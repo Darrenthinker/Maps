@@ -12,8 +12,12 @@ export function createLeafletAdapter(mapId) {
     maxZoom: 18,
     worldCopyJump: true,
     maxBounds: bounds,
-    maxBoundsViscosity: 1.0
+    maxBoundsViscosity: 1.0,
+    zoomControl: false  // 禁用默认左上角缩放控件
   });
+
+  // 将缩放控件添加到右下角（类似谷歌地图）
+  L.control.zoom({ position: 'bottomright' }).addTo(map);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
