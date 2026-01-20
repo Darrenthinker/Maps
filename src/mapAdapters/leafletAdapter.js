@@ -7,7 +7,7 @@ export function createLeafletAdapter(mapId) {
 
   const map = L.map(mapId, {
     center: [34, -118],
-    zoom: 5,
+    zoom: 7,
     minZoom: 2,
     maxZoom: 18,
     worldCopyJump: true,
