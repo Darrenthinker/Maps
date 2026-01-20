@@ -79,7 +79,6 @@ export function createLeafletAdapter(mapId) {
       html: "📍"
     });
     addressMarker = L.marker([lat, lng], { icon }).addTo(map);
-    addressMarker.bindPopup(`<div><strong>搜索位置</strong><br/>经纬度: ${lat.toFixed(4)}, ${lng.toFixed(4)}</div>`).openPopup();
   }
 
   return {

@@ -82,21 +82,20 @@ function findNearby(lat, lng, limit = 5) {
 // 初始化 Google Places Autocomplete
 async function initPlacesAutocomplete() {
   try {
-    const { Autocomplete } = await google.maps.importLibrary("places");
+    await google.maps.importLibrary("places");
     
-    placesAutocomplete = new Autocomplete(addressInput, {
-      types: ["geocode", "establishment"],
+    // 使用传统 Autocomplete（仍然可用）
+    placesAutocomplete = new google.maps.places.Autocomplete(addressInput, {
       fields: ["formatted_address", "geometry", "name"]
     });
     
     // 监听选择事件
     placesAutocomplete.addListener("place_changed", handlePlaceSelect);
     
-    console.log("Google Places Autocomplete initialized");
+    console.log("Google Places Autocomplete initialized successfully");
   } catch (error) {
     console.error("Failed to initialize Google Places:", error);
-    // 显示备用提示
-    addressResult.innerHTML = '<div class="address-result__title">地址搜索加载中...</div>';
+    addressResult.innerHTML = '<div class="address-result__title">地址搜索加载失败，请刷新重试</div>';
     addressResult.className = "address-result address-result--visible";
   }
 }
@@ -124,7 +123,6 @@ function handlePlaceSelect() {
   // 显示结果
   let html = `
     <div class="address-result__title">📍 ${name}</div>
-    <div class="address-result__coords">经纬度: ${lat.toFixed(4)}, ${lng.toFixed(4)}</div>
   `;
   
   if (nearby.length > 0) {
