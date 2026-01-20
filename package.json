@@ -1,0 +1,20 @@
+{
+  "name": "global-hub-map",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 2026 --host",
+    "build": "vite build",
+    "preview": "vite preview --port 2026 --host",
+    "prepare:data": "node scripts/prepare-data.mjs"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
+  },
+  "dependencies": {
+    "csv-parse": "^5.6.0",
+    "globe.gl": "^2.45.0",
+    "maplibre-gl": "^4.7.1"
+  }
+}
