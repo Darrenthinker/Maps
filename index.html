@@ -34,16 +34,27 @@
           <span></span>
         </button>
         <div class="search">
-          <input id="searchInput" type="text" placeholder="搜索 IATA / ICAO / UNLOCODE / 城市 / 国家" />
-          <div class="filters">
-            <label class="filter">
-              <input id="filterAirports" type="checkbox" checked />
-              机场
-            </label>
-            <label class="filter">
-              <input id="filterPorts" type="checkbox" checked />
-              港口
-            </label>
+          <div class="search-tabs">
+            <button id="tabHubs" class="search-tab search-tab--active" type="button">机场/港口</button>
+            <button id="tabAddress" class="search-tab" type="button">地址搜索</button>
+          </div>
+          <div id="hubSearch" class="search-panel">
+            <input id="searchInput" type="text" placeholder="搜索 IATA / ICAO / 城市 / 国家（支持中英文）" />
+            <div class="filters">
+              <label class="filter">
+                <input id="filterAirports" type="checkbox" checked />
+                机场
+              </label>
+              <label class="filter">
+                <input id="filterPorts" type="checkbox" checked />
+                港口
+              </label>
+            </div>
+          </div>
+          <div id="addressSearch" class="search-panel search-panel--hidden">
+            <input id="addressInput" type="text" placeholder="输入任意地址，如：1600 Amphitheatre Parkway, CA" />
+            <button id="addressSearchBtn" class="address-search-btn" type="button">搜索地址</button>
+            <div id="addressResult" class="address-result"></div>
           </div>
           <!-- 3D地球模式：后续使用 Google Maps API 时启用 -->
           <!--

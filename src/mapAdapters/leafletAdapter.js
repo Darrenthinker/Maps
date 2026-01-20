@@ -63,9 +63,29 @@ export function createLeafletAdapter(mapId) {
     }
   }
 
+  // 用于地址搜索，定位到任意坐标
+  let addressMarker = null;
+  function focusOnCoords(lat, lng, zoom = 10) {
+    map.setView([lat, lng], zoom, { animate: true });
+    
+    // 移除旧的地址标记
+    if (addressMarker) {
+      map.removeLayer(addressMarker);
+    }
+    
+    // 添加新的地址标记
+    const icon = L.divIcon({
+      className: "marker marker-address",
+      html: "📍"
+    });
+    addressMarker = L.marker([lat, lng], { icon }).addTo(map);
+    addressMarker.bindPopup(`<div><strong>搜索位置</strong><br/>经纬度: ${lat.toFixed(4)}, ${lng.toFixed(4)}</div>`).openPopup();
+  }
+
   return {
     setMarkers,
     focusOn,
+    focusOnCoords,
     destroy: () => map.remove()
   };
 }
