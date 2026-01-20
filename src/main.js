@@ -19,9 +19,6 @@ const addressSearch = document.getElementById("addressSearch");
 const addressInput = document.getElementById("addressInput");
 const addressResult = document.getElementById("addressResult");
 
-// Google Places Autocomplete
-let placesAutocomplete = null;
-
 const mapAdapter = createMapAdapter("map", "leaflet");
 
 const state = {
@@ -79,81 +76,199 @@ function findNearby(lat, lng, limit = 5) {
   return withDistance.slice(0, limit);
 }
 
-// 初始化 Google Places Autocomplete
-async function initPlacesAutocomplete() {
-  try {
-    await google.maps.importLibrary("places");
-    
-    // 使用传统 Autocomplete（仍然可用）
-    placesAutocomplete = new google.maps.places.Autocomplete(addressInput, {
-      fields: ["formatted_address", "geometry", "name"]
-    });
-    
-    // 监听选择事件
-    placesAutocomplete.addListener("place_changed", handlePlaceSelect);
-    
-    console.log("Google Places Autocomplete initialized successfully");
-  } catch (error) {
-    console.error("Failed to initialize Google Places:", error);
-    addressResult.innerHTML = '<div class="address-result__title">地址搜索加载失败，请刷新重试</div>';
-    addressResult.className = "address-result address-result--visible";
-  }
+// ========== 自定义地址搜索（通过服务端代理，无需VPN） ==========
+
+let autocompleteDebounce = null;
+let autocompleteDropdown = null;
+
+// 创建自动补全下拉框
+function createAutocompleteDropdown() {
+  if (autocompleteDropdown) return;
+  
+  autocompleteDropdown = document.createElement("div");
+  autocompleteDropdown.className = "autocomplete-dropdown";
+  autocompleteDropdown.style.display = "none";
+  addressInput.parentNode.appendChild(autocompleteDropdown);
 }
 
-// 处理地址选择
-function handlePlaceSelect() {
-  const place = placesAutocomplete.getPlace();
-  
-  if (!place.geometry || !place.geometry.location) {
-    // 用户直接按回车但没选择，不显示提示
+// 显示自动补全建议
+function showAutocompleteSuggestions(predictions) {
+  if (!predictions || predictions.length === 0) {
+    autocompleteDropdown.style.display = "none";
     return;
   }
   
-  const lat = place.geometry.location.lat();
-  const lng = place.geometry.location.lng();
-  const name = place.formatted_address || place.name;
+  autocompleteDropdown.innerHTML = predictions.map((p, index) => `
+    <div class="autocomplete-item" data-place-id="${p.place_id}" data-index="${index}">
+      <span class="autocomplete-item__icon">📍</span>
+      <span class="autocomplete-item__text">${p.description}</span>
+    </div>
+  `).join("");
   
-  // 在地图上显示位置
-  mapAdapter.focusOnCoords(lat, lng, 12);
+  autocompleteDropdown.style.display = "block";
   
-  // 查找附近的机场/港口
-  const nearby = findNearby(lat, lng, 5);
-  
-  // 显示结果
-  let html = `
-    <div class="address-result__title">📍 ${name}</div>
-  `;
-  
-  if (nearby.length > 0) {
-    html += `
-      <div class="address-result__nearby">
-        <div class="address-result__nearby-title">📦 附近的机场/港口：</div>
-        ${nearby.map(node => `
-          <div class="address-result__nearby-item" data-id="${node.id}">
-            ${node.type === "airport" ? "✈️" : "🚢"} ${node.code} · ${node.name}
-            <span style="color: #64748b; font-size: 11px;">(${node.distance.toFixed(0)} km)</span>
-          </div>
-        `).join("")}
-      </div>
-    `;
-  }
-  
-  addressResult.innerHTML = html;
-  addressResult.className = "address-result address-result--visible";
-  
-  // 绑定附近项点击事件
-  addressResult.querySelectorAll(".address-result__nearby-item").forEach(item => {
+  // 绑定点击事件
+  autocompleteDropdown.querySelectorAll(".autocomplete-item").forEach(item => {
     item.addEventListener("click", () => {
-      const node = state.allNodes.find(n => n.id === item.dataset.id);
-      if (node) {
-        mapAdapter.focusOn(node);
-        if (window.innerWidth <= 768) {
-          app.classList.add("app--collapsed");
-        }
-      }
+      selectPlace(item.dataset.placeId, item.querySelector(".autocomplete-item__text").textContent);
     });
   });
 }
+
+// 获取自动补全建议（通过代理）
+async function fetchAutocompleteSuggestions(input) {
+  if (!input || input.trim().length < 2) {
+    autocompleteDropdown.style.display = "none";
+    return;
+  }
+  
+  try {
+    const response = await fetch(`/api/places-autocomplete?input=${encodeURIComponent(input)}`);
+    const data = await response.json();
+    
+    if (data.status === "OK" && data.predictions) {
+      showAutocompleteSuggestions(data.predictions);
+    } else if (data.status === "ZERO_RESULTS") {
+      autocompleteDropdown.innerHTML = '<div class="autocomplete-item autocomplete-item--empty">未找到匹配地址</div>';
+      autocompleteDropdown.style.display = "block";
+    } else {
+      console.warn("Autocomplete error:", data.status);
+      autocompleteDropdown.style.display = "none";
+    }
+  } catch (error) {
+    console.error("Failed to fetch autocomplete:", error);
+    autocompleteDropdown.style.display = "none";
+  }
+}
+
+// 选择地点并获取详情
+async function selectPlace(placeId, description) {
+  // 先更新输入框并隐藏下拉框
+  addressInput.value = description;
+  autocompleteDropdown.style.display = "none";
+  
+  // 显示加载状态
+  addressResult.innerHTML = '<div class="address-result__title">🔄 获取位置信息...</div>';
+  addressResult.className = "address-result address-result--visible";
+  
+  try {
+    const response = await fetch(`/api/places-details?place_id=${encodeURIComponent(placeId)}`);
+    const data = await response.json();
+    
+    if (data.status === "OK" && data.result) {
+      const place = data.result;
+      const lat = place.geometry.location.lat;
+      const lng = place.geometry.location.lng;
+      const name = place.formatted_address || place.name;
+      
+      // 在地图上显示位置
+      mapAdapter.focusOnCoords(lat, lng, 12);
+      
+      // 查找附近的机场/港口
+      const nearby = findNearby(lat, lng, 5);
+      
+      // 显示结果
+      let html = `
+        <div class="address-result__title">📍 ${name}</div>
+      `;
+      
+      if (nearby.length > 0) {
+        html += `
+          <div class="address-result__nearby">
+            <div class="address-result__nearby-title">📦 附近的机场/港口：</div>
+            ${nearby.map(node => `
+              <div class="address-result__nearby-item" data-id="${node.id}">
+                ${node.type === "airport" ? "✈️" : "🚢"} ${node.code} · ${node.name}
+                <span style="color: #64748b; font-size: 11px;">(${node.distance.toFixed(0)} km)</span>
+              </div>
+            `).join("")}
+          </div>
+        `;
+      }
+      
+      addressResult.innerHTML = html;
+      addressResult.className = "address-result address-result--visible";
+      
+      // 绑定附近项点击事件
+      addressResult.querySelectorAll(".address-result__nearby-item").forEach(item => {
+        item.addEventListener("click", () => {
+          const node = state.allNodes.find(n => n.id === item.dataset.id);
+          if (node) {
+            mapAdapter.focusOn(node);
+            if (window.innerWidth <= 768) {
+              app.classList.add("app--collapsed");
+            }
+          }
+        });
+      });
+    } else {
+      addressResult.innerHTML = '<div class="address-result__title">❌ 获取位置信息失败</div>';
+    }
+  } catch (error) {
+    console.error("Failed to fetch place details:", error);
+    addressResult.innerHTML = '<div class="address-result__title">❌ 网络错误，请重试</div>';
+  }
+}
+
+// 初始化地址搜索
+function initAddressSearch() {
+  createAutocompleteDropdown();
+  
+  // 输入事件 - 带防抖
+  addressInput.addEventListener("input", () => {
+    clearTimeout(autocompleteDebounce);
+    autocompleteDebounce = setTimeout(() => {
+      fetchAutocompleteSuggestions(addressInput.value);
+    }, 300); // 300ms 防抖，减少请求频率
+  });
+  
+  // 聚焦时如果有内容也显示建议
+  addressInput.addEventListener("focus", () => {
+    if (addressInput.value.trim().length >= 2) {
+      fetchAutocompleteSuggestions(addressInput.value);
+    }
+  });
+  
+  // 点击外部关闭下拉框
+  document.addEventListener("click", (e) => {
+    if (!addressInput.contains(e.target) && !autocompleteDropdown.contains(e.target)) {
+      autocompleteDropdown.style.display = "none";
+    }
+  });
+  
+  // 键盘导航
+  let selectedIndex = -1;
+  addressInput.addEventListener("keydown", (e) => {
+    const items = autocompleteDropdown.querySelectorAll(".autocomplete-item:not(.autocomplete-item--empty)");
+    if (items.length === 0) return;
+    
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      selectedIndex = Math.min(selectedIndex + 1, items.length - 1);
+      updateSelection(items);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      selectedIndex = Math.max(selectedIndex - 1, 0);
+      updateSelection(items);
+    } else if (e.key === "Enter" && selectedIndex >= 0) {
+      e.preventDefault();
+      const item = items[selectedIndex];
+      selectPlace(item.dataset.placeId, item.querySelector(".autocomplete-item__text").textContent);
+      selectedIndex = -1;
+    } else if (e.key === "Escape") {
+      autocompleteDropdown.style.display = "none";
+      selectedIndex = -1;
+    }
+  });
+  
+  function updateSelection(items) {
+    items.forEach((item, i) => {
+      item.classList.toggle("autocomplete-item--selected", i === selectedIndex);
+    });
+  }
+}
+
+// ========== 机场/港口搜索 ==========
 
 function applyFilters() {
   const query = searchInput.value.trim();
@@ -226,8 +341,8 @@ function wireEvents() {
     resultsSection.style.display = "none"; // 隐藏机场/港口列表
   });
   
-  // 初始化 Google Places Autocomplete
-  initPlacesAutocomplete();
+  // 初始化地址搜索（使用服务端代理）
+  initAddressSearch();
   
   // 机场/港口搜索
   let debounceTimer;

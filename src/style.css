@@ -184,45 +184,69 @@ body {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
-/* Google Places Autocomplete 下拉菜单优化 */
-.pac-container {
-  font-family: "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  border-radius: 12px;
+/* 自定义自动补全下拉框（通过代理服务器，无需VPN） */
+.autocomplete-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
   border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
   margin-top: 4px;
+  max-height: 280px;
+  overflow-y: auto;
   z-index: 10000;
 }
 
-.pac-item {
+.autocomplete-item {
   padding: 12px 14px;
   font-size: 14px;
   color: #334155;
   cursor: pointer;
   border-bottom: 1px solid rgba(226, 232, 240, 0.6);
   transition: background 0.15s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
-.pac-item:hover {
+.autocomplete-item:last-child {
+  border-bottom: none;
+}
+
+.autocomplete-item:hover {
   background: #f1f5f9;
 }
 
-.pac-item-selected {
+.autocomplete-item--selected {
   background: #eff6ff;
 }
 
-.pac-item-query {
-  font-weight: 600;
-  color: #0f172a;
+.autocomplete-item--empty {
+  color: #94a3b8;
+  cursor: default;
+  justify-content: center;
 }
 
-.pac-icon {
-  display: none;
+.autocomplete-item--empty:hover {
+  background: transparent;
 }
 
-.pac-matched {
-  font-weight: 600;
-  color: #2563eb;
+.autocomplete-item__icon {
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.autocomplete-item__text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* 输入框容器需要相对定位 */
+#addressSearch {
+  position: relative;
 }
 
 .address-result {
