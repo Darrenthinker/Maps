@@ -1,4 +1,5 @@
 import "./style.css";
+import Fuse from "fuse.js";
 import { createMapAdapter } from "./mapAdapters/index.js";
 
 const app = document.querySelector(".app");
@@ -14,12 +15,24 @@ const mapAdapter = createMapAdapter("map", "leaflet");
 
 const state = {
   allNodes: [],
-  filteredNodes: []
+  filteredNodes: [],
+  fuse: null
 };
 
-function normalize(text) {
-  return text.toLowerCase().trim();
-}
+// Fuse.js 配置 - 支持模糊搜索
+const fuseOptions = {
+  keys: [
+    { name: "name", weight: 0.3 },
+    { name: "city", weight: 0.25 },
+    { name: "country", weight: 0.2 },
+    { name: "code", weight: 0.15 },
+    { name: "icao", weight: 0.1 }
+  ],
+  threshold: 0.3, // 模糊度，0 = 精确匹配，1 = 全匹配
+  ignoreLocation: true,
+  includeScore: true,
+  minMatchCharLength: 1
+};
 
 function buildPopup(node) {
   const codeLabel = node.type === "airport" ? "IATA / ICAO" : "UN/LOCODE";
@@ -33,40 +46,42 @@ function buildPopup(node) {
   `;
 }
 
-function matchesQuery(node, query) {
-  if (!query) return true;
-  const haystack = [
-    node.name,
-    node.city,
-    node.country,
-    node.code,
-    node.icao || ""
-  ]
-    .join(" ")
-    .toLowerCase();
-  return haystack.includes(query);
-}
-
 function applyFilters() {
-  const query = normalize(searchInput.value);
+  const query = searchInput.value.trim();
   const showAirports = filterAirports.checked;
   const showPorts = filterPorts.checked;
 
-  state.filteredNodes = state.allNodes.filter((node) => {
+  // 先按类型筛选
+  let filtered = state.allNodes.filter((node) => {
     if (node.type === "airport" && !showAirports) return false;
     if (node.type === "port" && !showPorts) return false;
-    return matchesQuery(node, query);
+    return true;
   });
 
+  // 如果有搜索词，使用 Fuse.js 模糊搜索
+  if (query) {
+    const fuse = new Fuse(filtered, fuseOptions);
+    const results = fuse.search(query);
+    filtered = results.map((r) => r.item);
+  }
+
+  state.filteredNodes = filtered;
   renderResults();
-  mapAdapter.setMarkers(state.filteredNodes);
+  
+  // 只在地图上显示前 5000 个点以提高性能
+  const mapNodes = filtered.slice(0, 5000);
+  mapAdapter.setMarkers(mapNodes);
 }
 
 function renderResults() {
   resultsCount.textContent = String(state.filteredNodes.length);
-  resultsList.innerHTML = state.filteredNodes
+  
+  // 只渲染前 200 个结果以提高性能
+  const displayNodes = state.filteredNodes.slice(0, 200);
+  
+  resultsList.innerHTML = displayNodes
     .map((node) => {
-      const code = node.type === "airport" ? node.code : node.code;
+      const code = node.code || "";
       const sub = node.type === "airport" ? "机场" : "港口";
       return `
         <li class="result-item" data-id="${node.id}">
@@ -76,17 +91,39 @@ function renderResults() {
       `;
     })
     .join("");
+    
+  // 如果结果超过 200 个，显示提示
+  if (state.filteredNodes.length > 200) {
+    resultsList.innerHTML += `
+      <li class="result-item result-item--hint">
+        <div class="result-item__meta">还有 ${state.filteredNodes.length - 200} 个结果，请输入更精确的搜索词</div>
+      </li>
+    `;
+  }
 }
 
 function wireEvents() {
-  searchInput.addEventListener("input", applyFilters);
+  // 使用防抖优化搜索性能
+  let debounceTimer;
+  searchInput.addEventListener("input", () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(applyFilters, 150);
+  });
+  
   filterAirports.addEventListener("change", applyFilters);
   filterPorts.addEventListener("change", applyFilters);
+  
   resultsList.addEventListener("click", (event) => {
     const item = event.target.closest(".result-item");
-    if (!item) return;
+    if (!item || item.classList.contains("result-item--hint")) return;
     const node = state.filteredNodes.find((n) => n.id === item.dataset.id);
-    mapAdapter.focusOn(node);
+    if (node) {
+      mapAdapter.focusOn(node);
+      // 手机端点击后自动收起侧边栏
+      if (window.innerWidth <= 768) {
+        app.classList.add("app--collapsed");
+      }
+    }
   });
 
   const toggleSidebar = () => {
@@ -98,25 +135,33 @@ function wireEvents() {
 }
 
 async function loadData() {
-  const [airports, ports] = await Promise.all([
-    fetch("/data/airports.json").then((res) => res.json()),
-    fetch("/data/ports.json").then((res) => res.json())
-  ]);
+  // 显示加载状态
+  resultsList.innerHTML = '<li class="result-item"><div class="result-item__meta">加载数据中...</div></li>';
+  
+  try {
+    const [airports, ports] = await Promise.all([
+      fetch("/data/airports.json").then((res) => res.json()),
+      fetch("/data/ports.json").then((res) => res.json())
+    ]);
 
-  const airportNodes = airports.map((airport) => ({
-    ...airport,
-    type: "airport",
-    popupHtml: buildPopup({ ...airport, type: "airport" })
-  }));
+    const airportNodes = airports.map((airport) => ({
+      ...airport,
+      type: "airport",
+      popupHtml: buildPopup({ ...airport, type: "airport" })
+    }));
 
-  const portNodes = ports.map((port) => ({
-    ...port,
-    type: "port",
-    popupHtml: buildPopup({ ...port, type: "port" })
-  }));
+    const portNodes = ports.map((port) => ({
+      ...port,
+      type: "port",
+      popupHtml: buildPopup({ ...port, type: "port" })
+    }));
 
-  state.allNodes = [...airportNodes, ...portNodes];
-  applyFilters();
+    state.allNodes = [...airportNodes, ...portNodes];
+    applyFilters();
+  } catch (error) {
+    resultsList.innerHTML = '<li class="result-item"><div class="result-item__meta">数据加载失败，请刷新重试</div></li>';
+    console.error("Failed to load data:", error);
+  }
 }
 
 // 手机端默认折叠侧边栏
