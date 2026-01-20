@@ -119,5 +119,10 @@ async function loadData() {
   applyFilters();
 }
 
+// 手机端默认折叠侧边栏
+if (window.innerWidth <= 768) {
+  app.classList.add("app--collapsed");
+}
+
 wireEvents();
 loadData();
