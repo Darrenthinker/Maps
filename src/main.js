@@ -360,14 +360,24 @@ function wireEvents() {
     const node = state.filteredNodes.find((n) => n.id === item.dataset.id);
     if (node) {
       mapAdapter.focusOn(node);
+      // 移动端：点击结果后关闭侧边栏
       if (window.innerWidth <= 768) {
-        app.classList.add("app--collapsed");
+        app.classList.remove("app--sidebar-open");
       }
     }
   });
 
+  // 侧边栏切换逻辑
+  const isMobile = () => window.innerWidth <= 768;
+  
   const toggleSidebar = () => {
-    app.classList.toggle("app--collapsed");
+    if (isMobile()) {
+      // 移动端：切换 app--sidebar-open
+      app.classList.toggle("app--sidebar-open");
+    } else {
+      // 桌面端：切换 app--collapsed
+      app.classList.toggle("app--collapsed");
+    }
   };
 
   sidebarToggle.addEventListener("click", toggleSidebar);
@@ -401,10 +411,6 @@ async function loadData() {
     resultsList.innerHTML = '<li class="result-item"><div class="result-item__meta">数据加载失败，请刷新重试</div></li>';
     console.error("Failed to load data:", error);
   }
-}
-
-if (window.innerWidth <= 768) {
-  app.classList.add("app--collapsed");
 }
 
 wireEvents();

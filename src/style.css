@@ -469,13 +469,9 @@ body {
     transition: transform 0.3s ease;
   }
 
-  /* 移动端：非折叠状态显示侧边栏 */
-  .app:not(.app--collapsed) .sidebar {
+  /* 移动端：使用 app--sidebar-open 来显示侧边栏 */
+  .app.app--sidebar-open .sidebar {
     transform: translateX(0);
-  }
-
-  .app--collapsed .sidebar {
-    transform: translateX(-100%);
   }
 
   .sidebar__header h1 {
@@ -522,7 +518,7 @@ body {
   }
 
   /* 侧边栏打开时隐藏浮动按钮 */
-  .app:not(.app--collapsed) .sidebar-toggle--floating {
+  .app.app--sidebar-open .sidebar-toggle--floating {
     display: none !important;
   }
 
