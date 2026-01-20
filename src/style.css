@@ -469,6 +469,7 @@ body {
     transition: transform 0.3s ease;
   }
 
+  /* 移动端：非折叠状态显示侧边栏 */
   .app:not(.app--collapsed) .sidebar {
     transform: translateX(0);
   }
@@ -481,25 +482,48 @@ body {
     font-size: 18px;
   }
 
+  /* 移动端：侧边栏内的关闭按钮 */
   .sidebar-toggle {
     top: 16px;
     right: 16px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-
-  .sidebar-toggle--floating {
-    top: 16px;
-    left: 16px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    display: inline-flex;
+    background: #f1f5f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
-  .app--collapsed .sidebar-toggle--floating {
-    display: inline-flex;
+  /* 移动端：始终显示浮动菜单按钮 */
+  .sidebar-toggle--floating {
+    top: 16px;
+    left: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: inline-flex !important;
+    background: #2563eb;
+    border-color: #2563eb;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+  }
+
+  .sidebar-toggle--floating span {
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+
+  /* 移动端菜单图标（三条横线） */
+  .sidebar-toggle--floating::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    box-shadow: 0 6px 0 #ffffff, 0 12px 0 #ffffff;
+    border-radius: 1px;
+  }
+
+  /* 侧边栏打开时隐藏浮动按钮 */
+  .app:not(.app--collapsed) .sidebar-toggle--floating {
+    display: none !important;
   }
 
   .search input {
@@ -521,11 +545,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-  }
-
-  /* 默认显示地图，侧边栏折叠 */
-  .app {
-    /* 手机端默认折叠侧边栏 */
   }
 }
 
