@@ -17,8 +17,10 @@ const tabAddress = document.getElementById("tabAddress");
 const hubSearch = document.getElementById("hubSearch");
 const addressSearch = document.getElementById("addressSearch");
 const addressInput = document.getElementById("addressInput");
-const addressSearchBtn = document.getElementById("addressSearchBtn");
 const addressResult = document.getElementById("addressResult");
+
+// Google Places Autocomplete
+let placesAutocomplete = null;
 
 const mapAdapter = createMapAdapter("map", "leaflet");
 
@@ -77,98 +79,83 @@ function findNearby(lat, lng, limit = 5) {
   return withDistance.slice(0, limit);
 }
 
-// 使用 Nominatim API 搜索地址
-async function searchAddress(query) {
-  const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=1`;
-  
+// 初始化 Google Places Autocomplete
+async function initPlacesAutocomplete() {
   try {
-    const response = await fetch(url, {
-      headers: {
-        "Accept-Language": "zh-CN,zh,en",
-        "User-Agent": "GlobalHubMap/1.0"
-      }
+    const { Autocomplete } = await google.maps.importLibrary("places");
+    
+    placesAutocomplete = new Autocomplete(addressInput, {
+      types: ["geocode", "establishment"],
+      fields: ["formatted_address", "geometry", "name"]
     });
     
-    if (!response.ok) throw new Error("API request failed");
+    // 监听选择事件
+    placesAutocomplete.addListener("place_changed", handlePlaceSelect);
     
-    const data = await response.json();
-    if (data.length === 0) return null;
-    
-    return {
-      name: data[0].display_name,
-      lat: parseFloat(data[0].lat),
-      lng: parseFloat(data[0].lon)
-    };
+    console.log("Google Places Autocomplete initialized");
   } catch (error) {
-    console.error("Address search error:", error);
-    return null;
+    console.error("Failed to initialize Google Places:", error);
+    // 显示备用提示
+    addressResult.innerHTML = '<div class="address-result__title">地址搜索加载中...</div>';
+    addressResult.className = "address-result address-result--visible";
   }
 }
 
-// 处理地址搜索
-async function handleAddressSearch() {
-  const query = addressInput.value.trim();
-  if (!query) return;
+// 处理地址选择
+function handlePlaceSelect() {
+  const place = placesAutocomplete.getPlace();
   
-  addressSearchBtn.disabled = true;
-  addressSearchBtn.textContent = "搜索中...";
-  addressResult.className = "address-result";
-  
-  try {
-    const result = await searchAddress(query);
-    
-    if (!result) {
-      addressResult.innerHTML = '<div class="address-result__title">未找到该地址，请尝试其他关键词</div>';
-      addressResult.className = "address-result address-result--visible";
-      return;
-    }
-    
-    // 在地图上显示位置
-    mapAdapter.focusOnCoords(result.lat, result.lng, 10);
-    
-    // 查找附近的机场/港口
-    const nearby = findNearby(result.lat, result.lng, 5);
-    
-    // 显示结果
-    let html = `
-      <div class="address-result__title">📍 ${result.name}</div>
-      <div class="address-result__coords">经纬度: ${result.lat.toFixed(4)}, ${result.lng.toFixed(4)}</div>
-    `;
-    
-    if (nearby.length > 0) {
-      html += `
-        <div class="address-result__nearby">
-          <div class="address-result__nearby-title">📦 附近的机场/港口：</div>
-          ${nearby.map(node => `
-            <div class="address-result__nearby-item" data-id="${node.id}">
-              ${node.type === "airport" ? "✈️" : "🚢"} ${node.code} · ${node.name}
-              <span style="color: #64748b; font-size: 11px;">(${node.distance.toFixed(0)} km)</span>
-            </div>
-          `).join("")}
-        </div>
-      `;
-    }
-    
-    addressResult.innerHTML = html;
+  if (!place.geometry || !place.geometry.location) {
+    addressResult.innerHTML = '<div class="address-result__title">请从下拉列表中选择地址</div>';
     addressResult.className = "address-result address-result--visible";
-    
-    // 绑定附近项点击事件
-    addressResult.querySelectorAll(".address-result__nearby-item").forEach(item => {
-      item.addEventListener("click", () => {
-        const node = state.allNodes.find(n => n.id === item.dataset.id);
-        if (node) {
-          mapAdapter.focusOn(node);
-          if (window.innerWidth <= 768) {
-            app.classList.add("app--collapsed");
-          }
-        }
-      });
-    });
-    
-  } finally {
-    addressSearchBtn.disabled = false;
-    addressSearchBtn.textContent = "搜索地址";
+    return;
   }
+  
+  const lat = place.geometry.location.lat();
+  const lng = place.geometry.location.lng();
+  const name = place.formatted_address || place.name;
+  
+  // 在地图上显示位置
+  mapAdapter.focusOnCoords(lat, lng, 12);
+  
+  // 查找附近的机场/港口
+  const nearby = findNearby(lat, lng, 5);
+  
+  // 显示结果
+  let html = `
+    <div class="address-result__title">📍 ${name}</div>
+    <div class="address-result__coords">经纬度: ${lat.toFixed(4)}, ${lng.toFixed(4)}</div>
+  `;
+  
+  if (nearby.length > 0) {
+    html += `
+      <div class="address-result__nearby">
+        <div class="address-result__nearby-title">📦 附近的机场/港口：</div>
+        ${nearby.map(node => `
+          <div class="address-result__nearby-item" data-id="${node.id}">
+            ${node.type === "airport" ? "✈️" : "🚢"} ${node.code} · ${node.name}
+            <span style="color: #64748b; font-size: 11px;">(${node.distance.toFixed(0)} km)</span>
+          </div>
+        `).join("")}
+      </div>
+    `;
+  }
+  
+  addressResult.innerHTML = html;
+  addressResult.className = "address-result address-result--visible";
+  
+  // 绑定附近项点击事件
+  addressResult.querySelectorAll(".address-result__nearby-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const node = state.allNodes.find(n => n.id === item.dataset.id);
+      if (node) {
+        mapAdapter.focusOn(node);
+        if (window.innerWidth <= 768) {
+          app.classList.add("app--collapsed");
+        }
+      }
+    });
+  });
 }
 
 function applyFilters() {
@@ -238,11 +225,8 @@ function wireEvents() {
     hubSearch.classList.add("search-panel--hidden");
   });
   
-  // 地址搜索
-  addressSearchBtn.addEventListener("click", handleAddressSearch);
-  addressInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") handleAddressSearch();
-  });
+  // 初始化 Google Places Autocomplete
+  initPlacesAutocomplete();
   
   // 机场/港口搜索
   let debounceTimer;

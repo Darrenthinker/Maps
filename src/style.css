@@ -166,27 +166,45 @@ body {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
-.address-search-btn {
-  width: 100%;
-  margin-top: 10px;
-  padding: 12px 16px;
-  background: #2563eb;
-  color: #ffffff;
-  border: none;
-  border-radius: 10px;
+/* Google Places Autocomplete 下拉菜单优化 */
+.pac-container {
+  font-family: "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  margin-top: 4px;
+  z-index: 10000;
+}
+
+.pac-item {
+  padding: 12px 14px;
   font-size: 14px;
-  font-weight: 500;
+  color: #334155;
   cursor: pointer;
-  transition: background 0.2s ease;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  transition: background 0.15s ease;
 }
 
-.address-search-btn:hover {
-  background: #1d4ed8;
+.pac-item:hover {
+  background: #f1f5f9;
 }
 
-.address-search-btn:disabled {
-  background: #94a3b8;
-  cursor: not-allowed;
+.pac-item-selected {
+  background: #eff6ff;
+}
+
+.pac-item-query {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.pac-icon {
+  display: none;
+}
+
+.pac-matched {
+  font-weight: 600;
+  color: #2563eb;
 }
 
 .address-result {

@@ -22,6 +22,13 @@
       rel="stylesheet"
       href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
     />
+    <!-- Google Maps JavaScript API with Places library -->
+    <script>
+      (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]);for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+        key: "AIzaSyA-8x6r7r8V2JOI8dgFzwxDLQApIwGaf30",
+        v: "weekly"
+      });
+    </script>
   </head>
   <body>
     <div class="app">
@@ -52,8 +59,7 @@
             </div>
           </div>
           <div id="addressSearch" class="search-panel search-panel--hidden">
-            <input id="addressInput" type="text" placeholder="输入任意地址，如：1600 Amphitheatre Parkway, CA" />
-            <button id="addressSearchBtn" class="address-search-btn" type="button">搜索地址</button>
+            <input id="addressInput" type="text" placeholder="输入地址，自动联想..." autocomplete="off" />
             <div id="addressResult" class="address-result"></div>
           </div>
           <!-- 3D地球模式：后续使用 Google Maps API 时启用 -->
