@@ -1,16 +1,25 @@
 export function createLeafletAdapter(mapId) {
+  // 设置地图边界，防止拖出地图范围
+  const bounds = L.latLngBounds(
+    L.latLng(-85, -180),
+    L.latLng(85, 180)
+  );
+
   const map = L.map(mapId, {
     center: [34, -118],
     zoom: 5,
     minZoom: 2,
     maxZoom: 18,
-    worldCopyJump: true
+    worldCopyJump: true,
+    maxBounds: bounds,
+    maxBoundsViscosity: 1.0
   });
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: "&copy; OpenStreetMap contributors",
-    noWrap: false
+    noWrap: false,
+    bounds: bounds
   }).addTo(map);
 
   const clusterGroup = L.markerClusterGroup();

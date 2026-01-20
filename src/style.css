@@ -244,12 +244,13 @@ body {
 .map-wrapper {
   flex: 1;
   position: relative;
-  background: #e2e8f0;
+  background: #aad3df; /* 海洋蓝色，与地图底色一致 */
 }
 
 #map {
   height: 100%;
   width: 100%;
+  background: #aad3df; /* 海洋蓝色 */
 }
 
 .marker {
