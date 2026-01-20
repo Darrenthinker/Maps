@@ -62,10 +62,12 @@ export function createLeafletAdapter(mapId) {
 
   function focusOn(node) {
     if (!node) return;
-    map.setView([node.lat, node.lng], 6, { animate: true });
     const marker = markerById.get(node.id);
     if (marker) {
-      marker.openPopup();
+      // 使用 zoomToShowLayer 确保标记从聚合中显示出来，然后自动打开 popup
+      clusterGroup.zoomToShowLayer(marker, function() {
+        marker.openPopup();
+      });
     }
   }
 
