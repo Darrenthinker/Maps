@@ -525,32 +525,29 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
-  /* 移动端：始终显示浮动菜单按钮 */
+  /* 移动端：简洁的三角形展开按钮（与桌面端风格一致） */
   .sidebar-toggle--floating {
     top: 16px;
-    left: 16px;
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    left: 12px;
+    width: 32px;
+    height: 44px;
+    border-radius: 10px;
     display: inline-flex !important;
-    background: #2563eb;
-    border-color: #2563eb;
-    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
   }
 
   .sidebar-toggle--floating span {
     border-left: 0 !important;
-    border-right: 0 !important;
+    border-right: 6px solid #334155 !important;
+    border-top: 6px solid transparent !important;
+    border-bottom: 6px solid transparent !important;
   }
 
-  /* 移动端菜单图标（三条横线） */
+  /* 移动端不需要三横杠图标 */
   .sidebar-toggle--floating::before {
-    content: '';
-    width: 20px;
-    height: 2px;
-    background: #ffffff;
-    box-shadow: 0 6px 0 #ffffff, 0 12px 0 #ffffff;
-    border-radius: 1px;
+    display: none;
   }
 
   /* 侧边栏打开时隐藏浮动按钮 */
