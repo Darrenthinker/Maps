@@ -46,15 +46,33 @@ body {
   position: relative;
 }
 
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.title-group {
+  display: flex;
+  flex-direction: column;
+}
+
 .sidebar__header h1 {
-  margin: 0 0 6px;
+  margin: 0;
   font-size: 20px;
   font-weight: 600;
+  color: #0f172a;
+  letter-spacing: 2px;
 }
 
 .sidebar__header p {
-  margin: 0;
-  font-size: 12.5px;
+  margin: 2px 0 0;
+  font-size: 12px;
   color: #64748b;
 }
 

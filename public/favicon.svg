@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="pinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285F4"/>
+      <stop offset="50%" style="stop-color:#34A853"/>
+      <stop offset="100%" style="stop-color:#FBBC05"/>
+    </linearGradient>
+    <linearGradient id="globeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285F4"/>
+      <stop offset="100%" style="stop-color:#34A853"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 地球背景圆 -->
+  <circle cx="256" cy="256" r="220" fill="url(#globeGradient)" opacity="0.15"/>
+  <circle cx="256" cy="256" r="220" fill="none" stroke="url(#globeGradient)" stroke-width="8"/>
+  
+  <!-- 经纬线 -->
+  <ellipse cx="256" cy="256" rx="220" ry="80" fill="none" stroke="#4285F4" stroke-width="3" opacity="0.4"/>
+  <ellipse cx="256" cy="256" rx="80" ry="220" fill="none" stroke="#4285F4" stroke-width="3" opacity="0.4"/>
+  <line x1="36" y1="256" x2="476" y2="256" stroke="#4285F4" stroke-width="3" opacity="0.4"/>
+  
+  <!-- 地图标记 Pin -->
+  <path d="M256 80 C200 80 156 124 156 180 C156 260 256 380 256 380 C256 380 356 260 356 180 C356 124 312 80 256 80 Z" 
+        fill="url(#pinGradient)" 
+        stroke="#ffffff" 
+        stroke-width="8"/>
+  
+  <!-- Pin 内圆 -->
+  <circle cx="256" cy="180" r="45" fill="#ffffff"/>
+  
+  <!-- 飞机图标 -->
+  <path d="M256 155 L270 180 L290 175 L265 195 L275 220 L256 205 L237 220 L247 195 L222 175 L242 180 Z" 
+        fill="#4285F4"/>
+</svg>

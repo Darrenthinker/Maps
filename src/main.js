@@ -105,8 +105,7 @@ function handlePlaceSelect() {
   const place = placesAutocomplete.getPlace();
   
   if (!place.geometry || !place.geometry.location) {
-    addressResult.innerHTML = '<div class="address-result__title">请从下拉列表中选择地址</div>';
-    addressResult.className = "address-result address-result--visible";
+    // 用户直接按回车但没选择，不显示提示
     return;
   }
   
@@ -207,6 +206,8 @@ function renderResults() {
   }
 }
 
+const resultsSection = document.querySelector(".results");
+
 function wireEvents() {
   // 标签切换
   tabHubs.addEventListener("click", () => {
@@ -214,6 +215,7 @@ function wireEvents() {
     tabAddress.classList.remove("search-tab--active");
     hubSearch.classList.remove("search-panel--hidden");
     addressSearch.classList.add("search-panel--hidden");
+    resultsSection.style.display = "flex"; // 显示机场/港口列表
   });
   
   tabAddress.addEventListener("click", () => {
@@ -221,6 +223,7 @@ function wireEvents() {
     tabHubs.classList.remove("search-tab--active");
     addressSearch.classList.remove("search-panel--hidden");
     hubSearch.classList.add("search-panel--hidden");
+    resultsSection.style.display = "none"; // 隐藏机场/港口列表
   });
   
   // 初始化 Google Places Autocomplete

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Global Hub Map - MVP</title>
+    <title>货代地图</title>
+    <link rel="icon" type="image/png" href="/Map.png" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -34,8 +35,13 @@
     <div class="app">
       <aside class="sidebar">
         <div class="sidebar__header">
-          <h1>全球机场 & 港口地图</h1>
-          <p>全球机场与港口查询</p>
+          <div class="logo-title">
+            <img src="/Map.png" alt="Logo" class="logo-icon" />
+            <div class="title-group">
+              <h1>货 代 地 图</h1>
+              <p>国际机场 港口 海外仓库查询</p>
+            </div>
+          </div>
         </div>
         <button id="sidebarToggle" class="sidebar-toggle" type="button" aria-label="折叠侧栏">
           <span></span>
