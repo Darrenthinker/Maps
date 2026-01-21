@@ -10,3 +10,4 @@ export function createMapAdapter(mapId, provider = "leaflet", options = {}) {
   }
   throw new Error(`Unsupported map provider: ${provider}`);
 }
+

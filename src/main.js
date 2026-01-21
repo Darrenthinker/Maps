@@ -290,7 +290,8 @@ function applyFilters() {
   state.filteredNodes = filtered;
   renderResults();
   
-  const mapNodes = filtered.slice(0, 5000);
+  // 限制地图标记数量，提升渲染性能
+  const mapNodes = filtered.slice(0, 2000);
   mapAdapter.setMarkers(mapNodes);
 }
 
@@ -388,6 +389,15 @@ async function loadData() {
   resultsList.innerHTML = '<li class="result-item"><div class="result-item__meta">加载数据中...</div></li>';
   
   try {
+    // 使用 requestIdleCallback 或 setTimeout 延迟加载数据，让地图先渲染
+    await new Promise(resolve => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(resolve, { timeout: 500 });
+      } else {
+        setTimeout(resolve, 100);
+      }
+    });
+
     const [airports, ports] = await Promise.all([
       fetch("/data/airports.json").then((res) => res.json()),
       fetch("/data/ports.json").then((res) => res.json())
@@ -406,7 +416,11 @@ async function loadData() {
     }));
 
     state.allNodes = [...airportNodes, ...portNodes];
-    applyFilters();
+    
+    // 分批渲染标记，避免阻塞
+    requestAnimationFrame(() => {
+      applyFilters();
+    });
   } catch (error) {
     resultsList.innerHTML = '<li class="result-item"><div class="result-item__meta">数据加载失败，请刷新重试</div></li>';
     console.error("Failed to load data:", error);
@@ -415,3 +429,4 @@ async function loadData() {
 
 wireEvents();
 loadData();
+

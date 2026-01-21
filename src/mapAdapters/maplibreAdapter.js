@@ -214,3 +214,4 @@ export function createMaplibreAdapter(mapId, options = {}) {
     destroy: () => map.remove()
   };
 }
+

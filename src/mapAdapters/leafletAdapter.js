@@ -13,22 +13,106 @@ export function createLeafletAdapter(mapId) {
     worldCopyJump: true,
     maxBounds: bounds,
     maxBoundsViscosity: 1.0,
-    zoomControl: false  // 禁用默认左上角缩放控件
+    zoomControl: false,  // 禁用默认左上角缩放控件
+    preferCanvas: true   // 使用 Canvas 渲染，性能更好
   });
 
   // 将缩放控件添加到右下角（类似谷歌地图）
   L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-  // 使用 Carto 瓦片服务（全球 CDN 加速，国内访问更快）
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    noWrap: false,
-    bounds: bounds
-  }).addTo(map);
+  // 定义多个瓦片源，按优先级排列（国内访问友好）
+  const tileSources = [
+    // 主源：Carto Voyager（全球 CDN）
+    {
+      url: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+      options: {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd'
+      }
+    },
+    // 备用源1：Carto Light（更轻量）
+    {
+      url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+      options: {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd'
+      }
+    },
+    // 备用源2：OSM 官方 CDN
+    {
+      url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+      options: {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }
+    }
+  ];
 
-  const clusterGroup = L.markerClusterGroup();
+  let currentSourceIndex = 0;
+  let tileLayer = null;
+  let failedTiles = 0;
+  const MAX_FAILED_TILES = 5; // 超过这个数量就切换源
+
+  function createTileLayer(sourceIndex) {
+    const source = tileSources[sourceIndex];
+    const layer = L.tileLayer(source.url, {
+      ...source.options,
+      noWrap: false,
+      bounds: bounds,
+      crossOrigin: true,
+      errorTileUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==' // 透明1x1像素
+    });
+
+    // 监听瓦片加载错误
+    layer.on('tileerror', function(e) {
+      failedTiles++;
+      console.warn(`瓦片加载失败 (${failedTiles}/${MAX_FAILED_TILES}):`, e.tile.src);
+      
+      // 如果失败次数过多，切换到备用源
+      if (failedTiles >= MAX_FAILED_TILES && currentSourceIndex < tileSources.length - 1) {
+        console.log('切换到备用瓦片源...');
+        switchToNextSource();
+      }
+    });
+
+    // 瓦片加载成功时重置计数
+    layer.on('tileload', function() {
+      failedTiles = Math.max(0, failedTiles - 1);
+    });
+
+    return layer;
+  }
+
+  function switchToNextSource() {
+    currentSourceIndex++;
+    failedTiles = 0;
+    
+    if (tileLayer) {
+      map.removeLayer(tileLayer);
+    }
+    
+    tileLayer = createTileLayer(currentSourceIndex);
+    tileLayer.addTo(map);
+    console.log(`已切换到瓦片源 ${currentSourceIndex + 1}/${tileSources.length}`);
+  }
+
+  // 初始化瓦片层
+  tileLayer = createTileLayer(0);
+  tileLayer.addTo(map);
+
+  // 优化 MarkerCluster 配置，提升性能
+  const clusterGroup = L.markerClusterGroup({
+    chunkedLoading: true,           // 分批加载标记
+    chunkInterval: 100,             // 每批间隔（ms）
+    chunkDelay: 50,                 // 延迟渲染
+    removeOutsideVisibleBounds: true, // 移除视野外的标记
+    animate: false,                 // 禁用动画，提升性能
+    disableClusteringAtZoom: 10,    // 缩放级别10以上不聚合
+    maxClusterRadius: 80,           // 聚合半径
+    spiderfyOnMaxZoom: true
+  });
   map.addLayer(clusterGroup);
 
   const markerById = new Map();
@@ -96,3 +180,4 @@ export function createLeafletAdapter(mapId) {
     destroy: () => map.remove()
   };
 }
+
