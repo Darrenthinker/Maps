@@ -78,7 +78,7 @@ body {
 
 .sidebar-toggle {
   position: absolute;
-  top: 120px;
+  top: 33%; /* 上1/3位置 */
   right: -14px;
   width: 28px;
   height: 44px;
@@ -613,24 +613,30 @@ body {
 .address-input-row {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0;
+  position: relative;
 }
 
 .address-input-row input {
   flex: 1;
+  width: 100%;
+  padding-right: 32px; /* 为按钮留空间 */
 }
 
-/* 添加测距按钮（小加号） */
+/* 添加测距按钮（小加号）- 绝对定位在输入框内右侧 */
 .distance-add-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  background: #f8fafc;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
   color: #94a3b8;
   cursor: pointer;
   transition: all 0.2s ease;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -638,7 +644,6 @@ body {
 
 .distance-add-btn:hover {
   background: #e2e8f0;
-  border-color: #94a3b8;
   color: #64748b;
 }
 
@@ -646,17 +651,20 @@ body {
   display: none;
 }
 
-/* 关闭测距按钮（X） */
+/* 关闭测距按钮（X）- 绝对定位在输入框内右侧 */
 .distance-close-btn {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
   border: none;
   background: transparent;
-  color: #94a3b8;
+  color: #b0b8c4;
   cursor: pointer;
   transition: all 0.15s ease;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -665,6 +673,11 @@ body {
 .distance-close-btn:hover {
   background: #fee2e2;
   color: #ef4444;
+}
+
+.distance-close-btn svg {
+  width: 10px;
+  height: 10px;
 }
 
 .address-input-row--hidden {
