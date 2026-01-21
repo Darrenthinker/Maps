@@ -582,11 +582,15 @@ function applyFilters() {
   state.filteredNodes = filtered;
   renderResults();
   
-  // 限制地图标记数量，大幅提升加载速度
-  // 有搜索词时显示更多，无搜索词时只显示少量
-  const maxMarkers = query ? 1000 : 300; // 搜索时1000个，默认只300个
-  const mapNodes = filtered.slice(0, maxMarkers);
-  mapAdapter.setMarkers(mapNodes);
+  // 优化：只有搜索时才显示标记，默认不显示任何标记
+  if (query) {
+    // 有搜索词时显示匹配的标记（限制数量）
+    const mapNodes = filtered.slice(0, 500);
+    mapAdapter.setMarkers(mapNodes);
+  } else {
+    // 无搜索词时不显示标记，提升加载速度
+    mapAdapter.setMarkers([]);
+  }
 }
 
 function renderResults() {
