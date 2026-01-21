@@ -481,10 +481,10 @@ body {
   border-radius: 0 0 8px 8px !important;
 }
 
-/* 右下角控件位置调整 */
+/* 右下角控件位置调整（页面2/3位置） */
 .leaflet-bottom.leaflet-right {
   right: 16px;
-  bottom: 24px;
+  bottom: 33vh; /* 距离底部1/3，即在2/3位置 */
 }
 
 /* ========== 移动端优化 ========== */
@@ -613,29 +613,21 @@ body {
 .address-input-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .address-input-row input {
   flex: 1;
 }
 
-.address-label {
-  font-size: 16px;
-  width: 24px;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.distance-toggle-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
+/* 添加测距按钮（小加号） */
+.distance-add-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
   background: #f8fafc;
-  font-size: 18px;
-  font-weight: 500;
-  color: #64748b;
+  color: #94a3b8;
   cursor: pointer;
   transition: all 0.2s ease;
   flex-shrink: 0;
@@ -644,20 +636,35 @@ body {
   justify-content: center;
 }
 
-.distance-toggle-btn:hover {
+.distance-add-btn:hover {
   background: #e2e8f0;
   border-color: #94a3b8;
-  color: #334155;
+  color: #64748b;
 }
 
-.distance-toggle-btn--active {
-  background: #2563eb;
-  border-color: #2563eb;
-  color: #ffffff;
+.distance-add-btn--hidden {
+  display: none;
 }
 
-.distance-toggle-btn--active:hover {
-  background: #1d4ed8;
+/* 关闭测距按钮（X） */
+.distance-close-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.distance-close-btn:hover {
+  background: #fee2e2;
+  color: #ef4444;
 }
 
 .address-input-row--hidden {

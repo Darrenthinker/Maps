@@ -21,6 +21,7 @@ const addressResult = document.getElementById("addressResult");
 
 // 两地距离相关元素
 const toggleDistanceBtn = document.getElementById("toggleDistanceBtn");
+const closeDistanceBtn = document.getElementById("closeDistanceBtn");
 const addressInputBRow = document.getElementById("addressInputB");
 const addressInputB = document.getElementById("addressInputB_field");
 const distanceResult = document.getElementById("distanceResult");
@@ -317,20 +318,25 @@ function initAddressSearch() {
   
   // ========== 两地距离功能 ==========
   
-  // 切换测距模式
+  // 打开测距模式
   toggleDistanceBtn.addEventListener("click", () => {
-    state.distanceMode = !state.distanceMode;
-    toggleDistanceBtn.textContent = state.distanceMode ? "−" : "+";
-    toggleDistanceBtn.classList.toggle("distance-toggle-btn--active", state.distanceMode);
-    addressInputBRow.classList.toggle("address-input-row--hidden", !state.distanceMode);
-    
-    if (!state.distanceMode) {
-      // 关闭测距模式时清空
-      addressInputB.value = "";
-      state.pointB = null;
-      distanceResult.classList.remove("distance-result--visible");
-    }
+    state.distanceMode = true;
+    toggleDistanceBtn.classList.add("distance-add-btn--hidden");
+    addressInputBRow.classList.remove("address-input-row--hidden");
+    addressInputB.focus();
   });
+  
+  // 关闭测距模式
+  function closeDistanceMode() {
+    state.distanceMode = false;
+    toggleDistanceBtn.classList.remove("distance-add-btn--hidden");
+    addressInputBRow.classList.add("address-input-row--hidden");
+    addressInputB.value = "";
+    state.pointB = null;
+    distanceResult.classList.remove("distance-result--visible");
+  }
+  
+  closeDistanceBtn.addEventListener("click", closeDistanceMode);
   
   // 第二个地址输入框事件
   addressInputB.addEventListener("input", () => {
