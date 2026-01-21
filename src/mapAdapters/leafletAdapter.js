@@ -173,10 +173,72 @@ export function createLeafletAdapter(mapId) {
     addressMarker = L.marker([lat, lng], { icon }).addTo(map);
   }
 
+  // 用于两地距离显示
+  let distanceMarkerA = null;
+  let distanceMarkerB = null;
+  let distanceLine = null;
+
+  function showDistanceLine(pointA, pointB) {
+    // 清除之前的标记和线
+    clearDistanceLine();
+
+    // 创建 A 点标记（蓝色）
+    const iconA = L.divIcon({
+      className: "marker marker-distance-a",
+      html: "A"
+    });
+    distanceMarkerA = L.marker([pointA.lat, pointA.lng], { icon: iconA }).addTo(map);
+    distanceMarkerA.bindPopup(`<strong>起点</strong><br/>${pointA.name}`);
+
+    // 创建 B 点标记（绿色）
+    const iconB = L.divIcon({
+      className: "marker marker-distance-b",
+      html: "B"
+    });
+    distanceMarkerB = L.marker([pointB.lat, pointB.lng], { icon: iconB }).addTo(map);
+    distanceMarkerB.bindPopup(`<strong>终点</strong><br/>${pointB.name}`);
+
+    // 创建连接线（虚线）
+    distanceLine = L.polyline(
+      [[pointA.lat, pointA.lng], [pointB.lat, pointB.lng]],
+      {
+        color: '#2563eb',
+        weight: 3,
+        opacity: 0.8,
+        dashArray: '10, 8',
+        lineCap: 'round'
+      }
+    ).addTo(map);
+
+    // 调整视野让两个点都可见
+    const bounds = L.latLngBounds(
+      [pointA.lat, pointA.lng],
+      [pointB.lat, pointB.lng]
+    );
+    map.fitBounds(bounds, { padding: [60, 60], maxZoom: 10 });
+  }
+
+  function clearDistanceLine() {
+    if (distanceMarkerA) {
+      map.removeLayer(distanceMarkerA);
+      distanceMarkerA = null;
+    }
+    if (distanceMarkerB) {
+      map.removeLayer(distanceMarkerB);
+      distanceMarkerB = null;
+    }
+    if (distanceLine) {
+      map.removeLayer(distanceLine);
+      distanceLine = null;
+    }
+  }
+
   return {
     setMarkers,
     focusOn,
     focusOnCoords,
+    showDistanceLine,
+    clearDistanceLine,
     destroy: () => map.remove()
   };
 }

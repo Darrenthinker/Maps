@@ -451,6 +451,19 @@ body {
   justify-content: center;
 }
 
+/* 两地距离标记 */
+.marker-distance-a {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.marker-distance-b {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
 /* 缩放控件样式（右下角） */
 .leaflet-control-zoom {
   border: none !important;

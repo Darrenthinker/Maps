@@ -334,6 +334,8 @@ function initAddressSearch() {
     addressInputB.value = "";
     state.pointB = null;
     distanceResult.classList.remove("distance-result--visible");
+    // 清除地图上的距离线和标记
+    mapAdapter.clearDistanceLine && mapAdapter.clearDistanceLine();
   }
   
   closeDistanceBtn.addEventListener("click", closeDistanceMode);
