@@ -70,7 +70,10 @@ export function createLeafletAdapter(mapId) {
       ...source.options,
       noWrap: false,
       bounds: bounds,
-      crossOrigin: true
+      crossOrigin: true,
+      useCache: true,           // 启用缓存
+      crossOrigin: 'anonymous', // 允许缓存跨域瓦片
+      cacheMaxAge: 86400 * 7    // 缓存7天
     });
 
     // 瓦片重试机制

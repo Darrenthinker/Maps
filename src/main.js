@@ -430,8 +430,11 @@ function applyFilters() {
   state.filteredNodes = filtered;
   renderResults();
   
-  // 限制地图标记数量，提升渲染性能
-  const mapNodes = filtered.slice(0, 2000);
+  // 限制地图标记数量，大幅提升加载速度
+  // 有搜索词时显示更多，无搜索词时只显示少量
+  const query = searchInput.value.trim();
+  const maxMarkers = query ? 1000 : 300; // 搜索时1000个，默认只300个
+  const mapNodes = filtered.slice(0, maxMarkers);
   mapAdapter.setMarkers(mapNodes);
 }
 
@@ -569,4 +572,11 @@ async function loadData() {
 
 wireEvents();
 loadData();
+
+// 注册 Service Worker 缓存瓦片
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(() => {
+    // 静默失败，不影响使用
+  });
+}
 
