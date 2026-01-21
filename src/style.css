@@ -524,16 +524,19 @@ body {
 
 /* 距离标签（显示在虚线上） */
 .distance-label {
-  background: #2563eb;
-  color: #ffffff;
-  padding: 4px 10px;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  padding: 6px 12px;
+  border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
   white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
-  border: 2px solid #ffffff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  letter-spacing: 0.3px;
 }
 
 /* 缩放控件样式（右下角） */

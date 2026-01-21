@@ -288,9 +288,9 @@ export function createLeafletAdapter(mapId) {
       const midPoint = routeCoords[midIndex];
       const labelIcon = L.divIcon({
         className: "distance-label",
-        html: `🚗 ${Math.round(routeDistance)} km`,
-        iconSize: [100, 24],
-        iconAnchor: [50, 12]
+        html: `${Math.round(routeDistance)} km`,
+        iconSize: [80, 28],
+        iconAnchor: [40, 14]
       });
       distanceLabel = L.marker(midPoint, { icon: labelIcon, interactive: false }).addTo(map);
 
@@ -312,9 +312,9 @@ export function createLeafletAdapter(mapId) {
       const midLng = (pointA.lng + pointB.lng) / 2;
       const labelIcon = L.divIcon({
         className: "distance-label",
-        html: `✈️ ${Math.round(straightKm)} km`,
-        iconSize: [100, 24],
-        iconAnchor: [50, 12]
+        html: `${Math.round(straightKm)} km`,
+        iconSize: [80, 28],
+        iconAnchor: [40, 14]
       });
       distanceLabel = L.marker([midLat, midLng], { icon: labelIcon, interactive: false }).addTo(map);
     }
