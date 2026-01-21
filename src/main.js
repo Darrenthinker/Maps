@@ -490,27 +490,74 @@ function initAddressSearch() {
 let currentInputTarget = 'A';
 
 // 计算并显示两地距离
-function calculateAndShowDistance() {
+async function calculateAndShowDistance() {
   if (!state.pointA || !state.pointB) return;
   
-  const distance = getDistance(
+  const straightKm = getDistance(
     state.pointA.lat, state.pointA.lng,
     state.pointB.lat, state.pointB.lng
   );
   
-  // 显示距离（公里和英里）
-  const km = distance.toFixed(0);
-  const miles = (distance * 0.621371).toFixed(0);
-  
+  // 先显示直线距离
   distanceResult.innerHTML = `
-    <span class="distance-result__icon">📏</span>
-    <span class="distance-result__text">直线距离</span>
-    <span class="distance-result__value">${km} km (${miles} mi)</span>
+    <div class="distance-row">
+      <span class="distance-result__icon">✈️</span>
+      <span class="distance-result__text">直线</span>
+      <span class="distance-result__value">${straightKm.toFixed(0)} km</span>
+    </div>
+    <div class="distance-row distance-row--loading">
+      <span class="distance-result__icon">🚗</span>
+      <span class="distance-result__text">公路</span>
+      <span class="distance-result__value">计算中...</span>
+    </div>
   `;
   distanceResult.classList.add("distance-result--visible");
   
-  // 在地图上显示两个点并调整视野
-  mapAdapter.showDistanceLine && mapAdapter.showDistanceLine(state.pointA, state.pointB);
+  // 在地图上显示路线
+  mapAdapter.showDistanceLine && await mapAdapter.showDistanceLine(state.pointA, state.pointB);
+  
+  // 尝试获取公路距离
+  try {
+    const url = `https://router.project-osrm.org/route/v1/driving/${state.pointA.lng},${state.pointA.lat};${state.pointB.lng},${state.pointB.lat}?overview=false`;
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    if (data.code === 'Ok' && data.routes && data.routes.length > 0) {
+      const routeKm = (data.routes[0].distance / 1000).toFixed(0);
+      const routeHours = Math.floor(data.routes[0].duration / 3600);
+      const routeMins = Math.floor((data.routes[0].duration % 3600) / 60);
+      const timeStr = routeHours > 0 ? `${routeHours}h ${routeMins}m` : `${routeMins}m`;
+      
+      distanceResult.innerHTML = `
+        <div class="distance-row">
+          <span class="distance-result__icon">✈️</span>
+          <span class="distance-result__text">直线</span>
+          <span class="distance-result__value">${straightKm.toFixed(0)} km</span>
+        </div>
+        <div class="distance-row">
+          <span class="distance-result__icon">🚗</span>
+          <span class="distance-result__text">公路</span>
+          <span class="distance-result__value">${routeKm} km (${timeStr})</span>
+        </div>
+      `;
+    } else {
+      // 无法获取公路距离（可能是跨洋等）
+      distanceResult.innerHTML = `
+        <div class="distance-row">
+          <span class="distance-result__icon">✈️</span>
+          <span class="distance-result__text">直线</span>
+          <span class="distance-result__value">${straightKm.toFixed(0)} km</span>
+        </div>
+        <div class="distance-row distance-row--unavailable">
+          <span class="distance-result__icon">🚗</span>
+          <span class="distance-result__text">公路</span>
+          <span class="distance-result__value">无陆路</span>
+        </div>
+      `;
+    }
+  } catch (error) {
+    console.warn('获取公路距离失败:', error);
+  }
 }
 
 // ========== 机场/港口搜索 ==========

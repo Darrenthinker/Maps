@@ -781,20 +781,40 @@ body {
 
 .distance-result--visible {
   display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.distance-row {
+  display: flex;
   align-items: center;
   gap: 8px;
 }
 
+.distance-row--loading .distance-result__value {
+  color: #94a3b8;
+}
+
+.distance-row--unavailable .distance-result__value {
+  color: #94a3b8;
+  font-style: italic;
+}
+
 .distance-result__icon {
-  font-size: 16px;
+  font-size: 14px;
+  width: 20px;
+  text-align: center;
 }
 
 .distance-result__text {
-  flex: 1;
+  font-size: 13px;
+  color: #64748b;
+  width: 40px;
 }
 
 .distance-result__value {
   font-weight: 600;
   color: #2563eb;
+  margin-left: auto;
 }
 

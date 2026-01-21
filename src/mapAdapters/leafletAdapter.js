@@ -219,13 +219,15 @@ export function createLeafletAdapter(mapId) {
     return R * c;
   }
 
-  function showDistanceLine(pointA, pointB) {
+  // 路线线条
+  let routeLine = null;
+
+  async function showDistanceLine(pointA, pointB) {
     // 清除之前的标记和线
     clearDistanceLine();
 
-    // 计算距离
-    const distanceKm = calcDistance(pointA.lat, pointA.lng, pointB.lat, pointB.lng);
-    const distanceMi = distanceKm * 0.621371;
+    // 计算直线距离
+    const straightKm = calcDistance(pointA.lat, pointA.lng, pointB.lat, pointB.lng);
 
     // 创建 A 点标记（红色📍）
     const iconA = L.divIcon({
@@ -243,28 +245,79 @@ export function createLeafletAdapter(mapId) {
     distanceMarkerB = L.marker([pointB.lat, pointB.lng], { icon: iconB }).addTo(map);
     distanceMarkerB.bindPopup(`<strong>🅱️ 终点</strong><br/>${pointB.name}`);
 
-    // 创建连接线（虚线）
-    distanceLine = L.polyline(
-      [[pointA.lat, pointA.lng], [pointB.lat, pointB.lng]],
-      {
-        color: '#2563eb',
-        weight: 3,
-        opacity: 0.8,
-        dashArray: '10, 8',
-        lineCap: 'round'
+    // 尝试获取公路距离
+    let routeDistance = null;
+    let routeCoords = null;
+    
+    try {
+      // 使用 OSRM Demo API 获取驾驶路线
+      const url = `https://router.project-osrm.org/route/v1/driving/${pointA.lng},${pointA.lat};${pointB.lng},${pointB.lat}?overview=full&geometries=geojson`;
+      const response = await fetch(url);
+      const data = await response.json();
+      
+      if (data.code === 'Ok' && data.routes && data.routes.length > 0) {
+        routeDistance = data.routes[0].distance / 1000; // 米转公里
+        routeCoords = data.routes[0].geometry.coordinates.map(c => [c[1], c[0]]); // [lng,lat] -> [lat,lng]
       }
-    ).addTo(map);
+    } catch (error) {
+      console.warn('获取路线失败，使用直线距离:', error);
+    }
 
-    // 在线的中点添加距离标签
-    const midLat = (pointA.lat + pointB.lat) / 2;
-    const midLng = (pointA.lng + pointB.lng) / 2;
-    const labelIcon = L.divIcon({
-      className: "distance-label",
-      html: `${Math.round(distanceKm)} km`,
-      iconSize: [80, 24],
-      iconAnchor: [40, 12]
-    });
-    distanceLabel = L.marker([midLat, midLng], { icon: labelIcon, interactive: false }).addTo(map);
+    // 如果有路线数据，显示实际路线；否则显示直线
+    if (routeCoords && routeCoords.length > 0) {
+      // 显示实际公路路线（蓝色实线）
+      routeLine = L.polyline(routeCoords, {
+        color: '#2563eb',
+        weight: 4,
+        opacity: 0.8
+      }).addTo(map);
+
+      // 同时显示直线（淡色虚线）
+      distanceLine = L.polyline(
+        [[pointA.lat, pointA.lng], [pointB.lat, pointB.lng]],
+        {
+          color: '#94a3b8',
+          weight: 2,
+          opacity: 0.5,
+          dashArray: '5, 5'
+        }
+      ).addTo(map);
+
+      // 在路线中点添加距离标签（显示公路距离）
+      const midIndex = Math.floor(routeCoords.length / 2);
+      const midPoint = routeCoords[midIndex];
+      const labelIcon = L.divIcon({
+        className: "distance-label",
+        html: `🚗 ${Math.round(routeDistance)} km`,
+        iconSize: [100, 24],
+        iconAnchor: [50, 12]
+      });
+      distanceLabel = L.marker(midPoint, { icon: labelIcon, interactive: false }).addTo(map);
+
+    } else {
+      // 只显示直线
+      distanceLine = L.polyline(
+        [[pointA.lat, pointA.lng], [pointB.lat, pointB.lng]],
+        {
+          color: '#2563eb',
+          weight: 3,
+          opacity: 0.8,
+          dashArray: '10, 8',
+          lineCap: 'round'
+        }
+      ).addTo(map);
+
+      // 在线的中点添加距离标签
+      const midLat = (pointA.lat + pointB.lat) / 2;
+      const midLng = (pointA.lng + pointB.lng) / 2;
+      const labelIcon = L.divIcon({
+        className: "distance-label",
+        html: `✈️ ${Math.round(straightKm)} km`,
+        iconSize: [100, 24],
+        iconAnchor: [50, 12]
+      });
+      distanceLabel = L.marker([midLat, midLng], { icon: labelIcon, interactive: false }).addTo(map);
+    }
 
     // 调整视野让两个点都可见
     const bounds = L.latLngBounds(
@@ -286,6 +339,10 @@ export function createLeafletAdapter(mapId) {
     if (distanceLine) {
       map.removeLayer(distanceLine);
       distanceLine = null;
+    }
+    if (routeLine) {
+      map.removeLayer(routeLine);
+      routeLine = null;
     }
     if (distanceLabel) {
       map.removeLayer(distanceLabel);
