@@ -182,21 +182,21 @@ export function createLeafletAdapter(mapId) {
     // 清除之前的标记和线
     clearDistanceLine();
 
-    // 创建 A 点标记（蓝色）
+    // 创建 A 点标记（红色📍）
     const iconA = L.divIcon({
-      className: "marker marker-distance-a",
-      html: "A"
+      className: "marker marker-address marker-point-a",
+      html: "📍"
     });
     distanceMarkerA = L.marker([pointA.lat, pointA.lng], { icon: iconA }).addTo(map);
-    distanceMarkerA.bindPopup(`<strong>起点</strong><br/>${pointA.name}`);
+    distanceMarkerA.bindPopup(`<strong>🅰️ 起点</strong><br/>${pointA.name}`);
 
-    // 创建 B 点标记（绿色）
+    // 创建 B 点标记（绿色📍）
     const iconB = L.divIcon({
-      className: "marker marker-distance-b",
-      html: "B"
+      className: "marker marker-address marker-point-b",
+      html: "📍"
     });
     distanceMarkerB = L.marker([pointB.lat, pointB.lng], { icon: iconB }).addTo(map);
-    distanceMarkerB.bindPopup(`<strong>终点</strong><br/>${pointB.name}`);
+    distanceMarkerB.bindPopup(`<strong>🅱️ 终点</strong><br/>${pointB.name}`);
 
     // 创建连接线（虚线）
     distanceLine = L.polyline(
