@@ -20,7 +20,7 @@ export function createLeafletAdapter(mapId) {
   // 将缩放控件添加到右下角（类似谷歌地图）
   L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-  // 定义多个瓦片源，按优先级排列（国内访问友好）
+  // 定义多个瓦片源，按优先级排列
   const tileSources = [
     // 主源：Carto Voyager（全球 CDN）
     {
@@ -31,16 +31,25 @@ export function createLeafletAdapter(mapId) {
         subdomains: 'abcd'
       }
     },
-    // 备用源1：Carto Light（更轻量）
+    // 备用源1：OSM DE 服务器（德国，稳定）
     {
-      url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+      url: "https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png",
       options: {
         maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-        subdomains: 'abcd'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        subdomains: 'abc'
       }
     },
-    // 备用源2：OSM 官方 CDN
+    // 备用源2：OSM FR 服务器（法国，稳定）
+    {
+      url: "https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png",
+      options: {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        subdomains: 'abc'
+      }
+    },
+    // 备用源3：OSM 官方
     {
       url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
       options: {
@@ -61,24 +70,43 @@ export function createLeafletAdapter(mapId) {
       ...source.options,
       noWrap: false,
       bounds: bounds,
-      crossOrigin: true,
-      errorTileUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==' // 透明1x1像素
+      crossOrigin: true
     });
+
+    // 瓦片重试机制
+    const retryCount = new Map(); // 记录每个瓦片的重试次数
+    const MAX_RETRIES = 3;
 
     // 监听瓦片加载错误
     layer.on('tileerror', function(e) {
-      failedTiles++;
-      console.warn(`瓦片加载失败 (${failedTiles}/${MAX_FAILED_TILES}):`, e.tile.src);
+      const tile = e.tile;
+      const src = tile.src;
       
-      // 如果失败次数过多，切换到备用源
-      if (failedTiles >= MAX_FAILED_TILES && currentSourceIndex < tileSources.length - 1) {
-        console.log('切换到备用瓦片源...');
-        switchToNextSource();
+      // 获取当前重试次数
+      const currentRetry = retryCount.get(src) || 0;
+      
+      if (currentRetry < MAX_RETRIES) {
+        // 延迟重试
+        retryCount.set(src, currentRetry + 1);
+        setTimeout(() => {
+          tile.src = src; // 重新加载瓦片
+        }, 500 * (currentRetry + 1)); // 递增延迟：500ms, 1000ms, 1500ms
+      } else {
+        // 超过重试次数，计入失败
+        failedTiles++;
+        console.warn(`瓦片加载失败 (重试${MAX_RETRIES}次后):`, src);
+        
+        // 如果失败次数过多，切换到备用源
+        if (failedTiles >= MAX_FAILED_TILES && currentSourceIndex < tileSources.length - 1) {
+          console.log('切换到备用瓦片源...');
+          switchToNextSource();
+        }
       }
     });
 
-    // 瓦片加载成功时重置计数
-    layer.on('tileload', function() {
+    // 瓦片加载成功时清除重试记录
+    layer.on('tileload', function(e) {
+      retryCount.delete(e.tile.src);
       failedTiles = Math.max(0, failedTiles - 1);
     });
 
