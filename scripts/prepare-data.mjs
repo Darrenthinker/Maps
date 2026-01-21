@@ -70,6 +70,8 @@ function buildAirports() {
       if (!code) return null;
       const countryCode = row.iso_country;
       const countryCn = COUNTRY_CN[countryCode] || "";
+      // large_airport 通常是国际机场
+      const isInternational = row.type === "large_airport";
       return {
         id: `a-${code}`.toLowerCase(),
         code,
@@ -78,7 +80,8 @@ function buildAirports() {
         country: countryCn ? `${countryCode} ${countryCn}` : countryCode,
         city: row.municipality || "",
         lat: Math.round(lat * 10000) / 10000,
-        lng: Math.round(lng * 10000) / 10000
+        lng: Math.round(lng * 10000) / 10000,
+        intl: isInternational ? 1 : 0  // 1=国际, 0=国内
       };
     })
     .filter(Boolean);

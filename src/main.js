@@ -77,12 +77,12 @@ function checkRemoteArea(zipCode) {
   
   // 检查州前缀（阿拉斯加、夏威夷、波多黎各通常都是偏远）
   const prefixes = state.remoteAreas.state_prefixes;
-  for (const [state, prefixList] of Object.entries(prefixes || {})) {
+  for (const [stateName, prefixList] of Object.entries(prefixes || {})) {
     if (prefixList.some(p => zip.startsWith(p))) {
       return { 
         isRemote: true, 
         carriers: ['UPS', 'FedEx', 'DHL'],
-        note: `${state} 地区通常需要偏远附加费`
+        note: `${stateName} 地区通常需要偏远附加费`
       };
     }
   }
@@ -305,12 +305,24 @@ async function selectPlace(placeId, description) {
         html += `
           <div class="address-result__nearby">
             <div class="address-result__nearby-title">📦 附近的机场/港口：</div>
-            ${nearby.map(node => `
-              <div class="address-result__nearby-item" data-id="${node.id}">
-                ${node.type === "airport" ? "✈️" : "🚢"} ${node.code} · ${node.name}
-                <span style="color: #64748b; font-size: 11px;">(${node.distance.toFixed(0)} km)</span>
-              </div>
-            `).join("")}
+            ${nearby.map(node => {
+              // 区分国际/国内机场
+              let icon = "🚢";
+              let typeLabel = "";
+              if (node.type === "airport") {
+                icon = node.intl ? "🌍" : "✈️";
+                typeLabel = node.intl ? "国际" : "国内";
+              }
+              return `
+                <div class="address-result__nearby-item" data-id="${node.id}" data-lat="${node.lat}" data-lng="${node.lng}" data-name="${node.name}">
+                  <span class="nearby-icon">${icon}</span>
+                  <span class="nearby-code">${node.code}</span>
+                  <span class="nearby-name">${node.name}</span>
+                  ${typeLabel ? `<span class="nearby-type">${typeLabel}</span>` : ''}
+                  <span class="nearby-distance">${node.distance.toFixed(0)} km</span>
+                </div>
+              `;
+            }).join("")}
           </div>
         `;
       }
@@ -318,15 +330,24 @@ async function selectPlace(placeId, description) {
       addressResult.innerHTML = html;
       addressResult.className = "address-result address-result--visible";
       
-      // 绑定附近项点击事件
+      // 绑定附近项点击事件 - 显示测距线
       addressResult.querySelectorAll(".address-result__nearby-item").forEach(item => {
         item.addEventListener("click", () => {
           const node = state.allNodes.find(n => n.id === item.dataset.id);
-          if (node) {
-            mapAdapter.focusOn(node);
+          if (node && state.pointA) {
+            // 显示从搜索地址到机场/港口的距离线
+            const pointB = {
+              lat: node.lat,
+              lng: node.lng,
+              name: node.name
+            };
+            mapAdapter.showDistanceLine(state.pointA, pointB);
+            
             if (window.innerWidth <= 768) {
-              app.classList.add("app--collapsed");
+              app.classList.remove("app--sidebar-open");
             }
+          } else if (node) {
+            mapAdapter.focusOn(node);
           }
         });
       });
@@ -516,7 +537,6 @@ function applyFilters() {
   
   // 限制地图标记数量，大幅提升加载速度
   // 有搜索词时显示更多，无搜索词时只显示少量
-  const query = searchInput.value.trim();
   const maxMarkers = query ? 1000 : 300; // 搜索时1000个，默认只300个
   const mapNodes = filtered.slice(0, maxMarkers);
   mapAdapter.setMarkers(mapNodes);

@@ -70,10 +70,7 @@ export function createLeafletAdapter(mapId) {
       ...source.options,
       noWrap: false,
       bounds: bounds,
-      crossOrigin: true,
-      useCache: true,           // 启用缓存
-      crossOrigin: 'anonymous', // 允许缓存跨域瓦片
-      cacheMaxAge: 86400 * 7    // 缓存7天
+      crossOrigin: 'anonymous'
     });
 
     // 瓦片重试机制
@@ -208,10 +205,27 @@ export function createLeafletAdapter(mapId) {
   let distanceMarkerA = null;
   let distanceMarkerB = null;
   let distanceLine = null;
+  let distanceLabel = null;
+
+  // 计算两点距离（公里）
+  function calcDistance(lat1, lng1, lat2, lng2) {
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLng = (lng2 - lng1) * Math.PI / 180;
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+      Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+  }
 
   function showDistanceLine(pointA, pointB) {
     // 清除之前的标记和线
     clearDistanceLine();
+
+    // 计算距离
+    const distanceKm = calcDistance(pointA.lat, pointA.lng, pointB.lat, pointB.lng);
+    const distanceMi = distanceKm * 0.621371;
 
     // 创建 A 点标记（红色📍）
     const iconA = L.divIcon({
@@ -241,6 +255,17 @@ export function createLeafletAdapter(mapId) {
       }
     ).addTo(map);
 
+    // 在线的中点添加距离标签
+    const midLat = (pointA.lat + pointB.lat) / 2;
+    const midLng = (pointA.lng + pointB.lng) / 2;
+    const labelIcon = L.divIcon({
+      className: "distance-label",
+      html: `${Math.round(distanceKm)} km`,
+      iconSize: [80, 24],
+      iconAnchor: [40, 12]
+    });
+    distanceLabel = L.marker([midLat, midLng], { icon: labelIcon, interactive: false }).addTo(map);
+
     // 调整视野让两个点都可见
     const bounds = L.latLngBounds(
       [pointA.lat, pointA.lng],
@@ -261,6 +286,10 @@ export function createLeafletAdapter(mapId) {
     if (distanceLine) {
       map.removeLayer(distanceLine);
       distanceLine = null;
+    }
+    if (distanceLabel) {
+      map.removeLayer(distanceLabel);
+      distanceLabel = null;
     }
   }
 
