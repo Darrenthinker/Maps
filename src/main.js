@@ -35,8 +35,70 @@ const state = {
   // 两地距离状态
   distanceMode: false,
   pointA: null, // { lat, lng, name }
-  pointB: null  // { lat, lng, name }
+  pointB: null,  // { lat, lng, name }
+  // 偏远地区数据
+  remoteAreas: null
 };
+
+// 加载偏远地区数据
+async function loadRemoteAreas() {
+  try {
+    const response = await fetch('/data/remote-areas.json');
+    state.remoteAreas = await response.json();
+  } catch (error) {
+    console.warn('偏远地区数据加载失败:', error);
+  }
+}
+
+// 判断 ZIP Code 是否为偏远地区
+function checkRemoteArea(zipCode) {
+  if (!state.remoteAreas || !zipCode) {
+    return { isRemote: false, carriers: [] };
+  }
+  
+  const zip = zipCode.toString().trim();
+  const zip3 = zip.substring(0, 3);
+  const carriers = [];
+  
+  // 检查 UPS 偏远地区
+  if (state.remoteAreas.ups_extended?.includes(zip)) {
+    carriers.push('UPS');
+  }
+  
+  // 检查 FedEx DAS
+  if (state.remoteAreas.fedex_das?.includes(zip)) {
+    carriers.push('FedEx');
+  }
+  
+  // 检查 FedEx DAS Extended（更偏远）
+  if (state.remoteAreas.fedex_das_extended?.includes(zip)) {
+    if (!carriers.includes('FedEx')) carriers.push('FedEx');
+  }
+  
+  // 检查州前缀（阿拉斯加、夏威夷、波多黎各通常都是偏远）
+  const prefixes = state.remoteAreas.state_prefixes;
+  for (const [state, prefixList] of Object.entries(prefixes || {})) {
+    if (prefixList.some(p => zip.startsWith(p))) {
+      return { 
+        isRemote: true, 
+        carriers: ['UPS', 'FedEx', 'DHL'],
+        note: `${state} 地区通常需要偏远附加费`
+      };
+    }
+  }
+  
+  return {
+    isRemote: carriers.length > 0,
+    carriers
+  };
+}
+
+// 从地址中提取 ZIP Code
+function extractZipCode(address) {
+  // 美国 ZIP Code 格式：5位数字 或 5位-4位
+  const match = address.match(/\b(\d{5})(-\d{4})?\b/);
+  return match ? match[1] : null;
+}
 
 // Fuse.js 配置 - 支持模糊搜索
 const fuseOptions = {
@@ -212,10 +274,32 @@ async function selectPlace(placeId, description) {
       // 查找附近的机场/港口
       const nearby = findNearby(lat, lng, 5);
       
+      // 检查偏远地区
+      const zipCode = extractZipCode(name);
+      const remoteCheck = checkRemoteArea(zipCode);
+      
       // 显示结果
       let html = `
         <div class="address-result__title">📍 ${name}</div>
       `;
+      
+      // 显示偏远地区状态
+      if (zipCode) {
+        if (remoteCheck.isRemote) {
+          html += `
+            <div class="address-result__remote address-result__remote--warning">
+              ⚠️ 偏远地区 ${remoteCheck.carriers.length > 0 ? `(${remoteCheck.carriers.join('/')})` : ''}
+              ${remoteCheck.note ? `<br><span style="font-size:11px;">${remoteCheck.note}</span>` : ''}
+            </div>
+          `;
+        } else {
+          html += `
+            <div class="address-result__remote address-result__remote--ok">
+              ✅ 非偏远地区
+            </div>
+          `;
+        }
+      }
       
       if (nearby.length > 0) {
         html += `
@@ -572,6 +656,7 @@ async function loadData() {
 
 wireEvents();
 loadData();
+loadRemoteAreas(); // 加载偏远地区数据
 
 // 注册 Service Worker 缓存瓦片
 if ('serviceWorker' in navigator) {
