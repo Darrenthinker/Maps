@@ -603,3 +603,93 @@ body {
   }
 }
 
+/* ========== 两地距离测量 ========== */
+.address-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.address-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.address-input-row input {
+  flex: 1;
+}
+
+.address-label {
+  font-size: 16px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.distance-toggle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: #f8fafc;
+  font-size: 18px;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.distance-toggle-btn:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+  color: #334155;
+}
+
+.distance-toggle-btn--active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+.distance-toggle-btn--active:hover {
+  background: #1d4ed8;
+}
+
+.address-input-row--hidden {
+  display: none;
+}
+
+.distance-result {
+  display: none;
+  padding: 10px 12px;
+  background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+  border-radius: 10px;
+  font-size: 14px;
+  color: #0f172a;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.distance-result--visible {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.distance-result__icon {
+  font-size: 16px;
+}
+
+.distance-result__text {
+  flex: 1;
+}
+
+.distance-result__value {
+  font-weight: 600;
+  color: #2563eb;
+}
+

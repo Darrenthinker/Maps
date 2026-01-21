@@ -19,12 +19,22 @@ const addressSearch = document.getElementById("addressSearch");
 const addressInput = document.getElementById("addressInput");
 const addressResult = document.getElementById("addressResult");
 
+// 两地距离相关元素
+const toggleDistanceBtn = document.getElementById("toggleDistanceBtn");
+const addressInputBRow = document.getElementById("addressInputB");
+const addressInputB = document.getElementById("addressInputB_field");
+const distanceResult = document.getElementById("distanceResult");
+
 const mapAdapter = createMapAdapter("map", "leaflet");
 
 const state = {
   allNodes: [],
   filteredNodes: [],
-  addressMarker: null
+  addressMarker: null,
+  // 两地距离状态
+  distanceMode: false,
+  pointA: null, // { lat, lng, name }
+  pointB: null  // { lat, lng, name }
 };
 
 // Fuse.js 配置 - 支持模糊搜索
@@ -88,7 +98,8 @@ function createAutocompleteDropdown() {
   autocompleteDropdown = document.createElement("div");
   autocompleteDropdown.className = "autocomplete-dropdown";
   autocompleteDropdown.style.display = "none";
-  addressInput.parentNode.appendChild(autocompleteDropdown);
+  // 将下拉框添加到地址搜索面板
+  document.getElementById("addressSearch").appendChild(autocompleteDropdown);
 }
 
 // 显示自动补全建议
@@ -143,9 +154,34 @@ async function fetchAutocompleteSuggestions(input) {
 
 // 选择地点并获取详情
 async function selectPlace(placeId, description) {
+  // 判断是哪个输入框
+  const isPointB = state.distanceMode && currentInputTarget === 'B';
+  const targetInput = isPointB ? addressInputB : addressInput;
+  
   // 先更新输入框并隐藏下拉框
-  addressInput.value = description;
+  targetInput.value = description;
   autocompleteDropdown.style.display = "none";
+  
+  // 如果是点B，只获取坐标不显示详情
+  if (isPointB) {
+    try {
+      const response = await fetch(`/api/places-details?place_id=${encodeURIComponent(placeId)}`);
+      const data = await response.json();
+      
+      if (data.status === "OK" && data.result) {
+        const place = data.result;
+        state.pointB = {
+          lat: place.geometry.location.lat,
+          lng: place.geometry.location.lng,
+          name: place.formatted_address || place.name
+        };
+        calculateAndShowDistance();
+      }
+    } catch (error) {
+      console.error("Failed to fetch place details:", error);
+    }
+    return;
+  }
   
   // 显示加载状态
   addressResult.innerHTML = '<div class="address-result__title">🔄 获取位置信息...</div>';
@@ -160,6 +196,14 @@ async function selectPlace(placeId, description) {
       const lat = place.geometry.location.lat;
       const lng = place.geometry.location.lng;
       const name = place.formatted_address || place.name;
+      
+      // 保存点A坐标（用于测距）
+      state.pointA = { lat, lng, name };
+      
+      // 如果测距模式开启且点B已设置，重新计算距离
+      if (state.distanceMode && state.pointB) {
+        calculateAndShowDistance();
+      }
       
       // 在地图上显示位置
       mapAdapter.focusOnCoords(lat, lng, 12);
@@ -217,6 +261,7 @@ function initAddressSearch() {
   // 输入事件 - 带防抖
   addressInput.addEventListener("input", () => {
     clearTimeout(autocompleteDebounce);
+    currentInputTarget = 'A';
     autocompleteDebounce = setTimeout(() => {
       fetchAutocompleteSuggestions(addressInput.value);
     }, 300); // 300ms 防抖，减少请求频率
@@ -224,6 +269,7 @@ function initAddressSearch() {
   
   // 聚焦时如果有内容也显示建议
   addressInput.addEventListener("focus", () => {
+    currentInputTarget = 'A';
     if (addressInput.value.trim().length >= 2) {
       fetchAutocompleteSuggestions(addressInput.value);
     }
@@ -231,7 +277,9 @@ function initAddressSearch() {
   
   // 点击外部关闭下拉框
   document.addEventListener("click", (e) => {
-    if (!addressInput.contains(e.target) && !autocompleteDropdown.contains(e.target)) {
+    if (!addressInput.contains(e.target) && 
+        !addressInputB.contains(e.target) && 
+        !autocompleteDropdown.contains(e.target)) {
       autocompleteDropdown.style.display = "none";
     }
   });
@@ -266,6 +314,90 @@ function initAddressSearch() {
       item.classList.toggle("autocomplete-item--selected", i === selectedIndex);
     });
   }
+  
+  // ========== 两地距离功能 ==========
+  
+  // 切换测距模式
+  toggleDistanceBtn.addEventListener("click", () => {
+    state.distanceMode = !state.distanceMode;
+    toggleDistanceBtn.textContent = state.distanceMode ? "−" : "+";
+    toggleDistanceBtn.classList.toggle("distance-toggle-btn--active", state.distanceMode);
+    addressInputBRow.classList.toggle("address-input-row--hidden", !state.distanceMode);
+    
+    if (!state.distanceMode) {
+      // 关闭测距模式时清空
+      addressInputB.value = "";
+      state.pointB = null;
+      distanceResult.classList.remove("distance-result--visible");
+    }
+  });
+  
+  // 第二个地址输入框事件
+  addressInputB.addEventListener("input", () => {
+    clearTimeout(autocompleteDebounce);
+    currentInputTarget = 'B';
+    autocompleteDebounce = setTimeout(() => {
+      fetchAutocompleteSuggestions(addressInputB.value);
+    }, 300);
+  });
+  
+  addressInputB.addEventListener("focus", () => {
+    currentInputTarget = 'B';
+    if (addressInputB.value.trim().length >= 2) {
+      fetchAutocompleteSuggestions(addressInputB.value);
+    }
+  });
+  
+  // B输入框键盘导航
+  addressInputB.addEventListener("keydown", (e) => {
+    const items = autocompleteDropdown.querySelectorAll(".autocomplete-item:not(.autocomplete-item--empty)");
+    if (items.length === 0) return;
+    
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      selectedIndex = Math.min(selectedIndex + 1, items.length - 1);
+      updateSelection(items);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      selectedIndex = Math.max(selectedIndex - 1, 0);
+      updateSelection(items);
+    } else if (e.key === "Enter" && selectedIndex >= 0) {
+      e.preventDefault();
+      const item = items[selectedIndex];
+      selectPlace(item.dataset.placeId, item.querySelector(".autocomplete-item__text").textContent);
+      selectedIndex = -1;
+    } else if (e.key === "Escape") {
+      autocompleteDropdown.style.display = "none";
+      selectedIndex = -1;
+    }
+  });
+}
+
+// 当前输入的目标（A 或 B）
+let currentInputTarget = 'A';
+
+// 计算并显示两地距离
+function calculateAndShowDistance() {
+  if (!state.pointA || !state.pointB) return;
+  
+  const distance = getDistance(
+    state.pointA.lat, state.pointA.lng,
+    state.pointB.lat, state.pointB.lng
+  );
+  
+  // 显示距离（公里和英里）
+  const km = distance.toFixed(0);
+  const miles = (distance * 0.621371).toFixed(0);
+  
+  distanceResult.innerHTML = `
+    <span class="distance-result__icon">📏</span>
+    <span class="distance-result__text">直线距离</span>
+    <span class="distance-result__value">${km} km (${miles} mi)</span>
+  `;
+  distanceResult.classList.add("distance-result--visible");
+  
+  // 在地图上显示两个点并调整视野
+  mapAdapter.showDistanceLine && mapAdapter.showDistanceLine(state.pointA, state.pointB);
 }
 
 // ========== 机场/港口搜索 ==========

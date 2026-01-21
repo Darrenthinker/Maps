@@ -59,7 +59,18 @@
             </div>
           </div>
           <div id="addressSearch" class="search-panel search-panel--hidden">
-            <input id="addressInput" type="text" placeholder="输入地址，自动联想..." autocomplete="off" />
+            <div class="address-input-group">
+              <div class="address-input-row">
+                <span class="address-label">🅰️</span>
+                <input id="addressInput" type="text" placeholder="输入地址，自动联想..." autocomplete="off" />
+                <button id="toggleDistanceBtn" class="distance-toggle-btn" type="button" title="测量两地距离">+</button>
+              </div>
+              <div id="addressInputB" class="address-input-row address-input-row--hidden">
+                <span class="address-label">🅱️</span>
+                <input id="addressInputB_field" type="text" placeholder="输入目的地..." autocomplete="off" />
+              </div>
+              <div id="distanceResult" class="distance-result"></div>
+            </div>
             <div id="addressResult" class="address-result"></div>
           </div>
           <!-- 3D地球模式：后续使用 Google Maps API 时启用 -->
