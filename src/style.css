@@ -654,15 +654,15 @@ body {
 /* 关闭测距按钮（X）- 绝对定位在输入框内右侧 */
 .distance-close-btn {
   position: absolute;
-  right: 8px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
   border: none;
   background: transparent;
-  color: #b0b8c4;
+  color: #94a3b8;
   cursor: pointer;
   transition: all 0.15s ease;
   display: flex;
@@ -676,8 +676,8 @@ body {
 }
 
 .distance-close-btn svg {
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
 }
 
 .address-input-row--hidden {
