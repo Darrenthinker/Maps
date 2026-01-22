@@ -305,7 +305,7 @@ async function selectPlace(placeId, description) {
         html += `
           <div class="address-result__nearby">
             <div class="address-result__nearby-title">📦 附近的机场/港口：</div>
-            ${nearby.map(node => {
+            ${nearby.map((node, index) => {
               // 区分国际/国内机场
               let icon = "🚢";
               let typeLabel = "";
@@ -319,12 +319,33 @@ async function selectPlace(placeId, description) {
                   <span class="nearby-code">${node.code}</span>
                   <span class="nearby-name">${node.name}</span>
                   ${typeLabel ? `<span class="nearby-type">${typeLabel}</span>` : ''}
-                  <span class="nearby-distance">${node.distance.toFixed(0)} km</span>
+                  <span class="nearby-distance" id="nearby-dist-${index}">${node.distance.toFixed(0)} km</span>
                 </div>
               `;
             }).join("")}
           </div>
         `;
+      }
+      
+      // 异步获取运输距离并更新显示
+      if (nearby.length > 0) {
+        nearby.forEach(async (node, index) => {
+          try {
+            const url = `https://router.project-osrm.org/route/v1/driving/${lng},${lat};${node.lng},${node.lat}?overview=false`;
+            const response = await fetch(url);
+            const data = await response.json();
+            
+            if (data.code === 'Ok' && data.routes && data.routes.length > 0) {
+              const routeKm = Math.round(data.routes[0].distance / 1000);
+              const distEl = document.getElementById(`nearby-dist-${index}`);
+              if (distEl) {
+                distEl.textContent = `${routeKm} km`;
+              }
+            }
+          } catch (error) {
+            // 保持直线距离显示
+          }
+        });
       }
       
       addressResult.innerHTML = html;
