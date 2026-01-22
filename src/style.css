@@ -665,6 +665,24 @@ body {
   bottom: 33vh; /* 距离底部1/3，即在2/3位置 */
 }
 
+/* 版权信息 - 移到最下角，缩小显示 */
+.leaflet-control-attribution {
+  position: fixed !important;
+  bottom: 4px !important;
+  right: 4px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  padding: 2px 6px !important;
+  font-size: 9px !important;
+  color: #888 !important;
+  border-radius: 4px !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.leaflet-control-attribution a {
+  color: #666 !important;
+}
+
 /* ========== 移动端优化 ========== */
 @media (max-width: 768px) {
   .app {
