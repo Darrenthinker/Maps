@@ -445,6 +445,8 @@ function initAddressSearch() {
     state.distanceMode = true;
     toggleDistanceBtn.classList.add("distance-add-btn--hidden");
     addressInputBRow.classList.remove("address-input-row--hidden");
+    // 隐藏附近机场/港口信息
+    addressResult.classList.remove("address-result--visible");
     addressInputB.focus();
   });
   
@@ -458,6 +460,10 @@ function initAddressSearch() {
     distanceResult.classList.remove("distance-result--visible");
     // 清除地图上的距离线和标记
     mapAdapter.clearDistanceLine && mapAdapter.clearDistanceLine();
+    // 恢复显示附近机场/港口信息（如果有内容）
+    if (addressResult.innerHTML.trim()) {
+      addressResult.classList.add("address-result--visible");
+    }
   }
   
   closeDistanceBtn.addEventListener("click", closeDistanceMode);
