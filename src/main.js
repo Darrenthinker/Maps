@@ -306,13 +306,9 @@ async function selectPlace(placeId, description) {
           <div class="address-result__nearby">
             <div class="address-result__nearby-title">📦 附近的机场/港口：</div>
             ${nearby.map((node, index) => {
-              // 区分国际/国内机场
-              let icon = "🚢";
-              let typeLabel = "";
-              if (node.type === "airport") {
-                icon = node.intl ? "🌍" : "✈️";
-                typeLabel = node.intl ? "国际" : "国内";
-              }
+              // 机场用飞机，港口用轮船
+              const icon = node.type === "airport" ? "✈️" : "🚢";
+              const typeLabel = node.intl ? "国际" : "国内";
               return `
                 <div class="address-result__nearby-item" data-id="${node.id}" data-lat="${node.lat}" data-lng="${node.lng}" data-name="${node.name}">
                   <span class="nearby-icon">${icon}</span>
