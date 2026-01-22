@@ -513,13 +513,36 @@ body {
   justify-content: center;
 }
 
-/* 两地距离标记 */
-.marker-point-a {
-  filter: hue-rotate(0deg); /* 红色 📍 */
+/* 两地距离端点标记 */
+.distance-point {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 3px solid #ffffff;
 }
 
-.marker-point-b {
-  filter: hue-rotate(100deg); /* 绿色 📍 */
+.distance-point span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.distance-point-a {
+  background: #1e40af; /* 深蓝色 */
+}
+
+.distance-point-b {
+  background: #059669; /* 绿色 */
 }
 
 /* 距离标签（显示在虚线上） */

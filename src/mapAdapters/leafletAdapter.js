@@ -229,21 +229,25 @@ export function createLeafletAdapter(mapId) {
     // 计算直线距离
     const straightKm = calcDistance(pointA.lat, pointA.lng, pointB.lat, pointB.lng);
 
-    // 创建 A 点标记（红色📍）
+    // 创建 A 点标记（起点 - 深蓝色圆点）
     const iconA = L.divIcon({
-      className: "marker marker-address marker-point-a",
-      html: "📍"
+      className: "distance-point distance-point-a",
+      html: "<span>A</span>",
+      iconSize: [32, 32],
+      iconAnchor: [16, 16]
     });
     distanceMarkerA = L.marker([pointA.lat, pointA.lng], { icon: iconA }).addTo(map);
-    distanceMarkerA.bindPopup(`<strong>🅰️ 起点</strong><br/>${pointA.name}`);
+    distanceMarkerA.bindPopup(`<strong>起点</strong><br/>${pointA.name}`);
 
-    // 创建 B 点标记（绿色📍）
+    // 创建 B 点标记（终点 - 绿色圆点）
     const iconB = L.divIcon({
-      className: "marker marker-address marker-point-b",
-      html: "📍"
+      className: "distance-point distance-point-b",
+      html: "<span>B</span>",
+      iconSize: [32, 32],
+      iconAnchor: [16, 16]
     });
     distanceMarkerB = L.marker([pointB.lat, pointB.lng], { icon: iconB }).addTo(map);
-    distanceMarkerB.bindPopup(`<strong>🅱️ 终点</strong><br/>${pointB.name}`);
+    distanceMarkerB.bindPopup(`<strong>终点</strong><br/>${pointB.name}`);
 
     // 尝试获取公路距离
     let routeDistance = null;
