@@ -513,7 +513,7 @@ body {
   justify-content: center;
 }
 
-/* 两地距离端点标记 - 小圆点 + 地址标签 */
+/* 两地距离端点标记 - 小圆点 + 脉冲 + 地址标签 */
 .distance-point {
   position: relative;
   width: 16px;
@@ -531,6 +531,20 @@ body {
   border-radius: 50%;
   border: 2px solid #ffffff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 脉冲效果 */
+.distance-point::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: pulse 2s ease-out infinite;
 }
 
 /* 地址标签 */
@@ -563,6 +577,10 @@ body {
   background: #2563eb;
 }
 
+.distance-point-a::after {
+  background: #2563eb;
+}
+
 .distance-point-a .distance-point-label {
   color: #1e40af;
   border-left: 3px solid #2563eb;
@@ -570,6 +588,10 @@ body {
 
 /* 终点 - 红色 */
 .distance-point-b::before {
+  background: #dc2626;
+}
+
+.distance-point-b::after {
   background: #dc2626;
 }
 

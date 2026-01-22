@@ -225,6 +225,12 @@ export function createLeafletAdapter(mapId) {
   async function showDistanceLine(pointA, pointB) {
     // 清除之前的标记和线
     clearDistanceLine();
+    
+    // 隐藏地址搜索的图钉标记，避免重复
+    if (addressMarker) {
+      map.removeLayer(addressMarker);
+      addressMarker = null;
+    }
 
     // 计算直线距离
     const straightKm = calcDistance(pointA.lat, pointA.lng, pointB.lat, pointB.lng);
