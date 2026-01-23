@@ -78,13 +78,25 @@ function checkRemoteArea(zipCode) {
     return false;
   };
   
-  // 检查 UPS
+  // 检查 UPS（使用2025官方数据）
   const upsData = state.remoteAreas.ups;
   if (upsData) {
-    if (upsData.extended_area_zips?.includes(zip)) {
-      result.ups = { isRemote: true, type: 'Extended Area' };
-    } else if (matchesPrefix(upsData.zip_prefixes)) {
-      result.ups = { isRemote: true, type: 'Extended Area' };
+    // 优先检查完整ZIP列表
+    if (upsData.all_remote_zips?.includes(zip)) {
+      // 判断具体类型
+      if (upsData.alaska_remote_zips?.includes(zip)) {
+        result.ups = { isRemote: true, type: 'Alaska Remote' };
+      } else if (upsData.hawaii_remote_zips?.includes(zip)) {
+        result.ups = { isRemote: true, type: 'Hawaii Remote' };
+      } else if (upsData.us48_remote_zips?.includes(zip)) {
+        result.ups = { isRemote: true, type: 'Remote' };
+      } else if (upsData.das_extended_zips?.includes(zip)) {
+        result.ups = { isRemote: true, type: 'DAS Extended' };
+      } else if (upsData.das_zips?.includes(zip)) {
+        result.ups = { isRemote: true, type: 'DAS' };
+      } else {
+        result.ups = { isRemote: true, type: 'Extended Area' };
+      }
     }
   }
   
