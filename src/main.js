@@ -100,15 +100,27 @@ function checkRemoteArea(zipCode) {
     }
   }
   
-  // 检查 FedEx
+  // 检查 FedEx（使用2025官方数据）
   const fedexData = state.remoteAreas.fedex;
   if (fedexData) {
-    if (fedexData.das_extended_zips?.includes(zip)) {
-      result.fedex = { isRemote: true, type: 'DAS Extended' };
-    } else if (fedexData.das_zips?.includes(zip)) {
-      result.fedex = { isRemote: true, type: 'DAS' };
-    } else if (matchesPrefix(fedexData.zip_prefixes)) {
-      result.fedex = { isRemote: true, type: 'DAS Extended' };
+    // 优先检查完整ZIP列表
+    if (fedexData.all_remote_zips?.includes(zip)) {
+      // 判断具体类型
+      if (fedexData.alaska_zips?.includes(zip)) {
+        result.fedex = { isRemote: true, type: 'Alaska' };
+      } else if (fedexData.hawaii_zips?.includes(zip)) {
+        result.fedex = { isRemote: true, type: 'Hawaii' };
+      } else if (fedexData.intra_hawaii_zips?.includes(zip)) {
+        result.fedex = { isRemote: true, type: 'Intra-Hawaii' };
+      } else if (fedexData.remote_zips?.includes(zip)) {
+        result.fedex = { isRemote: true, type: 'Remote' };
+      } else if (fedexData.das_extended_zips?.includes(zip)) {
+        result.fedex = { isRemote: true, type: 'DAS Extended' };
+      } else if (fedexData.das_zips?.includes(zip)) {
+        result.fedex = { isRemote: true, type: 'DAS' };
+      } else {
+        result.fedex = { isRemote: true, type: 'DAS' };
+      }
     }
   }
   
