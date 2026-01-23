@@ -464,6 +464,8 @@ function initAddressSearch() {
   addressInput.addEventListener("input", () => {
     clearTimeout(autocompleteDebounce);
     currentInputTarget = 'A';
+    // 隐藏之前的搜索结果，方便显示联想地址
+    addressResult.classList.remove("address-result--visible");
     autocompleteDebounce = setTimeout(() => {
       fetchAutocompleteSuggestions(addressInput.value);
     }, 300); // 300ms 防抖，减少请求频率
