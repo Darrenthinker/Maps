@@ -275,24 +275,49 @@ body {
   margin-bottom: 8px;
 }
 
-.address-result__remote {
-  margin-top: 8px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 500;
+/* 偏远地区状态列表（分快递公司） */
+.address-result__remote-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.address-result__remote--ok {
+.remote-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.remote-item--ok {
   background: #f0fdf4;
-  color: #15803d;
   border: 1px solid #bbf7d0;
 }
 
-.address-result__remote--warning {
+.remote-item--warning {
   background: #fef3c7;
-  color: #b45309;
   border: 1px solid #fde68a;
+}
+
+.remote-carrier {
+  font-weight: 600;
+  color: #334155;
+  min-width: 55px;
+}
+
+.remote-status {
+  font-weight: 500;
+}
+
+.remote-item--ok .remote-status {
+  color: #15803d;
+}
+
+.remote-item--warning .remote-status {
+  color: #b45309;
 }
 
 .address-result__nearby {

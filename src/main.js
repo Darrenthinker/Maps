@@ -50,47 +50,69 @@ async function loadRemoteAreas() {
   }
 }
 
-// 判断 ZIP Code 是否为偏远地区
+// 判断 ZIP Code 是否为偏远地区（分快递公司）
 function checkRemoteArea(zipCode) {
   if (!state.remoteAreas || !zipCode) {
-    return { isRemote: false, carriers: [] };
+    return { 
+      ups: { isRemote: false, type: null },
+      fedex: { isRemote: false, type: null },
+      dhl: { isRemote: false, type: null },
+      hasAnyRemote: false
+    };
   }
   
   const zip = zipCode.toString().trim();
   const zip3 = zip.substring(0, 3);
-  const carriers = [];
   
-  // 检查 UPS 偏远地区
-  if (state.remoteAreas.ups_extended?.includes(zip)) {
-    carriers.push('UPS');
-  }
+  const result = {
+    ups: { isRemote: false, type: null },
+    fedex: { isRemote: false, type: null },
+    dhl: { isRemote: false, type: null },
+    hasAnyRemote: false
+  };
   
-  // 检查 FedEx DAS
-  if (state.remoteAreas.fedex_das?.includes(zip)) {
-    carriers.push('FedEx');
-  }
-  
-  // 检查 FedEx DAS Extended（更偏远）
-  if (state.remoteAreas.fedex_das_extended?.includes(zip)) {
-    if (!carriers.includes('FedEx')) carriers.push('FedEx');
-  }
-  
-  // 检查州前缀（阿拉斯加、夏威夷、波多黎各通常都是偏远）
-  const prefixes = state.remoteAreas.state_prefixes;
-  for (const [stateName, prefixList] of Object.entries(prefixes || {})) {
-    if (prefixList.some(p => zip.startsWith(p))) {
-      return { 
-        isRemote: true, 
-        carriers: ['UPS', 'FedEx', 'DHL'],
-        note: `${stateName} 地区通常需要偏远附加费`
-      };
+  // 检查 UPS
+  const upsData = state.remoteAreas.ups;
+  if (upsData) {
+    if (upsData.zip_codes?.includes(zip) || upsData.zip_prefixes?.some(p => zip.startsWith(p))) {
+      result.ups = { isRemote: true, type: 'Extended Area' };
     }
   }
   
-  return {
-    isRemote: carriers.length > 0,
-    carriers
-  };
+  // 检查 FedEx
+  const fedexData = state.remoteAreas.fedex;
+  if (fedexData) {
+    if (fedexData.das_extended_zip_codes?.includes(zip) || fedexData.das_extended_prefixes?.some(p => zip.startsWith(p))) {
+      result.fedex = { isRemote: true, type: 'DAS Extended' };
+    } else if (fedexData.das_zip_codes?.includes(zip) || fedexData.das_prefixes?.some(p => zip.startsWith(p))) {
+      result.fedex = { isRemote: true, type: 'DAS' };
+    }
+  }
+  
+  // 检查 DHL
+  const dhlData = state.remoteAreas.dhl;
+  if (dhlData) {
+    if (dhlData.zip_codes?.includes(zip) || dhlData.zip_prefixes?.some(p => zip.startsWith(p))) {
+      result.dhl = { isRemote: true, type: 'Remote Area' };
+    }
+  }
+  
+  // 检查通用偏远州
+  const commonStates = state.remoteAreas.common_remote_states;
+  if (commonStates) {
+    for (const [stateCode, stateInfo] of Object.entries(commonStates)) {
+      if (stateInfo.prefixes?.some(p => zip.startsWith(p))) {
+        result.ups = { isRemote: true, type: 'Extended Area', note: stateInfo.name };
+        result.fedex = { isRemote: true, type: 'DAS Extended', note: stateInfo.name };
+        result.dhl = { isRemote: true, type: 'Remote Area', note: stateInfo.name };
+        break;
+      }
+    }
+  }
+  
+  result.hasAnyRemote = result.ups.isRemote || result.fedex.isRemote || result.dhl.isRemote;
+  
+  return result;
 }
 
 // 从地址中提取 ZIP Code
@@ -283,22 +305,32 @@ async function selectPlace(placeId, description) {
         <div class="address-result__title">📍 ${name}</div>
       `;
       
-      // 显示偏远地区状态
+      // 显示偏远地区状态（分快递公司）
       if (zipCode) {
-        if (remoteCheck.isRemote) {
-          html += `
-            <div class="address-result__remote address-result__remote--warning">
-              ⚠️ 偏远地区 ${remoteCheck.carriers.length > 0 ? `(${remoteCheck.carriers.join('/')})` : ''}
-              ${remoteCheck.note ? `<br><span style="font-size:11px;">${remoteCheck.note}</span>` : ''}
-            </div>
-          `;
+        html += `<div class="address-result__remote-list">`;
+        
+        // UPS
+        if (remoteCheck.ups.isRemote) {
+          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">UPS</span><span class="remote-status">⚠️ ${remoteCheck.ups.type}</span></div>`;
         } else {
-          html += `
-            <div class="address-result__remote address-result__remote--ok">
-              ✅ 非偏远地区
-            </div>
-          `;
+          html += `<div class="remote-item remote-item--ok"><span class="remote-carrier">UPS</span><span class="remote-status">✅ 非偏远</span></div>`;
         }
+        
+        // FedEx
+        if (remoteCheck.fedex.isRemote) {
+          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">FedEx</span><span class="remote-status">⚠️ ${remoteCheck.fedex.type}</span></div>`;
+        } else {
+          html += `<div class="remote-item remote-item--ok"><span class="remote-carrier">FedEx</span><span class="remote-status">✅ 非偏远</span></div>`;
+        }
+        
+        // DHL
+        if (remoteCheck.dhl.isRemote) {
+          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">DHL</span><span class="remote-status">⚠️ ${remoteCheck.dhl.type}</span></div>`;
+        } else {
+          html += `<div class="remote-item remote-item--ok"><span class="remote-carrier">DHL</span><span class="remote-status">✅ 非偏远</span></div>`;
+        }
+        
+        html += `</div>`;
       }
       
       if (nearby.length > 0) {
