@@ -124,13 +124,19 @@ function checkRemoteArea(zipCode) {
     }
   }
   
-  // 检查 DHL
+  // 检查 DHL（使用2025官方数据）
   const dhlData = state.remoteAreas.dhl;
   if (dhlData) {
-    if (dhlData.remote_zips?.includes(zip)) {
-      result.dhl = { isRemote: true, type: 'Remote Area' };
-    } else if (matchesPrefix(dhlData.zip_prefixes)) {
-      result.dhl = { isRemote: true, type: 'Remote Area' };
+    // 优先检查完整ZIP列表
+    if (dhlData.all_remote_zips?.includes(zip)) {
+      // 判断具体类型
+      if (dhlData.alaska_zips?.includes(zip)) {
+        result.dhl = { isRemote: true, type: 'Alaska Remote' };
+      } else if (dhlData.hawaii_zips?.includes(zip)) {
+        result.dhl = { isRemote: true, type: 'Hawaii Remote' };
+      } else {
+        result.dhl = { isRemote: true, type: 'Remote Area' };
+      }
     }
   }
   
