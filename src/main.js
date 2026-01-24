@@ -50,6 +50,29 @@ async function loadRemoteAreas() {
   }
 }
 
+// 偏远类型中文翻译
+function translateRemoteType(type) {
+  const translations = {
+    // UPS
+    'Extended Area': '偏远',
+    'DAS': '偏远',
+    'DAS Extended': '偏远',
+    'Alaska Remote': '阿拉斯加偏远',
+    'Hawaii Remote': '夏威夷偏远',
+    'Remote': '偏远',
+    // FedEx
+    'Alaska': '阿拉斯加偏远',
+    'Hawaii': '夏威夷偏远',
+    'Intra-Hawaii': '夏威夷岛内',
+    // DHL
+    'Remote Area': '偏远',
+    // USPS
+    'Noncontiguous': '非本土',
+    'APO/FPO': '军事地址'
+  };
+  return translations[type] || '偏远';
+}
+
 // 判断 ZIP Code 是否为偏远地区（分快递公司：UPS/FedEx/DHL/USPS）
 function checkRemoteArea(zipCode) {
   const defaultResult = { 
@@ -351,28 +374,28 @@ async function selectPlace(placeId, description) {
         
         // UPS
         if (remoteCheck.ups.isRemote) {
-          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">UPS</span><span class="remote-status">⚠️ ${remoteCheck.ups.type}</span></div>`;
+          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">UPS</span><span class="remote-status">⚠️ ${translateRemoteType(remoteCheck.ups.type)}</span></div>`;
         } else {
           html += `<div class="remote-item remote-item--ok"><span class="remote-carrier">UPS</span><span class="remote-status">✅ 非偏远</span></div>`;
         }
         
         // FedEx
         if (remoteCheck.fedex.isRemote) {
-          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">FedEx</span><span class="remote-status">⚠️ ${remoteCheck.fedex.type}</span></div>`;
+          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">FedEx</span><span class="remote-status">⚠️ ${translateRemoteType(remoteCheck.fedex.type)}</span></div>`;
         } else {
           html += `<div class="remote-item remote-item--ok"><span class="remote-carrier">FedEx</span><span class="remote-status">✅ 非偏远</span></div>`;
         }
         
         // DHL
         if (remoteCheck.dhl.isRemote) {
-          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">DHL</span><span class="remote-status">⚠️ ${remoteCheck.dhl.type}</span></div>`;
+          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">DHL</span><span class="remote-status">⚠️ ${translateRemoteType(remoteCheck.dhl.type)}</span></div>`;
         } else {
           html += `<div class="remote-item remote-item--ok"><span class="remote-carrier">DHL</span><span class="remote-status">✅ 非偏远</span></div>`;
         }
         
         // USPS
         if (remoteCheck.usps.isRemote) {
-          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">USPS</span><span class="remote-status">⚠️ ${remoteCheck.usps.type}</span></div>`;
+          html += `<div class="remote-item remote-item--warning"><span class="remote-carrier">USPS</span><span class="remote-status">⚠️ ${translateRemoteType(remoteCheck.usps.type)}</span></div>`;
         } else {
           html += `<div class="remote-item remote-item--ok"><span class="remote-carrier">USPS</span><span class="remote-status">✅ 非偏远</span></div>`;
         }
