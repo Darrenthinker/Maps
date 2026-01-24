@@ -185,6 +185,15 @@ function extractZipCode(address) {
   return match ? match[1] : null;
 }
 
+// 判断是否是美国地址
+function isUSAddress(address) {
+  if (!address) return false;
+  const addrLower = address.toLowerCase();
+  // 检查是否包含美国相关关键词
+  const usKeywords = ['美国', 'usa', 'united states', 'u.s.a', 'u.s.', ', us'];
+  return usKeywords.some(keyword => addrLower.includes(keyword));
+}
+
 // Fuse.js 配置 - 支持模糊搜索
 const fuseOptions = {
   keys: [
@@ -359,17 +368,18 @@ async function selectPlace(placeId, description) {
       // 查找附近的机场/港口
       const nearby = findNearby(lat, lng, 5);
       
-      // 检查偏远地区
+      // 检查偏远地区（仅美国地址）
       const zipCode = extractZipCode(name);
-      const remoteCheck = checkRemoteArea(zipCode);
+      const isUS = isUSAddress(name);
+      const remoteCheck = isUS ? checkRemoteArea(zipCode) : null;
       
       // 显示结果
       let html = `
         <div class="address-result__title">📍 ${name}</div>
       `;
       
-      // 显示偏远地区状态（分快递公司：UPS/FedEx/DHL/USPS）
-      if (zipCode) {
+      // 显示偏远地区状态（仅美国地址，分快递公司：UPS/FedEx/DHL/USPS）
+      if (zipCode && isUS && remoteCheck) {
         html += `<div class="address-result__remote-list">`;
         
         // UPS
