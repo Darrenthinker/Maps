@@ -1023,9 +1023,15 @@ function renderSearchResults() {
       const type = node.type || "airport";
       const sub = type === "airport" ? "机场" : "港口";
       const intlLabel = node.intl ? "🌐" : "";
+      // 获取中文名称
+      const zhName = getChineseName(node);
+      // 显示格式：有中文时显示 "中文名 / 英文名"
+      const displayName = zhName 
+        ? `<span class="result-name-zh">${zhName}</span> <span class="result-name-divider">/</span> <span class="result-name-en">${node.name}</span>`
+        : node.name;
       return `
         <li class="result-item result-item--search" data-lat="${node.lat}" data-lng="${node.lng}" data-type="${type}">
-          <div class="result-item__title">${intlLabel} ${code} · ${node.name}</div>
+          <div class="result-item__title">${intlLabel} ${code} · ${displayName}</div>
           <div class="result-item__meta">${node.city}, ${node.country} · ${sub}</div>
         </li>
       `;
