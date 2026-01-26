@@ -1107,6 +1107,22 @@ function bindTreeEvents() {
       renderClassifiedView();
     });
   });
+  
+  // 机场/港口项点击 - 跳转到地图
+  document.querySelectorAll('.result-item--airport[data-id]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const nodeId = el.dataset.id;
+      const node = state.allNodes.find(n => n.id === nodeId);
+      if (node) {
+        mapAdapter.focusOn(node);
+        // 移动端：点击后关闭侧边栏
+        if (window.innerWidth <= 768) {
+          app.classList.remove("app--sidebar-open");
+        }
+      }
+    });
+  });
 }
 
 const resultsSection = document.querySelector(".results");
