@@ -955,7 +955,7 @@ function renderWarehousesView() {
       <li class="tree-item tree-item--continent" data-category="${catKey}">
         <div class="tree-item__header tree-item__header--continent">
           <span class="tree-icon">${catIcon}</span>
-          <span class="tree-name">${category.icon} ${category.name}</span>
+          <span class="tree-name">${category.name}</span>
           <span class="tree-count">${category.totalWarehouses}</span>
         </div>
     `;
@@ -988,7 +988,7 @@ function renderWarehousesView() {
             const companyLabel = warehouse.company ? ` · ${warehouse.company}` : '';
             html += `
               <li class="result-item result-item--airport" data-warehouse="${warehouse.code}" data-lat="${warehouse.lat}" data-lng="${warehouse.lng}">
-                <div class="result-item__title">📦 ${warehouse.code} · ${warehouse.name}</div>
+                <div class="result-item__title">${warehouse.code} · ${warehouse.name}</div>
                 <div class="result-item__meta">${warehouse.city}${companyLabel}</div>
               </li>
             `;
