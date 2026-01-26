@@ -8,6 +8,7 @@ const OUT_DIR = path.join(ROOT, "public", "data");
 
 const AIRPORTS_CSV = path.join(RAW_DIR, "airports.csv");
 const UNLOCODE_CSV = path.join(RAW_DIR, "unlocode.csv");
+const INTL_AIRPORTS_JSON = path.join(RAW_DIR, "international-airports.json");
 
 // 常用国家中英文映射
 const COUNTRY_CN = {
@@ -54,27 +55,64 @@ function parseCoordinates(coordText) {
   return { lat: Math.round(lat * 10000) / 10000, lng: Math.round(lon * 10000) / 10000 };
 }
 
+// 加载国际机场白名单
+function loadInternationalAirports() {
+  if (!fs.existsSync(INTL_AIRPORTS_JSON)) {
+    console.warn("Warning: international-airports.json not found, using fallback logic");
+    return new Set();
+  }
+  const data = JSON.parse(fs.readFileSync(INTL_AIRPORTS_JSON, "utf8"));
+  const codes = new Set();
+  for (const country of Object.values(data.airports)) {
+    for (const code of country.codes) {
+      codes.add(code.toUpperCase());
+    }
+  }
+  console.log(`Loaded ${codes.size} international airport codes from whitelist`);
+  return codes;
+}
+
 function buildAirports() {
   const rows = parseCsv(AIRPORTS_CSV);
+  const intlAirportCodes = loadInternationalAirports();
   const allowedTypes = new Set(["large_airport", "medium_airport", "small_airport"]);
-  return rows
+  
+  let intlCount = 0;
+  let domesticCount = 0;
+  
+  const airports = rows
     .filter((row) => allowedTypes.has(row.type))
     .filter((row) => row.iata_code || row.scheduled_service === "yes")
     .map((row) => {
       const lat = toNumber(row.latitude_deg);
       const lng = toNumber(row.longitude_deg);
       if (lat === null || lng === null) return null;
-      const iata = (row.iata_code || "").trim();
-      const icao = (row.icao_code || row.ident || "").trim();
+      const iata = (row.iata_code || "").trim().toUpperCase();
+      const icao = (row.icao_code || row.ident || "").trim().toUpperCase();
       const code = iata || icao;
       if (!code) return null;
       const countryCode = row.iso_country;
       const countryCn = COUNTRY_CN[countryCode] || "";
-      // large_airport 通常是国际机场
-      const isInternational = row.type === "large_airport";
+      
+      // 判断国际机场的逻辑（优先级从高到低）：
+      // 1. IATA代码在白名单中 -> 国际机场
+      // 2. 白名单为空时，使用 large_airport 作为回退判断
+      let isInternational = false;
+      if (intlAirportCodes.size > 0) {
+        // 使用白名单判断
+        isInternational = intlAirportCodes.has(iata) || intlAirportCodes.has(icao);
+      } else {
+        // 回退逻辑：large_airport 或有 IATA 代码的 medium_airport
+        isInternational = row.type === "large_airport" || 
+          (row.type === "medium_airport" && iata && row.scheduled_service === "yes");
+      }
+      
+      if (isInternational) intlCount++;
+      else domesticCount++;
+      
       return {
         id: `a-${code}`.toLowerCase(),
-        code,
+        code: iata || icao,
         icao,
         name: row.name,
         country: countryCn ? `${countryCode} ${countryCn}` : countryCode,
@@ -85,6 +123,11 @@ function buildAirports() {
       };
     })
     .filter(Boolean);
+  
+  console.log(`  - International: ${intlCount}`);
+  console.log(`  - Domestic: ${domesticCount}`);
+  
+  return airports;
 }
 
 function buildPorts() {

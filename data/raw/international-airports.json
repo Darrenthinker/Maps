@@ -1,0 +1,301 @@
+{
+  "version": "2026.01",
+  "description": "国际机场IATA代码白名单 - 基于各国官方对外开放机场列表",
+  "lastUpdated": "2026-01-26",
+  "sources": [
+    "中国民航局对外开放机场列表",
+    "美国CBP入境口岸机场",
+    "欧盟申根区国际机场",
+    "各国航空管理机构官方数据"
+  ],
+  "airports": {
+    "CN": {
+      "description": "中国对外开放机场",
+      "codes": [
+        "PEK", "PKX", "PVG", "SHA", "CAN", "SZX", "CTU", "TFU", "CKG", "KMG",
+        "XIY", "HGH", "NKG", "WUH", "CSX", "TAO", "DLC", "SHE", "CGO", "XMN",
+        "FOC", "NNG", "HAK", "SYX", "TNA", "HRB", "CGQ", "TSN", "SJW", "TYN",
+        "HET", "INC", "LHW", "URC", "KWE", "KWL", "ZUH", "SWA", "JJN", "WNZ",
+        "NTG", "YNT", "WEH", "LYI", "JNZ", "HFE", "NGB", "YIW", "HSN", "WUX",
+        "CZX", "YNZ", "LYG", "NZH", "MFM", "HKG", "KHH", "TPE", "RMQ", "KHN",
+        "LXA", "XNN", "YBP", "ZYI", "LZH", "BHY", "WUZ", "AQG", "TXN", "JDZ",
+        "YIC", "ENH", "YIH", "SHS", "XFN", "LJG", "DLU", "JHG", "SYM", "ZAT",
+        "TCZ", "BSD", "LUM", "MIG", "NAO", "DAX", "GYS", "LZO", "XIC", "KWE",
+        "ZYI", "LPF", "ACX", "HZH", "JIU", "AVA", "BPX", "HUZ", "JGS", "YUS"
+      ]
+    },
+    "US": {
+      "description": "美国主要国际机场(Port of Entry)",
+      "codes": [
+        "JFK", "LAX", "ORD", "MIA", "SFO", "DFW", "ATL", "BOS", "SEA", "IAD",
+        "EWR", "IAH", "PHX", "DEN", "DTW", "MSP", "CLT", "LAS", "MCO", "PHL",
+        "FLL", "SAN", "TPA", "BWI", "HNL", "ANC", "PDX", "SLC", "STL", "MCI",
+        "SMF", "SNA", "RDU", "IND", "MKE", "CLE", "PIT", "CVG", "CMH", "OAK",
+        "SJC", "ONT", "BUF", "ABQ", "AUS", "SAT", "JAX", "RIC", "OKC", "MEM",
+        "BNA", "MSY", "PBI", "RSW", "OGG", "LIH", "KOA", "SJU", "STT", "STX",
+        "GUM", "SPN", "PPG", "BLI", "BTV", "BGR", "PWM", "GEG", "BOI", "FAI",
+        "YUM", "NOG", "LRD", "BRO", "MFE", "ELP", "TUS", "SDP", "CLD", "OTM"
+      ]
+    },
+    "JP": {
+      "description": "日本国际机场",
+      "codes": [
+        "NRT", "HND", "KIX", "NGO", "FUK", "CTS", "OKA", "KOJ", "HIJ", "SDJ",
+        "NGS", "KMQ", "MYJ", "TAK", "TKS", "KCZ", "UBJ", "OIT", "KMI", "KKJ",
+        "FSZ", "SHM", "MMB", "AKJ", "OBO", "HKD", "AOJ", "GAJ", "SYO", "ONJ",
+        "AXT", "MSJ", "IWJ", "TOY", "KMJ", "ASJ", "ISG", "MMY", "SHI", "TNE"
+      ]
+    },
+    "KR": {
+      "description": "韩国国际机场",
+      "codes": [
+        "ICN", "GMP", "PUS", "CJU", "TAE", "MWX", "KWJ", "RSU", "USN", "HIN",
+        "WJU", "YNY", "KPO", "CJJ", "KUV"
+      ]
+    },
+    "DE": {
+      "description": "德国国际机场",
+      "codes": [
+        "FRA", "MUC", "DUS", "TXL", "BER", "HAM", "CGN", "STR", "HAJ", "NUE",
+        "LEJ", "DRS", "BRE", "FMO", "DTM", "PAD", "SCN", "HHN", "NRN", "FKB",
+        "ERF", "RLG"
+      ]
+    },
+    "GB": {
+      "description": "英国国际机场",
+      "codes": [
+        "LHR", "LGW", "STN", "LTN", "MAN", "BHX", "EDI", "GLA", "BRS", "NCL",
+        "LPL", "LBA", "EMA", "ABZ", "BFS", "BHD", "CWL", "SOU", "EXT", "NQY",
+        "INV", "DND", "PIK", "SEN", "DSA", "HUY", "MME", "NWI"
+      ]
+    },
+    "FR": {
+      "description": "法国国际机场",
+      "codes": [
+        "CDG", "ORY", "NCE", "LYS", "MRS", "TLS", "BOD", "NTE", "SXB", "MPL",
+        "BIQ", "BVA", "LIL", "RNS", "MLH", "ETZ", "CFE", "LDE", "PGF", "BES",
+        "AJA", "BIA", "FSC", "PPT", "NOU", "PTP", "FDF", "RUN", "DZA"
+      ]
+    },
+    "NL": {
+      "description": "荷兰国际机场",
+      "codes": [
+        "AMS", "RTM", "EIN", "MST", "GRQ"
+      ]
+    },
+    "BE": {
+      "description": "比利时国际机场",
+      "codes": [
+        "BRU", "CRL", "LGG", "ANR", "OST"
+      ]
+    },
+    "IT": {
+      "description": "意大利国际机场",
+      "codes": [
+        "FCO", "MXP", "LIN", "VCE", "NAP", "BGY", "BLQ", "CAG", "CTA", "PMO",
+        "PSA", "FLR", "TRN", "GOA", "VRN", "TRS", "BRI", "OLB", "AHO", "REG",
+        "SUF", "PMF", "RMI", "AOI", "BDS", "PSR", "PEG", "TPS"
+      ]
+    },
+    "ES": {
+      "description": "西班牙国际机场",
+      "codes": [
+        "MAD", "BCN", "PMI", "AGP", "ALC", "TFS", "LPA", "IBZ", "VLC", "SVQ",
+        "BIO", "TFN", "FUE", "ACE", "GRX", "REU", "XRY", "LEI", "SDR", "VGO",
+        "SCQ", "OVD", "ZAZ", "BJZ", "SLM", "PNA", "VIT", "LCG", "EAS", "MLN"
+      ]
+    },
+    "SG": {
+      "description": "新加坡国际机场",
+      "codes": ["SIN", "XSP"]
+    },
+    "MY": {
+      "description": "马来西亚国际机场",
+      "codes": [
+        "KUL", "PEN", "LGK", "BKI", "KCH", "JHB", "SZB", "MYY", "SDK", "TWU",
+        "BTU", "SBW", "IPH", "AOR", "TGG", "KBR", "KTE", "MKZ", "TOD"
+      ]
+    },
+    "TH": {
+      "description": "泰国国际机场",
+      "codes": [
+        "BKK", "DMK", "HKT", "CNX", "USM", "KBV", "HDY", "UTH", "UBP", "CEI",
+        "URT", "NST", "SGZ", "HGN", "MAQ", "NNT", "PHY", "PYX", "SNO"
+      ]
+    },
+    "VN": {
+      "description": "越南国际机场",
+      "codes": [
+        "SGN", "HAN", "DAD", "CXR", "HPH", "PQC", "VCA", "VII", "UIH", "BMV",
+        "DLI", "VDH", "PXU", "THD", "VCL", "TBB", "VDO"
+      ]
+    },
+    "ID": {
+      "description": "印度尼西亚国际机场",
+      "codes": [
+        "CGK", "DPS", "SUB", "UPG", "JOG", "BPN", "MDC", "PLM", "BTH", "PKU",
+        "PNK", "BDJ", "SOC", "SRG", "KNO", "DJB", "PDG", "TKG", "LOP", "AMQ"
+      ]
+    },
+    "PH": {
+      "description": "菲律宾国际机场",
+      "codes": [
+        "MNL", "CEB", "CRK", "DVO", "ILO", "KLO", "ZAM", "GES", "TAC", "CGY",
+        "BXU", "PPS", "MPH", "TAG", "USU", "LGP", "SJI", "CYP", "OZC", "CBO"
+      ]
+    },
+    "IN": {
+      "description": "印度国际机场",
+      "codes": [
+        "DEL", "BOM", "MAA", "BLR", "CCU", "HYD", "COK", "AMD", "GOI", "PNQ",
+        "JAI", "TRV", "IXE", "IXC", "SXR", "CCJ", "TRZ", "VTZ", "GAU", "PAT",
+        "LKO", "BBI", "IXB", "ATQ", "IXA", "AGX", "NAG", "IDR", "BHO", "VNS"
+      ]
+    },
+    "AU": {
+      "description": "澳大利亚国际机场",
+      "codes": [
+        "SYD", "MEL", "BNE", "PER", "ADL", "CNS", "OOL", "CBR", "DRW", "HBA",
+        "NTL", "TSV", "AVV", "MCY", "BME", "PHE", "KTA", "ASP", "ZNE"
+      ]
+    },
+    "NZ": {
+      "description": "新西兰国际机场",
+      "codes": [
+        "AKL", "WLG", "CHC", "ZQN", "DUD", "NPE", "NPL", "PMR", "HLZ", "TRG",
+        "ROT", "GIS", "BHE", "NSN", "IVC"
+      ]
+    },
+    "CA": {
+      "description": "加拿大国际机场",
+      "codes": [
+        "YYZ", "YVR", "YUL", "YYC", "YEG", "YOW", "YWG", "YHZ", "YQB", "YXE",
+        "YQR", "YYJ", "YLW", "YXX", "YFC", "YQM", "YYT", "YZF", "YXY", "YQX"
+      ]
+    },
+    "BR": {
+      "description": "巴西国际机场",
+      "codes": [
+        "GRU", "GIG", "BSB", "CNF", "SSA", "REC", "CWB", "POA", "FOR", "MAO",
+        "VCP", "BEL", "FLN", "NAT", "VIX", "CGB", "GYN", "MCZ", "SLZ", "THE"
+      ]
+    },
+    "MX": {
+      "description": "墨西哥国际机场",
+      "codes": [
+        "MEX", "CUN", "GDL", "MTY", "TIJ", "SJD", "PVR", "CJS", "MID", "HMO",
+        "BJX", "CUU", "AGU", "SLP", "ZCL", "ZLO", "QRO", "TAM", "NLD", "REX",
+        "MZT", "PXM", "OAX", "CZM", "VER", "CME", "ACA", "HUX", "MLM", "LAP"
+      ]
+    },
+    "AE": {
+      "description": "阿联酋国际机场",
+      "codes": [
+        "DXB", "AUH", "SHJ", "DWC", "RKT", "AAN", "FJR"
+      ]
+    },
+    "SA": {
+      "description": "沙特阿拉伯国际机场",
+      "codes": [
+        "JED", "RUH", "DMM", "MED", "AHB", "GIZ", "TIF", "TUU", "YNB", "HAS",
+        "ELQ", "AJF", "ABT", "RAH", "DWD", "SHW", "URY", "WAE", "HOF"
+      ]
+    },
+    "TR": {
+      "description": "土耳其国际机场",
+      "codes": [
+        "IST", "SAW", "ESB", "AYT", "ADB", "ADA", "DLM", "GZT", "TZX", "BJV",
+        "ASR", "VAN", "ERZ", "KYA", "MLX", "EZS", "SZF", "NAV", "HTY", "DIY"
+      ]
+    },
+    "RU": {
+      "description": "俄罗斯国际机场",
+      "codes": [
+        "SVO", "DME", "VKO", "LED", "AER", "KRR", "ROV", "SVX", "OVB", "KZN",
+        "UFA", "KUF", "GOJ", "VVO", "KHV", "IKT", "KJA", "TJM", "UUS", "PEE"
+      ]
+    },
+    "ZA": {
+      "description": "南非国际机场",
+      "codes": [
+        "JNB", "CPT", "DUR", "PLZ", "GRJ", "ELS", "BFN", "HLA", "UTN", "MQP"
+      ]
+    },
+    "EG": {
+      "description": "埃及国际机场",
+      "codes": [
+        "CAI", "HRG", "SSH", "LXR", "ASW", "ALY", "HBE", "RMF", "ABS", "ATZ"
+      ]
+    },
+    "HK": {
+      "description": "香港国际机场",
+      "codes": ["HKG"]
+    },
+    "TW": {
+      "description": "台湾国际机场",
+      "codes": [
+        "TPE", "KHH", "RMQ", "TNN", "TSA", "TTT", "HUN", "MZG", "KNH", "LZN"
+      ]
+    },
+    "CH": {
+      "description": "瑞士国际机场",
+      "codes": ["ZRH", "GVA", "BSL", "BRN", "LUG", "SIR"]
+    },
+    "AT": {
+      "description": "奥地利国际机场",
+      "codes": ["VIE", "SZG", "INN", "GRZ", "KLU", "LNZ"]
+    },
+    "SE": {
+      "description": "瑞典国际机场",
+      "codes": ["ARN", "GOT", "MMX", "BMA", "NYO", "VST", "LLA", "UME", "OSD"]
+    },
+    "NO": {
+      "description": "挪威国际机场",
+      "codes": ["OSL", "BGO", "TRD", "SVG", "TOS", "BOO", "AES", "HAU", "KRS"]
+    },
+    "DK": {
+      "description": "丹麦国际机场",
+      "codes": ["CPH", "BLL", "AAL", "AAR", "ODE", "RNN", "EBJ", "KRP"]
+    },
+    "FI": {
+      "description": "芬兰国际机场",
+      "codes": ["HEL", "OUL", "TMP", "TKU", "RVN", "KUO", "JYV", "VAA", "KAJ"]
+    },
+    "PL": {
+      "description": "波兰国际机场",
+      "codes": ["WAW", "WMI", "KRK", "GDN", "KTW", "WRO", "POZ", "LCJ", "RZE", "SZZ"]
+    },
+    "CZ": {
+      "description": "捷克国际机场",
+      "codes": ["PRG", "BRQ", "OSR", "PED"]
+    },
+    "PT": {
+      "description": "葡萄牙国际机场",
+      "codes": ["LIS", "OPO", "FAO", "FNC", "PDL", "HOR", "TER", "SMA", "PXO"]
+    },
+    "GR": {
+      "description": "希腊国际机场",
+      "codes": ["ATH", "SKG", "HER", "RHO", "CFU", "KGS", "CHQ", "ZTH", "JMK", "JTR"]
+    },
+    "IE": {
+      "description": "爱尔兰国际机场",
+      "codes": ["DUB", "ORK", "SNN", "KIR", "NOC", "GWY"]
+    },
+    "AR": {
+      "description": "阿根廷国际机场",
+      "codes": ["EZE", "AEP", "COR", "MDZ", "BRC", "IGR", "SLA", "TUC", "NQN", "USH"]
+    },
+    "CL": {
+      "description": "智利国际机场",
+      "codes": ["SCL", "IQQ", "ANF", "CCP", "PMC", "PUQ", "IPC", "ZAL", "ZCO", "ARI"]
+    },
+    "CO": {
+      "description": "哥伦比亚国际机场",
+      "codes": ["BOG", "MDE", "CLO", "CTG", "BAQ", "ADZ", "BGA", "SMR", "PEI", "CUC"]
+    },
+    "PE": {
+      "description": "秘鲁国际机场",
+      "codes": ["LIM", "CUZ", "AQP", "TCQ", "PIU", "TRU", "JUL", "IQT", "PEM", "TYL"]
+    }
+  }
+}
