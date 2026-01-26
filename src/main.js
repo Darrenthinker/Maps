@@ -800,7 +800,10 @@ function applyFilters() {
 // 在机场或港口中搜索（同时搜索分类数据）
 function searchInNodes(query, type) {
   const q = query.toLowerCase();
-  let results = [];
+  const qUpper = query.toUpperCase();
+  let exactMatches = [];  // 精确匹配（代码完全相同）
+  let prefixMatches = []; // 前缀匹配（代码以搜索词开头）
+  let otherMatches = [];  // 其他匹配
   
   if (type === 'airport' && state.airportsClassified) {
     // 搜索分类数据中的机场
@@ -808,19 +811,29 @@ function searchInNodes(query, type) {
       for (const region of Object.values(continent.regions)) {
         for (const country of Object.values(region.countries)) {
           for (const airport of country.airports) {
-            const code = (airport.code || '').toLowerCase();
-            const icao = (airport.icao || '').toLowerCase();
-            const iata = (airport.iata || '').toLowerCase();
+            const code = (airport.code || '').toUpperCase();
+            const icao = (airport.icao || '').toUpperCase();
+            const iata = (airport.iata || '').toUpperCase();
             const name = (airport.name || '').toLowerCase();
             const city = (airport.city || '').toLowerCase();
             
-            if (code.includes(q) || icao.includes(q) || iata.includes(q) || 
-                name.includes(q) || city.includes(q)) {
-              results.push({
-                ...airport,
-                type: 'airport',
-                country: country.name
-              });
+            const item = {
+              ...airport,
+              type: 'airport',
+              country: country.name
+            };
+            
+            // 精确匹配代码
+            if (code === qUpper || icao === qUpper || iata === qUpper) {
+              exactMatches.push(item);
+            }
+            // 前缀匹配代码
+            else if (code.startsWith(qUpper) || icao.startsWith(qUpper) || iata.startsWith(qUpper)) {
+              prefixMatches.push(item);
+            }
+            // 其他匹配（名称、城市包含搜索词）
+            else if (name.includes(q) || city.includes(q)) {
+              otherMatches.push(item);
             }
           }
         }
@@ -832,16 +845,27 @@ function searchInNodes(query, type) {
       for (const region of Object.values(continent.regions)) {
         for (const country of Object.values(region.countries)) {
           for (const port of country.ports) {
-            const code = (port.code || '').toLowerCase();
+            const code = (port.code || '').toUpperCase();
             const name = (port.name || '').toLowerCase();
             const city = (port.city || '').toLowerCase();
             
-            if (code.includes(q) || name.includes(q) || city.includes(q)) {
-              results.push({
-                ...port,
-                type: 'port',
-                country: country.name
-              });
+            const item = {
+              ...port,
+              type: 'port',
+              country: country.name
+            };
+            
+            // 精确匹配代码
+            if (code === qUpper) {
+              exactMatches.push(item);
+            }
+            // 前缀匹配代码
+            else if (code.startsWith(qUpper)) {
+              prefixMatches.push(item);
+            }
+            // 其他匹配（名称、城市包含搜索词）
+            else if (name.includes(q) || city.includes(q)) {
+              otherMatches.push(item);
             }
           }
         }
@@ -849,36 +873,51 @@ function searchInNodes(query, type) {
     }
   }
   
-  return results;
+  // 返回排序后的结果：精确匹配 > 前缀匹配 > 其他匹配
+  return [...exactMatches, ...prefixMatches, ...otherMatches];
 }
 
 // 搜索海外仓数据
 function searchWarehouses(query) {
-  const results = [];
   const q = query.toLowerCase();
+  const qUpper = query.toUpperCase();
+  let exactMatches = [];  // 精确匹配
+  let prefixMatches = []; // 前缀匹配
+  let otherMatches = [];  // 其他匹配
   
-  if (!state.warehousesData) return results;
+  if (!state.warehousesData) return [];
   
   for (const [catKey, category] of Object.entries(state.warehousesData.categories)) {
     for (const [countryCode, country] of Object.entries(category.countries)) {
       for (const warehouse of country.warehouses) {
-        const code = (warehouse.code || '').toLowerCase();
+        const code = (warehouse.code || '').toUpperCase();
         const name = (warehouse.name || '').toLowerCase();
         const city = (warehouse.city || '').toLowerCase();
         const company = (warehouse.company || '').toLowerCase();
         
-        if (code.includes(q) || name.includes(q) || city.includes(q) || company.includes(q)) {
-          results.push({
-            ...warehouse,
-            categoryName: category.name,
-            countryName: country.name
-          });
+        const item = {
+          ...warehouse,
+          categoryName: category.name,
+          countryName: country.name
+        };
+        
+        // 精确匹配代码
+        if (code === qUpper) {
+          exactMatches.push(item);
+        }
+        // 前缀匹配代码
+        else if (code.startsWith(qUpper)) {
+          prefixMatches.push(item);
+        }
+        // 其他匹配
+        else if (name.includes(q) || city.includes(q) || company.includes(q)) {
+          otherMatches.push(item);
         }
       }
     }
   }
   
-  return results;
+  return [...exactMatches, ...prefixMatches, ...otherMatches];
 }
 
 // 渲染海外仓搜索结果
