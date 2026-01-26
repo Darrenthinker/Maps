@@ -284,26 +284,36 @@ export function createLeafletAdapter(mapId) {
       shadowPane: null  // 禁用阴影
     }).addTo(map);
     
-    // 如果有节点信息，绑定 popup 显示中英文
+    // 如果有节点信息，绑定 popup 显示中英文（苹果风格）
     if (nodeInfo) {
       const code = nodeInfo.code || '';
       const nameZh = nodeInfo.nameZh || '';
       const nameEn = nodeInfo.name || '';
-      const typeLabel = type === 'airport' ? '机场' : (type === 'port' ? '港口' : '仓库');
-      const intlLabel = nodeInfo.intl ? '国际' : '国内';
+      const typeIcon = type === 'airport' ? '✈️' : (type === 'port' ? '🚢' : '📦');
+      const intlClass = nodeInfo.intl ? 'intl' : 'domestic';
+      const intlText = nodeInfo.intl ? '国际' : '国内';
       
-      let popupContent = `<div class="map-popup">`;
-      popupContent += `<div class="map-popup__code">${code}</div>`;
-      if (nameZh) {
-        popupContent += `<div class="map-popup__name-zh">${nameZh}</div>`;
-      }
-      popupContent += `<div class="map-popup__name-en">${nameEn}</div>`;
-      popupContent += `<div class="map-popup__meta">${intlLabel} · ${typeLabel}</div>`;
-      popupContent += `</div>`;
+      // 简化中文名（如果太长，截取前12个字符）
+      const shortNameZh = nameZh.length > 15 ? nameZh.substring(0, 15) + '...' : nameZh;
+      // 简化英文名（如果太长，截取前25个字符）
+      const shortNameEn = nameEn.length > 30 ? nameEn.substring(0, 30) + '...' : nameEn;
+      
+      let popupContent = `
+        <div class="map-popup map-popup--apple">
+          <div class="map-popup__header">
+            <span class="map-popup__icon">${typeIcon}</span>
+            <span class="map-popup__code">${code}</span>
+            <span class="map-popup__tag map-popup__tag--${intlClass}">${intlText}</span>
+          </div>
+          ${nameZh ? `<div class="map-popup__name-zh">${shortNameZh}</div>` : ''}
+          <div class="map-popup__name-en">${shortNameEn}</div>
+        </div>
+      `;
       
       addressMarker.bindPopup(popupContent, {
-        className: 'custom-popup',
-        closeButton: false
+        className: 'custom-popup custom-popup--apple',
+        closeButton: false,
+        offset: [0, -5]
       }).openPopup();
     }
   }
