@@ -839,14 +839,13 @@ function applyFilters() {
     }
   } else {
     renderSearchResults();
-    // 如果只有一个结果，自动跳转到地图（不使用 setMarkers 避免重叠）
+    // 如果只有一个结果，自动跳转到地图
     if (results.length === 1) {
       mapAdapter.setMarkers([]);
       mapAdapter.focusOnCoords(results[0].lat, results[0].lng, 12, results[0].type);
     } else {
-      // 多个结果时显示标记点
-      const mapNodes = results.slice(0, 500);
-      mapAdapter.setMarkers(mapNodes);
+      // 多个结果时不显示标记聚合（保持地图清洁）
+      mapAdapter.setMarkers([]);
     }
   }
 }
