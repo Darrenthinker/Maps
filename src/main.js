@@ -797,12 +797,59 @@ function applyFilters() {
   }
 }
 
-// 在机场或港口中搜索
+// 在机场或港口中搜索（同时搜索分类数据）
 function searchInNodes(query, type) {
-  const nodes = state.allNodes.filter(n => n.type === type);
-  const fuse = new Fuse(nodes, fuseOptions);
-  const results = fuse.search(query);
-  return results.map(r => r.item);
+  const q = query.toLowerCase();
+  let results = [];
+  
+  if (type === 'airport' && state.airportsClassified) {
+    // 搜索分类数据中的机场
+    for (const continent of Object.values(state.airportsClassified.continents)) {
+      for (const region of Object.values(continent.regions)) {
+        for (const country of Object.values(region.countries)) {
+          for (const airport of country.airports) {
+            const code = (airport.code || '').toLowerCase();
+            const icao = (airport.icao || '').toLowerCase();
+            const iata = (airport.iata || '').toLowerCase();
+            const name = (airport.name || '').toLowerCase();
+            const city = (airport.city || '').toLowerCase();
+            
+            if (code.includes(q) || icao.includes(q) || iata.includes(q) || 
+                name.includes(q) || city.includes(q)) {
+              results.push({
+                ...airport,
+                type: 'airport',
+                country: country.name
+              });
+            }
+          }
+        }
+      }
+    }
+  } else if (type === 'port' && state.portsClassified) {
+    // 搜索分类数据中的港口
+    for (const continent of Object.values(state.portsClassified.continents)) {
+      for (const region of Object.values(continent.regions)) {
+        for (const country of Object.values(region.countries)) {
+          for (const port of country.ports) {
+            const code = (port.code || '').toLowerCase();
+            const name = (port.name || '').toLowerCase();
+            const city = (port.city || '').toLowerCase();
+            
+            if (code.includes(q) || name.includes(q) || city.includes(q)) {
+              results.push({
+                ...port,
+                type: 'port',
+                country: country.name
+              });
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  return results;
 }
 
 // 搜索海外仓数据
@@ -866,9 +913,12 @@ function renderResults() {
 
 // 渲染搜索结果（平铺列表）
 function renderSearchResults() {
-  resultsCount.textContent = String(state.filteredNodes.length);
-  
   const displayNodes = state.filteredNodes.slice(0, 200);
+  
+  if (displayNodes.length === 0) {
+    resultsList.innerHTML = '<li class="result-item"><div class="result-item__meta">未找到匹配结果</div></li>';
+    return;
+  }
   
   resultsList.innerHTML = displayNodes
     .map((node) => {
@@ -876,7 +926,7 @@ function renderSearchResults() {
       const sub = node.type === "airport" ? "机场" : "港口";
       const intlLabel = node.intl ? "🌐" : "";
       return `
-        <li class="result-item result-item--search" data-id="${node.id}" data-lat="${node.lat}" data-lng="${node.lng}">
+        <li class="result-item result-item--search" data-lat="${node.lat}" data-lng="${node.lng}">
           <div class="result-item__title">${intlLabel} ${code} · ${node.name}</div>
           <div class="result-item__meta">${node.city}, ${node.country} · ${sub}</div>
         </li>
