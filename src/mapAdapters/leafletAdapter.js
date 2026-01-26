@@ -200,10 +200,27 @@ export function createLeafletAdapter(mapId) {
     } else if (type === 'warehouse') {
       // 根据分类显示不同图标
       if (category === 'amazon' || (category && category.includes('亚马逊'))) {
-        html = '<img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="width:32px;height:20px;object-fit:contain;">';
+        // Amazon 箭头 A logo
+        html = `<svg viewBox="0 0 100 100" width="36" height="36">
+          <rect x="5" y="5" width="90" height="90" rx="8" fill="#232F3E"/>
+          <text x="50" y="62" font-family="Arial Black, sans-serif" font-size="50" font-weight="900" fill="white" text-anchor="middle">a</text>
+          <path d="M30 72 Q50 82 70 72" stroke="#FF9900" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M65 68 L70 72 L66 77" stroke="#FF9900" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`;
         className = "marker marker-type marker-warehouse-amazon";
       } else if (category === 'walmart' || (category && category.includes('沃尔玛'))) {
-        html = '<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart" style="width:32px;height:20px;object-fit:contain;">';
+        // Walmart spark logo
+        html = `<svg viewBox="0 0 100 100" width="36" height="36">
+          <rect x="5" y="5" width="90" height="90" rx="8" fill="#0071CE"/>
+          <g transform="translate(50,50)">
+            <rect x="-4" y="-28" width="8" height="22" rx="4" fill="#FFC220"/>
+            <rect x="-4" y="6" width="8" height="22" rx="4" fill="#FFC220"/>
+            <rect x="-4" y="-28" width="8" height="22" rx="4" fill="#FFC220" transform="rotate(60)"/>
+            <rect x="-4" y="6" width="8" height="22" rx="4" fill="#FFC220" transform="rotate(60)"/>
+            <rect x="-4" y="-28" width="8" height="22" rx="4" fill="#FFC220" transform="rotate(120)"/>
+            <rect x="-4" y="6" width="8" height="22" rx="4" fill="#FFC220" transform="rotate(120)"/>
+          </g>
+        </svg>`;
         className = "marker marker-type marker-warehouse-walmart";
       } else {
         html = "🏭";

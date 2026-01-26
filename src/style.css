@@ -809,30 +809,33 @@ body {
 }
 
 .marker-airport-icon {
-  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-  border-color: #3b82f6;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .marker-port-icon {
-  background: linear-gradient(135deg, #ffedd5, #fed7aa);
-  border-color: #f97316;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .marker-warehouse-icon {
-  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-  border-color: #10b981;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .marker-warehouse-amazon {
-  background: #ffffff;
-  border-color: #ff9900;
-  padding: 6px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .marker-warehouse-walmart {
-  background: #ffffff;
-  border-color: #0071ce;
-  padding: 6px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 /* 两地距离端点标记 - 小圆点 + 脉冲 + 地址标签 */
