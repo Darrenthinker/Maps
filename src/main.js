@@ -890,7 +890,7 @@ function renderClassifiedView() {
                 for (const airport of country.airports) {
                   const intlLabel = airport.intl ? '🌐' : '';
                   html += `
-                    <li class="result-item result-item--airport" data-id="a-${airport.code.toLowerCase()}">
+                    <li class="result-item result-item--airport" data-lat="${airport.lat}" data-lng="${airport.lng}" data-name="${airport.name}">
                       <div class="result-item__title">${intlLabel} ${airport.code} · ${airport.name}</div>
                       <div class="result-item__meta">${airport.city}</div>
                     </li>
@@ -899,7 +899,7 @@ function renderClassifiedView() {
               } else {
                 for (const port of country.ports) {
                   html += `
-                    <li class="result-item result-item--airport" data-id="p-${port.code.toLowerCase()}">
+                    <li class="result-item result-item--airport" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}">
                       <div class="result-item__title">🚢 ${port.code} · ${port.name}</div>
                       <div class="result-item__meta">${port.city}</div>
                     </li>
@@ -1108,14 +1108,15 @@ function bindTreeEvents() {
     });
   });
   
-  // 机场/港口项点击 - 跳转到地图
-  document.querySelectorAll('.result-item--airport[data-id]').forEach(el => {
+  // 机场/港口项点击 - 跳转到地图（使用分类数据中的坐标）
+  document.querySelectorAll('.result-item--airport[data-lat]').forEach(el => {
     el.addEventListener('click', (e) => {
       e.stopPropagation();
-      const nodeId = el.dataset.id;
-      const node = state.allNodes.find(n => n.id === nodeId);
-      if (node) {
-        mapAdapter.focusOn(node);
+      const lat = parseFloat(el.dataset.lat);
+      const lng = parseFloat(el.dataset.lng);
+      const name = el.dataset.name;
+      if (!isNaN(lat) && !isNaN(lng)) {
+        mapAdapter.focusOnCoords(lat, lng, 12);
         // 移动端：点击后关闭侧边栏
         if (window.innerWidth <= 768) {
           app.classList.remove("app--sidebar-open");
