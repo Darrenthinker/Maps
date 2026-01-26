@@ -785,16 +785,17 @@ body {
 
 /* 机场/港口/海外仓标记图标 */
 .marker-type {
-  width: 40px;
-  height: 40px;
-  background: #ffffff;
-  border: 2px solid #e2e8f0;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  font-size: 20px;
+  width: 24px !important;
+  height: 24px !important;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* 固定大小，不随地图缩放 */
+  transform: none !important;
 }
 
 /* 隐藏 Leaflet 默认标记阴影 */
