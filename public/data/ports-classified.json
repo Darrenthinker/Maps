@@ -479,7 +479,8 @@
                   "name": "Donggang",
                   "city": "Donggang",
                   "lat": 39.8833,
-                  "lng": 124.1333
+                  "lng": 124.1333,
+                  "nameZh": "东港市"
                 },
                 {
                   "code": "CNDGP",
@@ -1243,7 +1244,8 @@
                   "name": "Lianzhou",
                   "city": "Lianzhou",
                   "lat": 24.7667,
-                  "lng": 112.35
+                  "lng": 112.35,
+                  "nameZh": "连州市"
                 },
                 {
                   "code": "CNLJQ",
@@ -1339,7 +1341,8 @@
                   "name": "Lisui",
                   "city": "Lisui",
                   "lat": 40.0667,
-                  "lng": 116.75
+                  "lng": 116.75,
+                  "nameZh": "李遂镇"
                 },
                 {
                   "code": "CNLUN",
@@ -1369,7 +1372,8 @@
                   "name": "Lanxi",
                   "city": "Lanxi",
                   "lat": 29.2,
-                  "lng": 119.4667
+                  "lng": 119.4667,
+                  "nameZh": "兰溪市"
                 },
                 {
                   "code": "CNLYG",
@@ -1833,7 +1837,8 @@
                   "name": "Suibin",
                   "city": "Suibin",
                   "lat": 47.3,
-                  "lng": 131.85
+                  "lng": 131.85,
+                  "nameZh": "绥滨镇"
                 },
                 {
                   "code": "CNSDG",
@@ -1962,7 +1967,8 @@
                   "name": "Sanshui",
                   "city": "Sanshui",
                   "lat": 23.1667,
-                  "lng": 112.8667
+                  "lng": 112.8667,
+                  "nameZh": "三水区"
                 },
                 {
                   "code": "CNSJU",
@@ -2204,7 +2210,8 @@
                   "name": "Tongjiang",
                   "city": "Tongjiang",
                   "lat": 47.65,
-                  "lng": 132.5
+                  "lng": 132.5,
+                  "nameZh": "同江市"
                 },
                 {
                   "code": "CNTOL",
@@ -2708,7 +2715,8 @@
                   "name": "Zhongtang",
                   "city": "Zhongtang",
                   "lat": 23.0833,
-                  "lng": 113.65
+                  "lng": 113.65,
+                  "nameZh": "中堂镇"
                 },
                 {
                   "code": "CNZGW",
@@ -3045,7 +3053,8 @@
                   "name": "Kitanagoya",
                   "city": "Kitanagoya",
                   "lat": 35.2333,
-                  "lng": 136.85
+                  "lng": 136.85,
+                  "nameZh": "北名古屋市"
                 },
                 {
                   "code": "JPGTO",
@@ -3089,7 +3098,8 @@
                   "name": "Hamura",
                   "city": "Hamura",
                   "lat": 35.7667,
-                  "lng": 139.3
+                  "lng": 139.3,
+                  "nameZh": "羽村市"
                 },
                 {
                   "code": "JPHOF",
@@ -3170,7 +3180,8 @@
                   "name": "Kasumigaura",
                   "city": "Kasumigaura",
                   "lat": 36.0333,
-                  "lng": 140.2167
+                  "lng": 140.2167,
+                  "nameZh": "霞浦市"
                 },
                 {
                   "code": "JPKKJ",
@@ -3279,7 +3290,8 @@
                   "name": "Narashino",
                   "city": "Narashino",
                   "lat": 35.6667,
-                  "lng": 140.0167
+                  "lng": 140.0167,
+                  "nameZh": "习志野市"
                 },
                 {
                   "code": "JPNAN",
@@ -3479,7 +3491,8 @@
                   "name": "Shimada",
                   "city": "Shimada",
                   "lat": 34.8333,
-                  "lng": 138.1833
+                  "lng": 138.1833,
+                  "nameZh": "岛田市"
                 },
                 {
                   "code": "JPSUK",
@@ -3567,7 +3580,8 @@
                   "name": "Tsubame",
                   "city": "Tsubame",
                   "lat": 37.65,
-                  "lng": 138.9333
+                  "lng": 138.9333,
+                  "nameZh": "燕市"
                 },
                 {
                   "code": "JPTUZ",
@@ -3635,7 +3649,8 @@
                   "name": "Yachiyo",
                   "city": "Yachiyo",
                   "lat": 35.7333,
-                  "lng": 140.1
+                  "lng": 140.1,
+                  "nameZh": "八千代市"
                 },
                 {
                   "code": "JPYHI",
@@ -3680,7 +3695,8 @@
                   "name": "Iizuka",
                   "city": "Iizuka",
                   "lat": 33.65,
-                  "lng": 130.6833
+                  "lng": 130.6833,
+                  "nameZh": "饭冢市"
                 }
               ]
             },
@@ -4126,7 +4142,8 @@
                   "name": "Suwon",
                   "city": "Suwon",
                   "lat": 37.25,
-                  "lng": 127.2333
+                  "lng": 127.2333,
+                  "nameZh": "水原市"
                 },
                 {
                   "code": "KRSWD",
@@ -4257,7 +4274,8 @@
                   "name": "Hukou",
                   "city": "Hukou",
                   "lat": 24.9,
-                  "lng": 121.05
+                  "lng": 121.05,
+                  "nameZh": "湖口乡"
                 },
                 {
                   "code": "TWLGM",
@@ -4508,7 +4526,8 @@
                   "name": "Ampana",
                   "city": "Ampana",
                   "lat": -0.8667,
-                  "lng": 121.5833
+                  "lng": 121.5833,
+                  "nameZh": "丹戎阿比机场"
                 },
                 {
                   "code": "IDASI",
@@ -4864,7 +4883,8 @@
                   "name": "Kolonodale",
                   "city": "Kolonodale",
                   "lat": -1.9667,
-                  "lng": 121.3333
+                  "lng": 121.3333,
+                  "nameZh": "科洛诺达勒"
                 },
                 {
                   "code": "IDKNT",
@@ -5515,7 +5535,8 @@
                   "name": "Weda",
                   "city": "Weda",
                   "lat": 0.3333,
-                  "lng": 127.8833
+                  "lng": 127.8833,
+                  "nameZh": "韦达"
                 },
                 {
                   "code": "IDWGP",
@@ -5686,7 +5707,8 @@
                   "name": "Da Nang",
                   "city": "Da Nang",
                   "lat": 16.0667,
-                  "lng": 108.2167
+                  "lng": 108.2167,
+                  "nameZh": "岘港市"
                 },
                 {
                   "code": "VNDMO",
@@ -6251,7 +6273,8 @@
                   "name": "Van Phong",
                   "city": "Van Phong",
                   "lat": 20.8,
-                  "lng": 106.8667
+                  "lng": 106.8667,
+                  "nameZh": "Van Phong"
                 },
                 {
                   "code": "VNVRO",
@@ -6346,7 +6369,8 @@
                   "name": "Bacong",
                   "city": "Bacong",
                   "lat": 9.2333,
-                  "lng": 123.3
+                  "lng": 123.3,
+                  "nameZh": "巴孔"
                 },
                 {
                   "code": "PHBAT",
@@ -6448,7 +6472,8 @@
                   "name": "Batangas/Luzon",
                   "city": "Batangas/Luzon",
                   "lat": 13.75,
-                  "lng": 121.05
+                  "lng": 121.05,
+                  "nameZh": "八打雁市"
                 },
                 {
                   "code": "PHBUR",
@@ -6476,7 +6501,8 @@
                   "name": "Cagdianao",
                   "city": "Cagdianao",
                   "lat": 9.9167,
-                  "lng": 125.6667
+                  "lng": 125.6667,
+                  "nameZh": "卡地安纳"
                 },
                 {
                   "code": "PHCGI",
@@ -6491,7 +6517,8 @@
                   "name": "Capoocan",
                   "city": "Capoocan",
                   "lat": 11.3,
-                  "lng": 124.65
+                  "lng": 124.65,
+                  "nameZh": "卡波坎"
                 },
                 {
                   "code": "PHCRA",
@@ -6569,14 +6596,16 @@
                   "name": "Guihulngan",
                   "city": "Guihulngan",
                   "lat": 10.1167,
-                  "lng": 123.2833
+                  "lng": 123.2833,
+                  "nameZh": "吉胡尔岸"
                 },
                 {
                   "code": "PHGUN",
                   "name": "Guiuan",
                   "city": "Guiuan",
                   "lat": 11.0333,
-                  "lng": 125.7167
+                  "lng": 125.7167,
+                  "nameZh": "吉万"
                 },
                 {
                   "code": "PHHIL",
@@ -6655,7 +6684,8 @@
                   "name": "Leyte",
                   "city": "Leyte",
                   "lat": 11.3667,
-                  "lng": 124.4833
+                  "lng": 124.4833,
+                  "nameZh": "叻伊特"
                 },
                 {
                   "code": "PHLGP",
@@ -7017,7 +7047,8 @@
                   "name": "Beaufort",
                   "city": "Beaufort",
                   "lat": 5.3333,
-                  "lng": 115.75
+                  "lng": 115.75,
+                  "nameZh": "保佛县"
                 },
                 {
                   "code": "MYBEL",
@@ -7189,7 +7220,8 @@
                   "name": "Labuan",
                   "city": "Labuan",
                   "lat": 5.2833,
-                  "lng": 115.2333
+                  "lng": 115.2333,
+                  "nameZh": "纳闽"
                 },
                 {
                   "code": "MYLGK",
@@ -7239,7 +7271,8 @@
                   "name": "Nilai",
                   "city": "Nilai",
                   "lat": 2.8167,
-                  "lng": 101.8
+                  "lng": 101.8,
+                  "nameZh": "尼莱"
                 },
                 {
                   "code": "MYPEN",
@@ -7254,7 +7287,8 @@
                   "name": "Pengerang",
                   "city": "Pengerang",
                   "lat": 1.3667,
-                  "lng": 104.1167
+                  "lng": 104.1167,
+                  "nameZh": "边佳兰"
                 },
                 {
                   "code": "MYPJK",
@@ -7291,7 +7325,8 @@
                   "name": "Perai",
                   "city": "Perai",
                   "lat": 5.3833,
-                  "lng": 100.3833
+                  "lng": 100.3833,
+                  "nameZh": "北赖"
                 },
                 {
                   "code": "MYSAM",
@@ -8203,7 +8238,8 @@
                   "name": "Kozhikode (ex Calicut)",
                   "city": "Kozhikode (ex Calicut)",
                   "lat": 11.25,
-                  "lng": 75.7667
+                  "lng": 75.7667,
+                  "nameZh": "科兹科德"
                 },
                 {
                   "code": "INCCU",
@@ -8290,7 +8326,8 @@
                   "name": "Greater Noida",
                   "city": "Greater Noida",
                   "lat": 28.4667,
-                  "lng": 77.5167
+                  "lng": 77.5167,
+                  "nameZh": "大诺伊达"
                 },
                 {
                   "code": "INGRR",
@@ -8320,7 +8357,8 @@
                   "name": "Jammu",
                   "city": "Jammu",
                   "lat": 32.7,
-                  "lng": 74.85
+                  "lng": 74.85,
+                  "nameZh": "查谟"
                 },
                 {
                   "code": "INIXM",
@@ -8335,7 +8373,8 @@
                   "name": "Kandla",
                   "city": "Kandla",
                   "lat": 23.0333,
-                  "lng": 70.2167
+                  "lng": 70.2167,
+                  "nameZh": "Kandla"
                 },
                 {
                   "code": "INJBD",
@@ -8475,7 +8514,8 @@
                   "name": "Munger",
                   "city": "Munger",
                   "lat": 25.3833,
-                  "lng": 86.4667
+                  "lng": 86.4667,
+                  "nameZh": "蒙格埃尔"
                 },
                 {
                   "code": "INNEE",
@@ -8752,7 +8792,8 @@
                   "name": "Kulhudhuffushi",
                   "city": "Kulhudhuffushi",
                   "lat": 6.6167,
-                  "lng": 73.05
+                  "lng": 73.05,
+                  "nameZh": "库卢杜富希岛"
                 },
                 {
                   "code": "MVMCP",
@@ -8967,7 +9008,8 @@
                   "name": "Qalat",
                   "city": "Qalat",
                   "lat": 32.1,
-                  "lng": 66.8833
+                  "lng": 66.8833,
+                  "nameZh": "卡拉特"
                 },
                 {
                   "code": "AFRKH",
@@ -9055,7 +9097,8 @@
                   "name": "Alanya",
                   "city": "Alanya",
                   "lat": 36.5333,
-                  "lng": 31.9833
+                  "lng": 31.9833,
+                  "nameZh": "阿拉尼亚"
                 },
                 {
                   "code": "TRAMR",
@@ -9148,7 +9191,8 @@
                   "name": "Bodrum",
                   "city": "Bodrum",
                   "lat": 37.0333,
-                  "lng": 27.4167
+                  "lng": 27.4167,
+                  "nameZh": "博德鲁姆"
                 },
                 {
                   "code": "TRBZC",
@@ -9215,14 +9259,16 @@
                   "name": "Edremit",
                   "city": "Edremit",
                   "lat": 39.5833,
-                  "lng": 27.0167
+                  "lng": 27.0167,
+                  "nameZh": "阿德拉穆提乌姆人"
                 },
                 {
                   "code": "TRENE",
                   "name": "Enez",
                   "city": "Enez",
                   "lat": 40.7167,
-                  "lng": 26.0667
+                  "lng": 26.0667,
+                  "nameZh": "埃内兹"
                 },
                 {
                   "code": "TRERE",
@@ -9694,7 +9740,8 @@
                   "name": "Samsun",
                   "city": "Samsun",
                   "lat": 41.2833,
-                  "lng": 36.3333
+                  "lng": 36.3333,
+                  "nameZh": "萨姆松"
                 },
                 {
                   "code": "TRSUR",
@@ -10160,7 +10207,8 @@
                   "name": "Bandar Abbas",
                   "city": "Bandar Abbas",
                   "lat": 27.1833,
-                  "lng": 56.2667
+                  "lng": 56.2667,
+                  "nameZh": "阿巴斯港"
                 },
                 {
                   "code": "IRBPA",
@@ -10323,7 +10371,8 @@
                   "name": "Jizan",
                   "city": "Jizan",
                   "lat": 16.9,
-                  "lng": 42.5
+                  "lng": 42.5,
+                  "nameZh": "吉赞"
                 },
                 {
                   "code": "SAJBI",
@@ -10421,7 +10470,8 @@
                   "name": "Ras Tanura",
                   "city": "Ras Tanura",
                   "lat": 26.6333,
-                  "lng": 50.15
+                  "lng": 50.15,
+                  "nameZh": "Ras Tanura"
                 },
                 {
                   "code": "SASHU",
@@ -10612,7 +10662,8 @@
                   "name": "Dhekelia",
                   "city": "Dhekelia",
                   "lat": 34.9833,
-                  "lng": 33.75
+                  "lng": 33.75,
+                  "nameZh": "泽凯利亚发电厂"
                 },
                 {
                   "code": "CYFMG",
@@ -10633,7 +10684,8 @@
                   "name": "Kyrenia",
                   "city": "Kyrenia",
                   "lat": 35.3333,
-                  "lng": 33.3333
+                  "lng": 33.3333,
+                  "nameZh": "凯里尼亚"
                 },
                 {
                   "code": "CYLAT",
@@ -10647,7 +10699,8 @@
                   "name": "Larnaca",
                   "city": "Larnaca",
                   "lat": 34.9167,
-                  "lng": 33.6167
+                  "lng": 33.6167,
+                  "nameZh": "拉纳卡"
                 },
                 {
                   "code": "CYLMS",
@@ -10714,7 +10767,8 @@
                   "name": "Baghdåd",
                   "city": "Baghdåd",
                   "lat": 33.3333,
-                  "lng": 44.3833
+                  "lng": 44.3833,
+                  "nameZh": "巴格达"
                 },
                 {
                   "code": "IQHIL",
@@ -10767,7 +10821,8 @@
                   "name": "Taji",
                   "city": "Taji",
                   "lat": 33.5167,
-                  "lng": 44.2667
+                  "lng": 44.2667,
+                  "nameZh": "塔吉"
                 },
                 {
                   "code": "IQTQD",
@@ -11164,7 +11219,8 @@
                   "name": "Alat",
                   "city": "Alat",
                   "lat": 39.95,
-                  "lng": 49.4
+                  "lng": 49.4,
+                  "nameZh": "阿利亚特"
                 },
                 {
                   "code": "AZKMZ",
@@ -11185,7 +11241,8 @@
                   "name": "Shirvan",
                   "city": "Shirvan",
                   "lat": 39.9167,
-                  "lng": 48.9167
+                  "lng": 48.9167,
+                  "nameZh": "希尔万"
                 },
                 {
                   "code": "AZSUQ",
@@ -11252,7 +11309,8 @@
                   "name": "Sukhumi",
                   "city": "Sukhumi",
                   "lat": 43,
-                  "lng": 41
+                  "lng": 41,
+                  "nameZh": "苏呼米"
                 },
                 {
                   "code": "GEANA",
@@ -11295,7 +11353,8 @@
                   "name": "Hodeidah",
                   "city": "Hodeidah",
                   "lat": 14.8333,
-                  "lng": 42.9
+                  "lng": 42.9,
+                  "nameZh": "荷台达"
                 },
                 {
                   "code": "YELAD",
@@ -11978,7 +12037,8 @@
                   "name": "Aberystwyth",
                   "city": "Aberystwyth",
                   "lat": 52.4167,
-                  "lng": -4.0833
+                  "lng": -4.0833,
+                  "nameZh": "阿伯里斯特威斯"
                 },
                 {
                   "code": "GBBAD",
@@ -12226,7 +12286,8 @@
                   "name": "Bideford",
                   "city": "Bideford",
                   "lat": 51.0167,
-                  "lng": -4.2167
+                  "lng": -4.2167,
+                  "nameZh": "拜德福特"
                 },
                 {
                   "code": "GBBIF",
@@ -12354,7 +12415,8 @@
                   "name": "Barnstaple",
                   "city": "Barnstaple",
                   "lat": 51.0833,
-                  "lng": -4.0667
+                  "lng": -4.0667,
+                  "nameZh": "巴恩斯特普尔"
                 },
                 {
                   "code": "GBBNH",
@@ -12390,7 +12452,8 @@
                   "name": "Bournemouth",
                   "city": "Bournemouth",
                   "lat": 50.7333,
-                  "lng": -1.8833
+                  "lng": -1.8833,
+                  "nameZh": "伯恩茅斯"
                 },
                 {
                   "code": "GBBON",
@@ -12640,7 +12703,8 @@
                   "name": "Berwick-upon-Tweed",
                   "city": "Berwick-upon-Tweed",
                   "lat": 55.7833,
-                  "lng": -2
+                  "lng": -2,
+                  "nameZh": "特韦德河畔伯立克"
                 },
                 {
                   "code": "GBBWM",
@@ -12731,7 +12795,8 @@
                   "name": "Broughton",
                   "city": "Broughton",
                   "lat": 53.1667,
-                  "lng": -3
+                  "lng": -3,
+                  "nameZh": "布劳顿"
                 },
                 {
                   "code": "GBC5T",
@@ -12987,7 +13052,8 @@
                   "name": "Mostyn",
                   "city": "Mostyn",
                   "lat": 53.3,
-                  "lng": -3.2667
+                  "lng": -3.2667,
+                  "nameZh": "Mostyn"
                 },
                 {
                   "code": "GBCHJ",
@@ -13001,7 +13067,8 @@
                   "name": "Chepstow",
                   "city": "Chepstow",
                   "lat": 51.6333,
-                  "lng": -2.6667
+                  "lng": -2.6667,
+                  "nameZh": "彻普斯陶"
                 },
                 {
                   "code": "GBCII",
@@ -13448,7 +13515,8 @@
                   "name": "Cairnryan",
                   "city": "Cairnryan",
                   "lat": 54.9667,
-                  "lng": -5.0167
+                  "lng": -5.0167,
+                  "nameZh": "Cairnryan"
                 },
                 {
                   "code": "GBCYY",
@@ -13537,7 +13605,8 @@
                   "name": "Dartford",
                   "city": "Dartford",
                   "lat": 51.45,
-                  "lng": 0.2167
+                  "lng": 0.2167,
+                  "nameZh": "达特福德"
                 },
                 {
                   "code": "GBDHD",
@@ -13630,7 +13699,8 @@
                   "name": "Darlington",
                   "city": "Darlington",
                   "lat": 54.5333,
-                  "lng": -1.5667
+                  "lng": -1.5667,
+                  "nameZh": "达灵顿"
                 },
                 {
                   "code": "GBDRX",
@@ -13680,7 +13750,8 @@
                   "name": "Dunston",
                   "city": "Dunston",
                   "lat": 54.95,
-                  "lng": -1.65
+                  "lng": -1.65,
+                  "nameZh": "邓斯顿"
                 },
                 {
                   "code": "GBDUC",
@@ -13701,7 +13772,8 @@
                   "name": "Dumfries",
                   "city": "Dumfries",
                   "lat": 55.05,
-                  "lng": -3.6
+                  "lng": -3.6,
+                  "nameZh": "邓弗里斯"
                 },
                 {
                   "code": "GBDUN",
@@ -13737,7 +13809,8 @@
                   "name": "Dewsbury",
                   "city": "Dewsbury",
                   "lat": 53.7,
-                  "lng": -1.6167
+                  "lng": -1.6167,
+                  "nameZh": "迪斯伯里"
                 },
                 {
                   "code": "GBDYB",
@@ -13759,7 +13832,8 @@
                   "name": "Dysart",
                   "city": "Dysart",
                   "lat": 56.1333,
-                  "lng": -3.1167
+                  "lng": -3.1167,
+                  "nameZh": "戴撒"
                 },
                 {
                   "code": "GBEAA",
@@ -13795,7 +13869,8 @@
                   "name": "Eccles",
                   "city": "Eccles",
                   "lat": 53.4833,
-                  "lng": -2.3333
+                  "lng": -2.3333,
+                  "nameZh": "埃克尔斯"
                 },
                 {
                   "code": "GBEDI",
@@ -13909,7 +13984,8 @@
                   "name": "Seaton",
                   "city": "Seaton",
                   "lat": 50.7167,
-                  "lng": -3.0833
+                  "lng": -3.0833,
+                  "nameZh": "锡顿"
                 },
                 {
                   "code": "GBERI",
@@ -13930,7 +14006,8 @@
                   "name": "Easington",
                   "city": "Easington",
                   "lat": 54.7833,
-                  "lng": -1.35
+                  "lng": -1.35,
+                  "nameZh": "伊辛顿"
                 },
                 {
                   "code": "GBESH",
@@ -14207,7 +14284,8 @@
                   "name": "Formby",
                   "city": "Formby",
                   "lat": 53.55,
-                  "lng": -3.05
+                  "lng": -3.05,
+                  "nameZh": "佛安姆比"
                 },
                 {
                   "code": "GBFRW",
@@ -14331,7 +14409,8 @@
                   "name": "Gillingham",
                   "city": "Gillingham",
                   "lat": 51.3833,
-                  "lng": 0.55
+                  "lng": 0.55,
+                  "nameZh": "吉灵厄姆"
                 },
                 {
                   "code": "GBGIR",
@@ -14556,7 +14635,8 @@
                   "name": "Garston",
                   "city": "Garston",
                   "lat": 53.3333,
-                  "lng": -2.9
+                  "lng": -2.9,
+                  "nameZh": "Garston"
                 },
                 {
                   "code": "GBGUD",
@@ -14851,7 +14931,8 @@
                   "name": "Hythe",
                   "city": "Hythe",
                   "lat": 51.0667,
-                  "lng": 1.0833
+                  "lng": 1.0833,
+                  "nameZh": "海斯城"
                 },
                 {
                   "code": "GBHTP",
@@ -14947,7 +15028,8 @@
                   "name": "Heybridge",
                   "city": "Heybridge",
                   "lat": 51.7167,
-                  "lng": 0.7
+                  "lng": 0.7,
+                  "nameZh": "黑布利兹"
                 },
                 {
                   "code": "GBIAY",
@@ -14968,7 +15050,8 @@
                   "name": "Shifnal",
                   "city": "Shifnal",
                   "lat": 52.6667,
-                  "lng": -2.3667
+                  "lng": -2.3667,
+                  "nameZh": "诗夫纳尔"
                 },
                 {
                   "code": "GBIGG",
@@ -15056,7 +15139,8 @@
                   "name": "Isle of Grain",
                   "city": "Isle of Grain",
                   "lat": 51.45,
-                  "lng": 0.7
+                  "lng": 0.7,
+                  "nameZh": "Isle of Grain"
                 },
                 {
                   "code": "GBION",
@@ -15239,7 +15323,8 @@
                   "name": "Keighley",
                   "city": "Keighley",
                   "lat": 53.8833,
-                  "lng": -1.9167
+                  "lng": -1.9167,
+                  "nameZh": "基斯利"
                 },
                 {
                   "code": "GBKES",
@@ -15289,7 +15374,8 @@
                   "name": "Kingsbridge",
                   "city": "Kingsbridge",
                   "lat": 50.2833,
-                  "lng": -3.7667
+                  "lng": -3.7667,
+                  "nameZh": "金斯布里奇镇"
                 },
                 {
                   "code": "GBKIC",
@@ -15495,7 +15581,8 @@
                   "name": "Leeds",
                   "city": "Leeds",
                   "lat": 53.8,
-                  "lng": -1.5833
+                  "lng": -1.5833,
+                  "nameZh": "利兹"
                 },
                 {
                   "code": "GBLBD",
@@ -15596,7 +15683,8 @@
                   "name": "Lerwick",
                   "city": "Lerwick",
                   "lat": 60.15,
-                  "lng": -1.15
+                  "lng": -1.15,
+                  "nameZh": "勒威克"
                 },
                 {
                   "code": "GBLFF",
@@ -15970,7 +16058,8 @@
                   "name": "Lynton",
                   "city": "Lynton",
                   "lat": 51.2167,
-                  "lng": -3.8333
+                  "lng": -3.8333,
+                  "nameZh": "林顿"
                 },
                 {
                   "code": "GBLYW",
@@ -16026,7 +16115,8 @@
                   "name": "Middleham",
                   "city": "Middleham",
                   "lat": 54.2833,
-                  "lng": -1.8
+                  "lng": -1.8,
+                  "nameZh": "米德尔汉姆"
                 },
                 {
                   "code": "GBMED",
@@ -16085,7 +16175,8 @@
                   "name": "Middlesbrough",
                   "city": "Middlesbrough",
                   "lat": 54.5667,
-                  "lng": -1.15
+                  "lng": -1.15,
+                  "nameZh": "米德尔斯伯勒"
                 },
                 {
                   "code": "GBMLF",
@@ -16262,7 +16353,8 @@
                   "name": "Nairn",
                   "city": "Nairn",
                   "lat": 57.5833,
-                  "lng": -3.8833
+                  "lng": -3.8833,
+                  "nameZh": "奈恩"
                 },
                 {
                   "code": "GBNAR",
@@ -16926,7 +17018,8 @@
                   "name": "Penkridge",
                   "city": "Penkridge",
                   "lat": 52.7333,
-                  "lng": -2.1167
+                  "lng": -2.1167,
+                  "nameZh": "潘克里治"
                 },
                 {
                   "code": "GBPKL",
@@ -17703,7 +17796,8 @@
                   "name": "Thundersley",
                   "city": "Thundersley",
                   "lat": 51.55,
-                  "lng": 0.5833
+                  "lng": 0.5833,
+                  "nameZh": "桑德西"
                 },
                 {
                   "code": "GBRST",
@@ -17771,7 +17865,8 @@
                   "name": "Ryde",
                   "city": "Ryde",
                   "lat": 50.7333,
-                  "lng": -1.1667
+                  "lng": -1.1667,
+                  "nameZh": "赖德"
                 },
                 {
                   "code": "GBRYL",
@@ -17837,7 +17932,8 @@
                   "name": "Salcombe",
                   "city": "Salcombe",
                   "lat": 50.2333,
-                  "lng": -3.7833
+                  "lng": -3.7833,
+                  "nameZh": "萨科姆"
                 },
                 {
                   "code": "GBSCC",
@@ -18512,7 +18608,8 @@
                   "name": "Sullom Voe",
                   "city": "Sullom Voe",
                   "lat": 60.4667,
-                  "lng": -1.3
+                  "lng": -1.3,
+                  "nameZh": "Sullom Voe"
                 },
                 {
                   "code": "GBSUN",
@@ -18812,7 +18909,8 @@
                   "name": "Thurso",
                   "city": "Thurso",
                   "lat": 58.5833,
-                  "lng": -3.5167
+                  "lng": -3.5167,
+                  "nameZh": "苏尔索"
                 },
                 {
                   "code": "GBTHT",
@@ -18946,7 +19044,8 @@
                   "name": "Troon",
                   "city": "Troon",
                   "lat": 55.55,
-                  "lng": -4.65
+                  "lng": -4.65,
+                  "nameZh": "特伦"
                 },
                 {
                   "code": "GBTRO",
@@ -20414,7 +20513,8 @@
                   "name": "Caen",
                   "city": "Caen",
                   "lat": 49.1833,
-                  "lng": -0.3667
+                  "lng": -0.3667,
+                  "nameZh": "卡昂"
                 },
                 {
                   "code": "FRCGF",
@@ -21230,7 +21330,8 @@
                   "name": "Fumay",
                   "city": "Fumay",
                   "lat": 49.9667,
-                  "lng": 4.6833
+                  "lng": 4.6833,
+                  "nameZh": "菲迈"
                 },
                 {
                   "code": "FRFNS",
@@ -22210,7 +22311,8 @@
                   "name": "Lille",
                   "city": "Lille",
                   "lat": 50.6333,
-                  "lng": 3.0667
+                  "lng": 3.0667,
+                  "nameZh": "里尔"
                 },
                 {
                   "code": "FRLLW",
@@ -22386,7 +22488,8 @@
                   "name": "Les Sables-d'Olonne",
                   "city": "Les Sables-d'Olonne",
                   "lat": 46.5,
-                  "lng": -1.7833
+                  "lng": -1.7833,
+                  "nameZh": "Les Sables-d'Olonne"
                 },
                 {
                   "code": "FRLTF",
@@ -22986,7 +23089,8 @@
                   "name": "Boulogne-Billancourt",
                   "city": "Boulogne-Billancourt",
                   "lat": 48.8333,
-                  "lng": 2.25
+                  "lng": 2.25,
+                  "nameZh": "布洛涅-比扬古"
                 },
                 {
                   "code": "FROHP",
@@ -23057,7 +23161,8 @@
                   "name": "Ouistreham",
                   "city": "Ouistreham",
                   "lat": 49.2833,
-                  "lng": -0.2667
+                  "lng": -0.2667,
+                  "nameZh": "Ouistreham"
                 },
                 {
                   "code": "FROYI",
@@ -23971,7 +24076,8 @@
                   "name": "Sarreguemines",
                   "city": "Sarreguemines",
                   "lat": 49.1167,
-                  "lng": 7.0667
+                  "lng": 7.0667,
+                  "nameZh": "萨尔格米讷"
                 },
                 {
                   "code": "FRSBK",
@@ -24176,7 +24282,8 @@
                   "name": "Strasbourg",
                   "city": "Strasbourg",
                   "lat": 48.5667,
-                  "lng": 7.75
+                  "lng": 7.75,
+                  "nameZh": "斯特拉斯堡"
                 },
                 {
                   "code": "FRSYQ",
@@ -24581,7 +24688,8 @@
                   "name": "Rouen",
                   "city": "Rouen",
                   "lat": 49.45,
-                  "lng": 1.1
+                  "lng": 1.1,
+                  "nameZh": "鲁昂"
                 },
                 {
                   "code": "FRUSJ",
@@ -25512,7 +25620,8 @@
                   "name": "Wangerooge",
                   "city": "Wangerooge",
                   "lat": 53.8,
-                  "lng": 7.9
+                  "lng": 7.9,
+                  "nameZh": "旺格奥格"
                 },
                 {
                   "code": "DEAHC",
@@ -25542,7 +25651,8 @@
                   "name": "Amberg",
                   "city": "Amberg",
                   "lat": 49.4333,
-                  "lng": 11.8667
+                  "lng": 11.8667,
+                  "nameZh": "安贝格"
                 },
                 {
                   "code": "DEAML",
@@ -25563,7 +25673,8 @@
                   "name": "Andernach",
                   "city": "Andernach",
                   "lat": 50.4333,
-                  "lng": 7.4
+                  "lng": 7.4,
+                  "nameZh": "安德纳赫"
                 },
                 {
                   "code": "DEANE",
@@ -25593,7 +25704,8 @@
                   "name": "Pförring",
                   "city": "Pförring",
                   "lat": 48.8167,
-                  "lng": 11.6833
+                  "lng": 11.6833,
+                  "nameZh": "普弗灵"
                 },
                 {
                   "code": "DEAQF",
@@ -25623,7 +25735,8 @@
                   "name": "Arendsee",
                   "city": "Arendsee",
                   "lat": 52.8833,
-                  "lng": 11.4833
+                  "lng": 11.4833,
+                  "nameZh": "阿伦德塞"
                 },
                 {
                   "code": "DEASR",
@@ -25683,7 +25796,8 @@
                   "name": "Schwindegg",
                   "city": "Schwindegg",
                   "lat": 48.2667,
-                  "lng": 12.25
+                  "lng": 12.25,
+                  "nameZh": "施温德格"
                 },
                 {
                   "code": "DEBAS",
@@ -25697,7 +25811,8 @@
                   "name": "Brandenburg",
                   "city": "Brandenburg",
                   "lat": 52.4167,
-                  "lng": 12.55
+                  "lng": 12.55,
+                  "nameZh": "哈弗尔河畔勃兰登堡"
                 },
                 {
                   "code": "DEBBV",
@@ -25793,7 +25908,8 @@
                   "name": "Bergisch Gladbach",
                   "city": "Bergisch Gladbach",
                   "lat": 50.9833,
-                  "lng": 7.1333
+                  "lng": 7.1333,
+                  "nameZh": "贝吉施格拉德巴赫"
                 },
                 {
                   "code": "DEBIN",
@@ -25823,14 +25939,16 @@
                   "name": "Beeskow",
                   "city": "Beeskow",
                   "lat": 52.1667,
-                  "lng": 14.2333
+                  "lng": 14.2333,
+                  "nameZh": "贝斯科"
                 },
                 {
                   "code": "DEBLD",
                   "name": "Burglengenfeld",
                   "city": "Burglengenfeld",
                   "lat": 49.2,
-                  "lng": 12.0333
+                  "lng": 12.0333,
+                  "nameZh": "布格伦根费尔德"
                 },
                 {
                   "code": "DEBLM",
@@ -25926,7 +26044,8 @@
                   "name": "Bremerhaven",
                   "city": "Bremerhaven",
                   "lat": 53.5333,
-                  "lng": 8.6
+                  "lng": 8.6,
+                  "nameZh": "不来梅哈芬"
                 },
                 {
                   "code": "DEBSI",
@@ -25969,7 +26088,8 @@
                   "name": "Bühl",
                   "city": "Bühl",
                   "lat": 48.6833,
-                  "lng": 8.1333
+                  "lng": 8.1333,
+                  "nameZh": "比尔"
                 },
                 {
                   "code": "DEBUT",
@@ -26128,7 +26248,8 @@
                   "name": "Crossen an der Elster",
                   "city": "Crossen an der Elster",
                   "lat": 50.9667,
-                  "lng": 11.9667
+                  "lng": 11.9667,
+                  "nameZh": "埃尔斯特河畔克罗森"
                 },
                 {
                   "code": "DECUM",
@@ -26204,7 +26325,8 @@
                   "name": "Oberthal",
                   "city": "Oberthal",
                   "lat": 49.5167,
-                  "lng": 7.1
+                  "lng": 7.1,
+                  "nameZh": "上塔尔"
                 },
                 {
                   "code": "DEDEU",
@@ -26240,7 +26362,8 @@
                   "name": "Dierhagen",
                   "city": "Dierhagen",
                   "lat": 54.3,
-                  "lng": 12.3667
+                  "lng": 12.3667,
+                  "nameZh": "迪尔哈根"
                 },
                 {
                   "code": "DEDIT",
@@ -26369,14 +26492,16 @@
                   "name": "Düsseldorf",
                   "city": "Düsseldorf",
                   "lat": 51.2333,
-                  "lng": 6.7833
+                  "lng": 6.7833,
+                  "nameZh": "杜塞尔多夫"
                 },
                 {
                   "code": "DEDVE",
                   "name": "Dörverden",
                   "city": "Dörverden",
                   "lat": 52.85,
-                  "lng": 9.2333
+                  "lng": 9.2333,
+                  "nameZh": "德费登"
                 },
                 {
                   "code": "DEDWD",
@@ -26413,7 +26538,8 @@
                   "name": "Eberbach",
                   "city": "Eberbach",
                   "lat": 49.4667,
-                  "lng": 8.9833
+                  "lng": 8.9833,
+                  "nameZh": "埃伯巴赫"
                 },
                 {
                   "code": "DEEBI",
@@ -26441,7 +26567,8 @@
                   "name": "Gräfenhainichen",
                   "city": "Gräfenhainichen",
                   "lat": 51.7167,
-                  "lng": 12.45
+                  "lng": 12.45,
+                  "nameZh": "格雷芬海尼兴"
                 },
                 {
                   "code": "DEEGC",
@@ -26463,14 +26590,16 @@
                   "name": "Ehingen",
                   "city": "Ehingen",
                   "lat": 48.2833,
-                  "lng": 9.7333
+                  "lng": 9.7333,
+                  "nameZh": "多瑙河畔埃英根"
                 },
                 {
                   "code": "DEEHM",
                   "name": "Senheim",
                   "city": "Senheim",
                   "lat": 50.0833,
-                  "lng": 7.2
+                  "lng": 7.2,
+                  "nameZh": "森海姆"
                 },
                 {
                   "code": "DEEHS",
@@ -26577,14 +26706,16 @@
                   "name": "Ettal",
                   "city": "Ettal",
                   "lat": 47.5667,
-                  "lng": 11.1
+                  "lng": 11.1,
+                  "nameZh": "埃塔尔"
                 },
                 {
                   "code": "DEEZH",
                   "name": "Elzach",
                   "city": "Elzach",
                   "lat": 48.1667,
-                  "lng": 8.0667
+                  "lng": 8.0667,
+                  "nameZh": "埃尔察赫"
                 },
                 {
                   "code": "DEEZN",
@@ -26658,14 +26789,16 @@
                   "name": "Fresenburg",
                   "city": "Fresenburg",
                   "lat": 52.8833,
-                  "lng": 7.3
+                  "lng": 7.3,
+                  "nameZh": "弗雷森堡"
                 },
                 {
                   "code": "DEFRR",
                   "name": "Frauenau",
                   "city": "Frauenau",
                   "lat": 48.9833,
-                  "lng": 13.3
+                  "lng": 13.3,
+                  "nameZh": "弗劳埃瑙"
                 },
                 {
                   "code": "DEFSH",
@@ -26980,7 +27113,8 @@
                   "name": "Hannover",
                   "city": "Hannover",
                   "lat": 52.3667,
-                  "lng": 9.7167
+                  "lng": 9.7167,
+                  "nameZh": "汉诺威"
                 },
                 {
                   "code": "DEHAM",
@@ -27068,7 +27202,8 @@
                   "name": "Herne",
                   "city": "Herne",
                   "lat": 51.55,
-                  "lng": 7.2167
+                  "lng": 7.2167,
+                  "nameZh": "黑尔讷"
                 },
                 {
                   "code": "DEHEI",
@@ -27137,7 +27272,8 @@
                   "name": "Roschbach",
                   "city": "Roschbach",
                   "lat": 49.2333,
-                  "lng": 8.1167
+                  "lng": 8.1167,
+                  "nameZh": "罗施巴赫"
                 },
                 {
                   "code": "DEHLN",
@@ -27188,7 +27324,8 @@
                   "name": "Hemmoor",
                   "city": "Hemmoor",
                   "lat": 53.7,
-                  "lng": 9.1167
+                  "lng": 9.1167,
+                  "nameZh": "黑莫尔"
                 },
                 {
                   "code": "DEHNF",
@@ -27297,7 +27434,8 @@
                   "name": "Steinhorst",
                   "city": "Steinhorst",
                   "lat": 52.6833,
-                  "lng": 10.4
+                  "lng": 10.4,
+                  "nameZh": "施泰因霍斯特"
                 },
                 {
                   "code": "DEHSU",
@@ -27369,7 +27507,8 @@
                   "name": "Schwielowsee",
                   "city": "Schwielowsee",
                   "lat": 52.3333,
-                  "lng": 12.9667
+                  "lng": 12.9667,
+                  "nameZh": "施维洛塞"
                 },
                 {
                   "code": "DEIGH",
@@ -27622,7 +27761,8 @@
                   "name": "Krefeld",
                   "city": "Krefeld",
                   "lat": 51.3333,
-                  "lng": 6.5667
+                  "lng": 6.5667,
+                  "nameZh": "克雷费尔德"
                 },
                 {
                   "code": "DEKTN",
@@ -27675,7 +27815,8 @@
                   "name": "Lathen",
                   "city": "Lathen",
                   "lat": 52.8667,
-                  "lng": 7.3167
+                  "lng": 7.3167,
+                  "nameZh": "拉滕"
                 },
                 {
                   "code": "DELAW",
@@ -28552,7 +28693,8 @@
                   "name": "Schönebeck",
                   "city": "Schönebeck",
                   "lat": 52.0167,
-                  "lng": 11.7333
+                  "lng": 11.7333,
+                  "nameZh": "易北河畔舍讷贝克"
                 },
                 {
                   "code": "DEOKG",
@@ -28740,7 +28882,8 @@
                   "name": "Pellworm",
                   "city": "Pellworm",
                   "lat": 54.5167,
-                  "lng": 8.6333
+                  "lng": 8.6333,
+                  "nameZh": "佩尔沃姆"
                 },
                 {
                   "code": "DEPEN",
@@ -28777,21 +28920,24 @@
                   "name": "Pollhagen",
                   "city": "Pollhagen",
                   "lat": 52.3833,
-                  "lng": 9.2
+                  "lng": 9.2,
+                  "nameZh": "波尔哈根"
                 },
                 {
                   "code": "DEPLS",
                   "name": "Pliezhausen",
                   "city": "Pliezhausen",
                   "lat": 48.55,
-                  "lng": 9.2
+                  "lng": 9.2,
+                  "nameZh": "普利茨豪森"
                 },
                 {
                   "code": "DEPOT",
                   "name": "Potsdam",
                   "city": "Potsdam",
                   "lat": 52.4,
-                  "lng": 13.0667
+                  "lng": 13.0667,
+                  "nameZh": "波茨坦"
                 },
                 {
                   "code": "DEPPT",
@@ -28916,7 +29062,8 @@
                   "name": "Recke",
                   "city": "Recke",
                   "lat": 52.3833,
-                  "lng": 7.7167
+                  "lng": 7.7167,
+                  "nameZh": "雷克"
                 },
                 {
                   "code": "DERDL",
@@ -29106,7 +29253,8 @@
                   "name": "Reichartshausen",
                   "city": "Reichartshausen",
                   "lat": 49.35,
-                  "lng": 8.9333
+                  "lng": 8.9333,
+                  "nameZh": "赖夏尔茨豪森"
                 },
                 {
                   "code": "DERU7",
@@ -29205,7 +29353,8 @@
                   "name": "Seeshaupt",
                   "city": "Seeshaupt",
                   "lat": 47.8333,
-                  "lng": 11.3
+                  "lng": 11.3,
+                  "nameZh": "塞斯豪普特"
                 },
                 {
                   "code": "DESEF",
@@ -29219,7 +29368,8 @@
                   "name": "Schönfeld",
                   "city": "Schönfeld",
                   "lat": 51.3,
-                  "lng": 13.7
+                  "lng": 13.7,
+                  "nameZh": "申费尔德"
                 },
                 {
                   "code": "DESGW",
@@ -29277,7 +29427,8 @@
                   "name": "Sulzbach-Laufen",
                   "city": "Sulzbach-Laufen",
                   "lat": 48.9333,
-                  "lng": 9.85
+                  "lng": 9.85,
+                  "nameZh": "苏尔茨巴赫-劳芬"
                 },
                 {
                   "code": "DESMA",
@@ -29299,7 +29450,8 @@
                   "name": "Sünching",
                   "city": "Sünching",
                   "lat": 48.8833,
-                  "lng": 12.35
+                  "lng": 12.35,
+                  "nameZh": "辛兴"
                 },
                 {
                   "code": "DESNE",
@@ -29365,7 +29517,8 @@
                   "name": "Serrig",
                   "city": "Serrig",
                   "lat": 49.5833,
-                  "lng": 6.5667
+                  "lng": 6.5667,
+                  "nameZh": "塞里希"
                 },
                 {
                   "code": "DESRI",
@@ -29380,7 +29533,8 @@
                   "name": "Stockhausen-Illfurth",
                   "city": "Stockhausen-Illfurth",
                   "lat": 50.65,
-                  "lng": 7.9833
+                  "lng": 7.9833,
+                  "nameZh": "施托克豪森-伊尔富尔特"
                 },
                 {
                   "code": "DESSL",
@@ -29394,7 +29548,8 @@
                   "name": "Stade",
                   "city": "Stade",
                   "lat": 53.6,
-                  "lng": 9.4833
+                  "lng": 9.4833,
+                  "nameZh": "施塔德"
                 },
                 {
                   "code": "DESTS",
@@ -29416,14 +29571,16 @@
                   "name": "Schwanfeld",
                   "city": "Schwanfeld",
                   "lat": 49.9167,
-                  "lng": 10.1333
+                  "lng": 10.1333,
+                  "nameZh": "施万费尔德"
                 },
                 {
                   "code": "DESWS",
                   "name": "Steinwiesen",
                   "city": "Steinwiesen",
                   "lat": 50.3,
-                  "lng": 11.4667
+                  "lng": 11.4667,
+                  "nameZh": "施泰因维森"
                 },
                 {
                   "code": "DESWT",
@@ -29460,7 +29617,8 @@
                   "name": "Seelbach",
                   "city": "Seelbach",
                   "lat": 48.3167,
-                  "lng": 7.95
+                  "lng": 7.95,
+                  "nameZh": "塞尔巴赫"
                 },
                 {
                   "code": "DESZ8",
@@ -29564,7 +29722,8 @@
                   "name": "Teltow",
                   "city": "Teltow",
                   "lat": 52.4,
-                  "lng": 13.2667
+                  "lng": 13.2667,
+                  "nameZh": "泰尔托"
                 },
                 {
                   "code": "DETMH",
@@ -29578,7 +29737,8 @@
                   "name": "Temmels",
                   "city": "Temmels",
                   "lat": 49.6833,
-                  "lng": 6.4667
+                  "lng": 6.4667,
+                  "nameZh": "特梅尔斯"
                 },
                 {
                   "code": "DETNR",
@@ -29623,7 +29783,8 @@
                   "name": "Platten",
                   "city": "Platten",
                   "lat": 49.95,
-                  "lng": 6.9667
+                  "lng": 6.9667,
+                  "nameZh": "普拉滕"
                 },
                 {
                   "code": "DETWZ",
@@ -29653,7 +29814,8 @@
                   "name": "Ueckermünde",
                   "city": "Ueckermünde",
                   "lat": 53.7333,
-                  "lng": 14.05
+                  "lng": 14.05,
+                  "nameZh": "于克明德"
                 },
                 {
                   "code": "DEUDF",
@@ -29667,7 +29829,8 @@
                   "name": "Uelzen",
                   "city": "Uelzen",
                   "lat": 52.9667,
-                  "lng": 10.55
+                  "lng": 10.55,
+                  "nameZh": "于尔岑"
                 },
                 {
                   "code": "DEUES",
@@ -30158,7 +30321,8 @@
                   "name": "Monheim",
                   "city": "Monheim",
                   "lat": 48.8333,
-                  "lng": 10.8333
+                  "lng": 10.8333,
+                  "nameZh": "蒙海姆"
                 },
                 {
                   "code": "DEXRT",
@@ -30204,7 +30368,8 @@
                   "name": "Sulzberg",
                   "city": "Sulzberg",
                   "lat": 47.6667,
-                  "lng": 10.35
+                  "lng": 10.35,
+                  "nameZh": "苏尔茨贝格"
                 },
                 {
                   "code": "DEZH8",
@@ -30357,7 +30522,8 @@
                   "name": "Afsnee",
                   "city": "Afsnee",
                   "lat": 51.0333,
-                  "lng": 3.6667
+                  "lng": 3.6667,
+                  "nameZh": "阿夫斯内"
                 },
                 {
                   "code": "BEAGT",
@@ -30403,7 +30569,8 @@
                   "name": "Anhée",
                   "city": "Anhée",
                   "lat": 50.3167,
-                  "lng": 4.8833
+                  "lng": 4.8833,
+                  "nameZh": "昂埃"
                 },
                 {
                   "code": "BEANR",
@@ -30620,7 +30787,8 @@
                   "name": "Blaton",
                   "city": "Blaton",
                   "lat": 50.5,
-                  "lng": 3.65
+                  "lng": 3.65,
+                  "nameZh": "布拉通"
                 },
                 {
                   "code": "BEBMB",
@@ -30671,21 +30839,24 @@
                   "name": "Bornem",
                   "city": "Bornem",
                   "lat": 51.1,
-                  "lng": 4.2333
+                  "lng": 4.2333,
+                  "nameZh": "博尔讷姆"
                 },
                 {
                   "code": "BEBOO",
                   "name": "Boorsem",
                   "city": "Boorsem",
                   "lat": 50.9333,
-                  "lng": 5.7167
+                  "lng": 5.7167,
+                  "nameZh": "布尔森"
                 },
                 {
                   "code": "BEBRE",
                   "name": "Bree",
                   "city": "Bree",
                   "lat": 51.1333,
-                  "lng": 5.6
+                  "lng": 5.6,
+                  "nameZh": "布雷"
                 },
                 {
                   "code": "BEBRM",
@@ -30700,7 +30871,8 @@
                   "name": "Berendrecht",
                   "city": "Berendrecht",
                   "lat": 51.3333,
-                  "lng": 4.3167
+                  "lng": 4.3167,
+                  "nameZh": "贝伦德雷赫特"
                 },
                 {
                   "code": "BEBRU",
@@ -30795,7 +30967,8 @@
                   "name": "Warneton",
                   "city": "Warneton",
                   "lat": 50.75,
-                  "lng": 2.95
+                  "lng": 2.95,
+                  "nameZh": "瓦尔讷通"
                 },
                 {
                   "code": "BECBQ",
@@ -30915,7 +31088,8 @@
                   "name": "Dinant",
                   "city": "Dinant",
                   "lat": 50.2667,
-                  "lng": 4.9167
+                  "lng": 4.9167,
+                  "nameZh": "迪南"
                 },
                 {
                   "code": "BEDIK",
@@ -30930,7 +31104,8 @@
                   "name": "Daknam",
                   "city": "Daknam",
                   "lat": 51.1333,
-                  "lng": 3.9833
+                  "lng": 3.9833,
+                  "nameZh": "达克纳姆"
                 },
                 {
                   "code": "BEDLS",
@@ -30958,7 +31133,8 @@
                   "name": "Diepenbeek",
                   "city": "Diepenbeek",
                   "lat": 50.9,
-                  "lng": 5.4
+                  "lng": 5.4,
+                  "nameZh": "迪彭贝克"
                 },
                 {
                   "code": "BEDPY",
@@ -31036,7 +31212,8 @@
                   "name": "Eeklo",
                   "city": "Eeklo",
                   "lat": 51.1833,
-                  "lng": 3.5667
+                  "lng": 3.5667,
+                  "nameZh": "埃克洛"
                 },
                 {
                   "code": "BEEET",
@@ -31130,7 +31307,8 @@
                   "name": "Eisden",
                   "city": "Eisden",
                   "lat": 50.9833,
-                  "lng": 5.7167
+                  "lng": 5.7167,
+                  "nameZh": "艾斯登"
                 },
                 {
                   "code": "BEEVM",
@@ -31210,7 +31388,8 @@
                   "name": "Flawinne",
                   "city": "Flawinne",
                   "lat": 50.4667,
-                  "lng": 4.8
+                  "lng": 4.8,
+                  "nameZh": "弗拉维讷"
                 },
                 {
                   "code": "BEGBB",
@@ -31306,7 +31485,8 @@
                   "name": "Genk",
                   "city": "Genk",
                   "lat": 50.9667,
-                  "lng": 5.5
+                  "lng": 5.5,
+                  "nameZh": "亨克"
                 },
                 {
                   "code": "BEGOS",
@@ -31410,7 +31590,8 @@
                   "name": "Herentals",
                   "city": "Herentals",
                   "lat": 51.1833,
-                  "lng": 4.8333
+                  "lng": 4.8333,
+                  "nameZh": "海伦塔尔斯"
                 },
                 {
                   "code": "BEHET",
@@ -31447,7 +31628,8 @@
                   "name": "Houdeng-Goegnies",
                   "city": "Houdeng-Goegnies",
                   "lat": 50.4833,
-                  "lng": 4.15
+                  "lng": 4.15,
+                  "nameZh": "乌当格尼"
                 },
                 {
                   "code": "BEHKN",
@@ -31549,7 +31731,8 @@
                   "name": "Sint-Huibrechts-Lille",
                   "city": "Sint-Huibrechts-Lille",
                   "lat": 51.2167,
-                  "lng": 5.4833
+                  "lng": 5.4833,
+                  "nameZh": "圣海布雷赫茨-里尔"
                 },
                 {
                   "code": "BEHSS",
@@ -31592,7 +31775,8 @@
                   "name": "Huy",
                   "city": "Huy",
                   "lat": 50.5167,
-                  "lng": 5.2333
+                  "lng": 5.2333,
+                  "nameZh": "于伊"
                 },
                 {
                   "code": "BEHVE",
@@ -31613,7 +31797,8 @@
                   "name": "Ingelmunster",
                   "city": "Ingelmunster",
                   "lat": 50.9167,
-                  "lng": 3.25
+                  "lng": 3.25,
+                  "nameZh": "英厄尔明斯特"
                 },
                 {
                   "code": "BEISR",
@@ -31651,7 +31836,8 @@
                   "name": "Jupille-sur-Meuse",
                   "city": "Jupille-sur-Meuse",
                   "lat": 50.65,
-                  "lng": 5.6333
+                  "lng": 5.6333,
+                  "nameZh": "默兹河畔瑞皮耶"
                 },
                 {
                   "code": "BEJAM",
@@ -31799,7 +31985,8 @@
                   "name": "Kessenich",
                   "city": "Kessenich",
                   "lat": 51.15,
-                  "lng": 5.8167
+                  "lng": 5.8167,
+                  "nameZh": "凯瑟尼希"
                 },
                 {
                   "code": "BEKSR",
@@ -31935,14 +32122,16 @@
                   "name": "Lier",
                   "city": "Lier",
                   "lat": 51.1333,
-                  "lng": 4.5667
+                  "lng": 4.5667,
+                  "nameZh": "利尔"
                 },
                 {
                   "code": "BELIL",
                   "name": "Lillo",
                   "city": "Lillo",
                   "lat": 51.3,
-                  "lng": 4.3
+                  "lng": 4.3,
+                  "nameZh": "利洛"
                 },
                 {
                   "code": "BELIX",
@@ -31956,7 +32145,8 @@
                   "name": "Lommel",
                   "city": "Lommel",
                   "lat": 51.2333,
-                  "lng": 5.3
+                  "lng": 5.3,
+                  "nameZh": "罗莫尔市"
                 },
                 {
                   "code": "BELNK",
@@ -32051,7 +32241,8 @@
                   "name": "Lummen",
                   "city": "Lummen",
                   "lat": 50.9833,
-                  "lng": 5.2
+                  "lng": 5.2,
+                  "nameZh": "吕门"
                 },
                 {
                   "code": "BELUZ",
@@ -32117,7 +32308,8 @@
                   "name": "Menen",
                   "city": "Menen",
                   "lat": 50.8,
-                  "lng": 3.1167
+                  "lng": 3.1167,
+                  "nameZh": "梅嫩"
                 },
                 {
                   "code": "BEMEW",
@@ -32191,7 +32383,8 @@
                   "name": "Maasmechelen",
                   "city": "Maasmechelen",
                   "lat": 50.8167,
-                  "lng": 5.6667
+                  "lng": 5.6667,
+                  "nameZh": "马斯梅赫伦"
                 },
                 {
                   "code": "BEMNO",
@@ -32220,7 +32413,8 @@
                   "name": "Merendree",
                   "city": "Merendree",
                   "lat": 51.0833,
-                  "lng": 3.5833
+                  "lng": 3.5833,
+                  "nameZh": "梅伦德雷"
                 },
                 {
                   "code": "BEMRG",
@@ -32234,14 +32428,16 @@
                   "name": "Merksem",
                   "city": "Merksem",
                   "lat": 51.25,
-                  "lng": 4.45
+                  "lng": 4.45,
+                  "nameZh": "梅克瑟姆"
                 },
                 {
                   "code": "BEMRL",
                   "name": "Merelbeke",
                   "city": "Merelbeke",
                   "lat": 51,
-                  "lng": 3.75
+                  "lng": 3.75,
+                  "nameZh": "梅勒尔贝克"
                 },
                 {
                   "code": "BEMRM",
@@ -32390,14 +32586,16 @@
                   "name": "Ninove",
                   "city": "Ninove",
                   "lat": 50.8333,
-                  "lng": 4.0167
+                  "lng": 4.0167,
+                  "nameZh": "尼诺弗"
                 },
                 {
                   "code": "BENRP",
                   "name": "Neerpelt",
                   "city": "Neerpelt",
                   "lat": 51.2167,
-                  "lng": 5.4167
+                  "lng": 5.4167,
+                  "nameZh": "下佩尔特"
                 },
                 {
                   "code": "BENRT",
@@ -32426,7 +32624,8 @@
                   "name": "Nevele",
                   "city": "Nevele",
                   "lat": 51.0333,
-                  "lng": 3.55
+                  "lng": 3.55,
+                  "nameZh": "内弗勒"
                 },
                 {
                   "code": "BENVN",
@@ -32603,7 +32802,8 @@
                   "name": "Oud-Turnhout",
                   "city": "Oud-Turnhout",
                   "lat": 51.3167,
-                  "lng": 4.9833
+                  "lng": 4.9833,
+                  "nameZh": "旧蒂伦豪特"
                 },
                 {
                   "code": "BEOTK",
@@ -32662,7 +32862,8 @@
                   "name": "Pont-à-Celles",
                   "city": "Pont-à-Celles",
                   "lat": 50.5,
-                  "lng": 4.35
+                  "lng": 4.35,
+                  "nameZh": "蓬塔塞勒"
                 },
                 {
                   "code": "BEPCQ",
@@ -32691,7 +32892,8 @@
                   "name": "Pollinkhove",
                   "city": "Pollinkhove",
                   "lat": 50.9667,
-                  "lng": 2.7333
+                  "lng": 2.7333,
+                  "nameZh": "波林克霍弗"
                 },
                 {
                   "code": "BEPLB",
@@ -32712,7 +32914,8 @@
                   "name": "Petit-Lanaye",
                   "city": "Petit-Lanaye",
                   "lat": 50.7833,
-                  "lng": 5.6833
+                  "lng": 5.6833,
+                  "nameZh": "小拉奈"
                 },
                 {
                   "code": "BEPME",
@@ -32988,7 +33191,8 @@
                   "name": "Schoten",
                   "city": "Schoten",
                   "lat": 51.25,
-                  "lng": 4.5
+                  "lng": 4.5,
+                  "nameZh": "斯霍滕"
                 },
                 {
                   "code": "BESDP",
@@ -33009,7 +33213,8 @@
                   "name": "Seneffe",
                   "city": "Seneffe",
                   "lat": 50.5167,
-                  "lng": 4.25
+                  "lng": 4.25,
+                  "nameZh": "瑟内夫"
                 },
                 {
                   "code": "BESES",
@@ -33325,28 +33530,32 @@
                   "name": "Thorntonbank",
                   "city": "Thorntonbank",
                   "lat": 51.6333,
-                  "lng": 2.9167
+                  "lng": 2.9167,
+                  "nameZh": "Thorntonbank风力发电厂"
                 },
                 {
                   "code": "BETRN",
                   "name": "Doornik (Tournai)",
                   "city": "Doornik (Tournai)",
                   "lat": 50.6,
-                  "lng": 3.3833
+                  "lng": 3.3833,
+                  "nameZh": "图尔奈"
                 },
                 {
                   "code": "BETRN",
                   "name": "Tournai (Doornik)",
                   "city": "Tournai (Doornik)",
                   "lat": 50.6,
-                  "lng": 3.3833
+                  "lng": 3.3833,
+                  "nameZh": "图尔奈"
                 },
                 {
                   "code": "BETSE",
                   "name": "Temse",
                   "city": "Temse",
                   "lat": 51.1333,
-                  "lng": 4.2167
+                  "lng": 4.2167,
+                  "nameZh": "泰姆瑟"
                 },
                 {
                   "code": "BETSL",
@@ -33383,7 +33592,8 @@
                   "name": "Veurne",
                   "city": "Veurne",
                   "lat": 51.0667,
-                  "lng": 2.6667
+                  "lng": 2.6667,
+                  "nameZh": "弗尔讷"
                 },
                 {
                   "code": "BEVGL",
@@ -33404,7 +33614,8 @@
                   "name": "Vilvoorde",
                   "city": "Vilvoorde",
                   "lat": 50.9333,
-                  "lng": 4.4333
+                  "lng": 4.4333,
+                  "nameZh": "维尔福德"
                 },
                 {
                   "code": "BEVIT",
@@ -33477,7 +33688,8 @@
                   "name": "Waasmunster",
                   "city": "Waasmunster",
                   "lat": 51.1,
-                  "lng": 4.0833
+                  "lng": 4.0833,
+                  "nameZh": "瓦斯明斯特"
                 },
                 {
                   "code": "BEWAN",
@@ -33515,7 +33727,8 @@
                   "name": "Wondelgem",
                   "city": "Wondelgem",
                   "lat": 51.0833,
-                  "lng": 3.7167
+                  "lng": 3.7167,
+                  "nameZh": "翁德尔海姆"
                 },
                 {
                   "code": "BEWDM",
@@ -33553,7 +33766,8 @@
                   "name": "Wetteren",
                   "city": "Wetteren",
                   "lat": 51,
-                  "lng": 3.8833
+                  "lng": 3.8833,
+                  "nameZh": "韦特伦"
                 },
                 {
                   "code": "BEWEV",
@@ -33591,7 +33805,8 @@
                   "name": "Wépion",
                   "city": "Wépion",
                   "lat": 50.4167,
-                  "lng": 4.8667
+                  "lng": 4.8667,
+                  "nameZh": "韦皮永"
                 },
                 {
                   "code": "BEWIR",
@@ -33641,7 +33856,8 @@
                   "name": "Wandre",
                   "city": "Wandre",
                   "lat": 50.6667,
-                  "lng": 5.65
+                  "lng": 5.65,
+                  "nameZh": "旺德尔"
                 },
                 {
                   "code": "BEWTH",
@@ -33732,7 +33948,8 @@
                   "name": "Zomergem",
                   "city": "Zomergem",
                   "lat": 51.1167,
-                  "lng": 3.55
+                  "lng": 3.55,
+                  "nameZh": "佐默海姆"
                 },
                 {
                   "code": "BEZTL",
@@ -33845,7 +34062,8 @@
                   "name": "Alkmaar",
                   "city": "Alkmaar",
                   "lat": 52.6333,
-                  "lng": 4.75
+                  "lng": 4.75,
+                  "nameZh": "阿尔克马尔"
                 },
                 {
                   "code": "NLALM",
@@ -33902,7 +34120,8 @@
                   "name": "Anna Paulowna",
                   "city": "Anna Paulowna",
                   "lat": 52.8667,
-                  "lng": 4.8667
+                  "lng": 4.8667,
+                  "nameZh": "安娜保罗娜"
                 },
                 {
                   "code": "NLAPN",
@@ -34633,7 +34852,8 @@
                   "name": "Helmond",
                   "city": "Helmond",
                   "lat": 51.4833,
-                  "lng": 5.6667
+                  "lng": 5.6667,
+                  "nameZh": "海尔蒙德"
                 },
                 {
                   "code": "NLHLR",
@@ -36354,7 +36574,8 @@
                   "name": "Paternion",
                   "city": "Paternion",
                   "lat": 46.7,
-                  "lng": 13.6333
+                  "lng": 13.6333,
+                  "nameZh": "帕特尼翁"
                 },
                 {
                   "code": "ATATN",
@@ -36376,7 +36597,8 @@
                   "name": "Bischofshofen",
                   "city": "Bischofshofen",
                   "lat": 47.4167,
-                  "lng": 13.2167
+                  "lng": 13.2167,
+                  "nameZh": "比绍夫斯霍芬"
                 },
                 {
                   "code": "ATBNN",
@@ -36459,7 +36681,8 @@
                   "name": "Deutsch Wagram",
                   "city": "Deutsch Wagram",
                   "lat": 48.3,
-                  "lng": 16.5667
+                  "lng": 16.5667,
+                  "nameZh": "德意志瓦格拉姆"
                 },
                 {
                   "code": "ATEBR",
@@ -36550,7 +36773,8 @@
                   "name": "Fehring",
                   "city": "Fehring",
                   "lat": 46.9333,
-                  "lng": 16
+                  "lng": 16,
+                  "nameZh": "费灵"
                 },
                 {
                   "code": "ATFNA",
@@ -36572,7 +36796,8 @@
                   "name": "Faistenau",
                   "city": "Faistenau",
                   "lat": 47.7667,
-                  "lng": 13.2167
+                  "lng": 13.2167,
+                  "nameZh": "法伊施特瑙"
                 },
                 {
                   "code": "ATGA6",
@@ -36641,7 +36866,8 @@
                   "name": "Hadersdorf-Kammern",
                   "city": "Hadersdorf-Kammern",
                   "lat": 48.45,
-                  "lng": 15.7167
+                  "lng": 15.7167,
+                  "nameZh": "Hadersdorf-Kammern"
                 },
                 {
                   "code": "ATIEG",
@@ -36718,7 +36944,8 @@
                   "name": "Leutschach",
                   "city": "Leutschach",
                   "lat": 46.6667,
-                  "lng": 15.4667
+                  "lng": 15.4667,
+                  "nameZh": "洛伊查赫"
                 },
                 {
                   "code": "ATLTX",
@@ -36757,14 +36984,16 @@
                   "name": "Manning",
                   "city": "Manning",
                   "lat": 48.0833,
-                  "lng": 13.6667
+                  "lng": 13.6667,
+                  "nameZh": "曼宁"
                 },
                 {
                   "code": "ATMBS",
                   "name": "Morbisch am See",
                   "city": "Morbisch am See",
                   "lat": 47.75,
-                  "lng": 16.6667
+                  "lng": 16.6667,
+                  "nameZh": "滨湖默尔比施"
                 },
                 {
                   "code": "ATMKA",
@@ -36819,7 +37048,8 @@
                   "name": "Donnerskirchen",
                   "city": "Donnerskirchen",
                   "lat": 47.9,
-                  "lng": 16.6333
+                  "lng": 16.6333,
+                  "nameZh": "唐纳斯基兴"
                 },
                 {
                   "code": "ATNT9",
@@ -36841,14 +37071,16 @@
                   "name": "Ottensheim",
                   "city": "Ottensheim",
                   "lat": 48.3333,
-                  "lng": 14.1833
+                  "lng": 14.1833,
+                  "nameZh": "奥滕斯海姆"
                 },
                 {
                   "code": "ATPAS",
                   "name": "Podersdorf am See",
                   "city": "Podersdorf am See",
                   "lat": 47.85,
-                  "lng": 16.8333
+                  "lng": 16.8333,
+                  "nameZh": "滨湖波德尔斯多夫"
                 },
                 {
                   "code": "ATPBU",
@@ -36862,7 +37094,8 @@
                   "name": "Petzenkirchen",
                   "city": "Petzenkirchen",
                   "lat": 48.1333,
-                  "lng": 15.15
+                  "lng": 15.15,
+                  "nameZh": "佩岑基兴"
                 },
                 {
                   "code": "ATRAD",
@@ -36915,7 +37148,8 @@
                   "name": "Sankt Aegidi",
                   "city": "Sankt Aegidi",
                   "lat": 48.4833,
-                  "lng": 13.75
+                  "lng": 13.75,
+                  "nameZh": "圣阿埃吉迪"
                 },
                 {
                   "code": "ATSFT",
@@ -36930,7 +37164,8 @@
                   "name": "Sankt Georgen bei Salzburg",
                   "city": "Sankt Georgen bei Salzburg",
                   "lat": 47.9833,
-                  "lng": 12.8833
+                  "lng": 12.8833,
+                  "nameZh": "萨尔茨堡的圣格奥尔根"
                 },
                 {
                   "code": "ATSK3",
@@ -36991,7 +37226,8 @@
                   "name": "Steeg",
                   "city": "Steeg",
                   "lat": 47.6,
-                  "lng": 13.6333
+                  "lng": 13.6333,
+                  "nameZh": "施泰格"
                 },
                 {
                   "code": "ATSUH",
@@ -37076,21 +37312,24 @@
                   "name": "Traismauer",
                   "city": "Traismauer",
                   "lat": 48.3333,
-                  "lng": 15.7333
+                  "lng": 15.7333,
+                  "nameZh": "特赖斯毛埃尔"
                 },
                 {
                   "code": "ATTTL",
                   "name": "Schrattenthal",
                   "city": "Schrattenthal",
                   "lat": 48.7,
-                  "lng": 15.9
+                  "lng": 15.9,
+                  "nameZh": "施拉滕塔尔"
                 },
                 {
                   "code": "ATVEL",
                   "name": "Velden",
                   "city": "Velden",
                   "lat": 46.6167,
-                  "lng": 14.05
+                  "lng": 14.05,
+                  "nameZh": "沃尔特湖畔韦尔登"
                 },
                 {
                   "code": "ATWDF",
@@ -37446,7 +37685,8 @@
                   "name": "Glengarriff",
                   "city": "Glengarriff",
                   "lat": 51.75,
-                  "lng": -9.55
+                  "lng": -9.55,
+                  "nameZh": "格伦加里夫"
                 },
                 {
                   "code": "IEGOW",
@@ -37621,7 +37861,8 @@
                   "name": "Shannon",
                   "city": "Shannon",
                   "lat": 52.7,
-                  "lng": -8.85
+                  "lng": -8.85,
+                  "nameZh": "香农镇"
                 },
                 {
                   "code": "IESNR",
@@ -37932,7 +38173,8 @@
                   "name": "Meilen",
                   "city": "Meilen",
                   "lat": 47.2833,
-                  "lng": 8.6333
+                  "lng": 8.6333,
+                  "nameZh": "迈伦"
                 },
                 {
                   "code": "CHMWA",
@@ -37995,7 +38237,8 @@
                   "name": "Romanshorn",
                   "city": "Romanshorn",
                   "lat": 47.5667,
-                  "lng": 9.3833
+                  "lng": 9.3833,
+                  "nameZh": "罗曼斯霍恩"
                 },
                 {
                   "code": "CHRNB",
@@ -38465,7 +38708,8 @@
                   "name": "Åndalsnes",
                   "city": "Åndalsnes",
                   "lat": 62.5667,
-                  "lng": 7.7
+                  "lng": 7.7,
+                  "nameZh": "翁达尔斯内斯"
                 },
                 {
                   "code": "NOANN",
@@ -39948,7 +40192,8 @@
                   "name": "Honningsvåg",
                   "city": "Honningsvåg",
                   "lat": 70.9667,
-                  "lng": 25.9667
+                  "lng": 25.9667,
+                  "nameZh": "Honningsvåg"
                 },
                 {
                   "code": "NOHVI",
@@ -40573,7 +40818,8 @@
                   "name": "Leirvik",
                   "city": "Leirvik",
                   "lat": 59.7667,
-                  "lng": 5.5
+                  "lng": 5.5,
+                  "nameZh": "莱尔维克"
                 },
                 {
                   "code": "NOLRK",
@@ -42412,7 +42658,8 @@
                   "name": "Vardø",
                   "city": "Vardø",
                   "lat": 70.3667,
-                  "lng": 31.1
+                  "lng": 31.1,
+                  "nameZh": "Vardø"
                 },
                 {
                   "code": "NOVBE",
@@ -44965,7 +45212,8 @@
                   "name": "Nurmes",
                   "city": "Nurmes",
                   "lat": 63.5333,
-                  "lng": 29.1667
+                  "lng": 29.1667,
+                  "nameZh": "努尔梅斯"
                 },
                 {
                   "code": "FIOLK",
@@ -45419,14 +45667,16 @@
                   "name": "Tammerfors (Tampere)",
                   "city": "Tammerfors (Tampere)",
                   "lat": 61.5,
-                  "lng": 23.75
+                  "lng": 23.75,
+                  "nameZh": "坦佩雷"
                 },
                 {
                   "code": "FITMP",
                   "name": "Tampere (Tammerfors)",
                   "city": "Tampere (Tammerfors)",
                   "lat": 61.5,
-                  "lng": 23.75
+                  "lng": 23.75,
+                  "nameZh": "坦佩雷"
                 },
                 {
                   "code": "FITOJ",
@@ -45624,7 +45874,8 @@
                   "name": "Varkaus",
                   "city": "Varkaus",
                   "lat": 62.3167,
-                  "lng": 27.9
+                  "lng": 27.9,
+                  "nameZh": "瓦尔考斯"
                 },
                 {
                   "code": "FIVSS",
@@ -46915,7 +47166,8 @@
                   "name": "Uppsala",
                   "city": "Uppsala",
                   "lat": 59.8667,
-                  "lng": 17.6333
+                  "lng": 17.6333,
+                  "nameZh": "乌普萨拉"
                 },
                 {
                   "code": "SEVAA",
@@ -46971,7 +47223,8 @@
                   "name": "Västerås",
                   "city": "Västerås",
                   "lat": 59.6167,
-                  "lng": 16.55
+                  "lng": 16.55,
+                  "nameZh": "韦斯特罗斯"
                 },
                 {
                   "code": "SEVVK",
@@ -47021,7 +47274,8 @@
                   "name": "Aarhus",
                   "city": "Aarhus",
                   "lat": 56.15,
-                  "lng": 10.2167
+                  "lng": 10.2167,
+                  "nameZh": "奥胡斯"
                 },
                 {
                   "code": "DKAGE",
@@ -47256,7 +47510,8 @@
                   "name": "Hadsund",
                   "city": "Hadsund",
                   "lat": 56.7167,
-                  "lng": 10.1
+                  "lng": 10.1,
+                  "nameZh": "海松"
                 },
                 {
                   "code": "DKHVS",
@@ -47398,7 +47653,8 @@
                   "name": "Mariager",
                   "city": "Mariager",
                   "lat": 56.65,
-                  "lng": 10
+                  "lng": 10,
+                  "nameZh": "玛丽艾厄"
                 },
                 {
                   "code": "DKN3S",
@@ -48121,7 +48377,8 @@
                   "name": "Tasiilaq",
                   "city": "Tasiilaq",
                   "lat": 65.6,
-                  "lng": -37.6333
+                  "lng": -37.6333,
+                  "nameZh": "塔西拉克"
                 },
                 {
                   "code": "GLGOH",
@@ -48761,7 +49018,8 @@
                   "name": "Delos",
                   "city": "Delos",
                   "lat": 37.4,
-                  "lng": 25.2667
+                  "lng": 25.2667,
+                  "nameZh": "提洛岛"
                 },
                 {
                   "code": "GRDPA",
@@ -49074,7 +49332,8 @@
                   "name": "Itea",
                   "city": "Itea",
                   "lat": 38.4333,
-                  "lng": 22.4167
+                  "lng": 22.4167,
+                  "nameZh": "伊泰阿"
                 },
                 {
                   "code": "GRITH",
@@ -49842,7 +50101,8 @@
                   "name": "Návpaktos",
                   "city": "Návpaktos",
                   "lat": 38.4,
-                  "lng": 21.8333
+                  "lng": 21.8333,
+                  "nameZh": "纳夫帕克托斯"
                 },
                 {
                   "code": "GRNPY",
@@ -50372,7 +50632,8 @@
                   "name": "Thessaloníki",
                   "city": "Thessaloníki",
                   "lat": 40.6333,
-                  "lng": 22.95
+                  "lng": 22.95,
+                  "nameZh": "塞萨洛尼基"
                 },
                 {
                   "code": "GRSKM",
@@ -50451,14 +50712,16 @@
                   "name": "Stylída (Stylis)",
                   "city": "Stylída (Stylis)",
                   "lat": 38.9167,
-                  "lng": 22.6167
+                  "lng": 22.6167,
+                  "nameZh": "斯蒂利斯"
                 },
                 {
                   "code": "GRSYS",
                   "name": "Stylis (Stylída)",
                   "city": "Stylis (Stylída)",
                   "lat": 38.9167,
-                  "lng": 22.6167
+                  "lng": 22.6167,
+                  "nameZh": "斯蒂利斯"
                 },
                 {
                   "code": "GRSYV",
@@ -50809,7 +51072,8 @@
                   "name": "Málaga",
                   "city": "Málaga",
                   "lat": 36.7167,
-                  "lng": -4.4167
+                  "lng": -4.4167,
+                  "nameZh": "马拉加"
                 },
                 {
                   "code": "ESAGU",
@@ -51438,7 +51702,8 @@
                   "name": "Ferrol",
                   "city": "Ferrol",
                   "lat": 43.4833,
-                  "lng": -8.25
+                  "lng": -8.25,
+                  "nameZh": "费罗尔"
                 },
                 {
                   "code": "ESFSL",
@@ -51480,7 +51745,8 @@
                   "name": "Gijón",
                   "city": "Gijón",
                   "lat": 43.5333,
-                  "lng": -5.6667
+                  "lng": -5.6667,
+                  "nameZh": "Gijón"
                 },
                 {
                   "code": "ESGLE",
@@ -53058,7 +53324,8 @@
                   "name": "Andora",
                   "city": "Andora",
                   "lat": 43.95,
-                  "lng": 8.15
+                  "lng": 8.15,
+                  "nameZh": "安多拉"
                 },
                 {
                   "code": "ITAEL",
@@ -53089,7 +53356,8 @@
                   "name": "Alassio",
                   "city": "Alassio",
                   "lat": 44,
-                  "lng": 8.1667
+                  "lng": 8.1667,
+                  "nameZh": "阿拉西奥"
                 },
                 {
                   "code": "ITAMA",
@@ -53120,7 +53388,8 @@
                   "name": "Anzio",
                   "city": "Anzio",
                   "lat": 41.45,
-                  "lng": 12.6167
+                  "lng": 12.6167,
+                  "nameZh": "安齐奥"
                 },
                 {
                   "code": "ITAOA",
@@ -53165,7 +53434,8 @@
                   "name": "Castiglioncello",
                   "city": "Castiglioncello",
                   "lat": 43.4,
-                  "lng": 10.4
+                  "lng": 10.4,
+                  "nameZh": "卡斯蒂利翁切洛"
                 },
                 {
                   "code": "ITATX",
@@ -53290,7 +53560,8 @@
                   "name": "Bianco",
                   "city": "Bianco",
                   "lat": 38.0833,
-                  "lng": 16.15
+                  "lng": 16.15,
+                  "nameZh": "比安科"
                 },
                 {
                   "code": "ITBOA",
@@ -53361,7 +53632,8 @@
                   "name": "Cecina",
                   "city": "Cecina",
                   "lat": 43.3167,
-                  "lng": 10.5167
+                  "lng": 10.5167,
+                  "nameZh": "切奇纳"
                 },
                 {
                   "code": "ITCEQ",
@@ -53384,7 +53656,8 @@
                   "name": "Cefalù",
                   "city": "Cefalù",
                   "lat": 38.0333,
-                  "lng": 14.0167
+                  "lng": 14.0167,
+                  "nameZh": "切法卢"
                 },
                 {
                   "code": "ITCGC",
@@ -53518,7 +53791,8 @@
                   "name": "Castellammare del Golfo",
                   "city": "Castellammare del Golfo",
                   "lat": 38.0167,
-                  "lng": 12.8833
+                  "lng": 12.8833,
+                  "nameZh": "戈尔福海堡"
                 },
                 {
                   "code": "ITCVV",
@@ -53610,7 +53884,8 @@
                   "name": "Finale Ligure",
                   "city": "Finale Ligure",
                   "lat": 44.1667,
-                  "lng": 8.3333
+                  "lng": 8.3333,
+                  "nameZh": "菲纳莱利古雷"
                 },
                 {
                   "code": "ITFOL",
@@ -53641,7 +53916,8 @@
                   "name": "Forio",
                   "city": "Forio",
                   "lat": 40.7333,
-                  "lng": 13.85
+                  "lng": 13.85,
+                  "nameZh": "福里奥"
                 },
                 {
                   "code": "ITFSA",
@@ -53711,7 +53987,8 @@
                   "name": "Gabicce Mare",
                   "city": "Gabicce Mare",
                   "lat": 43.9667,
-                  "lng": 12.7667
+                  "lng": 12.7667,
+                  "nameZh": "加比切马雷"
                 },
                 {
                   "code": "ITGOA",
@@ -53758,14 +54035,16 @@
                   "name": "Giovinazzo",
                   "city": "Giovinazzo",
                   "lat": 41.1833,
-                  "lng": 16.6667
+                  "lng": 16.6667,
+                  "nameZh": "焦维纳佐"
                 },
                 {
                   "code": "ITGZS",
                   "name": "Anguillara Sabazia",
                   "city": "Anguillara Sabazia",
                   "lat": 42.0833,
-                  "lng": 12.2667
+                  "lng": 12.2667,
+                  "nameZh": "安圭拉腊萨巴齐亚"
                 },
                 {
                   "code": "ITICA",
@@ -53811,7 +54090,8 @@
                   "name": "Maiori",
                   "city": "Maiori",
                   "lat": 40.65,
-                  "lng": 14.6333
+                  "lng": 14.6333,
+                  "nameZh": "马约里"
                 },
                 {
                   "code": "ITISB",
@@ -53825,7 +54105,8 @@
                   "name": "Ischia",
                   "city": "Ischia",
                   "lat": 40.7333,
-                  "lng": 13.95
+                  "lng": 13.95,
+                  "nameZh": "伊斯基亚"
                 },
                 {
                   "code": "ITISN",
@@ -53863,7 +54144,8 @@
                   "name": "Lacco Ameno",
                   "city": "Lacco Ameno",
                   "lat": 40.75,
-                  "lng": 13.9
+                  "lng": 13.9,
+                  "nameZh": "拉科阿梅诺"
                 },
                 {
                   "code": "ITLAW",
@@ -53878,28 +54160,32 @@
                   "name": "Scalea",
                   "city": "Scalea",
                   "lat": 39.8167,
-                  "lng": 15.7833
+                  "lng": 15.7833,
+                  "nameZh": "斯卡莱阿"
                 },
                 {
                   "code": "ITLEC",
                   "name": "Leuca",
                   "city": "Leuca",
                   "lat": 39.8,
-                  "lng": 18.35
+                  "lng": 18.35,
+                  "nameZh": "圣玛丽亚迪莱乌卡"
                 },
                 {
                   "code": "ITLEN",
                   "name": "Levanto",
                   "city": "Levanto",
                   "lat": 44.1667,
-                  "lng": 9.6333
+                  "lng": 9.6333,
+                  "nameZh": "莱万托"
                 },
                 {
                   "code": "ITLER",
                   "name": "Lerici",
                   "city": "Lerici",
                   "lat": 44.0667,
-                  "lng": 9.9167
+                  "lng": 9.9167,
+                  "nameZh": "莱里奇"
                 },
                 {
                   "code": "ITLES",
@@ -53961,7 +54247,8 @@
                   "name": "Loano",
                   "city": "Loano",
                   "lat": 44.1333,
-                  "lng": 8.25
+                  "lng": 8.25,
+                  "nameZh": "洛阿诺"
                 },
                 {
                   "code": "ITLSD",
@@ -54008,7 +54295,8 @@
                   "name": "Mazara del Vallo",
                   "city": "Mazara del Vallo",
                   "lat": 37.65,
-                  "lng": 12.5833
+                  "lng": 12.5833,
+                  "nameZh": "马扎拉-德尔瓦洛"
                 },
                 {
                   "code": "ITMDA",
@@ -54087,7 +54375,8 @@
                   "name": "Massa Lubrense",
                   "city": "Massa Lubrense",
                   "lat": 40.6,
-                  "lng": 14.3333
+                  "lng": 14.3333,
+                  "nameZh": "马萨卢布伦塞"
                 },
                 {
                   "code": "ITMND",
@@ -54126,7 +54415,8 @@
                   "name": "Marsala",
                   "city": "Marsala",
                   "lat": 37.8,
-                  "lng": 12.4333
+                  "lng": 12.4333,
+                  "nameZh": "马尔萨拉"
                 },
                 {
                   "code": "ITMRM",
@@ -54165,7 +54455,8 @@
                   "name": "Meta",
                   "city": "Meta",
                   "lat": 40.65,
-                  "lng": 14.4
+                  "lng": 14.4,
+                  "nameZh": "梅塔"
                 },
                 {
                   "code": "ITNAP",
@@ -54196,7 +54487,8 @@
                   "name": "Noli",
                   "city": "Noli",
                   "lat": 44.2,
-                  "lng": 8.4333
+                  "lng": 8.4333,
+                  "nameZh": "诺利"
                 },
                 {
                   "code": "ITNNE",
@@ -54242,21 +54534,24 @@
                   "name": "Numana",
                   "city": "Numana",
                   "lat": 43.5167,
-                  "lng": 13.6167
+                  "lng": 13.6167,
+                  "nameZh": "努马纳"
                 },
                 {
                   "code": "ITOBT",
                   "name": "Orbetello",
                   "city": "Orbetello",
                   "lat": 42.45,
-                  "lng": 11.2167
+                  "lng": 11.2167,
+                  "nameZh": "奥尔贝泰洛"
                 },
                 {
                   "code": "ITODB",
                   "name": "Mola di Bari",
                   "city": "Mola di Bari",
                   "lat": 41.0667,
-                  "lng": 17.0833
+                  "lng": 17.0833,
+                  "nameZh": "莫拉-迪巴里"
                 },
                 {
                   "code": "ITODG",
@@ -54376,7 +54671,8 @@
                   "name": "Marghera",
                   "city": "Marghera",
                   "lat": 45.45,
-                  "lng": 12.2167
+                  "lng": 12.2167,
+                  "nameZh": "马格拉"
                 },
                 {
                   "code": "ITPMM",
@@ -54415,7 +54711,8 @@
                   "name": "Porto Viro",
                   "city": "Porto Viro",
                   "lat": 45.05,
-                  "lng": 12.25
+                  "lng": 12.25,
+                  "nameZh": "维罗港"
                 },
                 {
                   "code": "ITPPF",
@@ -54477,7 +54774,8 @@
                   "name": "Piano di Sorrento",
                   "city": "Piano di Sorrento",
                   "lat": 40.6333,
-                  "lng": 14.3833
+                  "lng": 14.3833,
+                  "nameZh": "皮亚诺-迪索伦托"
                 },
                 {
                   "code": "ITPRW",
@@ -54500,7 +54798,8 @@
                   "name": "Portici",
                   "city": "Portici",
                   "lat": 40.8167,
-                  "lng": 14.3333
+                  "lng": 14.3333,
+                  "nameZh": "波蒂奇"
                 },
                 {
                   "code": "ITPTH",
@@ -54599,7 +54898,8 @@
                   "name": "Riomaggiore",
                   "city": "Riomaggiore",
                   "lat": 44.1,
-                  "lng": 9.7333
+                  "lng": 9.7333,
+                  "nameZh": "里奥马焦雷"
                 },
                 {
                   "code": "ITRMI",
@@ -54614,7 +54914,8 @@
                   "name": "Spotorno",
                   "city": "Spotorno",
                   "lat": 44.2333,
-                  "lng": 8.4167
+                  "lng": 8.4167,
+                  "nameZh": "斯波托尔诺"
                 },
                 {
                   "code": "ITROC",
@@ -54652,7 +54953,8 @@
                   "name": "Monterosso al Mare",
                   "city": "Monterosso al Mare",
                   "lat": 44.15,
-                  "lng": 9.65
+                  "lng": 9.65,
+                  "nameZh": "滨海蒙特罗索"
                 },
                 {
                   "code": "ITRTS",
@@ -54673,7 +54975,8 @@
                   "name": "Sciacca",
                   "city": "Sciacca",
                   "lat": 37.5167,
-                  "lng": 13.05
+                  "lng": 13.05,
+                  "nameZh": "夏卡"
                 },
                 {
                   "code": "ITSCO",
@@ -54695,7 +54998,8 @@
                   "name": "Senigallia",
                   "city": "Senigallia",
                   "lat": 43.7167,
-                  "lng": 13.2167
+                  "lng": 13.2167,
+                  "nameZh": "塞尼加利亚"
                 },
                 {
                   "code": "ITSFE",
@@ -54868,7 +55172,8 @@
                   "name": "Trebisacce",
                   "city": "Trebisacce",
                   "lat": 39.8667,
-                  "lng": 16.5333
+                  "lng": 16.5333,
+                  "nameZh": "特雷比萨切"
                 },
                 {
                   "code": "ITTCS",
@@ -54913,7 +55218,8 @@
                   "name": "Isole Tremiti",
                   "city": "Isole Tremiti",
                   "lat": 42.1167,
-                  "lng": 15.4833
+                  "lng": 15.4833,
+                  "nameZh": "伊索莱特雷米蒂"
                 },
                 {
                   "code": "ITTPS",
@@ -55036,14 +55342,16 @@
                   "name": "Vernazza",
                   "city": "Vernazza",
                   "lat": 44.1333,
-                  "lng": 9.6833
+                  "lng": 9.6833,
+                  "nameZh": "韦尔纳扎"
                 },
                 {
                   "code": "ITZQQ",
                   "name": "Polignano a Mare",
                   "city": "Polignano a Mare",
                   "lat": 41,
-                  "lng": 17.2167
+                  "lng": 17.2167,
+                  "nameZh": "滨海波利尼亚诺"
                 }
               ]
             },
@@ -55194,7 +55502,8 @@
                   "name": "Dubrovnik",
                   "city": "Dubrovnik",
                   "lat": 42.65,
-                  "lng": 18.0833
+                  "lng": 18.0833,
+                  "nameZh": "杜布罗夫尼克"
                 },
                 {
                   "code": "HRDLJ",
@@ -55257,7 +55566,8 @@
                   "name": "Hvar",
                   "city": "Hvar",
                   "lat": 43.1667,
-                  "lng": 16.4333
+                  "lng": 16.4333,
+                  "nameZh": "赫瓦尔"
                 },
                 {
                   "code": "HRILO",
@@ -55877,7 +56187,8 @@
                   "name": "Stari Grad",
                   "city": "Stari Grad",
                   "lat": 43.1833,
-                  "lng": 16.6
+                  "lng": 16.6,
+                  "nameZh": "斯塔里格勒"
                 },
                 {
                   "code": "HRSGR",
@@ -56013,7 +56324,8 @@
                   "name": "Supetar",
                   "city": "Supetar",
                   "lat": 43.3833,
-                  "lng": 16.55
+                  "lng": 16.55,
+                  "nameZh": "苏佩塔尔"
                 },
                 {
                   "code": "HRSUR",
@@ -56156,7 +56468,8 @@
                   "name": "Vis",
                   "city": "Vis",
                   "lat": 43.05,
-                  "lng": 16.1667
+                  "lng": 16.1667,
+                  "nameZh": "维斯岛"
                 },
                 {
                   "code": "HRVIZ",
@@ -56272,7 +56585,8 @@
                   "name": "Albufeira",
                   "city": "Albufeira",
                   "lat": 37.0833,
-                  "lng": -8.25
+                  "lng": -8.25,
+                  "nameZh": "阿尔布费拉"
                 },
                 {
                   "code": "PTADG",
@@ -56378,7 +56692,8 @@
                   "name": "Baltar",
                   "city": "Baltar",
                   "lat": 41.1833,
-                  "lng": -8.3833
+                  "lng": -8.3833,
+                  "nameZh": "Baltar"
                 },
                 {
                   "code": "PTBUS",
@@ -56408,7 +56723,8 @@
                   "name": "Costa da Caparica",
                   "city": "Costa da Caparica",
                   "lat": 38.6333,
-                  "lng": -9.2167
+                  "lng": -9.2167,
+                  "nameZh": "科什塔达卡帕里卡"
                 },
                 {
                   "code": "PTCAS",
@@ -56598,7 +56914,8 @@
                   "name": "Lajes das Flores",
                   "city": "Lajes das Flores",
                   "lat": 39.3833,
-                  "lng": -31.1667
+                  "lng": -31.1667,
+                  "nameZh": "拉日什-达什弗洛里什"
                 },
                 {
                   "code": "PTLDP",
@@ -56640,7 +56957,8 @@
                   "name": "Lisboa",
                   "city": "Lisboa",
                   "lat": 38.7167,
-                  "lng": -9.1333
+                  "lng": -9.1333,
+                  "nameZh": "里斯本"
                 },
                 {
                   "code": "PTLNS",
@@ -56698,7 +57016,8 @@
                   "name": "Valongo",
                   "city": "Valongo",
                   "lat": 41.1833,
-                  "lng": -8.5
+                  "lng": -8.5,
+                  "nameZh": "瓦隆古"
                 },
                 {
                   "code": "PTNRD",
@@ -56767,14 +57086,16 @@
                   "name": "Peniche",
                   "city": "Peniche",
                   "lat": 39.35,
-                  "lng": -9.3833
+                  "lng": -9.3833,
+                  "nameZh": "佩尼谢"
                 },
                 {
                   "code": "PTPFT",
                   "name": "Perafita",
                   "city": "Perafita",
                   "lat": 41.2167,
-                  "lng": -8.7
+                  "lng": -8.7,
+                  "nameZh": "佩拉菲塔"
                 },
                 {
                   "code": "PTPMZ",
@@ -56840,7 +57161,8 @@
                   "name": "Quarteira",
                   "city": "Quarteira",
                   "lat": 37.0667,
-                  "lng": -8.1
+                  "lng": -8.1,
+                  "nameZh": "夸尔泰拉"
                 },
                 {
                   "code": "PTRPX",
@@ -56885,7 +57207,8 @@
                   "name": "Setúbal",
                   "city": "Setúbal",
                   "lat": 38.5333,
-                  "lng": -8.9
+                  "lng": -8.9,
+                  "nameZh": "塞图巴尔"
                 },
                 {
                   "code": "PTSHA",
@@ -56900,7 +57223,8 @@
                   "name": "Sines",
                   "city": "Sines",
                   "lat": 37.95,
-                  "lng": -8.8667
+                  "lng": -8.8667,
+                  "nameZh": "锡尼什"
                 },
                 {
                   "code": "PTSLZ",
@@ -56953,7 +57277,8 @@
                   "name": "Torreira",
                   "city": "Torreira",
                   "lat": 40.75,
-                  "lng": -8.7
+                  "lng": -8.7,
+                  "nameZh": "Torreira"
                 },
                 {
                   "code": "PTTPO",
@@ -57379,7 +57704,8 @@
                   "name": "Marsaxlokk",
                   "city": "Marsaxlokk",
                   "lat": 35.8333,
-                  "lng": 14.5333
+                  "lng": 14.5333,
+                  "nameZh": "马尔萨什洛克"
                 },
                 {
                   "code": "MTMGZ",
@@ -57459,7 +57785,8 @@
                   "name": "Apatin",
                   "city": "Apatin",
                   "lat": 45.6667,
-                  "lng": 18.9833
+                  "lng": 18.9833,
+                  "nameZh": "阿帕廷"
                 },
                 {
                   "code": "RSBPA",
@@ -57599,7 +57926,8 @@
                   "name": "Kotor",
                   "city": "Kotor",
                   "lat": 42.4167,
-                  "lng": 18.7667
+                  "lng": 18.7667,
+                  "nameZh": "科托尔"
                 },
                 {
                   "code": "MEPVC",
@@ -57628,7 +57956,8 @@
                   "name": "Ulcinj",
                   "city": "Ulcinj",
                   "lat": 41.9167,
-                  "lng": 19.2
+                  "lng": 19.2,
+                  "nameZh": "乌尔齐尼"
                 },
                 {
                   "code": "MEZEL",
@@ -57892,7 +58221,8 @@
                   "name": "Shebekino",
                   "city": "Shebekino",
                   "lat": 50.4,
-                  "lng": 36.9
+                  "lng": 36.9,
+                  "nameZh": "舍别基诺"
                 },
                 {
                   "code": "RUBGV",
@@ -57951,7 +58281,8 @@
                   "name": "Boshnyakovo",
                   "city": "Boshnyakovo",
                   "lat": 49.65,
-                  "lng": 142.1667
+                  "lng": 142.1667,
+                  "nameZh": "波什尼亚科沃村"
                 },
                 {
                   "code": "RUBRK",
@@ -58017,7 +58348,8 @@
                   "name": "Yuzhno-Kuril'sk",
                   "city": "Yuzhno-Kuril'sk",
                   "lat": 44.0333,
-                  "lng": 145.85
+                  "lng": 145.85,
+                  "nameZh": "南库里尔斯克"
                 },
                 {
                   "code": "RUDHA",
@@ -58211,7 +58543,8 @@
                   "name": "Konakovo",
                   "city": "Konakovo",
                   "lat": 56.7,
-                  "lng": 36.7833
+                  "lng": 36.7833,
+                  "nameZh": "科纳科沃"
                 },
                 {
                   "code": "RUKOT",
@@ -58225,7 +58558,8 @@
                   "name": "Kondopoga",
                   "city": "Kondopoga",
                   "lat": 62.2,
-                  "lng": 34.2833
+                  "lng": 34.2833,
+                  "nameZh": "孔多波加"
                 },
                 {
                   "code": "RUKRA",
@@ -58305,7 +58639,8 @@
                   "name": "Kolpashevo",
                   "city": "Kolpashevo",
                   "lat": 58.3,
-                  "lng": 82.9333
+                  "lng": 82.9333,
+                  "nameZh": "科尔帕舍沃"
                 },
                 {
                   "code": "RUKYB",
@@ -58358,7 +58693,8 @@
                   "name": "Lyubim",
                   "city": "Lyubim",
                   "lat": 58.35,
-                  "lng": 40.6833
+                  "lng": 40.6833,
+                  "nameZh": "柳比姆"
                 },
                 {
                   "code": "RULDY",
@@ -58423,7 +58759,8 @@
                   "name": "Malino",
                   "city": "Malino",
                   "lat": 55.1,
-                  "lng": 38.1667
+                  "lng": 38.1667,
+                  "nameZh": "马利诺_(莫斯科州)"
                 },
                 {
                   "code": "RUMAS",
@@ -58474,7 +58811,8 @@
                   "name": "Moskva",
                   "city": "Moskva",
                   "lat": 55.75,
-                  "lng": 37.6
+                  "lng": 37.6,
+                  "nameZh": "莫斯科"
                 },
                 {
                   "code": "RUMSH",
@@ -58511,7 +58849,8 @@
                   "name": "Nizhnevartovsk",
                   "city": "Nizhnevartovsk",
                   "lat": 60.9333,
-                  "lng": 76.5667
+                  "lng": 76.5667,
+                  "nameZh": "下瓦尔托夫斯克"
                 },
                 {
                   "code": "RUNLK",
@@ -58679,7 +59018,8 @@
                   "name": "Preobrazheniye",
                   "city": "Preobrazheniye",
                   "lat": 42.9,
-                  "lng": 133.9
+                  "lng": 133.9,
+                  "nameZh": "普列奥布拉热尼耶_(滨海边疆区)"
                 },
                 {
                   "code": "RUPTP",
@@ -58758,7 +59098,8 @@
                   "name": "Salekhard",
                   "city": "Salekhard",
                   "lat": 66.5167,
-                  "lng": 66.6
+                  "lng": 66.6,
+                  "nameZh": "萨列哈尔德"
                 },
                 {
                   "code": "RUSLK",
@@ -58772,7 +59113,8 @@
                   "name": "Solnechnogorsk",
                   "city": "Solnechnogorsk",
                   "lat": 56.1833,
-                  "lng": 36.9667
+                  "lng": 36.9667,
+                  "nameZh": "索尔涅奇诺戈尔斯克"
                 },
                 {
                   "code": "RUSSK",
@@ -58787,7 +59129,8 @@
                   "name": "Streika",
                   "city": "Streika",
                   "lat": 58.0833,
-                  "lng": 93.0333
+                  "lng": 93.0333,
+                  "nameZh": "斯特列尔卡_(列索西比尔斯克)"
                 },
                 {
                   "code": "RUSTY",
@@ -58810,7 +59153,8 @@
                   "name": "Taman'",
                   "city": "Taman'",
                   "lat": 45.2167,
-                  "lng": 36.7167
+                  "lng": 36.7167,
+                  "nameZh": "塔曼"
                 },
                 {
                   "code": "RUTAY",
@@ -58846,7 +59190,8 @@
                   "name": "Timashevsk",
                   "city": "Timashevsk",
                   "lat": 45.6167,
-                  "lng": 38.9333
+                  "lng": 38.9333,
+                  "nameZh": "季马绍夫斯克"
                 },
                 {
                   "code": "RUUCH",
@@ -58913,7 +59258,8 @@
                   "name": "Vitino",
                   "city": "Vitino",
                   "lat": 67.0833,
-                  "lng": 32.3333
+                  "lng": 32.3333,
+                  "nameZh": "Vitino"
                 },
                 {
                   "code": "RUVKR",
@@ -58989,7 +59335,8 @@
                   "name": "Vysotsk",
                   "city": "Vysotsk",
                   "lat": 60.6333,
-                  "lng": 28.5667
+                  "lng": 28.5667,
+                  "nameZh": "维索茨克"
                 },
                 {
                   "code": "RUVZH",
@@ -60122,7 +60469,8 @@
                   "name": "Bechet",
                   "city": "Bechet",
                   "lat": 43.7667,
-                  "lng": 23.9333
+                  "lng": 23.9333,
+                  "nameZh": "贝凯特"
                 },
                 {
                   "code": "ROBEZ",
@@ -60143,7 +60491,8 @@
                   "name": "Calafat",
                   "city": "Calafat",
                   "lat": 43.9833,
-                  "lng": 22.9333
+                  "lng": 22.9333,
+                  "nameZh": "卡拉法特"
                 },
                 {
                   "code": "ROCAS",
@@ -60224,7 +60573,8 @@
                   "name": "Galati",
                   "city": "Galati",
                   "lat": 45.4333,
-                  "lng": 28.05
+                  "lng": 28.05,
+                  "nameZh": "加拉茨"
                 },
                 {
                   "code": "ROGRG",
@@ -60303,7 +60653,8 @@
                   "name": "Medgidia",
                   "city": "Medgidia",
                   "lat": 44.25,
-                  "lng": 28.2667
+                  "lng": 28.2667,
+                  "nameZh": "梅吉迪亚"
                 },
                 {
                   "code": "ROMGU",
@@ -60583,14 +60934,16 @@
                   "name": "Dunaújváros",
                   "city": "Dunaújváros",
                   "lat": 46.9667,
-                  "lng": 18.9333
+                  "lng": 18.9333,
+                  "nameZh": "多瑙新城"
                 },
                 {
                   "code": "HUDVE",
                   "name": "Dunavecse",
                   "city": "Dunavecse",
                   "lat": 46.9167,
-                  "lng": 18.9667
+                  "lng": 18.9667,
+                  "nameZh": "多瑙韦切"
                 },
                 {
                   "code": "HUEBS",
@@ -60662,7 +61015,8 @@
                   "name": "Karcag",
                   "city": "Karcag",
                   "lat": 47.3,
-                  "lng": 20.9167
+                  "lng": 20.9167,
+                  "nameZh": "考尔曹格"
                 },
                 {
                   "code": "HUKCO",
@@ -60677,7 +61031,8 @@
                   "name": "Kisvárda",
                   "city": "Kisvárda",
                   "lat": 48.2167,
-                  "lng": 22.0667
+                  "lng": 22.0667,
+                  "nameZh": "小瓦尔道"
                 },
                 {
                   "code": "HUKKU",
@@ -60765,7 +61120,8 @@
                   "name": "Göd",
                   "city": "Göd",
                   "lat": 47.7,
-                  "lng": 19.1333
+                  "lng": 19.1333,
+                  "nameZh": "格德"
                 },
                 {
                   "code": "HUPAL",
@@ -60919,7 +61275,8 @@
                   "name": "Kolárovo",
                   "city": "Kolárovo",
                   "lat": 47.9,
-                  "lng": 17.9833
+                  "lng": 17.9833,
+                  "nameZh": "科拉罗沃"
                 },
                 {
                   "code": "SKKVE",
@@ -61057,7 +61414,8 @@
                   "name": "Izmail",
                   "city": "Izmail",
                   "lat": 45.3167,
-                  "lng": 28.85
+                  "lng": 28.85,
+                  "nameZh": "伊兹梅尔"
                 },
                 {
                   "code": "UAKHE",
@@ -61151,7 +61509,8 @@
                   "name": "Zaporizhzhia",
                   "city": "Zaporizhzhia",
                   "lat": 47.8167,
-                  "lng": 35.1667
+                  "lng": 35.1667,
+                  "nameZh": "扎波罗热"
                 }
               ]
             },
@@ -61180,7 +61539,8 @@
                   "name": "Balchik",
                   "city": "Balchik",
                   "lat": 43.4167,
-                  "lng": 28.1667
+                  "lng": 28.1667,
+                  "nameZh": "巴尔奇克"
                 },
                 {
                   "code": "BGBSL",
@@ -61225,7 +61585,8 @@
                   "name": "Nikopol",
                   "city": "Nikopol",
                   "lat": 43.6833,
-                  "lng": 24.8833
+                  "lng": 24.8833,
+                  "nameZh": "尼科波尔"
                 },
                 {
                   "code": "BGOKH",
@@ -61263,7 +61624,8 @@
                   "name": "Byala Cherkva",
                   "city": "Byala Cherkva",
                   "lat": 43.2,
-                  "lng": 25.3
+                  "lng": 25.3,
+                  "nameZh": "白切尔克瓦"
                 }
               ]
             },
@@ -61384,7 +61746,8 @@
                   "name": "Sinton",
                   "city": "Sinton",
                   "lat": 28.0333,
-                  "lng": -97.5
+                  "lng": -97.5,
+                  "nameZh": "辛顿"
                 },
                 {
                   "code": "US2TO",
@@ -61509,7 +61872,8 @@
                   "name": "Ulm",
                   "city": "Ulm",
                   "lat": 34.5667,
-                  "lng": -91.45
+                  "lng": -91.45,
+                  "nameZh": "乌尔姆"
                 },
                 {
                   "code": "US4WR",
@@ -61695,7 +62059,8 @@
                   "name": "Chapman",
                   "city": "Chapman",
                   "lat": 38.9667,
-                  "lng": -97.0167
+                  "lng": -97.0167,
+                  "nameZh": "查普曼"
                 },
                 {
                   "code": "US9DK",
@@ -61959,7 +62324,8 @@
                   "name": "Avon",
                   "city": "Avon",
                   "lat": 39.6333,
-                  "lng": -106.5167
+                  "lng": -106.5167,
+                  "nameZh": "雅芳"
                 },
                 {
                   "code": "USAOU",
@@ -62033,7 +62399,8 @@
                   "name": "Allenstown",
                   "city": "Allenstown",
                   "lat": 43.1333,
-                  "lng": -71.45
+                  "lng": -71.45,
+                  "nameZh": "艾伦斯敦"
                 },
                 {
                   "code": "USAV9",
@@ -62197,7 +62564,8 @@
                   "name": "Beulaville",
                   "city": "Beulaville",
                   "lat": 34.9167,
-                  "lng": -77.7667
+                  "lng": -77.7667,
+                  "nameZh": "比拉维尔"
                 },
                 {
                   "code": "USBCM",
@@ -62234,7 +62602,8 @@
                   "name": "Biscoe",
                   "city": "Biscoe",
                   "lat": 35.3667,
-                  "lng": -79.7833
+                  "lng": -79.7833,
+                  "nameZh": "比斯科"
                 },
                 {
                   "code": "USBE8",
@@ -62333,7 +62702,8 @@
                   "name": "Becker",
                   "city": "Becker",
                   "lat": 45.3833,
-                  "lng": -93.8667
+                  "lng": -93.8667,
+                  "nameZh": "贝克"
                 },
                 {
                   "code": "USBKQ",
@@ -62470,7 +62840,8 @@
                   "name": "Bath",
                   "city": "Bath",
                   "lat": 43.9,
-                  "lng": -69.8167
+                  "lng": -69.8167,
+                  "nameZh": "巴斯"
                 },
                 {
                   "code": "USBTR",
@@ -62607,7 +62978,8 @@
                   "name": "Clinton",
                   "city": "Clinton",
                   "lat": 30.85,
-                  "lng": -91
+                  "lng": -91,
+                  "nameZh": "克林顿"
                 },
                 {
                   "code": "USC55",
@@ -62665,7 +63037,8 @@
                   "name": "Clinton",
                   "city": "Clinton",
                   "lat": 38.3667,
-                  "lng": -93.7833
+                  "lng": -93.7833,
+                  "nameZh": "柯林顿"
                 },
                 {
                   "code": "USCC2",
@@ -62849,7 +63222,8 @@
                   "name": "Cherokee",
                   "city": "Cherokee",
                   "lat": 34.75,
-                  "lng": -87.9667
+                  "lng": -87.9667,
+                  "nameZh": "切罗基"
                 },
                 {
                   "code": "USCKI",
@@ -63034,7 +63408,8 @@
                   "name": "Clarkesville",
                   "city": "Clarkesville",
                   "lat": 34.6167,
-                  "lng": -83.5333
+                  "lng": -83.5333,
+                  "nameZh": "克拉克斯维尔"
                 },
                 {
                   "code": "USCWX",
@@ -63086,7 +63461,8 @@
                   "name": "Dagsboro",
                   "city": "Dagsboro",
                   "lat": 38.5333,
-                  "lng": -75.2333
+                  "lng": -75.2333,
+                  "nameZh": "达格斯伯勒"
                 },
                 {
                   "code": "USDA8",
@@ -63331,7 +63707,8 @@
                   "name": "Delta",
                   "city": "Delta",
                   "lat": 38.75,
-                  "lng": -108.0667
+                  "lng": -108.0667,
+                  "nameZh": "德尔塔"
                 },
                 {
                   "code": "USDTP",
@@ -63563,7 +63940,8 @@
                   "name": "Bernie",
                   "city": "Bernie",
                   "lat": 36.6667,
-                  "lng": -89.9667
+                  "lng": -89.9667,
+                  "nameZh": "伯尼"
                 },
                 {
                   "code": "USEIF",
@@ -63602,7 +63980,8 @@
                   "name": "Elkton",
                   "city": "Elkton",
                   "lat": 44.2333,
-                  "lng": -96.4833
+                  "lng": -96.4833,
+                  "nameZh": "埃尔克顿"
                 },
                 {
                   "code": "USEL3",
@@ -63925,7 +64304,8 @@
                   "name": "Francesville",
                   "city": "Francesville",
                   "lat": 40.9833,
-                  "lng": -86.8667
+                  "lng": -86.8667,
+                  "nameZh": "弗朗西斯维尔 (印地安纳州)"
                 },
                 {
                   "code": "USFDE",
@@ -64006,7 +64386,8 @@
                   "name": "Fishkill",
                   "city": "Fishkill",
                   "lat": 41.5333,
-                  "lng": -73.9
+                  "lng": -73.9,
+                  "nameZh": "菲什基尔"
                 },
                 {
                   "code": "USFJY",
@@ -64229,7 +64610,8 @@
                   "name": "Guy",
                   "city": "Guy",
                   "lat": 35.3167,
-                  "lng": -92.3333
+                  "lng": -92.3333,
+                  "nameZh": "盖伊"
                 },
                 {
                   "code": "USGA7",
@@ -64273,7 +64655,8 @@
                   "name": "Coolidge",
                   "city": "Coolidge",
                   "lat": 31,
-                  "lng": -83.8667
+                  "lng": -83.8667,
+                  "nameZh": "柯立芝"
                 },
                 {
                   "code": "USGDJ",
@@ -64348,7 +64731,8 @@
                   "name": "Goldendale",
                   "city": "Goldendale",
                   "lat": 45.8167,
-                  "lng": -120.8167
+                  "lng": -120.8167,
+                  "nameZh": "戈尔登代尔"
                 },
                 {
                   "code": "USGM2",
@@ -64492,7 +64876,8 @@
                   "name": "Guttenberg",
                   "city": "Guttenberg",
                   "lat": 40.7833,
-                  "lng": -74
+                  "lng": -74,
+                  "nameZh": "加滕伯格"
                 },
                 {
                   "code": "USGUM",
@@ -64551,7 +64936,8 @@
                   "name": "Grabill",
                   "city": "Grabill",
                   "lat": 41.2,
-                  "lng": -84.9667
+                  "lng": -84.9667,
+                  "nameZh": "格拉比尔"
                 },
                 {
                   "code": "USGZI",
@@ -64642,7 +65028,8 @@
                   "name": "Hastings",
                   "city": "Hastings",
                   "lat": 42.6333,
-                  "lng": -85.2833
+                  "lng": -85.2833,
+                  "nameZh": "黑斯廷斯"
                 },
                 {
                   "code": "USHGU",
@@ -64749,7 +65136,8 @@
                   "name": "Hickman",
                   "city": "Hickman",
                   "lat": 36.5667,
-                  "lng": -89.1833
+                  "lng": -89.1833,
+                  "nameZh": "希克曼"
                 },
                 {
                   "code": "USHM4",
@@ -64835,7 +65223,8 @@
                   "name": "Hector",
                   "city": "Hector",
                   "lat": 42.5,
-                  "lng": -76.8667
+                  "lng": -76.8667,
+                  "nameZh": "赫克托 (纽约州)"
                 },
                 {
                   "code": "USHR5",
@@ -64864,7 +65253,8 @@
                   "name": "Hackensack",
                   "city": "Hackensack",
                   "lat": 46.9333,
-                  "lng": -94.5167
+                  "lng": -94.5167,
+                  "nameZh": "哈肯萨克"
                 },
                 {
                   "code": "USHS3",
@@ -64931,7 +65321,8 @@
                   "name": "Cumberland",
                   "city": "Cumberland",
                   "lat": 36.9667,
-                  "lng": -82.9833
+                  "lng": -82.9833,
+                  "nameZh": "坎伯兰"
                 },
                 {
                   "code": "USHXF",
@@ -64952,7 +65343,8 @@
                   "name": "Hercules",
                   "city": "Hercules",
                   "lat": 38.0167,
-                  "lng": -122.2833
+                  "lng": -122.2833,
+                  "nameZh": "海格立斯"
                 },
                 {
                   "code": "USHZA",
@@ -64967,7 +65359,8 @@
                   "name": "Hawesville",
                   "city": "Hawesville",
                   "lat": 37.9,
-                  "lng": -86.75
+                  "lng": -86.75,
+                  "nameZh": "霍斯维尔"
                 },
                 {
                   "code": "USIA2",
@@ -65006,7 +65399,8 @@
                   "name": "Nicholls",
                   "city": "Nicholls",
                   "lat": 31.5167,
-                  "lng": -82.6333
+                  "lng": -82.6333,
+                  "nameZh": "尼科尔斯"
                 },
                 {
                   "code": "USIEG",
@@ -65052,7 +65446,8 @@
                   "name": "Williams",
                   "city": "Williams",
                   "lat": 39.15,
-                  "lng": -122.15
+                  "lng": -122.15,
+                  "nameZh": "威廉姆斯"
                 },
                 {
                   "code": "USIJM",
@@ -65190,7 +65585,8 @@
                   "name": "Isle",
                   "city": "Isle",
                   "lat": 46.1333,
-                  "lng": -93.4833
+                  "lng": -93.4833,
+                  "nameZh": "艾尔"
                 },
                 {
                   "code": "USIVG",
@@ -65250,7 +65646,8 @@
                   "name": "Jackman",
                   "city": "Jackman",
                   "lat": 45.6167,
-                  "lng": -70.2333
+                  "lng": -70.2333,
+                  "nameZh": "杰克曼"
                 },
                 {
                   "code": "USJAY",
@@ -65480,7 +65877,8 @@
                   "name": "Knob Noster",
                   "city": "Knob Noster",
                   "lat": 38.7667,
-                  "lng": -93.55
+                  "lng": -93.55,
+                  "nameZh": "诺布诺斯特"
                 },
                 {
                   "code": "USKA7",
@@ -65620,14 +66018,16 @@
                   "name": "Hooksett",
                   "city": "Hooksett",
                   "lat": 43.1,
-                  "lng": -71.4667
+                  "lng": -71.4667,
+                  "nameZh": "胡克西特"
                 },
                 {
                   "code": "USKTT",
                   "name": "Kitty Hawk",
                   "city": "Kitty Hawk",
                   "lat": 36.0667,
-                  "lng": -75.7
+                  "lng": -75.7,
+                  "nameZh": "首航机场"
                 },
                 {
                   "code": "USKTZ",
@@ -65780,7 +66180,8 @@
                   "name": "Los Alamitos",
                   "city": "Los Alamitos",
                   "lat": 33.8,
-                  "lng": -118.0667
+                  "lng": -118.0667,
+                  "nameZh": "洛斯阿拉米托斯"
                 },
                 {
                   "code": "USLAX",
@@ -65810,7 +66211,8 @@
                   "name": "Calabash",
                   "city": "Calabash",
                   "lat": 33.8833,
-                  "lng": -78.5667
+                  "lng": -78.5667,
+                  "nameZh": "卡拉巴什 (北卡罗莱纳州)"
                 },
                 {
                   "code": "USLC2",
@@ -65942,7 +66344,8 @@
                   "name": "Stillmore",
                   "city": "Stillmore",
                   "lat": 32.4333,
-                  "lng": -82.2
+                  "lng": -82.2,
+                  "nameZh": "斯蒂尔莫尔"
                 },
                 {
                   "code": "USLLU",
@@ -66177,7 +66580,8 @@
                   "name": "Milburn",
                   "city": "Milburn",
                   "lat": 34.2333,
-                  "lng": -96.5333
+                  "lng": -96.5333,
+                  "nameZh": "米尔伯恩"
                 },
                 {
                   "code": "USM2P",
@@ -66200,7 +66604,8 @@
                   "name": "Middletown",
                   "city": "Middletown",
                   "lat": 39.4333,
-                  "lng": -77.5333
+                  "lng": -77.5333,
+                  "nameZh": "米德尔敦"
                 },
                 {
                   "code": "USM47",
@@ -66246,7 +66651,8 @@
                   "name": "Mendon",
                   "city": "Mendon",
                   "lat": 42.9833,
-                  "lng": -77.5
+                  "lng": -77.5,
+                  "nameZh": "门登 (纽约州)"
                 },
                 {
                   "code": "USM9O",
@@ -66487,7 +66893,8 @@
                   "name": "Meraux",
                   "city": "Meraux",
                   "lat": 29.9167,
-                  "lng": -89.9333
+                  "lng": -89.9333,
+                  "nameZh": "梅罗"
                 },
                 {
                   "code": "USMY3",
@@ -66662,7 +67069,8 @@
                   "name": "Newfane",
                   "city": "Newfane",
                   "lat": 43.2833,
-                  "lng": -78.7167
+                  "lng": -78.7167,
+                  "nameZh": "纽费恩 (纽约州)"
                 },
                 {
                   "code": "USNFR",
@@ -66685,7 +67093,8 @@
                   "name": "Northampton",
                   "city": "Northampton",
                   "lat": 42.3333,
-                  "lng": -72.6333
+                  "lng": -72.6333,
+                  "nameZh": "北安普敦"
                 },
                 {
                   "code": "USNHN",
@@ -66838,7 +67247,8 @@
                   "name": "Newport",
                   "city": "Newport",
                   "lat": 44.6333,
-                  "lng": -124.05
+                  "lng": -124.05,
+                  "nameZh": "纽波特 (奥勒冈州)"
                 },
                 {
                   "code": "USNPX",
@@ -67137,7 +67547,8 @@
                   "name": "Oglesby",
                   "city": "Oglesby",
                   "lat": 41.2833,
-                  "lng": -89.05
+                  "lng": -89.05,
+                  "nameZh": "奥格斯比 (伊利诺伊州)"
                 },
                 {
                   "code": "USOI7",
@@ -67222,14 +67633,16 @@
                   "name": "Castile",
                   "city": "Castile",
                   "lat": 42.6167,
-                  "lng": -78.05
+                  "lng": -78.05,
+                  "nameZh": "卡斯蒂尔 (纽约州)"
                 },
                 {
                   "code": "USONA",
                   "name": "Winona",
                   "city": "Winona",
                   "lat": 44.05,
-                  "lng": -91.6333
+                  "lng": -91.6333,
+                  "nameZh": "威诺纳"
                 },
                 {
                   "code": "USONG",
@@ -67861,7 +68274,8 @@
                   "name": "Preston",
                   "city": "Preston",
                   "lat": 42.0833,
-                  "lng": -111.8667
+                  "lng": -111.8667,
+                  "nameZh": "普雷斯顿"
                 },
                 {
                   "code": "USPSJ",
@@ -67987,14 +68401,16 @@
                   "name": "Chautauqua",
                   "city": "Chautauqua",
                   "lat": 42.2,
-                  "lng": -79.4667
+                  "lng": -79.4667,
+                  "nameZh": "肖托夸"
                 },
                 {
                   "code": "USQCZ",
                   "name": "Cozad",
                   "city": "Cozad",
                   "lat": 40.85,
-                  "lng": -99.9833
+                  "lng": -99.9833,
+                  "nameZh": "科扎德"
                 },
                 {
                   "code": "USQDM",
@@ -68053,7 +68469,8 @@
                   "name": "Earlington",
                   "city": "Earlington",
                   "lat": 37.2667,
-                  "lng": -87.5
+                  "lng": -87.5,
+                  "nameZh": "厄灵顿"
                 },
                 {
                   "code": "USQET",
@@ -68105,7 +68522,8 @@
                   "name": "Ferriday",
                   "city": "Ferriday",
                   "lat": 31.6167,
-                  "lng": -91.55
+                  "lng": -91.55,
+                  "nameZh": "费里迪"
                 },
                 {
                   "code": "USQFM",
@@ -68144,7 +68562,8 @@
                   "name": "Garrett",
                   "city": "Garrett",
                   "lat": 41.3333,
-                  "lng": -85.1333
+                  "lng": -85.1333,
+                  "nameZh": "加勒特 (印地安纳州)"
                 },
                 {
                   "code": "USQGX",
@@ -68272,7 +68691,8 @@
                   "name": "Ketchum",
                   "city": "Ketchum",
                   "lat": 43.6667,
-                  "lng": -114.35
+                  "lng": -114.35,
+                  "nameZh": "凯彻姆"
                 },
                 {
                   "code": "USQLF",
@@ -68359,7 +68779,8 @@
                   "name": "McCleary",
                   "city": "McCleary",
                   "lat": 47.05,
-                  "lng": -123.25
+                  "lng": -123.25,
+                  "nameZh": "麦克利"
                 },
                 {
                   "code": "USQNE",
@@ -68691,7 +69112,8 @@
                   "name": "Rollinsford",
                   "city": "Rollinsford",
                   "lat": 43.2333,
-                  "lng": -70.8167
+                  "lng": -70.8167,
+                  "nameZh": "罗林斯福德"
                 },
                 {
                   "code": "USR55",
@@ -68822,7 +69244,8 @@
                   "name": "Rancho Mirage",
                   "city": "Rancho Mirage",
                   "lat": 33.7333,
-                  "lng": -116.4167
+                  "lng": -116.4167,
+                  "nameZh": "兰乔米拉奇"
                 },
                 {
                   "code": "USRHY",
@@ -69212,7 +69635,8 @@
                   "name": "Stonington",
                   "city": "Stonington",
                   "lat": 41.3333,
-                  "lng": -71.9
+                  "lng": -71.9,
+                  "nameZh": "康涅秋格州的斯托宁顿"
                 },
                 {
                   "code": "USSI2",
@@ -69422,7 +69846,8 @@
                   "name": "Tabor",
                   "city": "Tabor",
                   "lat": 42.9333,
-                  "lng": -97.65
+                  "lng": -97.65,
+                  "nameZh": "泰伯"
                 },
                 {
                   "code": "USTBH",
@@ -69491,7 +69916,8 @@
                   "name": "Stephentown",
                   "city": "Stephentown",
                   "lat": 42.5333,
-                  "lng": -73.3667
+                  "lng": -73.3667,
+                  "nameZh": "史蒂芬镇"
                 },
                 {
                   "code": "USTFG",
@@ -69644,7 +70070,8 @@
                   "name": "Tunica",
                   "city": "Tunica",
                   "lat": 34.6833,
-                  "lng": -90.3667
+                  "lng": -90.3667,
+                  "nameZh": "蒂尼卡"
                 },
                 {
                   "code": "USTNV",
@@ -69725,7 +70152,8 @@
                   "name": "Troy",
                   "city": "Troy",
                   "lat": 42.7167,
-                  "lng": -73.6833
+                  "lng": -73.6833,
+                  "nameZh": "特洛伊"
                 },
                 {
                   "code": "USTS4",
@@ -70039,7 +70467,8 @@
                   "name": "Tchula",
                   "city": "Tchula",
                   "lat": 33.1833,
-                  "lng": -90.2167
+                  "lng": -90.2167,
+                  "nameZh": "楚拉"
                 },
                 {
                   "code": "USUTS",
@@ -70115,7 +70544,8 @@
                   "name": "Vermilion",
                   "city": "Vermilion",
                   "lat": 41.4167,
-                  "lng": -82.35
+                  "lng": -82.35,
+                  "nameZh": "弗米利恩 (俄亥俄州)"
                 },
                 {
                   "code": "USVED",
@@ -70138,7 +70568,8 @@
                   "name": "Vanceburg",
                   "city": "Vanceburg",
                   "lat": 38.6,
-                  "lng": -83.3167
+                  "lng": -83.3167,
+                  "nameZh": "万斯堡"
                 },
                 {
                   "code": "USVIR",
@@ -70181,7 +70612,8 @@
                   "name": "Van Alstyne",
                   "city": "Van Alstyne",
                   "lat": 33.4167,
-                  "lng": -96.5667
+                  "lng": -96.5667,
+                  "nameZh": "范阿尔斯泰恩"
                 },
                 {
                   "code": "USVMD",
@@ -70430,7 +70862,8 @@
                   "name": "Wolfeboro",
                   "city": "Wolfeboro",
                   "lat": 43.5833,
-                  "lng": -71.2
+                  "lng": -71.2,
+                  "nameZh": "沃尔夫波罗"
                 },
                 {
                   "code": "USWG2",
@@ -70594,7 +71027,8 @@
                   "name": "Whitman",
                   "city": "Whitman",
                   "lat": 42.0833,
-                  "lng": -70.9333
+                  "lng": -70.9333,
+                  "nameZh": "惠特曼"
                 },
                 {
                   "code": "USWQU",
@@ -70669,7 +71103,8 @@
                   "name": "Wurtland",
                   "city": "Wurtland",
                   "lat": 38.55,
-                  "lng": -82.7667
+                  "lng": -82.7667,
+                  "nameZh": "沃特兰"
                 },
                 {
                   "code": "USWUS",
@@ -71044,7 +71479,8 @@
                   "name": "Silverton",
                   "city": "Silverton",
                   "lat": 45,
-                  "lng": -122.7667
+                  "lng": -122.7667,
+                  "nameZh": "西尔弗顿"
                 },
                 {
                   "code": "USXVR",
@@ -71247,7 +71683,8 @@
                   "name": "Carver",
                   "city": "Carver",
                   "lat": 41.8833,
-                  "lng": -70.7667
+                  "lng": -70.7667,
+                  "nameZh": "卡弗"
                 },
                 {
                   "code": "USYCG",
@@ -71391,7 +71828,8 @@
                   "name": "Glennville",
                   "city": "Glennville",
                   "lat": 31.9333,
-                  "lng": -81.9167
+                  "lng": -81.9167,
+                  "nameZh": "格林维尔 (乔治亚州塔特纳尔县)"
                 },
                 {
                   "code": "USYGS",
@@ -71405,7 +71843,8 @@
                   "name": "Heyburn",
                   "city": "Heyburn",
                   "lat": 42.55,
-                  "lng": -113.75
+                  "lng": -113.75,
+                  "nameZh": "海本"
                 },
                 {
                   "code": "USYHE",
@@ -71434,7 +71873,8 @@
                   "name": "Ingleside",
                   "city": "Ingleside",
                   "lat": 27.8667,
-                  "lng": -97.2
+                  "lng": -97.2,
+                  "nameZh": "英格塞德"
                 },
                 {
                   "code": "USYIL",
@@ -71638,7 +72078,8 @@
                   "name": "Peterborough",
                   "city": "Peterborough",
                   "lat": 42.8667,
-                  "lng": -71.95
+                  "lng": -71.95,
+                  "nameZh": "彼得堡"
                 },
                 {
                   "code": "USYPF",
@@ -71697,7 +72138,8 @@
                   "name": "Ragland",
                   "city": "Ragland",
                   "lat": 33.7333,
-                  "lng": -86.15
+                  "lng": -86.15,
+                  "nameZh": "拉格兰德"
                 },
                 {
                   "code": "USYRO",
@@ -71719,7 +72161,8 @@
                   "name": "Star",
                   "city": "Star",
                   "lat": 35.4,
-                  "lng": -79.7833
+                  "lng": -79.7833,
+                  "nameZh": "斯塔 (北卡罗莱纳州)"
                 },
                 {
                   "code": "USYRY",
@@ -71931,7 +72374,8 @@
                   "name": "Willacoochee",
                   "city": "Willacoochee",
                   "lat": 31.3333,
-                  "lng": -83.0333
+                  "lng": -83.0333,
+                  "nameZh": "威拉库奇"
                 },
                 {
                   "code": "USYWD",
@@ -71953,7 +72397,8 @@
                   "name": "Whately",
                   "city": "Whately",
                   "lat": 42.4333,
-                  "lng": -72.6333
+                  "lng": -72.6333,
+                  "nameZh": "惠特利"
                 },
                 {
                   "code": "USYWI",
@@ -72048,7 +72493,8 @@
                   "name": "Marcy",
                   "city": "Marcy",
                   "lat": 43.1667,
-                  "lng": -75.2833
+                  "lng": -75.2833,
+                  "nameZh": "马西 (纽约州)"
                 },
                 {
                   "code": "USZBA",
@@ -72078,14 +72524,16 @@
                   "name": "Bastrop",
                   "city": "Bastrop",
                   "lat": 30.1167,
-                  "lng": -97.3167
+                  "lng": -97.3167,
+                  "nameZh": "巴斯特罗普"
                 },
                 {
                   "code": "USZCB",
                   "name": "Cibolo",
                   "city": "Cibolo",
                   "lat": 29.5667,
-                  "lng": -98.2333
+                  "lng": -98.2333,
+                  "nameZh": "席博罗"
                 },
                 {
                   "code": "USZCC",
@@ -72211,7 +72659,8 @@
                   "name": "Commerce",
                   "city": "Commerce",
                   "lat": 34.2,
-                  "lng": -83.45
+                  "lng": -83.45,
+                  "nameZh": "康默斯"
                 },
                 {
                   "code": "USZEF",
@@ -72274,14 +72723,16 @@
                   "name": "Ellaville",
                   "city": "Ellaville",
                   "lat": 32.2333,
-                  "lng": -84.3
+                  "lng": -84.3,
+                  "nameZh": "艾拉维"
                 },
                 {
                   "code": "USZEW",
                   "name": "Ellenwood",
                   "city": "Ellenwood",
                   "lat": 33.6,
-                  "lng": -84.2833
+                  "lng": -84.2833,
+                  "nameZh": "埃伦伍德"
                 },
                 {
                   "code": "USZFI",
@@ -72341,7 +72792,8 @@
                   "name": "Ferguson",
                   "city": "Ferguson",
                   "lat": 38.7333,
-                  "lng": -90.3
+                  "lng": -90.3,
+                  "nameZh": "弗格森"
                 },
                 {
                   "code": "USZGZ",
@@ -72408,7 +72860,8 @@
                   "name": "Inkom",
                   "city": "Inkom",
                   "lat": 42.7833,
-                  "lng": -112.25
+                  "lng": -112.25,
+                  "nameZh": "因科姆"
                 },
                 {
                   "code": "USZIW",
@@ -72431,7 +72884,8 @@
                   "name": "Jeffersonville",
                   "city": "Jeffersonville",
                   "lat": 37.9667,
-                  "lng": -83.8333
+                  "lng": -83.8333,
+                  "nameZh": "杰斐逊维尔"
                 },
                 {
                   "code": "USZKL",
@@ -72446,7 +72900,8 @@
                   "name": "Dickson",
                   "city": "Dickson",
                   "lat": 36.0667,
-                  "lng": -87.3833
+                  "lng": -87.3833,
+                  "nameZh": "迪克森"
                 },
                 {
                   "code": "USZLG",
@@ -72500,7 +72955,8 @@
                   "name": "Newburyport",
                   "city": "Newburyport",
                   "lat": 42.8,
-                  "lng": -70.8667
+                  "lng": -70.8667,
+                  "nameZh": "纽伯里波特"
                 },
                 {
                   "code": "USZMQ",
@@ -72700,7 +73156,8 @@
                   "name": "Rowlett",
                   "city": "Rowlett",
                   "lat": 32.9,
-                  "lng": -96.55
+                  "lng": -96.55,
+                  "nameZh": "罗莱特"
                 },
                 {
                   "code": "USZRH",
@@ -72715,14 +73172,16 @@
                   "name": "Carrboro",
                   "city": "Carrboro",
                   "lat": 35.9167,
-                  "lng": -79.0833
+                  "lng": -79.0833,
+                  "nameZh": "卡勃罗"
                 },
                 {
                   "code": "USZRY",
                   "name": "Rye",
                   "city": "Rye",
                   "lat": 40.9667,
-                  "lng": -73.6833
+                  "lng": -73.6833,
+                  "nameZh": "拉伊"
                 },
                 {
                   "code": "USZS2",
@@ -73006,7 +73465,8 @@
                   "name": "Bogart",
                   "city": "Bogart",
                   "lat": 33.9333,
-                  "lng": -83.5333
+                  "lng": -83.5333,
+                  "nameZh": "博加特"
                 },
                 {
                   "code": "USZZC",
@@ -73349,7 +73809,8 @@
                   "name": "Botwood",
                   "city": "Botwood",
                   "lat": 49.15,
-                  "lng": -55.3667
+                  "lng": -55.3667,
+                  "nameZh": "Botwood"
                 },
                 {
                   "code": "CABYR",
@@ -73423,7 +73884,8 @@
                   "name": "Corner Brook",
                   "city": "Corner Brook",
                   "lat": 48.95,
-                  "lng": -57.9333
+                  "lng": -57.9333,
+                  "nameZh": "科纳布鲁克"
                 },
                 {
                   "code": "CACBY",
@@ -73763,7 +74225,8 @@
                   "name": "Fredericton",
                   "city": "Fredericton",
                   "lat": 45.95,
-                  "lng": -66.65
+                  "lng": -66.65,
+                  "nameZh": "弗雷德里克顿"
                 },
                 {
                   "code": "CAFSD",
@@ -75519,7 +75982,8 @@
                   "name": "Altamira",
                   "city": "Altamira",
                   "lat": 22.4,
-                  "lng": -97.9167
+                  "lng": -97.9167,
+                  "nameZh": "阿尔塔米拉"
                 },
                 {
                   "code": "MXATN",
@@ -75652,7 +76116,8 @@
                   "name": "Ensenada",
                   "city": "Ensenada",
                   "lat": 31.85,
-                  "lng": -116.6
+                  "lng": -116.6,
+                  "nameZh": "恩塞纳达"
                 },
                 {
                   "code": "MXFRN",
@@ -75688,7 +76153,8 @@
                   "name": "Guaymas",
                   "city": "Guaymas",
                   "lat": 27.9167,
-                  "lng": -110.8833
+                  "lng": -110.8833,
+                  "nameZh": "Guaymas"
                 },
                 {
                   "code": "MXHTO",
@@ -75820,7 +76286,8 @@
                   "name": "Progreso",
                   "city": "Progreso",
                   "lat": 21.2667,
-                  "lng": -89.65
+                  "lng": -89.65,
+                  "nameZh": "普罗格雷索"
                 },
                 {
                   "code": "MXPIC",
@@ -76038,7 +76505,8 @@
                   "name": "Veracruz",
                   "city": "Veracruz",
                   "lat": 19.2,
-                  "lng": -96.0833
+                  "lng": -96.0833,
+                  "nameZh": "韦拉克鲁斯"
                 },
                 {
                   "code": "MXVNR",
@@ -76329,7 +76797,8 @@
                   "name": "Puntarenas",
                   "city": "Puntarenas",
                   "lat": 9.9667,
-                  "lng": -84.8333
+                  "lng": -84.8333,
+                  "nameZh": "蓬塔雷纳斯"
                 },
                 {
                   "code": "CRPIT",
@@ -76554,7 +77023,8 @@
                   "name": "Cristóbal",
                   "city": "Cristóbal",
                   "lat": 9.35,
-                  "lng": -79.9
+                  "lng": -79.9,
+                  "nameZh": "克里斯托弗"
                 },
                 {
                   "code": "PACTD",
@@ -76603,7 +77073,8 @@
                   "name": "Colón",
                   "city": "Colón",
                   "lat": 9.35,
-                  "lng": -79.8667
+                  "lng": -79.8667,
+                  "nameZh": "科隆"
                 },
                 {
                   "code": "PAPBE",
@@ -76653,7 +77124,8 @@
                   "name": "Rodman",
                   "city": "Rodman",
                   "lat": 8.95,
-                  "lng": -79.5667
+                  "lng": -79.5667,
+                  "nameZh": "罗德曼海军基地"
                 },
                 {
                   "code": "PASCL",
@@ -76919,7 +77391,8 @@
                   "name": "Bahía Honda",
                   "city": "Bahía Honda",
                   "lat": 22.9,
-                  "lng": -83.1667
+                  "lng": -83.1667,
+                  "nameZh": "翁达湾"
                 },
                 {
                   "code": "CUBOG",
@@ -78480,7 +78953,8 @@
                   "name": "Aracaju",
                   "city": "Aracaju",
                   "lat": -10.9,
-                  "lng": -37.0333
+                  "lng": -37.0333,
+                  "nameZh": "阿拉卡茹"
                 },
                 {
                   "code": "BRALT",
@@ -78554,7 +79028,8 @@
                   "name": "Altamira",
                   "city": "Altamira",
                   "lat": -3.2,
-                  "lng": -52.2
+                  "lng": -52.2,
+                  "nameZh": "阿尔塔米拉"
                 },
                 {
                   "code": "BRAUN",
@@ -78575,7 +79050,8 @@
                   "name": "Balneário Camboriú",
                   "city": "Balneário Camboriú",
                   "lat": -26.9833,
-                  "lng": -48.6333
+                  "lng": -48.6333,
+                  "nameZh": "Balneário Camboriú"
                 },
                 {
                   "code": "BRBAR",
@@ -78589,7 +79065,8 @@
                   "name": "Barcelos",
                   "city": "Barcelos",
                   "lat": -0.9667,
-                  "lng": -62.9167
+                  "lng": -62.9167,
+                  "nameZh": "巴塞洛斯"
                 },
                 {
                   "code": "BRBCE",
@@ -78625,7 +79102,8 @@
                   "name": "Belém",
                   "city": "Belém",
                   "lat": -1.45,
-                  "lng": -48.4833
+                  "lng": -48.4833,
+                  "nameZh": "贝伦"
                 },
                 {
                   "code": "BRBIR",
@@ -78690,7 +79168,8 @@
                   "name": "Canoas",
                   "city": "Canoas",
                   "lat": -29.9167,
-                  "lng": -51.1667
+                  "lng": -51.1667,
+                  "nameZh": "卡诺阿斯"
                 },
                 {
                   "code": "BRCAR",
@@ -78719,7 +79198,8 @@
                   "name": "Caracaraí",
                   "city": "Caracaraí",
                   "lat": 1.8,
-                  "lng": -61.1333
+                  "lng": -61.1333,
+                  "nameZh": "卡拉卡拉伊"
                 },
                 {
                   "code": "BRCDA",
@@ -78793,7 +79273,8 @@
                   "name": "Corumbá",
                   "city": "Corumbá",
                   "lat": -19,
-                  "lng": -57.6333
+                  "lng": -57.6333,
+                  "nameZh": "科伦巴"
                 },
                 {
                   "code": "BRCPR",
@@ -78857,7 +79338,8 @@
                   "name": "Cruzeiro do Sul",
                   "city": "Cruzeiro do Sul",
                   "lat": -7.6167,
-                  "lng": -72.6667
+                  "lng": -72.6667,
+                  "nameZh": "南克鲁赛罗"
                 },
                 {
                   "code": "BRDCS",
@@ -78966,7 +79448,8 @@
                   "name": "Guarujá",
                   "city": "Guarujá",
                   "lat": -23.9833,
-                  "lng": -46.2333
+                  "lng": -46.2333,
+                  "nameZh": "瓜鲁雅"
                 },
                 {
                   "code": "BRHMA",
@@ -79023,7 +79506,8 @@
                   "name": "Imperatriz",
                   "city": "Imperatriz",
                   "lat": -5.5167,
-                  "lng": -47.4667
+                  "lng": -47.4667,
+                  "nameZh": "因佩拉特里斯"
                 },
                 {
                   "code": "BRIOA",
@@ -79037,7 +79521,8 @@
                   "name": "Ilhéus",
                   "city": "Ilhéus",
                   "lat": -14.7833,
-                  "lng": -39.0333
+                  "lng": -39.0333,
+                  "nameZh": "伊列乌斯"
                 },
                 {
                   "code": "BRIPG",
@@ -79073,7 +79558,8 @@
                   "name": "Itaituba",
                   "city": "Itaituba",
                   "lat": -4.25,
-                  "lng": -55.9833
+                  "lng": -55.9833,
+                  "nameZh": "伊泰图巴"
                 },
                 {
                   "code": "BRITJ",
@@ -79103,7 +79589,8 @@
                   "name": "Jaguarão",
                   "city": "Jaguarão",
                   "lat": -32.55,
-                  "lng": -53.3667
+                  "lng": -53.3667,
+                  "nameZh": "亚瓜龙"
                 },
                 {
                   "code": "BRJAU",
@@ -79531,7 +80018,8 @@
                   "name": "Porto Velho",
                   "city": "Porto Velho",
                   "lat": -8.7667,
-                  "lng": -63.8167
+                  "lng": -63.8167,
+                  "nameZh": "波多韦柳"
                 },
                 {
                   "code": "BRPWA",
@@ -79553,7 +80041,8 @@
                   "name": "Rio Branco",
                   "city": "Rio Branco",
                   "lat": -9.9667,
-                  "lng": -67.8
+                  "lng": -67.8,
+                  "nameZh": "里奥布朗库"
                 },
                 {
                   "code": "BRRCH",
@@ -79743,7 +80232,8 @@
                   "name": "Santarém",
                   "city": "Santarém",
                   "lat": -2.4333,
-                  "lng": -54.7167
+                  "lng": -54.7167,
+                  "nameZh": "圣塔伦"
                 },
                 {
                   "code": "BRSTU",
@@ -79788,7 +80278,8 @@
                   "name": "Tabatinga",
                   "city": "Tabatinga",
                   "lat": -4.2167,
-                  "lng": -69.9333
+                  "lng": -69.9333,
+                  "nameZh": "塔巴廷加"
                 },
                 {
                   "code": "BRTFF",
@@ -79817,7 +80308,8 @@
                   "name": "Três Lagoas",
                   "city": "Três Lagoas",
                   "lat": -20.7833,
-                  "lng": -51.7
+                  "lng": -51.7,
+                  "nameZh": "特雷斯拉瓜斯"
                 },
                 {
                   "code": "BRTMT",
@@ -79988,7 +80480,8 @@
                   "name": "Arica",
                   "city": "Arica",
                   "lat": -18.4833,
-                  "lng": -70.3167
+                  "lng": -70.3167,
+                  "nameZh": "阿里卡"
                 },
                 {
                   "code": "CLAYA",
@@ -80039,7 +80532,8 @@
                   "name": "Calbuco",
                   "city": "Calbuco",
                   "lat": -41.75,
-                  "lng": -73.1333
+                  "lng": -73.1333,
+                  "nameZh": "卡尔布科"
                 },
                 {
                   "code": "CLCCA",
@@ -80053,7 +80547,8 @@
                   "name": "Concepción",
                   "city": "Concepción",
                   "lat": -36.8167,
-                  "lng": -73.05
+                  "lng": -73.05,
+                  "nameZh": "康塞普西翁"
                 },
                 {
                   "code": "CLCDV",
@@ -80105,14 +80600,16 @@
                   "name": "Puerto Cisnes",
                   "city": "Puerto Cisnes",
                   "lat": -44.7333,
-                  "lng": -72.7
+                  "lng": -72.7,
+                  "nameZh": "锡斯内斯港"
                 },
                 {
                   "code": "CLCLD",
                   "name": "Caldera",
                   "city": "Caldera",
                   "lat": -27.0333,
-                  "lng": -70.8
+                  "lng": -70.8,
+                  "nameZh": "卡尔德拉"
                 },
                 {
                   "code": "CLCLR",
@@ -80520,7 +81017,8 @@
                   "name": "Punta Arenas",
                   "city": "Punta Arenas",
                   "lat": -53.1333,
-                  "lng": -70.9333
+                  "lng": -70.9333,
+                  "nameZh": "蓬塔阿雷纳斯"
                 },
                 {
                   "code": "CLPVS",
@@ -80610,7 +81108,8 @@
                   "name": "Talca",
                   "city": "Talca",
                   "lat": -35.4167,
-                  "lng": -71.65
+                  "lng": -71.65,
+                  "nameZh": "塔尔卡"
                 },
                 {
                   "code": "CLTOM",
@@ -80625,7 +81124,8 @@
                   "name": "Tongoy",
                   "city": "Tongoy",
                   "lat": -30.25,
-                  "lng": -71.4833
+                  "lng": -71.4833,
+                  "nameZh": "通戈伊"
                 },
                 {
                   "code": "CLTOQ",
@@ -80654,7 +81154,8 @@
                   "name": "Taltal",
                   "city": "Taltal",
                   "lat": -25.4,
-                  "lng": -70.4667
+                  "lng": -70.4667,
+                  "nameZh": "塔尔塔尔"
                 },
                 {
                   "code": "CLVAP",
@@ -80684,7 +81185,8 @@
                   "name": "Castro",
                   "city": "Castro",
                   "lat": -42.4667,
-                  "lng": -73.7667
+                  "lng": -73.7667,
+                  "nameZh": "卡斯特罗市"
                 },
                 {
                   "code": "CLWCH",
@@ -80706,7 +81208,8 @@
                   "name": "Puerto Williams",
                   "city": "Puerto Williams",
                   "lat": -54.9167,
-                  "lng": -67.6167
+                  "lng": -67.6167,
+                  "nameZh": "威廉斯港"
                 },
                 {
                   "code": "CLZAL",
@@ -80857,7 +81360,8 @@
                   "name": "Diamante",
                   "city": "Diamante",
                   "lat": -32.0667,
-                  "lng": -60.65
+                  "lng": -60.65,
+                  "nameZh": "迪亚曼特"
                 },
                 {
                   "code": "ARDSU",
@@ -80945,7 +81449,8 @@
                   "name": "Luján",
                   "city": "Luján",
                   "lat": -34.5667,
-                  "lng": -59.1
+                  "lng": -59.1,
+                  "nameZh": "卢汉"
                 },
                 {
                   "code": "ARLZG",
@@ -81115,7 +81620,8 @@
                   "name": "Rivadavia",
                   "city": "Rivadavia",
                   "lat": -33.1833,
-                  "lng": -68.4667
+                  "lng": -68.4667,
+                  "nameZh": "里瓦达维亚"
                 },
                 {
                   "code": "ARROC",
@@ -81579,7 +82085,8 @@
                   "name": "Leticia",
                   "city": "Leticia",
                   "lat": -4.2167,
-                  "lng": -69.9333
+                  "lng": -69.9333,
+                  "nameZh": "莱蒂西亚"
                 },
                 {
                   "code": "COMAM",
@@ -81715,7 +82222,8 @@
                   "name": "Ciudad Bolívar",
                   "city": "Ciudad Bolívar",
                   "lat": 8.1167,
-                  "lng": -63.55
+                  "lng": -63.55,
+                  "nameZh": "玻利瓦尔城"
                 },
                 {
                   "code": "VECHQ",
@@ -82387,7 +82895,8 @@
                   "name": "Dumyat (Damietta)",
                   "city": "Dumyat (Damietta)",
                   "lat": 31.4167,
-                  "lng": 31.8167
+                  "lng": 31.8167,
+                  "nameZh": "杜姆亚特"
                 },
                 {
                   "code": "EGDOM",
@@ -82797,7 +83306,8 @@
                   "name": "Boujdour",
                   "city": "Boujdour",
                   "lat": 26.1333,
-                  "lng": -14.4833
+                  "lng": -14.4833,
+                  "nameZh": "布伊杜尔"
                 },
                 {
                   "code": "MACAS",
@@ -82864,7 +83374,8 @@
                   "name": "Aït Melloul",
                   "city": "Aït Melloul",
                   "lat": 30.3333,
-                  "lng": -9.4833
+                  "lng": -9.4833,
+                  "nameZh": "阿伊特迈卢勒"
                 },
                 {
                   "code": "MATNG",
@@ -82965,7 +83476,8 @@
                   "name": "Ejbei Uad el Aabd",
                   "city": "Ejbei Uad el Aabd",
                   "lat": 27.15,
-                  "lng": -13.2
+                  "lng": -13.2,
+                  "nameZh": "阿尤恩"
                 }
               ]
             },
@@ -83118,7 +83630,8 @@
                   "name": "Oyo",
                   "city": "Oyo",
                   "lat": 5.3833,
-                  "lng": 4.5833
+                  "lng": 4.5833,
+                  "nameZh": "奥约"
                 },
                 {
                   "code": "NGSOT",
@@ -83200,7 +83713,8 @@
                   "name": "Jacqueville",
                   "city": "Jacqueville",
                   "lat": 5.2,
-                  "lng": -4.4167
+                  "lng": -4.4167,
+                  "nameZh": "雅克维尔"
                 },
                 {
                   "code": "CIKOS",
@@ -83274,7 +83788,8 @@
                   "name": "Kamsar",
                   "city": "Kamsar",
                   "lat": 10.6667,
-                  "lng": -14.5833
+                  "lng": -14.5833,
+                  "nameZh": "卡姆萨尔"
                 },
                 {
                   "code": "GNKMR",
@@ -83318,7 +83833,8 @@
                   "name": "Bolama",
                   "city": "Bolama",
                   "lat": 11.5833,
-                  "lng": -15.4667
+                  "lng": -15.4667,
+                  "nameZh": "博拉马"
                 },
                 {
                   "code": "GWBQE",
@@ -83347,7 +83863,8 @@
                   "name": "Farim",
                   "city": "Farim",
                   "lat": 12.4833,
-                  "lng": -15.2167
+                  "lng": -15.2167,
+                  "nameZh": "法林"
                 },
                 {
                   "code": "GWOXB",
@@ -84109,7 +84626,8 @@
                   "name": "Garoua",
                   "city": "Garoua",
                   "lat": 9.3,
-                  "lng": 13.4
+                  "lng": 13.4,
+                  "nameZh": "加鲁阿"
                 },
                 {
                   "code": "CMKUM",
@@ -84595,7 +85113,8 @@
                   "name": "Mahalapye",
                   "city": "Mahalapye",
                   "lat": -23.1,
-                  "lng": 26.8333
+                  "lng": 26.8333,
+                  "nameZh": "马哈拉佩"
                 }
               ]
             },
@@ -84618,7 +85137,8 @@
                   "name": "Thyolo",
                   "city": "Thyolo",
                   "lat": -16.0667,
-                  "lng": 35.1333
+                  "lng": 35.1333,
+                  "nameZh": "乔洛"
                 }
               ]
             },
@@ -84826,7 +85346,8 @@
                   "name": "Ashton",
                   "city": "Ashton",
                   "lat": -34.9333,
-                  "lng": 138.7333
+                  "lng": 138.7333,
+                  "nameZh": "亚殊顿"
                 },
                 {
                   "code": "AUATT",
@@ -84899,7 +85420,8 @@
                   "name": "Bomaderry",
                   "city": "Bomaderry",
                   "lat": -34.85,
-                  "lng": 150.6167
+                  "lng": 150.6167,
+                  "nameZh": "博马德里"
                 },
                 {
                   "code": "AUBE9",
@@ -85063,7 +85585,8 @@
                   "name": "Bulli",
                   "city": "Bulli",
                   "lat": -34.3,
-                  "lng": 150.9167
+                  "lng": 150.9167,
+                  "nameZh": "新南威尔斯"
                 },
                 {
                   "code": "AUBVD",
@@ -85166,7 +85689,8 @@
                   "name": "Carlingford",
                   "city": "Carlingford",
                   "lat": -33.7833,
-                  "lng": 151.05
+                  "lng": 151.05,
+                  "nameZh": "卡林福德"
                 },
                 {
                   "code": "AUCLM",
@@ -85265,7 +85789,8 @@
                   "name": "Crafers",
                   "city": "Crafers",
                   "lat": -35,
-                  "lng": 138.7
+                  "lng": 138.7,
+                  "nameZh": "嘉佛士"
                 },
                 {
                   "code": "AUCRL",
@@ -85416,7 +85941,8 @@
                   "name": "Cowandilla",
                   "city": "Cowandilla",
                   "lat": -34.9167,
-                  "lng": 138.55
+                  "lng": 138.55,
+                  "nameZh": "歌云地拿"
                 },
                 {
                   "code": "AUDIT",
@@ -85499,7 +86025,8 @@
                   "name": "Findon",
                   "city": "Findon",
                   "lat": -34.9,
-                  "lng": 138.5333
+                  "lng": 138.5333,
+                  "nameZh": "芬登"
                 },
                 {
                   "code": "AUFLD",
@@ -85648,7 +86175,8 @@
                   "name": "Hastings",
                   "city": "Hastings",
                   "lat": -38.3,
-                  "lng": 145.25
+                  "lng": 145.25,
+                  "nameZh": "哈斯丁"
                 },
                 {
                   "code": "AUHBA",
@@ -85723,14 +86251,16 @@
                   "name": "Ingle Farm",
                   "city": "Ingle Farm",
                   "lat": -34.8333,
-                  "lng": 138.6333
+                  "lng": 138.6333,
+                  "nameZh": "英告坊"
                 },
                 {
                   "code": "AUIRY",
                   "name": "Irymple",
                   "city": "Irymple",
                   "lat": -34.25,
-                  "lng": 142.1667
+                  "lng": 142.1667,
+                  "nameZh": "伊林普尔"
                 },
                 {
                   "code": "AUJAR",
@@ -85751,7 +86281,8 @@
                   "name": "Kangarilla",
                   "city": "Kangarilla",
                   "lat": -35.15,
-                  "lng": 138.65
+                  "lng": 138.65,
+                  "nameZh": "景嘉列拿"
                 },
                 {
                   "code": "AUKAY",
@@ -85816,7 +86347,8 @@
                   "name": "Lakes Entrance",
                   "city": "Lakes Entrance",
                   "lat": -37.8833,
-                  "lng": 147.9833
+                  "lng": 147.9833,
+                  "nameZh": "湖口小镇"
                 },
                 {
                   "code": "AULMQ",
@@ -85853,7 +86385,8 @@
                   "name": "Marrickville",
                   "city": "Marrickville",
                   "lat": -33.9167,
-                  "lng": 151.1667
+                  "lng": 151.1667,
+                  "nameZh": "马里克维尔"
                 },
                 {
                   "code": "AUMBY",
@@ -85919,7 +86452,8 @@
                   "name": "Mooloolaba",
                   "city": "Mooloolaba",
                   "lat": -26.6833,
-                  "lng": 153.1333
+                  "lng": 153.1333,
+                  "nameZh": "穆卢拉巴"
                 },
                 {
                   "code": "AUMOK",
@@ -86384,7 +86918,8 @@
                   "name": "Ulladulla",
                   "city": "Ulladulla",
                   "lat": -35.35,
-                  "lng": 150.4167
+                  "lng": 150.4167,
+                  "nameZh": "阿勒达拉 (新南威尔斯省)"
                 },
                 {
                   "code": "AUUMB",
@@ -86427,7 +86962,8 @@
                   "name": "Wingham",
                   "city": "Wingham",
                   "lat": -31.8667,
-                  "lng": 152.3667
+                  "lng": 152.3667,
+                  "nameZh": "温厄姆"
                 },
                 {
                   "code": "AUWNB",
@@ -86442,7 +86978,8 @@
                   "name": "Woolloomooloo",
                   "city": "Woolloomooloo",
                   "lat": -33.8667,
-                  "lng": 151.2167
+                  "lng": 151.2167,
+                  "nameZh": "伍卢穆卢"
                 },
                 {
                   "code": "AUWRB",
@@ -86640,7 +87177,8 @@
                   "name": "Napier",
                   "city": "Napier",
                   "lat": -39.4667,
-                  "lng": 176.9
+                  "lng": 176.9,
+                  "nameZh": "内皮尔"
                 },
                 {
                   "code": "NZNPL",
@@ -86655,7 +87193,8 @@
                   "name": "Nelson",
                   "city": "Nelson",
                   "lat": -41.25,
-                  "lng": 173.2667
+                  "lng": 173.2667,
+                  "nameZh": "纳尔逊"
                 },
                 {
                   "code": "NZOLT",
@@ -86760,7 +87299,8 @@
                   "name": "Takapuna",
                   "city": "Takapuna",
                   "lat": -36.7833,
-                  "lng": 174.7667
+                  "lng": 174.7667,
+                  "nameZh": "塔卡普纳"
                 },
                 {
                   "code": "NZTHH",
@@ -87361,7 +87901,8 @@
                   "name": "Gizo",
                   "city": "Gizo",
                   "lat": -8.1,
-                  "lng": 156.85
+                  "lng": 156.85,
+                  "nameZh": "吉佐"
                 },
                 {
                   "code": "SBLAT",
