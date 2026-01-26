@@ -47,15 +47,20 @@
           </div>
           <div id="hubSearch" class="search-panel">
             <input id="searchInput" type="text" placeholder="搜索 IATA / ICAO / 城市 / 国家（支持中英文）" />
-            <div class="filters">
-              <label class="filter">
-                <input id="filterAirports" type="checkbox" checked />
-                机场
-              </label>
-              <label class="filter">
-                <input id="filterPorts" type="checkbox" checked />
-                港口
-              </label>
+            <div class="filters-row">
+              <div class="filters">
+                <label class="filter">
+                  <input id="filterAirports" type="checkbox" checked />
+                  机场
+                </label>
+                <label class="filter">
+                  <input id="filterPorts" type="checkbox" checked />
+                  港口
+                </label>
+              </div>
+              <div class="results__count">
+                <span id="resultsCount">0</span> 个结果
+              </div>
             </div>
           </div>
           <div id="addressSearch" class="search-panel search-panel--hidden">
@@ -100,9 +105,6 @@
           -->
         </div>
         <div class="results">
-          <div class="results__meta">
-            <span id="resultsCount">0</span> 个结果
-          </div>
           <ul id="resultsList" class="results__list"></ul>
         </div>
       </aside>
