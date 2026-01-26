@@ -1484,23 +1484,44 @@ function showSearchSuggestions() {
     return;
   }
   
-  // 获取所有类型的搜索结果（限制数量）
-  const airportResults = searchInNodes(query, 'airport').slice(0, 5);
-  const portResults = searchInNodes(query, 'port').slice(0, 5);
-  const warehouseResults = searchWarehouses(query).slice(0, 5);
+  // 获取所有类型的搜索结果（获取更多用于统计）
+  const airportResults = searchInNodes(query, 'airport');
+  const portResults = searchInNodes(query, 'port');
+  const warehouseResults = searchWarehouses(query);
   
-  // 合并结果
-  const allResults = [
-    ...airportResults.map(r => ({ ...r, _type: 'airport' })),
-    ...portResults.map(r => ({ ...r, _type: 'port' })),
-    ...warehouseResults.map(r => ({ ...r, _type: 'warehouse' }))
-  ];
+  // 统计各类型数量
+  const airportCount = airportResults.length;
+  const portCount = portResults.length;
+  const warehouseCount = warehouseResults.length;
   
-  if (allResults.length === 0) {
+  if (airportCount + portCount + warehouseCount === 0) {
     hideSuggestions();
     applyFilters();
     return;
   }
+  
+  // 构建联想列表HTML
+  let html = '';
+  
+  // 分类快捷入口（显示各类型数量）
+  html += '<div class="suggestion-categories">';
+  if (airportCount > 0) {
+    html += `<div class="suggestion-category" data-tab="airports">✈️ 机场 <span class="suggestion-category__count">${airportCount}</span></div>`;
+  }
+  if (portCount > 0) {
+    html += `<div class="suggestion-category" data-tab="ports">🚢 港口 <span class="suggestion-category__count">${portCount}</span></div>`;
+  }
+  if (warehouseCount > 0) {
+    html += `<div class="suggestion-category" data-tab="warehouses">📦 海外仓 <span class="suggestion-category__count">${warehouseCount}</span></div>`;
+  }
+  html += '</div>';
+  
+  // 合并结果并限制显示数量
+  const allResults = [
+    ...airportResults.slice(0, 3).map(r => ({ ...r, _type: 'airport' })),
+    ...portResults.slice(0, 3).map(r => ({ ...r, _type: 'port' })),
+    ...warehouseResults.slice(0, 3).map(r => ({ ...r, _type: 'warehouse' }))
+  ];
   
   // 按相关性排序（精确匹配优先）
   const qUpper = query.toUpperCase();
@@ -1510,12 +1531,10 @@ function showSearchSuggestions() {
     return aExact - bExact;
   });
   
-  // 渲染联想列表（最多显示10个）
-  const displayResults = allResults.slice(0, 10);
-  
-  searchSuggestions.innerHTML = displayResults.map((item, index) => {
+  // 渲染联想列表
+  html += allResults.map((item, index) => {
     const code = item.code || '';
-    const name = item.name || '';
+    const name = item.nameZh || item.name || '';
     const highlightedCode = highlightMatch(code, query);
     
     let meta = '';
@@ -1546,7 +1565,7 @@ function showSearchSuggestions() {
     }
     
     return `
-      <div class="suggestion-item" data-index="${index}" data-lat="${item.lat}" data-lng="${item.lng}" data-type="${item._type}" data-code="${code}" ${categoryAttr}>
+      <div class="suggestion-item" data-index="${index}" data-lat="${item.lat}" data-lng="${item.lng}" data-type="${item._type}" data-code="${code}" data-name="${item.name || ''}" data-name-zh="${item.nameZh || ''}" data-intl="${item.intl ? 1 : 0}" ${categoryAttr}>
         <div class="suggestion-item__title">
           ${highlightedCode} · ${name}
           <span class="suggestion-item__tag ${tagClass}">${tagText}</span>
@@ -1556,9 +1575,20 @@ function showSearchSuggestions() {
     `;
   }).join('');
   
+  searchSuggestions.innerHTML = html;
   searchSuggestions.classList.add('search-suggestions--visible');
   
-  // 绑定点击事件
+  // 绑定分类点击事件
+  searchSuggestions.querySelectorAll('.suggestion-category').forEach(cat => {
+    cat.addEventListener('click', () => {
+      const tab = cat.dataset.tab;
+      hideSuggestions();
+      switchHubTab(tab);
+      applyFilters();
+    });
+  });
+  
+  // 绑定结果项点击事件
   searchSuggestions.querySelectorAll('.suggestion-item').forEach(item => {
     item.addEventListener('click', () => {
       const lat = parseFloat(item.dataset.lat);
@@ -1579,10 +1609,16 @@ function showSearchSuggestions() {
         switchHubTab('warehouses');
       }
       
-      // 跳转地图（带类型图标）
+      // 跳转地图（带类型图标和节点信息）
       if (!isNaN(lat) && !isNaN(lng)) {
-        const category = el.dataset.category || null;
-        mapAdapter.focusOnCoords(lat, lng, 12, type, category);
+        const category = item.dataset.category || null;
+        const nodeInfo = {
+          code: item.dataset.code || '',
+          name: item.dataset.name || '',
+          nameZh: item.dataset.nameZh || '',
+          intl: item.dataset.intl === '1'
+        };
+        mapAdapter.focusOnCoords(lat, lng, 12, type, category, nodeInfo);
       }
       
       // 应用过滤
