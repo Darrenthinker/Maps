@@ -49,6 +49,8 @@ const state = {
   airportsClassified: null,
   portsClassified: null,
   warehousesData: null,
+  // 中英文对照数据
+  cityNamesZh: null,
   // 当前选中的 Tab: 'airports' | 'ports' | 'warehouses'
   currentTab: 'airports',
   // 展开状态
@@ -68,6 +70,43 @@ async function loadRemoteAreas() {
   } catch (error) {
     console.warn('偏远地区数据加载失败:', error);
   }
+}
+
+// 加载中英文对照数据
+async function loadCityNamesZh() {
+  try {
+    const response = await fetch('/data/city-names-zh.json');
+    state.cityNamesZh = await response.json();
+  } catch (error) {
+    console.warn('中英文对照数据加载失败:', error);
+  }
+}
+
+// 获取城市/机场/港口的中文名称
+function getChineseName(node) {
+  if (!state.cityNamesZh) return null;
+  
+  const data = state.cityNamesZh;
+  
+  // 1. 先查机场代码
+  if (node.type === 'airport' && node.code && data.airports[node.code]) {
+    return data.airports[node.code];
+  }
+  
+  // 2. 再查港口代码
+  if (node.type === 'port' && node.code && data.ports[node.code]) {
+    return data.ports[node.code];
+  }
+  
+  // 3. 最后查城市名
+  if (node.city && data.cities[node.city]) {
+    return data.cities[node.city];
+  }
+  if (node.name && data.cities[node.name]) {
+    return data.cities[node.name];
+  }
+  
+  return null;
 }
 
 // 偏远类型中文翻译
@@ -441,11 +480,17 @@ async function selectPlace(placeId, description) {
               // 机场用飞机，港口用轮船
               const icon = node.type === "airport" ? "✈️" : "🚢";
               const typeLabel = node.intl ? "国际" : "国内";
+              // 获取中文名称
+              const zhName = getChineseName(node);
+              // 显示格式：有中文时显示 "中文名 / 英文名"，无中文时只显示英文
+              const displayName = zhName 
+                ? `<span class="nearby-name-zh">${zhName}</span><span class="nearby-name-divider">/</span><span class="nearby-name-en">${node.name}</span>` 
+                : `<span class="nearby-name">${node.name}</span>`;
               return `
                 <div class="address-result__nearby-item" data-id="${node.id}" data-lat="${node.lat}" data-lng="${node.lng}" data-name="${node.name}">
                   <span class="nearby-icon">${icon}</span>
                   <span class="nearby-code">${node.code}</span>
-                  <span class="nearby-name">${node.name}</span>
+                  ${displayName}
                   ${typeLabel ? `<span class="nearby-type">${typeLabel}</span>` : ''}
                   <span class="nearby-distance" id="nearby-dist-${index}">${node.distance.toFixed(0)} km</span>
                 </div>
@@ -1674,6 +1719,7 @@ async function loadData() {
 wireEvents();
 loadData();
 loadRemoteAreas(); // 加载偏远地区数据
+loadCityNamesZh(); // 加载中英文对照数据
 
 // 注册 Service Worker 缓存瓦片
 if ('serviceWorker' in navigator) {

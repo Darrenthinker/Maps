@@ -374,6 +374,23 @@ body {
   white-space: nowrap;
 }
 
+/* 中英文名称显示 */
+.nearby-name-zh {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.nearby-name-divider {
+  color: #94a3b8;
+  margin: 0 4px;
+  font-size: 11px;
+}
+
+.nearby-name-en {
+  color: #64748b;
+  font-size: 12px;
+}
+
 .nearby-type {
   font-size: 11px;
   padding: 2px 6px;
