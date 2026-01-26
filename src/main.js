@@ -84,21 +84,26 @@ async function loadCityNamesZh() {
 
 // 获取城市/机场/港口的中文名称
 function getChineseName(node) {
+  // 1. 优先使用数据中已有的 nameZh 字段（来自翻译脚本）
+  if (node.nameZh) {
+    return node.nameZh;
+  }
+  
   if (!state.cityNamesZh) return null;
   
   const data = state.cityNamesZh;
   
-  // 1. 先查机场代码
+  // 2. 查机场代码
   if (node.type === 'airport' && node.code && data.airports[node.code]) {
     return data.airports[node.code];
   }
   
-  // 2. 再查港口代码
+  // 3. 查港口代码
   if (node.type === 'port' && node.code && data.ports[node.code]) {
     return data.ports[node.code];
   }
   
-  // 3. 最后查城市名
+  // 4. 查城市名
   if (node.city && data.cities[node.city]) {
     return data.cities[node.city];
   }
@@ -1140,18 +1145,28 @@ function renderClassifiedView() {
               if (isAirports) {
                 for (const airport of country.airports) {
                   const intlLabel = airport.intl ? '🌐' : '';
+                  const nameZh = airport.nameZh || '';
+                  // 显示中英文名称
+                  const displayName = nameZh 
+                    ? `<span class="result-name-zh">${nameZh}</span> <span class="result-name-divider">/</span> <span class="result-name-en">${airport.name}</span>`
+                    : airport.name;
                   html += `
-                    <li class="result-item result-item--airport" data-lat="${airport.lat}" data-lng="${airport.lng}" data-name="${airport.name}" data-type="airport">
-                      <div class="result-item__title">${intlLabel} ${airport.code} · ${airport.name}</div>
+                    <li class="result-item result-item--airport" data-lat="${airport.lat}" data-lng="${airport.lng}" data-name="${airport.name}" data-name-zh="${nameZh}" data-code="${airport.code}" data-intl="${airport.intl ? 1 : 0}" data-type="airport">
+                      <div class="result-item__title">${intlLabel} ${airport.code} · ${displayName}</div>
                       <div class="result-item__meta">${airport.city}</div>
                     </li>
                   `;
                 }
               } else {
                 for (const port of country.ports) {
+                  const nameZh = port.nameZh || '';
+                  // 显示中英文名称
+                  const displayName = nameZh 
+                    ? `<span class="result-name-zh">${nameZh}</span> <span class="result-name-divider">/</span> <span class="result-name-en">${port.name}</span>`
+                    : port.name;
                   html += `
-                    <li class="result-item result-item--airport" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}" data-type="port">
-                      <div class="result-item__title">🚢 ${port.code} · ${port.name}</div>
+                    <li class="result-item result-item--airport" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}" data-name-zh="${nameZh}" data-code="${port.code}" data-intl="0" data-type="port">
+                      <div class="result-item__title">🚢 ${port.code} · ${displayName}</div>
                       <div class="result-item__meta">${port.city}</div>
                     </li>
                   `;
@@ -1368,7 +1383,14 @@ function bindTreeEvents() {
       const lng = parseFloat(el.dataset.lng);
       const type = el.dataset.type;
       if (!isNaN(lat) && !isNaN(lng)) {
-        mapAdapter.focusOnCoords(lat, lng, 12, type);
+        // 构建节点信息用于 popup 显示
+        const nodeInfo = {
+          code: el.dataset.code || '',
+          name: el.dataset.name || '',
+          nameZh: el.dataset.nameZh || '',
+          intl: el.dataset.intl === '1'
+        };
+        mapAdapter.focusOnCoords(lat, lng, 12, type, null, nodeInfo);
         // 移动端：点击后关闭侧边栏
         if (window.innerWidth <= 768) {
           app.classList.remove("app--sidebar-open");

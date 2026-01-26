@@ -265,7 +265,7 @@ export function createLeafletAdapter(mapId) {
   // 监听缩放事件，动态调整图标大小
   map.on('zoomend', updateMarkerIcon);
   
-  function focusOnCoords(lat, lng, zoom = 10, type = null, category = null) {
+  function focusOnCoords(lat, lng, zoom = 10, type = null, category = null, nodeInfo = null) {
     map.setView([lat, lng], zoom, { animate: true });
     
     // 移除旧的地址标记
@@ -283,6 +283,29 @@ export function createLeafletAdapter(mapId) {
       icon,
       shadowPane: null  // 禁用阴影
     }).addTo(map);
+    
+    // 如果有节点信息，绑定 popup 显示中英文
+    if (nodeInfo) {
+      const code = nodeInfo.code || '';
+      const nameZh = nodeInfo.nameZh || '';
+      const nameEn = nodeInfo.name || '';
+      const typeLabel = type === 'airport' ? '机场' : (type === 'port' ? '港口' : '仓库');
+      const intlLabel = nodeInfo.intl ? '国际' : '国内';
+      
+      let popupContent = `<div class="map-popup">`;
+      popupContent += `<div class="map-popup__code">${code}</div>`;
+      if (nameZh) {
+        popupContent += `<div class="map-popup__name-zh">${nameZh}</div>`;
+      }
+      popupContent += `<div class="map-popup__name-en">${nameEn}</div>`;
+      popupContent += `<div class="map-popup__meta">${intlLabel} · ${typeLabel}</div>`;
+      popupContent += `</div>`;
+      
+      addressMarker.bindPopup(popupContent, {
+        className: 'custom-popup',
+        closeButton: false
+      }).openPopup();
+    }
   }
 
   // 用于两地距离显示
