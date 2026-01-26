@@ -227,9 +227,12 @@ export function createLeafletAdapter(mapId) {
       map.removeLayer(addressMarker);
     }
     
-    // 添加新的标记（根据类型显示不同图标）
+    // 添加新的标记（根据类型显示不同图标，禁用阴影）
     const icon = getMarkerIcon(type, category);
-    addressMarker = L.marker([lat, lng], { icon }).addTo(map);
+    addressMarker = L.marker([lat, lng], { 
+      icon,
+      shadowPane: null  // 禁用阴影
+    }).addTo(map);
   }
 
   // 用于两地距离显示

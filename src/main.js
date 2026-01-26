@@ -789,11 +789,14 @@ function applyFilters() {
     }
   } else {
     renderSearchResults();
-    const mapNodes = results.slice(0, 500);
-    mapAdapter.setMarkers(mapNodes);
-    // 如果只有一个结果，自动跳转到地图
+    // 如果只有一个结果，自动跳转到地图（不使用 setMarkers 避免重叠）
     if (results.length === 1) {
+      mapAdapter.setMarkers([]);
       mapAdapter.focusOnCoords(results[0].lat, results[0].lng, 12, results[0].type);
+    } else {
+      // 多个结果时显示标记点
+      const mapNodes = results.slice(0, 500);
+      mapAdapter.setMarkers(mapNodes);
     }
   }
 }
@@ -1579,6 +1582,8 @@ function wireEvents() {
       const type = item.dataset.type || 'airport';
       const category = item.dataset.category || null;
       if (!isNaN(lat) && !isNaN(lng)) {
+        // 清除批量标记，避免与类型图标重叠
+        mapAdapter.setMarkers([]);
         mapAdapter.focusOnCoords(lat, lng, 12, type, category);
         if (window.innerWidth <= 768) {
           app.classList.remove("app--sidebar-open");

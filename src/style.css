@@ -797,6 +797,17 @@ body {
   justify-content: center;
 }
 
+/* 隐藏 Leaflet 默认标记阴影 */
+.leaflet-marker-shadow {
+  display: none !important;
+}
+
+/* 确保类型标记不显示多余内容 */
+.marker-type::after,
+.marker-type::before {
+  display: none !important;
+}
+
 .marker-airport-icon {
   background: linear-gradient(135deg, #dbeafe, #bfdbfe);
   border-color: #3b82f6;
