@@ -385,11 +385,13 @@ body {
   text-align: right;
 }
 
-/* ========== 机场/港口/海外仓 Tab 切换 ========== */
+/* ========== 机场/港口/海外仓 Tab 切换 - Apple 风格 ========== */
 .hub-tabs {
   display: flex;
-  gap: 6px;
+  padding: 3px;
   margin-top: 12px;
+  background: #f1f5f9;
+  border-radius: 10px;
 }
 
 .hub-tab {
@@ -397,11 +399,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  padding: 10px 8px;
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  background: #f8fafc;
-  border-radius: 10px;
+  gap: 6px;
+  padding: 8px 10px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
   font-size: 13px;
   color: #64748b;
   cursor: pointer;
@@ -409,43 +411,17 @@ body {
 }
 
 .hub-tab:hover {
-  background: #f1f5f9;
-  border-color: rgba(148, 163, 184, 0.5);
+  color: #334155;
 }
 
 .hub-tab--active {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #ffffff;
-  border-color: transparent;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .hub-tab--active:hover {
-  background: linear-gradient(135deg, #1d4ed8, #1e40af);
-}
-
-/* 港口 Tab 激活时橙色 */
-#tabPorts.hub-tab--active {
-  background: linear-gradient(135deg, #f97316, #ea580c);
-  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
-}
-
-#tabPorts.hub-tab--active:hover {
-  background: linear-gradient(135deg, #ea580c, #c2410c);
-}
-
-/* 海外仓 Tab 激活时绿色 */
-#tabWarehouses.hub-tab--active {
-  background: linear-gradient(135deg, #10b981, #059669);
-  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
-}
-
-#tabWarehouses.hub-tab--active:hover {
-  background: linear-gradient(135deg, #059669, #047857);
-}
-
-.hub-tab__icon {
-  font-size: 14px;
+  background: #ffffff;
 }
 
 .hub-tab__text {
@@ -454,14 +430,12 @@ body {
 
 .hub-tab__count {
   font-size: 11px;
-  padding: 1px 6px;
-  border-radius: 8px;
-  background: rgba(148, 163, 184, 0.2);
-  color: inherit;
+  font-weight: 600;
+  color: #94a3b8;
 }
 
 .hub-tab--active .hub-tab__count {
-  background: rgba(255, 255, 255, 0.25);
+  color: #3b82f6;
 }
 
 .view-modes {
