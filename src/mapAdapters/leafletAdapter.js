@@ -183,9 +183,43 @@ export function createLeafletAdapter(mapId) {
     }
   }
 
-  // 用于地址搜索，定位到任意坐标
+  // 用于地址搜索和机场/港口/海外仓定位
   let addressMarker = null;
-  function focusOnCoords(lat, lng, zoom = 10) {
+  
+  // 根据类型获取图标
+  function getMarkerIcon(type, category) {
+    let html = "📍";
+    let className = "marker marker-address";
+    
+    if (type === 'airport') {
+      html = "✈️";
+      className = "marker marker-type marker-airport-icon";
+    } else if (type === 'port') {
+      html = "🚢";
+      className = "marker marker-type marker-port-icon";
+    } else if (type === 'warehouse') {
+      // 根据分类显示不同图标
+      if (category === 'amazon' || (category && category.includes('亚马逊'))) {
+        html = '<img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="width:32px;height:20px;object-fit:contain;">';
+        className = "marker marker-type marker-warehouse-amazon";
+      } else if (category === 'walmart' || (category && category.includes('沃尔玛'))) {
+        html = '<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart" style="width:32px;height:20px;object-fit:contain;">';
+        className = "marker marker-type marker-warehouse-walmart";
+      } else {
+        html = "🏭";
+        className = "marker marker-type marker-warehouse-icon";
+      }
+    }
+    
+    return L.divIcon({
+      className: className,
+      html: html,
+      iconSize: [40, 40],
+      iconAnchor: [20, 20]
+    });
+  }
+  
+  function focusOnCoords(lat, lng, zoom = 10, type = null, category = null) {
     map.setView([lat, lng], zoom, { animate: true });
     
     // 移除旧的地址标记
@@ -193,11 +227,8 @@ export function createLeafletAdapter(mapId) {
       map.removeLayer(addressMarker);
     }
     
-    // 添加新的地址标记
-    const icon = L.divIcon({
-      className: "marker marker-address",
-      html: "📍"
-    });
+    // 添加新的标记（根据类型显示不同图标）
+    const icon = getMarkerIcon(type, category);
     addressMarker = L.marker([lat, lng], { icon }).addTo(map);
   }
 

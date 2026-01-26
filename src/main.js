@@ -785,7 +785,7 @@ function applyFilters() {
     mapAdapter.setMarkers([]);
     // 如果只有一个结果，自动跳转到地图
     if (results.length === 1) {
-      mapAdapter.focusOnCoords(results[0].lat, results[0].lng, 12);
+      mapAdapter.focusOnCoords(results[0].lat, results[0].lng, 12, 'warehouse', results[0].categoryName);
     }
   } else {
     renderSearchResults();
@@ -793,7 +793,7 @@ function applyFilters() {
     mapAdapter.setMarkers(mapNodes);
     // 如果只有一个结果，自动跳转到地图
     if (results.length === 1) {
-      mapAdapter.focusOnCoords(results[0].lat, results[0].lng, 12);
+      mapAdapter.focusOnCoords(results[0].lat, results[0].lng, 12, results[0].type);
     }
   }
 }
@@ -925,12 +925,21 @@ function searchWarehouses(query) {
 function renderWarehouseSearchResults(results) {
   resultsList.innerHTML = results.length === 0 
     ? '<li class="result-item"><div class="result-item__meta">未找到匹配的海外仓</div></li>'
-    : results.map(w => `
-        <li class="result-item result-item--search" data-lat="${w.lat}" data-lng="${w.lng}">
-          <div class="result-item__title">${w.code} · ${w.name}</div>
-          <div class="result-item__meta">${w.city} · ${w.categoryName} · ${w.countryName}</div>
-        </li>
-      `).join('');
+    : results.map(w => {
+        // 根据分类名称设置分类属性
+        let category = 'freight';
+        if (w.categoryName && w.categoryName.includes('亚马逊')) {
+          category = 'amazon';
+        } else if (w.categoryName && w.categoryName.includes('沃尔玛')) {
+          category = 'walmart';
+        }
+        return `
+          <li class="result-item result-item--search result-item--warehouse" data-lat="${w.lat}" data-lng="${w.lng}" data-type="warehouse" data-category="${category}">
+            <div class="result-item__title">${w.code} · ${w.name}</div>
+            <div class="result-item__meta">${w.city} · ${w.categoryName} · ${w.countryName}</div>
+          </li>
+        `;
+      }).join('');
 }
 
 function renderResults() {
@@ -963,10 +972,11 @@ function renderSearchResults() {
   resultsList.innerHTML = displayNodes
     .map((node) => {
       const code = node.code || "";
-      const sub = node.type === "airport" ? "机场" : "港口";
+      const type = node.type || "airport";
+      const sub = type === "airport" ? "机场" : "港口";
       const intlLabel = node.intl ? "🌐" : "";
       return `
-        <li class="result-item result-item--search" data-lat="${node.lat}" data-lng="${node.lng}">
+        <li class="result-item result-item--search" data-lat="${node.lat}" data-lng="${node.lng}" data-type="${type}">
           <div class="result-item__title">${intlLabel} ${code} · ${node.name}</div>
           <div class="result-item__meta">${node.city}, ${node.country} · ${sub}</div>
         </li>
@@ -1077,7 +1087,7 @@ function renderClassifiedView() {
                 for (const airport of country.airports) {
                   const intlLabel = airport.intl ? '🌐' : '';
                   html += `
-                    <li class="result-item result-item--airport" data-lat="${airport.lat}" data-lng="${airport.lng}" data-name="${airport.name}">
+                    <li class="result-item result-item--airport" data-lat="${airport.lat}" data-lng="${airport.lng}" data-name="${airport.name}" data-type="airport">
                       <div class="result-item__title">${intlLabel} ${airport.code} · ${airport.name}</div>
                       <div class="result-item__meta">${airport.city}</div>
                     </li>
@@ -1086,7 +1096,7 @@ function renderClassifiedView() {
               } else {
                 for (const port of country.ports) {
                   html += `
-                    <li class="result-item result-item--airport" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}">
+                    <li class="result-item result-item--airport" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}" data-type="port">
                       <div class="result-item__title">🚢 ${port.code} · ${port.name}</div>
                       <div class="result-item__meta">${port.city}</div>
                     </li>
@@ -1174,7 +1184,7 @@ function renderWarehousesView() {
           for (const warehouse of country.warehouses) {
             const companyLabel = warehouse.company ? ` · ${warehouse.company}` : '';
             html += `
-              <li class="result-item result-item--airport" data-warehouse="${warehouse.code}" data-lat="${warehouse.lat}" data-lng="${warehouse.lng}">
+              <li class="result-item result-item--airport" data-warehouse="${warehouse.code}" data-lat="${warehouse.lat}" data-lng="${warehouse.lng}" data-category="${catKey}">
                 <div class="result-item__title">${warehouse.code} · ${warehouse.name}</div>
                 <div class="result-item__meta">${warehouse.city}${companyLabel}</div>
               </li>
@@ -1231,13 +1241,14 @@ function bindWarehouseTreeEvents() {
     });
   });
   
-  // 仓库项点击 - 在地图上显示位置
+  // 仓库项点击 - 在地图上显示位置（带分类图标）
   document.querySelectorAll('.result-item[data-warehouse]').forEach(el => {
     el.addEventListener('click', () => {
       const lat = parseFloat(el.dataset.lat);
       const lng = parseFloat(el.dataset.lng);
+      const category = el.dataset.category;
       if (!isNaN(lat) && !isNaN(lng)) {
-        mapAdapter.focusOnCoords(lat, lng, 12);
+        mapAdapter.focusOnCoords(lat, lng, 12, 'warehouse', category);
         if (window.innerWidth <= 768) {
           app.classList.remove("app--sidebar-open");
         }
@@ -1295,15 +1306,15 @@ function bindTreeEvents() {
     });
   });
   
-  // 机场/港口项点击 - 跳转到地图（使用分类数据中的坐标）
-  document.querySelectorAll('.result-item--airport[data-lat]').forEach(el => {
+  // 机场/港口项点击 - 跳转到地图（使用分类数据中的坐标和类型图标）
+  document.querySelectorAll('.result-item--airport[data-lat][data-type]').forEach(el => {
     el.addEventListener('click', (e) => {
       e.stopPropagation();
       const lat = parseFloat(el.dataset.lat);
       const lng = parseFloat(el.dataset.lng);
-      const name = el.dataset.name;
+      const type = el.dataset.type;
       if (!isNaN(lat) && !isNaN(lng)) {
-        mapAdapter.focusOnCoords(lat, lng, 12);
+        mapAdapter.focusOnCoords(lat, lng, 12, type);
         // 移动端：点击后关闭侧边栏
         if (window.innerWidth <= 768) {
           app.classList.remove("app--sidebar-open");
@@ -1399,6 +1410,7 @@ function showSearchSuggestions() {
     let tagClass = '';
     let tagText = '';
     
+    let categoryAttr = '';
     if (item._type === 'airport') {
       meta = `${item.city}, ${item.country}`;
       tagClass = 'suggestion-item__tag--airport';
@@ -1411,10 +1423,18 @@ function showSearchSuggestions() {
       meta = `${item.city} · ${item.categoryName}`;
       tagClass = 'suggestion-item__tag--warehouse';
       tagText = '海外仓';
+      // 根据分类名称设置分类属性
+      if (item.categoryName && item.categoryName.includes('亚马逊')) {
+        categoryAttr = 'data-category="amazon"';
+      } else if (item.categoryName && item.categoryName.includes('沃尔玛')) {
+        categoryAttr = 'data-category="walmart"';
+      } else {
+        categoryAttr = 'data-category="freight"';
+      }
     }
     
     return `
-      <div class="suggestion-item" data-index="${index}" data-lat="${item.lat}" data-lng="${item.lng}" data-type="${item._type}" data-code="${code}">
+      <div class="suggestion-item" data-index="${index}" data-lat="${item.lat}" data-lng="${item.lng}" data-type="${item._type}" data-code="${code}" ${categoryAttr}>
         <div class="suggestion-item__title">
           ${highlightedCode} · ${name}
           <span class="suggestion-item__tag ${tagClass}">${tagText}</span>
@@ -1447,9 +1467,10 @@ function showSearchSuggestions() {
         switchHubTab('warehouses');
       }
       
-      // 跳转地图
+      // 跳转地图（带类型图标）
       if (!isNaN(lat) && !isNaN(lng)) {
-        mapAdapter.focusOnCoords(lat, lng, 12);
+        const category = el.dataset.category || null;
+        mapAdapter.focusOnCoords(lat, lng, 12, type, category);
       }
       
       // 应用过滤
@@ -1551,12 +1572,14 @@ function wireEvents() {
     const item = event.target.closest(".result-item");
     if (!item || item.classList.contains("result-item--hint")) return;
     
-    // 搜索结果点击：使用坐标跳转
+    // 搜索结果点击：使用坐标跳转（带类型图标）
     if (item.classList.contains("result-item--search")) {
       const lat = parseFloat(item.dataset.lat);
       const lng = parseFloat(item.dataset.lng);
+      const type = item.dataset.type || 'airport';
+      const category = item.dataset.category || null;
       if (!isNaN(lat) && !isNaN(lng)) {
-        mapAdapter.focusOnCoords(lat, lng, 12);
+        mapAdapter.focusOnCoords(lat, lng, 12, type, category);
         if (window.innerWidth <= 768) {
           app.classList.remove("app--sidebar-open");
         }
