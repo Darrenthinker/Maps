@@ -4,12 +4,18 @@ import { createMapAdapter } from "./mapAdapters/index.js";
 
 const app = document.querySelector(".app");
 const searchInput = document.getElementById("searchInput");
-const filterAirports = document.getElementById("filterAirports");
-const filterPorts = document.getElementById("filterPorts");
 const resultsCount = document.getElementById("resultsCount");
 const resultsList = document.getElementById("resultsList");
 const sidebarToggle = document.getElementById("sidebarToggle");
 const sidebarFloatingToggle = document.getElementById("sidebarFloatingToggle");
+
+// 机场/港口/海外仓 Tab
+const tabAirports = document.getElementById("tabAirports");
+const tabPorts = document.getElementById("tabPorts");
+const tabWarehouses = document.getElementById("tabWarehouses");
+const airportsCountEl = document.getElementById("airportsCount");
+const portsCountEl = document.getElementById("portsCount");
+const warehousesCountEl = document.getElementById("warehousesCount");
 
 // 地址搜索相关元素
 const tabHubs = document.getElementById("tabHubs");
@@ -39,11 +45,16 @@ const state = {
   // 偏远地区数据
   remoteAreas: null,
   // 分类数据
-  classifiedData: null,
+  airportsClassified: null,
+  portsClassified: null,
+  warehousesData: null,
+  // 当前选中的 Tab: 'airports' | 'ports' | 'warehouses'
+  currentTab: 'airports',
   // 展开状态
   expandedContinents: new Set(),
   expandedRegions: new Set(),
   expandedCountries: new Set(),
+  expandedCategories: new Set(),  // 海外仓分类展开状态
   // 当前视图模式：'classified' 分类视图 | 'search' 搜索视图
   viewMode: 'classified'
 };
@@ -709,12 +720,12 @@ async function calculateAndShowDistance() {
 
 function applyFilters() {
   const query = searchInput.value.trim();
-  const showAirports = filterAirports.checked;
-  const showPorts = filterPorts.checked;
+  const currentTab = state.currentTab;
 
+  // 根据当前Tab筛选数据
   let filtered = state.allNodes.filter((node) => {
-    if (node.type === "airport" && !showAirports) return false;
-    if (node.type === "port" && !showPorts) return false;
+    if (currentTab === 'airports' && node.type !== "airport") return false;
+    if (currentTab === 'ports' && node.type !== "port") return false;
     return true;
   });
 
@@ -748,7 +759,11 @@ function renderResults() {
   } else {
     // 无搜索词，显示分类视图
     state.viewMode = 'classified';
-    renderClassifiedView();
+    if (state.currentTab === 'warehouses') {
+      renderWarehousesView();
+    } else {
+      renderClassifiedView();
+    }
   }
 }
 
@@ -783,24 +798,13 @@ function renderSearchResults() {
 
 // 渲染分类视图（大洲 → 区域 → 国家）
 function renderClassifiedView() {
-  if (!state.classifiedData) {
-    resultsCount.textContent = String(state.filteredNodes.length);
+  const isAirports = state.currentTab === 'airports';
+  const classifiedData = isAirports ? state.airportsClassified : state.portsClassified;
+  
+  if (!classifiedData) {
     resultsList.innerHTML = '<li class="result-item"><div class="result-item__meta">加载分类数据中...</div></li>';
     return;
   }
-  
-  const showAirports = filterAirports.checked;
-  const showPorts = filterPorts.checked;
-  
-  // 计算当前显示的总数
-  let totalCount = 0;
-  if (showAirports && state.classifiedData) {
-    totalCount += state.classifiedData.totalAirports || 0;
-  }
-  if (showPorts) {
-    totalCount += state.allNodes.filter(n => n.type === 'port').length;
-  }
-  resultsCount.textContent = String(totalCount);
   
   let html = '';
   
@@ -808,8 +812,11 @@ function renderClassifiedView() {
   const continentOrder = ['AS', 'EU', 'NA', 'SA', 'AF', 'OC'];
   
   for (const contCode of continentOrder) {
-    const continent = state.classifiedData.continents[contCode];
+    const continent = classifiedData.continents[contCode];
     if (!continent) continue;
+    
+    const totalCount = isAirports ? continent.totalAirports : continent.totalPorts;
+    if (totalCount === 0) continue;
     
     const isContExpanded = state.expandedContinents.has(contCode);
     const contIcon = isContExpanded ? '▼' : '▶';
@@ -819,7 +826,7 @@ function renderClassifiedView() {
         <div class="tree-item__header tree-item__header--continent">
           <span class="tree-icon">${contIcon}</span>
           <span class="tree-name">${continent.name}</span>
-          <span class="tree-count">${continent.totalAirports}</span>
+          <span class="tree-count">${totalCount}</span>
         </div>
     `;
     
@@ -827,7 +834,8 @@ function renderClassifiedView() {
       html += '<ul class="tree-children">';
       
       for (const [regCode, region] of Object.entries(continent.regions)) {
-        if (region.totalAirports === 0) continue;
+        const regTotal = isAirports ? region.totalAirports : region.totalPorts;
+        if (regTotal === 0) continue;
         
         const regKey = `${contCode}-${regCode}`;
         const isRegExpanded = state.expandedRegions.has(regKey);
@@ -838,44 +846,65 @@ function renderClassifiedView() {
             <div class="tree-item__header tree-item__header--region">
               <span class="tree-icon">${regIcon}</span>
               <span class="tree-name">${region.name}</span>
-              <span class="tree-count">${region.totalAirports}</span>
+              <span class="tree-count">${regTotal}</span>
             </div>
         `;
         
         if (isRegExpanded) {
           html += '<ul class="tree-children">';
           
-          // 按机场数量排序国家
+          // 按数量排序国家
           const sortedCountries = Object.entries(region.countries)
-            .sort((a, b) => b[1].totalAirports - a[1].totalAirports);
+            .sort((a, b) => {
+              const aTotal = isAirports ? b[1].totalAirports : b[1].totalPorts;
+              const bTotal = isAirports ? a[1].totalAirports : a[1].totalPorts;
+              return aTotal - bTotal;
+            });
           
           for (const [countryCode, country] of sortedCountries) {
-            if (country.totalAirports === 0) continue;
+            const countryTotal = isAirports ? country.totalAirports : country.totalPorts;
+            if (countryTotal === 0) continue;
             
             const countryKey = `${contCode}-${regCode}-${countryCode}`;
             const isCountryExpanded = state.expandedCountries.has(countryKey);
             const countryIcon = isCountryExpanded ? '▼' : '▶';
+            
+            // 机场显示国际机场数量
+            const countLabel = isAirports 
+              ? `${countryTotal} (${country.intlAirports || 0})`
+              : `${countryTotal}`;
             
             html += `
               <li class="tree-item tree-item--country" data-continent="${contCode}" data-region="${regCode}" data-country="${countryCode}">
                 <div class="tree-item__header tree-item__header--country">
                   <span class="tree-icon">${countryIcon}</span>
                   <span class="tree-name">${country.name}</span>
-                  <span class="tree-count">${country.totalAirports} (${country.intlAirports})</span>
+                  <span class="tree-count">${countLabel}</span>
                 </div>
             `;
             
-            if (isCountryExpanded && showAirports) {
+            if (isCountryExpanded) {
               html += '<ul class="tree-children tree-children--airports">';
               
-              for (const airport of country.airports) {
-                const intlLabel = airport.intl ? '🌐' : '';
-                html += `
-                  <li class="result-item result-item--airport" data-id="a-${airport.code.toLowerCase()}">
-                    <div class="result-item__title">${intlLabel} ${airport.code} · ${airport.name}</div>
-                    <div class="result-item__meta">${airport.city}</div>
-                  </li>
-                `;
+              if (isAirports) {
+                for (const airport of country.airports) {
+                  const intlLabel = airport.intl ? '🌐' : '';
+                  html += `
+                    <li class="result-item result-item--airport" data-id="a-${airport.code.toLowerCase()}">
+                      <div class="result-item__title">${intlLabel} ${airport.code} · ${airport.name}</div>
+                      <div class="result-item__meta">${airport.city}</div>
+                    </li>
+                  `;
+                }
+              } else {
+                for (const port of country.ports) {
+                  html += `
+                    <li class="result-item result-item--airport" data-id="p-${port.code.toLowerCase()}">
+                      <div class="result-item__title">🚢 ${port.code} · ${port.name}</div>
+                      <div class="result-item__meta">${port.city}</div>
+                    </li>
+                  `;
+                }
               }
               
               html += '</ul>';
@@ -900,6 +929,134 @@ function renderClassifiedView() {
   
   // 绑定展开/折叠事件
   bindTreeEvents();
+}
+
+// 渲染海外仓视图
+function renderWarehousesView() {
+  if (!state.warehousesData) {
+    resultsList.innerHTML = '<li class="result-item"><div class="result-item__meta">加载海外仓数据中...</div></li>';
+    return;
+  }
+  
+  let html = '';
+  const categories = state.warehousesData.categories;
+  
+  // 分类顺序：亚马逊、沃尔玛、货代公司
+  const categoryOrder = ['amazon', 'walmart', 'freight'];
+  
+  for (const catKey of categoryOrder) {
+    const category = categories[catKey];
+    if (!category) continue;
+    
+    const isCatExpanded = state.expandedCategories.has(catKey);
+    const catIcon = isCatExpanded ? '▼' : '▶';
+    
+    html += `
+      <li class="tree-item tree-item--continent" data-category="${catKey}">
+        <div class="tree-item__header tree-item__header--continent">
+          <span class="tree-icon">${catIcon}</span>
+          <span class="tree-name">${category.icon} ${category.name}</span>
+          <span class="tree-count">${category.totalWarehouses}</span>
+        </div>
+    `;
+    
+    if (isCatExpanded) {
+      html += '<ul class="tree-children">';
+      
+      // 按仓库数量排序国家
+      const sortedCountries = Object.entries(category.countries)
+        .sort((a, b) => b[1].totalWarehouses - a[1].totalWarehouses);
+      
+      for (const [countryCode, country] of sortedCountries) {
+        const countryKey = `${catKey}-${countryCode}`;
+        const isCountryExpanded = state.expandedCountries.has(countryKey);
+        const countryIcon = isCountryExpanded ? '▼' : '▶';
+        
+        html += `
+          <li class="tree-item tree-item--region" data-category="${catKey}" data-country="${countryCode}">
+            <div class="tree-item__header tree-item__header--region">
+              <span class="tree-icon">${countryIcon}</span>
+              <span class="tree-name">${country.name}</span>
+              <span class="tree-count">${country.totalWarehouses}</span>
+            </div>
+        `;
+        
+        if (isCountryExpanded) {
+          html += '<ul class="tree-children tree-children--airports">';
+          
+          for (const warehouse of country.warehouses) {
+            const companyLabel = warehouse.company ? ` · ${warehouse.company}` : '';
+            html += `
+              <li class="result-item result-item--airport" data-warehouse="${warehouse.code}" data-lat="${warehouse.lat}" data-lng="${warehouse.lng}">
+                <div class="result-item__title">📦 ${warehouse.code} · ${warehouse.name}</div>
+                <div class="result-item__meta">${warehouse.city}${companyLabel}</div>
+              </li>
+            `;
+          }
+          
+          html += '</ul>';
+        }
+        
+        html += '</li>';
+      }
+      
+      html += '</ul>';
+    }
+    
+    html += '</li>';
+  }
+  
+  resultsList.innerHTML = html;
+  
+  // 绑定海外仓展开/折叠事件
+  bindWarehouseTreeEvents();
+}
+
+// 绑定海外仓树形结构的展开/折叠事件
+function bindWarehouseTreeEvents() {
+  // 分类点击
+  document.querySelectorAll('.tree-item--continent[data-category] > .tree-item__header').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const catKey = el.parentElement.dataset.category;
+      if (state.expandedCategories.has(catKey)) {
+        state.expandedCategories.delete(catKey);
+      } else {
+        state.expandedCategories.add(catKey);
+      }
+      renderWarehousesView();
+    });
+  });
+  
+  // 国家点击
+  document.querySelectorAll('.tree-item--region[data-category] > .tree-item__header').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const catKey = el.parentElement.dataset.category;
+      const countryCode = el.parentElement.dataset.country;
+      const key = `${catKey}-${countryCode}`;
+      if (state.expandedCountries.has(key)) {
+        state.expandedCountries.delete(key);
+      } else {
+        state.expandedCountries.add(key);
+      }
+      renderWarehousesView();
+    });
+  });
+  
+  // 仓库项点击 - 在地图上显示位置
+  document.querySelectorAll('.result-item[data-warehouse]').forEach(el => {
+    el.addEventListener('click', () => {
+      const lat = parseFloat(el.dataset.lat);
+      const lng = parseFloat(el.dataset.lng);
+      if (!isNaN(lat) && !isNaN(lng)) {
+        mapAdapter.focusOnCoords(lat, lng, 12);
+        if (window.innerWidth <= 768) {
+          app.classList.remove("app--sidebar-open");
+        }
+      }
+    });
+  });
 }
 
 // 绑定树形结构的展开/折叠事件
@@ -954,6 +1111,41 @@ function bindTreeEvents() {
 
 const resultsSection = document.querySelector(".results");
 
+// 切换 Tab 的通用函数
+function switchHubTab(tabName) {
+  state.currentTab = tabName;
+  
+  // 清除展开状态
+  state.expandedContinents.clear();
+  state.expandedRegions.clear();
+  state.expandedCountries.clear();
+  
+  // 更新 Tab 样式
+  tabAirports.classList.toggle('hub-tab--active', tabName === 'airports');
+  tabPorts.classList.toggle('hub-tab--active', tabName === 'ports');
+  tabWarehouses.classList.toggle('hub-tab--active', tabName === 'warehouses');
+  
+  // 重新渲染
+  applyFilters();
+}
+
+// 更新 Tab 上的数量显示
+function updateTabCounts() {
+  if (state.airportsClassified) {
+    airportsCountEl.textContent = state.airportsClassified.totalAirports || 0;
+  }
+  if (state.portsClassified) {
+    portsCountEl.textContent = state.portsClassified.totalPorts || 0;
+  }
+  if (state.warehousesData) {
+    let total = 0;
+    for (const cat of Object.values(state.warehousesData.categories)) {
+      total += cat.totalWarehouses || 0;
+    }
+    warehousesCountEl.textContent = total;
+  }
+}
+
 function wireEvents() {
   // 标签切换
   tabHubs.addEventListener("click", () => {
@@ -972,6 +1164,11 @@ function wireEvents() {
     resultsSection.style.display = "none"; // 隐藏机场/港口列表
   });
   
+  // 机场/港口/海外仓 Tab 切换
+  tabAirports.addEventListener("click", () => switchHubTab('airports'));
+  tabPorts.addEventListener("click", () => switchHubTab('ports'));
+  tabWarehouses.addEventListener("click", () => switchHubTab('warehouses'));
+  
   // 初始化地址搜索（使用服务端代理）
   initAddressSearch();
   
@@ -981,9 +1178,6 @@ function wireEvents() {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(applyFilters, 150);
   });
-  
-  filterAirports.addEventListener("change", applyFilters);
-  filterPorts.addEventListener("change", applyFilters);
   
   resultsList.addEventListener("click", (event) => {
     const item = event.target.closest(".result-item");
@@ -1028,10 +1222,12 @@ async function loadData() {
       }
     });
 
-    const [airports, ports, classifiedData] = await Promise.all([
+    const [airports, ports, airportsClassified, portsClassified, warehousesData] = await Promise.all([
       fetch("/data/airports.json").then((res) => res.json()),
       fetch("/data/ports.json").then((res) => res.json()),
-      fetch("/data/airports-classified.json").then((res) => res.json()).catch(() => null)
+      fetch("/data/airports-classified.json").then((res) => res.json()).catch(() => null),
+      fetch("/data/ports-classified.json").then((res) => res.json()).catch(() => null),
+      fetch("/data/warehouses.json").then((res) => res.json()).catch(() => null)
     ]);
 
     const airportNodes = airports.map((airport) => ({
@@ -1047,7 +1243,12 @@ async function loadData() {
     }));
 
     state.allNodes = [...airportNodes, ...portNodes];
-    state.classifiedData = classifiedData;
+    state.airportsClassified = airportsClassified;
+    state.portsClassified = portsClassified;
+    state.warehousesData = warehousesData;
+    
+    // 更新 Tab 数量
+    updateTabCounts();
     
     // 分批渲染标记，避免阻塞
     requestAnimationFrame(() => {

@@ -47,20 +47,23 @@
           </div>
           <div id="hubSearch" class="search-panel">
             <input id="searchInput" type="text" placeholder="搜索 IATA / ICAO / 城市 / 国家（支持中英文）" />
-            <div class="filters-row">
-              <div class="filters">
-                <label class="filter">
-                  <input id="filterAirports" type="checkbox" checked />
-                  机场
-                </label>
-                <label class="filter">
-                  <input id="filterPorts" type="checkbox" checked />
-                  港口
-                </label>
-              </div>
-              <div class="results__count">
-                <span id="resultsCount">0</span> 个结果
-              </div>
+            <!-- 三个Tab切换：机场 / 港口 / 海外仓 -->
+            <div class="hub-tabs">
+              <button id="tabAirports" class="hub-tab hub-tab--active" type="button">
+                <span class="hub-tab__icon">✈️</span>
+                <span class="hub-tab__text">机场</span>
+                <span class="hub-tab__count" id="airportsCount">0</span>
+              </button>
+              <button id="tabPorts" class="hub-tab" type="button">
+                <span class="hub-tab__icon">🚢</span>
+                <span class="hub-tab__text">港口</span>
+                <span class="hub-tab__count" id="portsCount">0</span>
+              </button>
+              <button id="tabWarehouses" class="hub-tab" type="button">
+                <span class="hub-tab__icon">🏭</span>
+                <span class="hub-tab__text">海外仓</span>
+                <span class="hub-tab__count" id="warehousesCount">0</span>
+              </button>
             </div>
           </div>
           <div id="addressSearch" class="search-panel search-panel--hidden">

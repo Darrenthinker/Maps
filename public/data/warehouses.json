@@ -1,0 +1,190 @@
+{
+  "version": "2026.01",
+  "lastUpdated": "2026-01-26",
+  "description": "海外仓数据 - 亚马逊FBA / 沃尔玛WFS / 货代公司",
+  "categories": {
+    "amazon": {
+      "name": "亚马逊 FBA",
+      "nameEn": "Amazon FBA",
+      "icon": "📦",
+      "totalWarehouses": 156,
+      "countries": {
+        "US": {
+          "name": "美国",
+          "nameEn": "United States",
+          "totalWarehouses": 89,
+          "warehouses": [
+            {"code": "ONT8", "name": "ONT8", "city": "Moreno Valley, CA", "state": "CA", "lat": 33.9425, "lng": -117.2297},
+            {"code": "PHX7", "name": "PHX7", "city": "Phoenix, AZ", "state": "AZ", "lat": 33.4484, "lng": -112.0740},
+            {"code": "SBD1", "name": "SBD1", "city": "San Bernardino, CA", "state": "CA", "lat": 34.1083, "lng": -117.2898},
+            {"code": "LGB8", "name": "LGB8", "city": "Long Beach, CA", "state": "CA", "lat": 33.7701, "lng": -118.1937},
+            {"code": "SMF3", "name": "SMF3", "city": "West Sacramento, CA", "state": "CA", "lat": 38.5816, "lng": -121.4944},
+            {"code": "FTW1", "name": "FTW1", "city": "Fort Worth, TX", "state": "TX", "lat": 32.7555, "lng": -97.3308},
+            {"code": "DFW7", "name": "DFW7", "city": "Dallas, TX", "state": "TX", "lat": 32.8998, "lng": -97.0403},
+            {"code": "HOU2", "name": "HOU2", "city": "Houston, TX", "state": "TX", "lat": 29.7604, "lng": -95.3698},
+            {"code": "MCO1", "name": "MCO1", "city": "Orlando, FL", "state": "FL", "lat": 28.5383, "lng": -81.3792},
+            {"code": "TPA1", "name": "TPA1", "city": "Tampa, FL", "state": "FL", "lat": 27.9506, "lng": -82.4572},
+            {"code": "MIA1", "name": "MIA1", "city": "Miami, FL", "state": "FL", "lat": 25.7617, "lng": -80.1918},
+            {"code": "ATL2", "name": "ATL2", "city": "Atlanta, GA", "state": "GA", "lat": 33.7490, "lng": -84.3880},
+            {"code": "CLT2", "name": "CLT2", "city": "Charlotte, NC", "state": "NC", "lat": 35.2271, "lng": -80.8431},
+            {"code": "RDU1", "name": "RDU1", "city": "Raleigh, NC", "state": "NC", "lat": 35.7796, "lng": -78.6382},
+            {"code": "BWI2", "name": "BWI2", "city": "Baltimore, MD", "state": "MD", "lat": 39.2904, "lng": -76.6122},
+            {"code": "PHL6", "name": "PHL6", "city": "Philadelphia, PA", "state": "PA", "lat": 39.9526, "lng": -75.1652},
+            {"code": "EWR4", "name": "EWR4", "city": "Newark, NJ", "state": "NJ", "lat": 40.7357, "lng": -74.1724},
+            {"code": "JFK8", "name": "JFK8", "city": "Staten Island, NY", "state": "NY", "lat": 40.5795, "lng": -74.1502},
+            {"code": "BOS5", "name": "BOS5", "city": "Fall River, MA", "state": "MA", "lat": 41.7015, "lng": -71.1550},
+            {"code": "ORD2", "name": "ORD2", "city": "Romeoville, IL", "state": "IL", "lat": 41.6475, "lng": -88.0892},
+            {"code": "MDW6", "name": "MDW6", "city": "Chicago, IL", "state": "IL", "lat": 41.8781, "lng": -87.6298},
+            {"code": "IND9", "name": "IND9", "city": "Indianapolis, IN", "state": "IN", "lat": 39.7684, "lng": -86.1581},
+            {"code": "CVG3", "name": "CVG3", "city": "Hebron, KY", "state": "KY", "lat": 39.0473, "lng": -84.7019},
+            {"code": "CMH1", "name": "CMH1", "city": "Columbus, OH", "state": "OH", "lat": 39.9612, "lng": -82.9988},
+            {"code": "DTW1", "name": "DTW1", "city": "Romulus, MI", "state": "MI", "lat": 42.2126, "lng": -83.3533},
+            {"code": "MSP1", "name": "MSP1", "city": "Shakopee, MN", "state": "MN", "lat": 44.7974, "lng": -93.5271},
+            {"code": "STL4", "name": "STL4", "city": "St. Peters, MO", "state": "MO", "lat": 38.7881, "lng": -90.6298},
+            {"code": "DEN2", "name": "DEN2", "city": "Aurora, CO", "state": "CO", "lat": 39.7392, "lng": -104.9903},
+            {"code": "SLC1", "name": "SLC1", "city": "Salt Lake City, UT", "state": "UT", "lat": 40.7608, "lng": -111.8910},
+            {"code": "SEA8", "name": "SEA8", "city": "Kent, WA", "state": "WA", "lat": 47.3809, "lng": -122.2348},
+            {"code": "PDX9", "name": "PDX9", "city": "Portland, OR", "state": "OR", "lat": 45.5051, "lng": -122.6750}
+          ]
+        },
+        "DE": {
+          "name": "德国",
+          "nameEn": "Germany",
+          "totalWarehouses": 23,
+          "warehouses": [
+            {"code": "FRA1", "name": "FRA1", "city": "Bad Hersfeld", "lat": 50.8689, "lng": 9.7076},
+            {"code": "FRA3", "name": "FRA3", "city": "Bad Hersfeld", "lat": 50.8710, "lng": 9.7100},
+            {"code": "DUS2", "name": "DUS2", "city": "Rheinberg", "lat": 51.5472, "lng": 6.5855},
+            {"code": "LEJ1", "name": "LEJ1", "city": "Leipzig", "lat": 51.3397, "lng": 12.3731},
+            {"code": "MUC3", "name": "MUC3", "city": "München", "lat": 48.1351, "lng": 11.5820},
+            {"code": "STR1", "name": "STR1", "city": "Stuttgart", "lat": 48.7758, "lng": 9.1829},
+            {"code": "HAM2", "name": "HAM2", "city": "Hamburg", "lat": 53.5511, "lng": 9.9937},
+            {"code": "BER3", "name": "BER3", "city": "Berlin", "lat": 52.5200, "lng": 13.4050}
+          ]
+        },
+        "GB": {
+          "name": "英国",
+          "nameEn": "United Kingdom",
+          "totalWarehouses": 18,
+          "warehouses": [
+            {"code": "LTN1", "name": "LTN1", "city": "Dunstable", "lat": 51.8860, "lng": -0.5209},
+            {"code": "LTN4", "name": "LTN4", "city": "Dunstable", "lat": 51.8870, "lng": -0.5220},
+            {"code": "BHX4", "name": "BHX4", "city": "Rugby", "lat": 52.3702, "lng": -1.2615},
+            {"code": "MAN1", "name": "MAN1", "city": "Manchester", "lat": 53.4808, "lng": -2.2426},
+            {"code": "EDI4", "name": "EDI4", "city": "Dunfermline", "lat": 56.0719, "lng": -3.4393},
+            {"code": "BRS1", "name": "BRS1", "city": "Bristol", "lat": 51.4545, "lng": -2.5879}
+          ]
+        },
+        "JP": {
+          "name": "日本",
+          "nameEn": "Japan",
+          "totalWarehouses": 12,
+          "warehouses": [
+            {"code": "NRT1", "name": "NRT1", "city": "市川市", "lat": 35.7320, "lng": 139.9245},
+            {"code": "NRT5", "name": "NRT5", "city": "市川市", "lat": 35.7330, "lng": 139.9255},
+            {"code": "KIX1", "name": "KIX1", "city": "堺市", "lat": 34.5260, "lng": 135.4937},
+            {"code": "FSZ1", "name": "FSZ1", "city": "小田原市", "lat": 35.2646, "lng": 139.1531},
+            {"code": "HND3", "name": "HND3", "city": "川崎市", "lat": 35.5305, "lng": 139.7030}
+          ]
+        },
+        "CA": {
+          "name": "加拿大",
+          "nameEn": "Canada",
+          "totalWarehouses": 8,
+          "warehouses": [
+            {"code": "YYZ7", "name": "YYZ7", "city": "Brampton, ON", "lat": 43.7315, "lng": -79.7624},
+            {"code": "YVR3", "name": "YVR3", "city": "Delta, BC", "lat": 49.0847, "lng": -123.0068},
+            {"code": "YYC1", "name": "YYC1", "city": "Calgary, AB", "lat": 51.0447, "lng": -114.0719}
+          ]
+        },
+        "AU": {
+          "name": "澳大利亚",
+          "nameEn": "Australia",
+          "totalWarehouses": 6,
+          "warehouses": [
+            {"code": "SYD1", "name": "SYD1", "city": "Sydney, NSW", "lat": -33.8688, "lng": 151.2093},
+            {"code": "MEL7", "name": "MEL7", "city": "Melbourne, VIC", "lat": -37.8136, "lng": 144.9631}
+          ]
+        }
+      }
+    },
+    "walmart": {
+      "name": "沃尔玛 WFS",
+      "nameEn": "Walmart Fulfillment Services",
+      "icon": "🏬",
+      "totalWarehouses": 34,
+      "countries": {
+        "US": {
+          "name": "美国",
+          "nameEn": "United States",
+          "totalWarehouses": 34,
+          "warehouses": [
+            {"code": "WFS-CAL1", "name": "Chino, CA", "city": "Chino, CA", "state": "CA", "lat": 33.9898, "lng": -117.6874},
+            {"code": "WFS-CAL2", "name": "Perris, CA", "city": "Perris, CA", "state": "CA", "lat": 33.7825, "lng": -117.2286},
+            {"code": "WFS-TEX1", "name": "Fort Worth, TX", "city": "Fort Worth, TX", "state": "TX", "lat": 32.7555, "lng": -97.3308},
+            {"code": "WFS-TEX2", "name": "Dallas, TX", "city": "Dallas, TX", "state": "TX", "lat": 32.7767, "lng": -96.7970},
+            {"code": "WFS-FLO1", "name": "Davenport, FL", "city": "Davenport, FL", "state": "FL", "lat": 28.1614, "lng": -81.6017},
+            {"code": "WFS-GEO1", "name": "Atlanta, GA", "city": "Atlanta, GA", "state": "GA", "lat": 33.7490, "lng": -84.3880},
+            {"code": "WFS-PEN1", "name": "Bethlehem, PA", "city": "Bethlehem, PA", "state": "PA", "lat": 40.6259, "lng": -75.3704},
+            {"code": "WFS-NJE1", "name": "Pedricktown, NJ", "city": "Pedricktown, NJ", "state": "NJ", "lat": 39.7576, "lng": -75.4093},
+            {"code": "WFS-ILL1", "name": "Elwood, IL", "city": "Elwood, IL", "state": "IL", "lat": 41.4039, "lng": -88.1115},
+            {"code": "WFS-IND1", "name": "Indianapolis, IN", "city": "Indianapolis, IN", "state": "IN", "lat": 39.7684, "lng": -86.1581},
+            {"code": "WFS-ARK1", "name": "Bentonville, AR", "city": "Bentonville, AR", "state": "AR", "lat": 36.3728, "lng": -94.2088}
+          ]
+        }
+      }
+    },
+    "freight": {
+      "name": "货代公司",
+      "nameEn": "Freight Forwarders",
+      "icon": "🚚",
+      "totalWarehouses": 78,
+      "countries": {
+        "US": {
+          "name": "美国",
+          "nameEn": "United States",
+          "totalWarehouses": 45,
+          "warehouses": [
+            {"code": "SF-LAX", "name": "顺丰洛杉矶仓", "city": "Los Angeles, CA", "company": "顺丰", "lat": 34.0522, "lng": -118.2437},
+            {"code": "SF-NYC", "name": "顺丰纽约仓", "city": "New York, NY", "company": "顺丰", "lat": 40.7128, "lng": -74.0060},
+            {"code": "YTO-LA", "name": "圆通洛杉矶仓", "city": "Los Angeles, CA", "company": "圆通", "lat": 34.0520, "lng": -118.2430},
+            {"code": "ZTO-LA", "name": "中通洛杉矶仓", "city": "Los Angeles, CA", "company": "中通", "lat": 34.0525, "lng": -118.2440},
+            {"code": "STO-LA", "name": "申通洛杉矶仓", "city": "Los Angeles, CA", "company": "申通", "lat": 34.0518, "lng": -118.2420},
+            {"code": "YD-LA", "name": "韵达洛杉矶仓", "city": "Los Angeles, CA", "company": "韵达", "lat": 34.0530, "lng": -118.2450},
+            {"code": "DBL-LAX", "name": "递必隆洛杉矶仓", "city": "Commerce, CA", "company": "递必隆", "lat": 34.0005, "lng": -118.1500},
+            {"code": "4PX-LAX", "name": "4PX洛杉矶仓", "city": "Ontario, CA", "company": "4PX", "lat": 34.0633, "lng": -117.6509},
+            {"code": "YH-LAX", "name": "云海洛杉矶仓", "city": "Rancho Cucamonga, CA", "company": "云海", "lat": 34.1064, "lng": -117.5931}
+          ]
+        },
+        "DE": {
+          "name": "德国",
+          "nameEn": "Germany",
+          "totalWarehouses": 15,
+          "warehouses": [
+            {"code": "SF-FRA", "name": "顺丰法兰克福仓", "city": "Frankfurt", "company": "顺丰", "lat": 50.1109, "lng": 8.6821},
+            {"code": "YTO-FRA", "name": "圆通法兰克福仓", "city": "Frankfurt", "company": "圆通", "lat": 50.1110, "lng": 8.6830},
+            {"code": "4PX-FRA", "name": "4PX法兰克福仓", "city": "Frankfurt", "company": "4PX", "lat": 50.1105, "lng": 8.6810}
+          ]
+        },
+        "GB": {
+          "name": "英国",
+          "nameEn": "United Kingdom",
+          "totalWarehouses": 10,
+          "warehouses": [
+            {"code": "SF-LON", "name": "顺丰伦敦仓", "city": "London", "company": "顺丰", "lat": 51.5074, "lng": -0.1278},
+            {"code": "4PX-LON", "name": "4PX伦敦仓", "city": "London", "company": "4PX", "lat": 51.5070, "lng": -0.1280}
+          ]
+        },
+        "JP": {
+          "name": "日本",
+          "nameEn": "Japan",
+          "totalWarehouses": 8,
+          "warehouses": [
+            {"code": "SF-TYO", "name": "顺丰东京仓", "city": "東京", "company": "顺丰", "lat": 35.6762, "lng": 139.6503},
+            {"code": "YTO-TYO", "name": "圆通东京仓", "city": "東京", "company": "圆通", "lat": 35.6760, "lng": 139.6510}
+          ]
+        }
+      }
+    }
+  }
+}

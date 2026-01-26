@@ -385,46 +385,83 @@ body {
   text-align: right;
 }
 
-.filters-row {
+/* ========== 机场/港口/海外仓 Tab 切换 ========== */
+.hub-tabs {
+  display: flex;
+  gap: 6px;
   margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.filters {
-  display: flex;
-  gap: 14px;
-}
-
-.filter {
-  font-size: 12px;
-  color: #64748b;
+.hub-tab {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
+  padding: 10px 8px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: #f8fafc;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #64748b;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.filter:hover {
-  color: #3b82f6;
+.hub-tab:hover {
+  background: #f1f5f9;
+  border-color: rgba(148, 163, 184, 0.5);
 }
 
-.filter input[type="checkbox"] {
-  width: 14px;
-  height: 14px;
-  accent-color: #3b82f6;
-  cursor: pointer;
+.hub-tab--active {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
-.results__count {
-  font-size: 12px;
-  color: #94a3b8;
+.hub-tab--active:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
 }
 
-.results__count span {
-  color: #3b82f6;
-  font-weight: 600;
+/* 港口 Tab 激活时橙色 */
+#tabPorts.hub-tab--active {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+}
+
+#tabPorts.hub-tab--active:hover {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+}
+
+/* 海外仓 Tab 激活时绿色 */
+#tabWarehouses.hub-tab--active {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+#tabWarehouses.hub-tab--active:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.hub-tab__icon {
+  font-size: 14px;
+}
+
+.hub-tab__text {
+  font-weight: 500;
+}
+
+.hub-tab__count {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.2);
+  color: inherit;
+}
+
+.hub-tab--active .hub-tab__count {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .view-modes {
