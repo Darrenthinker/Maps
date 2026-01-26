@@ -190,14 +190,14 @@ export function createLeafletAdapter(mapId) {
   
   // 根据缩放级别计算图标大小
   function getIconSizeByZoom(zoom) {
-    // 缩放级别越高（放大），图标越小；缩放级别越低（缩小），图标也保持较小
-    // 基准：zoom 12 时大小为 28px
-    if (zoom >= 14) return 24;      // 放大时小一点
-    if (zoom >= 12) return 28;      // 正常大小
-    if (zoom >= 10) return 26;      // 稍微缩小
-    if (zoom >= 8) return 24;       // 继续缩小
-    if (zoom >= 6) return 22;       // 更小
-    return 20;                       // 最小尺寸
+    // 缩放级别越高（放大），图标正常；缩放级别越低（缩小），图标更小
+    if (zoom >= 14) return 26;      // 放大时
+    if (zoom >= 12) return 24;      // 正常大小
+    if (zoom >= 10) return 20;      // 稍微缩小
+    if (zoom >= 8) return 16;       // 继续缩小
+    if (zoom >= 6) return 12;       // 更小
+    if (zoom >= 4) return 10;       // 很小
+    return 8;                        // 最小尺寸
   }
   
   // 根据类型获取图标
