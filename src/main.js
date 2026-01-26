@@ -37,7 +37,15 @@ const state = {
   pointA: null, // { lat, lng, name }
   pointB: null,  // { lat, lng, name }
   // 偏远地区数据
-  remoteAreas: null
+  remoteAreas: null,
+  // 分类数据
+  classifiedData: null,
+  // 展开状态
+  expandedContinents: new Set(),
+  expandedRegions: new Set(),
+  expandedCountries: new Set(),
+  // 当前视图模式：'classified' 分类视图 | 'search' 搜索视图
+  viewMode: 'classified'
 };
 
 // 加载偏远地区数据
@@ -731,6 +739,21 @@ function applyFilters() {
 }
 
 function renderResults() {
+  const query = searchInput.value.trim();
+  
+  // 如果有搜索词，显示搜索结果
+  if (query) {
+    state.viewMode = 'search';
+    renderSearchResults();
+  } else {
+    // 无搜索词，显示分类视图
+    state.viewMode = 'classified';
+    renderClassifiedView();
+  }
+}
+
+// 渲染搜索结果（平铺列表）
+function renderSearchResults() {
   resultsCount.textContent = String(state.filteredNodes.length);
   
   const displayNodes = state.filteredNodes.slice(0, 200);
@@ -739,9 +762,10 @@ function renderResults() {
     .map((node) => {
       const code = node.code || "";
       const sub = node.type === "airport" ? "机场" : "港口";
+      const intlLabel = node.intl ? "🌐" : "";
       return `
         <li class="result-item" data-id="${node.id}">
-          <div class="result-item__title">${code} · ${node.name}</div>
+          <div class="result-item__title">${intlLabel} ${code} · ${node.name}</div>
           <div class="result-item__meta">${node.city}, ${node.country} · ${sub}</div>
         </li>
       `;
@@ -755,6 +779,177 @@ function renderResults() {
       </li>
     `;
   }
+}
+
+// 渲染分类视图（大洲 → 区域 → 国家）
+function renderClassifiedView() {
+  if (!state.classifiedData) {
+    resultsCount.textContent = String(state.filteredNodes.length);
+    resultsList.innerHTML = '<li class="result-item"><div class="result-item__meta">加载分类数据中...</div></li>';
+    return;
+  }
+  
+  const showAirports = filterAirports.checked;
+  const showPorts = filterPorts.checked;
+  
+  // 计算当前显示的总数
+  let totalCount = 0;
+  if (showAirports && state.classifiedData) {
+    totalCount += state.classifiedData.totalAirports || 0;
+  }
+  if (showPorts) {
+    totalCount += state.allNodes.filter(n => n.type === 'port').length;
+  }
+  resultsCount.textContent = String(totalCount);
+  
+  let html = '';
+  
+  // 大洲顺序
+  const continentOrder = ['AS', 'EU', 'NA', 'SA', 'AF', 'OC'];
+  
+  for (const contCode of continentOrder) {
+    const continent = state.classifiedData.continents[contCode];
+    if (!continent) continue;
+    
+    const isContExpanded = state.expandedContinents.has(contCode);
+    const contIcon = isContExpanded ? '▼' : '▶';
+    
+    html += `
+      <li class="tree-item tree-item--continent" data-continent="${contCode}">
+        <div class="tree-item__header tree-item__header--continent">
+          <span class="tree-icon">${contIcon}</span>
+          <span class="tree-name">${continent.name}</span>
+          <span class="tree-count">${continent.totalAirports}</span>
+        </div>
+    `;
+    
+    if (isContExpanded) {
+      html += '<ul class="tree-children">';
+      
+      for (const [regCode, region] of Object.entries(continent.regions)) {
+        if (region.totalAirports === 0) continue;
+        
+        const regKey = `${contCode}-${regCode}`;
+        const isRegExpanded = state.expandedRegions.has(regKey);
+        const regIcon = isRegExpanded ? '▼' : '▶';
+        
+        html += `
+          <li class="tree-item tree-item--region" data-continent="${contCode}" data-region="${regCode}">
+            <div class="tree-item__header tree-item__header--region">
+              <span class="tree-icon">${regIcon}</span>
+              <span class="tree-name">${region.name}</span>
+              <span class="tree-count">${region.totalAirports}</span>
+            </div>
+        `;
+        
+        if (isRegExpanded) {
+          html += '<ul class="tree-children">';
+          
+          // 按机场数量排序国家
+          const sortedCountries = Object.entries(region.countries)
+            .sort((a, b) => b[1].totalAirports - a[1].totalAirports);
+          
+          for (const [countryCode, country] of sortedCountries) {
+            if (country.totalAirports === 0) continue;
+            
+            const countryKey = `${contCode}-${regCode}-${countryCode}`;
+            const isCountryExpanded = state.expandedCountries.has(countryKey);
+            const countryIcon = isCountryExpanded ? '▼' : '▶';
+            
+            html += `
+              <li class="tree-item tree-item--country" data-continent="${contCode}" data-region="${regCode}" data-country="${countryCode}">
+                <div class="tree-item__header tree-item__header--country">
+                  <span class="tree-icon">${countryIcon}</span>
+                  <span class="tree-name">${country.name}</span>
+                  <span class="tree-count">${country.totalAirports} (${country.intlAirports})</span>
+                </div>
+            `;
+            
+            if (isCountryExpanded && showAirports) {
+              html += '<ul class="tree-children tree-children--airports">';
+              
+              for (const airport of country.airports) {
+                const intlLabel = airport.intl ? '🌐' : '';
+                html += `
+                  <li class="result-item result-item--airport" data-id="a-${airport.code.toLowerCase()}">
+                    <div class="result-item__title">${intlLabel} ${airport.code} · ${airport.name}</div>
+                    <div class="result-item__meta">${airport.city}</div>
+                  </li>
+                `;
+              }
+              
+              html += '</ul>';
+            }
+            
+            html += '</li>';
+          }
+          
+          html += '</ul>';
+        }
+        
+        html += '</li>';
+      }
+      
+      html += '</ul>';
+    }
+    
+    html += '</li>';
+  }
+  
+  resultsList.innerHTML = html;
+  
+  // 绑定展开/折叠事件
+  bindTreeEvents();
+}
+
+// 绑定树形结构的展开/折叠事件
+function bindTreeEvents() {
+  // 大洲点击
+  document.querySelectorAll('.tree-item--continent > .tree-item__header').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const contCode = el.parentElement.dataset.continent;
+      if (state.expandedContinents.has(contCode)) {
+        state.expandedContinents.delete(contCode);
+      } else {
+        state.expandedContinents.add(contCode);
+      }
+      renderClassifiedView();
+    });
+  });
+  
+  // 区域点击
+  document.querySelectorAll('.tree-item--region > .tree-item__header').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const contCode = el.parentElement.dataset.continent;
+      const regCode = el.parentElement.dataset.region;
+      const key = `${contCode}-${regCode}`;
+      if (state.expandedRegions.has(key)) {
+        state.expandedRegions.delete(key);
+      } else {
+        state.expandedRegions.add(key);
+      }
+      renderClassifiedView();
+    });
+  });
+  
+  // 国家点击
+  document.querySelectorAll('.tree-item--country > .tree-item__header').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const contCode = el.parentElement.dataset.continent;
+      const regCode = el.parentElement.dataset.region;
+      const countryCode = el.parentElement.dataset.country;
+      const key = `${contCode}-${regCode}-${countryCode}`;
+      if (state.expandedCountries.has(key)) {
+        state.expandedCountries.delete(key);
+      } else {
+        state.expandedCountries.add(key);
+      }
+      renderClassifiedView();
+    });
+  });
 }
 
 const resultsSection = document.querySelector(".results");
@@ -833,9 +1028,10 @@ async function loadData() {
       }
     });
 
-    const [airports, ports] = await Promise.all([
+    const [airports, ports, classifiedData] = await Promise.all([
       fetch("/data/airports.json").then((res) => res.json()),
-      fetch("/data/ports.json").then((res) => res.json())
+      fetch("/data/ports.json").then((res) => res.json()),
+      fetch("/data/airports-classified.json").then((res) => res.json()).catch(() => null)
     ]);
 
     const airportNodes = airports.map((airport) => ({
@@ -851,6 +1047,7 @@ async function loadData() {
     }));
 
     state.allNodes = [...airportNodes, ...portNodes];
+    state.classifiedData = classifiedData;
     
     // 分批渲染标记，避免阻塞
     requestAnimationFrame(() => {

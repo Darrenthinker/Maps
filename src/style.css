@@ -492,6 +492,127 @@ body {
   margin-top: 4px;
 }
 
+/* ========== 树形分类结构 ========== */
+.tree-item {
+  list-style: none;
+}
+
+.tree-item__header {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.tree-item__header:hover {
+  background: #f1f5f9;
+}
+
+.tree-icon {
+  width: 16px;
+  font-size: 10px;
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.tree-name {
+  flex: 1;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.tree-count {
+  font-size: 12px;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+/* 大洲层级 */
+.tree-item__header--continent {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 12px 16px;
+}
+
+.tree-item__header--continent .tree-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.tree-item__header--continent .tree-count {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+/* 区域层级 */
+.tree-item__header--region {
+  padding-left: 28px;
+  background: #fafbfc;
+}
+
+.tree-item__header--region .tree-name {
+  font-size: 14px;
+  color: #475569;
+}
+
+.tree-item__header--region .tree-count {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+/* 国家层级 */
+.tree-item__header--country {
+  padding-left: 44px;
+}
+
+.tree-item__header--country .tree-name {
+  font-size: 13px;
+  color: #334155;
+}
+
+.tree-item__header--country .tree-count {
+  font-size: 11px;
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* 子级容器 */
+.tree-children {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tree-children--airports {
+  background: #fafbfc;
+}
+
+.tree-children--airports .result-item {
+  padding-left: 60px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom-color: rgba(226, 232, 240, 0.4);
+}
+
+.tree-children--airports .result-item__title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tree-children--airports .result-item__meta {
+  font-size: 11px;
+}
+
+.result-item--airport:hover {
+  background: #e0f2fe;
+}
+
 .map-wrapper {
   flex: 1;
   position: relative;
