@@ -1201,7 +1201,7 @@ function renderClassifiedView() {
                     : port.name;
                   html += `
                     <li class="result-item result-item--airport" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}" data-name-zh="${nameZh}" data-code="${port.code}" data-intl="0" data-type="port">
-                      <div class="result-item__title">🚢 ${port.code} · ${displayName}</div>
+                      <div class="result-item__title">${port.code} · ${displayName}</div>
                       <div class="result-item__meta">${port.city}</div>
                     </li>
                   `;
