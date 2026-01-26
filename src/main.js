@@ -720,9 +720,23 @@ async function calculateAndShowDistance() {
 
 function applyFilters() {
   const query = searchInput.value.trim();
-  const currentTab = state.currentTab;
+  let currentTab = state.currentTab;
 
-  // 根据当前Tab筛选数据
+  // 有搜索词时，如果当前是海外仓Tab，自动切换到机场Tab
+  if (query && currentTab === 'warehouses') {
+    switchHubTab('airports');
+    return; // switchHubTab 会重新调用 applyFilters
+  }
+
+  // 海外仓Tab无搜索词，显示分类视图
+  if (currentTab === 'warehouses') {
+    state.filteredNodes = [];
+    renderResults();
+    mapAdapter.setMarkers([]);
+    return;
+  }
+
+  // 根据当前Tab筛选数据（机场或港口）
   let filtered = state.allNodes.filter((node) => {
     if (currentTab === 'airports' && node.type !== "airport") return false;
     if (currentTab === 'ports' && node.type !== "port") return false;
@@ -779,7 +793,7 @@ function renderSearchResults() {
       const sub = node.type === "airport" ? "机场" : "港口";
       const intlLabel = node.intl ? "🌐" : "";
       return `
-        <li class="result-item" data-id="${node.id}">
+        <li class="result-item result-item--search" data-id="${node.id}" data-lat="${node.lat}" data-lng="${node.lng}">
           <div class="result-item__title">${intlLabel} ${code} · ${node.name}</div>
           <div class="result-item__meta">${node.city}, ${node.country} · ${sub}</div>
         </li>
@@ -1199,6 +1213,21 @@ function wireEvents() {
   resultsList.addEventListener("click", (event) => {
     const item = event.target.closest(".result-item");
     if (!item || item.classList.contains("result-item--hint")) return;
+    
+    // 搜索结果点击：使用坐标跳转
+    if (item.classList.contains("result-item--search")) {
+      const lat = parseFloat(item.dataset.lat);
+      const lng = parseFloat(item.dataset.lng);
+      if (!isNaN(lat) && !isNaN(lng)) {
+        mapAdapter.focusOnCoords(lat, lng, 12);
+        if (window.innerWidth <= 768) {
+          app.classList.remove("app--sidebar-open");
+        }
+      }
+      return;
+    }
+    
+    // 其他情况：通过 id 查找节点
     const node = state.filteredNodes.find((n) => n.id === item.dataset.id);
     if (node) {
       mapAdapter.focusOn(node);
