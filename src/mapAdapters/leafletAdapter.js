@@ -289,19 +289,17 @@ export function createLeafletAdapter(mapId) {
       const code = nodeInfo.code || '';
       const nameZh = nodeInfo.nameZh || '';
       const nameEn = nodeInfo.name || '';
-      const typeIcon = type === 'airport' ? '✈️' : (type === 'port' ? '🚢' : '📦');
       const intlClass = nodeInfo.intl ? 'intl' : 'domestic';
       const intlText = nodeInfo.intl ? '国际' : '国内';
       
-      // 简化中文名（如果太长，截取前12个字符）
+      // 简化中文名（如果太长，截取前15个字符）
       const shortNameZh = nameZh.length > 15 ? nameZh.substring(0, 15) + '...' : nameZh;
-      // 简化英文名（如果太长，截取前25个字符）
+      // 简化英文名（如果太长，截取前30个字符）
       const shortNameEn = nameEn.length > 30 ? nameEn.substring(0, 30) + '...' : nameEn;
       
       let popupContent = `
         <div class="map-popup map-popup--apple">
           <div class="map-popup__header">
-            <span class="map-popup__icon">${typeIcon}</span>
             <span class="map-popup__code">${code}</span>
             <span class="map-popup__tag map-popup__tag--${intlClass}">${intlText}</span>
           </div>
