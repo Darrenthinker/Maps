@@ -223,14 +223,8 @@ export function createLeafletAdapter(mapId) {
         </svg>`;
         className = "marker marker-type marker-warehouse-walmart";
       } else {
-        // 货代仓库 - 纸箱图标
-        html = `<svg viewBox="0 0 100 100" width="36" height="36">
-          <rect x="5" y="5" width="90" height="90" rx="8" fill="#8B5CF6"/>
-          <path d="M20 35 L50 20 L80 35 L80 70 L50 85 L20 70 Z" fill="#DDD6FE" stroke="white" stroke-width="2"/>
-          <path d="M50 20 L50 85" stroke="white" stroke-width="2"/>
-          <path d="M20 35 L50 50 L80 35" stroke="white" stroke-width="2" fill="none"/>
-          <path d="M50 50 L50 85" stroke="white" stroke-width="2"/>
-        </svg>`;
+        // 货代仓库 - 纸箱 emoji
+        html = "📦";
         className = "marker marker-type marker-warehouse-icon";
       }
     }
