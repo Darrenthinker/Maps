@@ -720,47 +720,89 @@ async function calculateAndShowDistance() {
 
 function applyFilters() {
   const query = searchInput.value.trim();
-  const currentTab = state.currentTab;
 
-  // 海外仓Tab：搜索海外仓数据
-  if (currentTab === 'warehouses') {
-    if (query && state.warehousesData) {
-      const results = searchWarehouses(query);
-      state.filteredNodes = results;
-      renderWarehouseSearchResults(results);
-    } else {
-      state.filteredNodes = [];
-      renderResults();
-    }
+  // 无搜索词时，显示当前Tab的分类视图
+  if (!query) {
+    state.filteredNodes = [];
+    renderResults();
     mapAdapter.setMarkers([]);
     return;
   }
 
-  // 根据当前Tab筛选数据（机场或港口）
-  let filtered = state.allNodes.filter((node) => {
-    if (currentTab === 'airports' && node.type !== "airport") return false;
-    if (currentTab === 'ports' && node.type !== "port") return false;
-    return true;
-  });
+  // 智能搜索：搜索所有数据源，自动切换到有结果的Tab
+  const warehouseResults = searchWarehouses(query);
+  const airportResults = searchInNodes(query, 'airport');
+  const portResults = searchInNodes(query, 'port');
 
-  if (query) {
-    const fuse = new Fuse(filtered, fuseOptions);
-    const results = fuse.search(query);
-    filtered = results.map((r) => r.item);
+  // 根据搜索结果自动切换Tab（优先级：精确匹配 > 结果数量）
+  let targetTab = state.currentTab;
+  let results = [];
+
+  // 检查海外仓是否有精确匹配
+  if (warehouseResults.length > 0 && warehouseResults.some(w => 
+    w.code.toUpperCase() === query.toUpperCase())) {
+    targetTab = 'warehouses';
+    results = warehouseResults;
+  }
+  // 检查机场是否有精确匹配
+  else if (airportResults.length > 0 && airportResults.some(a => 
+    a.code.toUpperCase() === query.toUpperCase())) {
+    targetTab = 'airports';
+    results = airportResults;
+  }
+  // 检查港口是否有精确匹配
+  else if (portResults.length > 0 && portResults.some(p => 
+    p.code.toUpperCase() === query.toUpperCase())) {
+    targetTab = 'ports';
+    results = portResults;
+  }
+  // 无精确匹配，选择结果最多的Tab
+  else if (warehouseResults.length >= airportResults.length && warehouseResults.length >= portResults.length && warehouseResults.length > 0) {
+    targetTab = 'warehouses';
+    results = warehouseResults;
+  } else if (portResults.length >= airportResults.length && portResults.length > 0) {
+    targetTab = 'ports';
+    results = portResults;
+  } else if (airportResults.length > 0) {
+    targetTab = 'airports';
+    results = airportResults;
   }
 
-  state.filteredNodes = filtered;
-  renderResults();
+  // 如果需要切换Tab，更新UI（不重新触发applyFilters）
+  if (targetTab !== state.currentTab) {
+    state.currentTab = targetTab;
+    tabAirports.classList.toggle('hub-tab--active', targetTab === 'airports');
+    tabPorts.classList.toggle('hub-tab--active', targetTab === 'ports');
+    tabWarehouses.classList.toggle('hub-tab--active', targetTab === 'warehouses');
+  }
+
+  // 渲染结果
+  state.filteredNodes = results;
   
-  // 优化：只有搜索时才显示标记，默认不显示任何标记
-  if (query) {
-    // 有搜索词时显示匹配的标记（限制数量）
-    const mapNodes = filtered.slice(0, 500);
-    mapAdapter.setMarkers(mapNodes);
-  } else {
-    // 无搜索词时不显示标记，提升加载速度
+  if (targetTab === 'warehouses') {
+    renderWarehouseSearchResults(results);
     mapAdapter.setMarkers([]);
+    // 如果只有一个结果，自动跳转到地图
+    if (results.length === 1) {
+      mapAdapter.focusOnCoords(results[0].lat, results[0].lng, 12);
+    }
+  } else {
+    renderSearchResults();
+    const mapNodes = results.slice(0, 500);
+    mapAdapter.setMarkers(mapNodes);
+    // 如果只有一个结果，自动跳转到地图
+    if (results.length === 1) {
+      mapAdapter.focusOnCoords(results[0].lat, results[0].lng, 12);
+    }
   }
+}
+
+// 在机场或港口中搜索
+function searchInNodes(query, type) {
+  const nodes = state.allNodes.filter(n => n.type === type);
+  const fuse = new Fuse(nodes, fuseOptions);
+  const results = fuse.search(query);
+  return results.map(r => r.item);
 }
 
 // 搜索海外仓数据
