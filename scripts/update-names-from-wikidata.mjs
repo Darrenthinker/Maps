@@ -1,5 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
+import * as OpenCC from "opencc-js";
+
+// 繁体转简体转换器
+const converter = OpenCC.Converter({ from: "tw", to: "cn" });
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "public", "data");
@@ -44,8 +48,10 @@ function normalizeCode(value) {
 function buildAirportNameMap(rows) {
   const map = new Map();
   for (const row of rows) {
-    const zh = row.zhLabel?.value?.trim();
+    let zh = row.zhLabel?.value?.trim();
     if (!zh) continue;
+    // 繁体转简体
+    zh = converter(zh);
     const iata = normalizeCode(row.iata?.value);
     const icao = normalizeCode(row.icao?.value);
     if (iata) map.set(iata, zh);
@@ -57,8 +63,10 @@ function buildAirportNameMap(rows) {
 function buildPortNameMap(rows) {
   const map = new Map();
   for (const row of rows) {
-    const zh = row.zhLabel?.value?.trim();
+    let zh = row.zhLabel?.value?.trim();
     if (!zh) continue;
+    // 繁体转简体
+    zh = converter(zh);
     const locode = normalizeCode(row.locode?.value);
     if (!locode) continue;
     const normalized = locode.replace(/\s+/g, "");

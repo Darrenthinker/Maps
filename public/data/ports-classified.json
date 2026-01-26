@@ -961,7 +961,7 @@
                   "city": "Huludao",
                   "lat": 40.75,
                   "lng": 120.85,
-                  "nameZh": "葫蘆島港"
+                  "nameZh": "葫芦岛港"
                 },
                 {
                   "code": "CNHUH",
@@ -2853,7 +2853,7 @@
                   "city": "AmagasakiNishinomiyaAshiya",
                   "lat": 34.7167,
                   "lng": 135.4167,
-                  "nameZh": "尼崎西宮蘆屋港"
+                  "nameZh": "尼崎西宫芦屋港"
                 },
                 {
                   "code": "JPAOM",
@@ -3598,7 +3598,7 @@
                   "city": "Yokosuka",
                   "lat": 35.2833,
                   "lng": 139.6667,
-                  "nameZh": "橫須賀港"
+                  "nameZh": "横须贺港"
                 },
                 {
                   "code": "JPYRO",
@@ -3968,7 +3968,7 @@
                   "city": "Pyeongtaek",
                   "lat": 36.9667,
                   "lng": 127.1,
-                  "nameZh": "平澤唐津港"
+                  "nameZh": "平泽唐津港"
                 },
                 {
                   "code": "KRPUS",
@@ -7326,7 +7326,7 @@
                   "city": "Tanjung Pelepas",
                   "lat": 1.3667,
                   "lng": 103.55,
-                  "nameZh": "亞丹戎帕拉帕斯港"
+                  "nameZh": "亚丹戎帕拉帕斯港"
                 },
                 {
                   "code": "MYTRB",
@@ -10784,7 +10784,7 @@
                   "city": "Beirut",
                   "lat": 33.8333,
                   "lng": 35.4833,
-                  "nameZh": "貝魯特港"
+                  "nameZh": "贝鲁特港"
                 },
                 {
                   "code": "LBBRU",
@@ -11915,7 +11915,7 @@
                   "city": "Belfast",
                   "lat": 54.9833,
                   "lng": -5.9167,
-                  "nameZh": "貝爾法斯特港"
+                  "nameZh": "贝尔法斯特港"
                 },
                 {
                   "code": "GBBFB",
@@ -22296,7 +22296,7 @@
                   "city": "Marseille",
                   "lat": 43.3,
                   "lng": 5.4,
-                  "nameZh": "馬賽-福斯港"
+                  "nameZh": "马赛-福斯港"
                 },
                 {
                   "code": "FRMRW",
@@ -42128,7 +42128,7 @@
                   "city": "Lennusadam",
                   "lat": 59.45,
                   "lng": 24.7333,
-                  "nameZh": "水上飛機港博物館"
+                  "nameZh": "水上飞机港博物馆"
                 },
                 {
                   "code": "EELEP",
@@ -52277,7 +52277,7 @@
                   "city": "Cagliari",
                   "lat": 39.2167,
                   "lng": 9.1167,
-                  "nameZh": "卡利亞里港"
+                  "nameZh": "卡利亚里港"
                 },
                 {
                   "code": "ITCAS",
@@ -52639,7 +52639,7 @@
                   "city": "Genova",
                   "lat": 44.4167,
                   "lng": 8.95,
-                  "nameZh": "熱那亞港"
+                  "nameZh": "热那亚港"
                 },
                 {
                   "code": "ITGOO",
@@ -52843,7 +52843,7 @@
                   "city": "Livorno",
                   "lat": 43.55,
                   "lng": 10.3167,
-                  "nameZh": "利沃諾港"
+                  "nameZh": "利沃诺港"
                 },
                 {
                   "code": "ITLLT",
@@ -60798,7 +60798,7 @@
                   "city": "Baltimore",
                   "lat": 39.2833,
                   "lng": -76.6167,
-                  "nameZh": "巴爾的摩港"
+                  "nameZh": "巴尔的摩港"
                 },
                 {
                   "code": "USBB8",
@@ -61083,7 +61083,7 @@
                   "city": "Brownsville",
                   "lat": 25.9,
                   "lng": -97.4833,
-                  "nameZh": "布朗斯維爾港"
+                  "nameZh": "布朗斯维尔港"
                 },
                 {
                   "code": "USBS9",
@@ -64388,7 +64388,7 @@
                   "city": "Long Beach",
                   "lat": 33.7667,
                   "lng": -118.1833,
-                  "nameZh": "長堤港"
+                  "nameZh": "长堤港"
                 },
                 {
                   "code": "USLGK",
@@ -65475,7 +65475,7 @@
                   "city": "New York",
                   "lat": 40.7,
                   "lng": -74,
-                  "nameZh": "紐約和紐澤西港"
+                  "nameZh": "纽约和纽泽西港"
                 },
                 {
                   "code": "USNYI",
@@ -80333,7 +80333,7 @@
                   "city": "Dégrad des Cannes",
                   "lat": 4.8667,
                   "lng": -52.2667,
-                  "nameZh": "圭亞那港"
+                  "nameZh": "圭亚那港"
                 },
                 {
                   "code": "GFLCY",
@@ -80798,7 +80798,7 @@
                   "city": "Alger (Algiers)",
                   "lat": 36.75,
                   "lng": 3.05,
-                  "nameZh": "阿爾及爾港"
+                  "nameZh": "阿尔及尔港"
                 },
                 {
                   "code": "DZAZW",
