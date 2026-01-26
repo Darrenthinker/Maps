@@ -185,11 +185,27 @@ export function createLeafletAdapter(mapId) {
 
   // 用于地址搜索和机场/港口/海外仓定位
   let addressMarker = null;
+  let currentMarkerType = null;
+  let currentMarkerCategory = null;
+  
+  // 根据缩放级别计算图标大小
+  function getIconSizeByZoom(zoom) {
+    // 缩放级别越高（放大），图标越小；缩放级别越低（缩小），图标也保持较小
+    // 基准：zoom 12 时大小为 28px
+    if (zoom >= 14) return 24;      // 放大时小一点
+    if (zoom >= 12) return 28;      // 正常大小
+    if (zoom >= 10) return 26;      // 稍微缩小
+    if (zoom >= 8) return 24;       // 继续缩小
+    if (zoom >= 6) return 22;       // 更小
+    return 20;                       // 最小尺寸
+  }
   
   // 根据类型获取图标
-  function getMarkerIcon(type, category) {
+  function getMarkerIcon(type, category, zoom = 12) {
     let html = "📍";
     let className = "marker marker-address";
+    const size = getIconSizeByZoom(zoom);
+    const fontSize = Math.max(14, size - 6);
     
     if (type === 'airport') {
       html = "✈️";
@@ -201,7 +217,7 @@ export function createLeafletAdapter(mapId) {
       // 根据分类显示不同图标
       if (category === 'amazon' || (category && category.includes('亚马逊'))) {
         // Amazon 箭头 A logo
-        html = `<svg viewBox="0 0 100 100" width="28" height="28">
+        html = `<svg viewBox="0 0 100 100" width="${size}" height="${size}">
           <rect x="5" y="5" width="90" height="90" rx="8" fill="#232F3E"/>
           <text x="50" y="62" font-family="Arial Black, sans-serif" font-size="50" font-weight="900" fill="white" text-anchor="middle">a</text>
           <path d="M30 72 Q50 82 70 72" stroke="#FF9900" stroke-width="4" fill="none" stroke-linecap="round"/>
@@ -210,7 +226,7 @@ export function createLeafletAdapter(mapId) {
         className = "marker marker-type marker-warehouse-amazon";
       } else if (category === 'walmart' || (category && category.includes('沃尔玛'))) {
         // Walmart spark logo
-        html = `<svg viewBox="0 0 100 100" width="28" height="28">
+        html = `<svg viewBox="0 0 100 100" width="${size}" height="${size}">
           <rect x="5" y="5" width="90" height="90" rx="8" fill="#0071CE"/>
           <g transform="translate(50,50)">
             <rect x="-4" y="-28" width="8" height="22" rx="4" fill="#FFC220"/>
@@ -230,12 +246,24 @@ export function createLeafletAdapter(mapId) {
     }
     
     return L.divIcon({
-      className: className,
+      className: `${className} marker-zoom-${zoom >= 12 ? 'large' : zoom >= 8 ? 'medium' : 'small'}`,
       html: html,
-      iconSize: [28, 28],
-      iconAnchor: [14, 14]
+      iconSize: [size, size],
+      iconAnchor: [size / 2, size / 2]
     });
   }
+  
+  // 更新标记图标（缩放时调用）
+  function updateMarkerIcon() {
+    if (addressMarker && currentMarkerType) {
+      const zoom = map.getZoom();
+      const newIcon = getMarkerIcon(currentMarkerType, currentMarkerCategory, zoom);
+      addressMarker.setIcon(newIcon);
+    }
+  }
+  
+  // 监听缩放事件，动态调整图标大小
+  map.on('zoomend', updateMarkerIcon);
   
   function focusOnCoords(lat, lng, zoom = 10, type = null, category = null) {
     map.setView([lat, lng], zoom, { animate: true });
@@ -245,8 +273,12 @@ export function createLeafletAdapter(mapId) {
       map.removeLayer(addressMarker);
     }
     
+    // 保存当前标记类型
+    currentMarkerType = type;
+    currentMarkerCategory = category;
+    
     // 添加新的标记（根据类型显示不同图标，禁用阴影）
-    const icon = getMarkerIcon(type, category);
+    const icon = getMarkerIcon(type, category, zoom);
     addressMarker = L.marker([lat, lng], { 
       icon,
       shadowPane: null  // 禁用阴影

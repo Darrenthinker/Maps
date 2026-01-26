@@ -785,17 +785,26 @@ body {
 
 /* 机场/港口/海外仓标记图标 */
 .marker-type {
-  width: 28px !important;
-  height: 28px !important;
   background: transparent;
   border: none;
   box-shadow: none;
-  font-size: 22px;
-  line-height: 28px;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: none;
+}
+
+/* 根据缩放级别调整字体大小 */
+.marker-type.marker-zoom-large {
+  font-size: 22px;
+}
+
+.marker-type.marker-zoom-medium {
+  font-size: 18px;
+}
+
+.marker-type.marker-zoom-small {
+  font-size: 14px;
 }
 
 /* 隐藏 Leaflet 默认标记阴影 */
