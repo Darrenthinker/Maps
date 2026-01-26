@@ -117,13 +117,18 @@ async function main() {
     throw new Error(`Missing file: ${PORTS_PATH}`);
   }
 
-  console.log("Fetching airport names from Wikidata...");
+  // 使用 zh-cn 获取简体中文，如果没有则尝试 zh-hans，最后尝试 zh
+  console.log("Fetching airport names from Wikidata (简体中文)...");
   const airportRows = await fetchPaged((limit, offset) => `
     SELECT ?iata ?icao ?zhLabel WHERE {
       ?item wdt:P31/wdt:P279* wd:Q1248784.
       OPTIONAL { ?item wdt:P238 ?iata. }
       OPTIONAL { ?item wdt:P239 ?icao. }
-      ?item rdfs:label ?zhLabel FILTER(LANG(?zhLabel) = "zh")
+      OPTIONAL { ?item rdfs:label ?zhcn FILTER(LANG(?zhcn) = "zh-cn") }
+      OPTIONAL { ?item rdfs:label ?zhhans FILTER(LANG(?zhhans) = "zh-hans") }
+      OPTIONAL { ?item rdfs:label ?zh FILTER(LANG(?zh) = "zh") }
+      BIND(COALESCE(?zhcn, ?zhhans, ?zh) AS ?zhLabel)
+      FILTER(BOUND(?zhLabel))
       FILTER(BOUND(?iata) || BOUND(?icao))
     }
     LIMIT ${limit}
@@ -132,12 +137,16 @@ async function main() {
   const airportNameMap = buildAirportNameMap(airportRows);
   console.log(`Airport names loaded: ${airportNameMap.size}`);
 
-  console.log("Fetching port names from Wikidata...");
+  console.log("Fetching port names from Wikidata (简体中文)...");
   const portRows = await fetchPaged((limit, offset) => `
     SELECT ?locode ?zhLabel WHERE {
       ?item wdt:P31/wdt:P279* wd:Q44782.
       ?item wdt:P1937 ?locode.
-      ?item rdfs:label ?zhLabel FILTER(LANG(?zhLabel) = "zh")
+      OPTIONAL { ?item rdfs:label ?zhcn FILTER(LANG(?zhcn) = "zh-cn") }
+      OPTIONAL { ?item rdfs:label ?zhhans FILTER(LANG(?zhhans) = "zh-hans") }
+      OPTIONAL { ?item rdfs:label ?zh FILTER(LANG(?zh) = "zh") }
+      BIND(COALESCE(?zhcn, ?zhhans, ?zh) AS ?zhLabel)
+      FILTER(BOUND(?zhLabel))
     }
     LIMIT ${limit}
     OFFSET ${offset}

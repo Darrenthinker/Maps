@@ -3547,7 +3547,7 @@
                   "city": "Kobe",
                   "lat": 34.6833,
                   "lng": 135.1667,
-                  "nameZh": "神戶港"
+                  "nameZh": "神户港"
                 },
                 {
                   "code": "JPUUN",
@@ -3590,7 +3590,7 @@
                   "city": "Yokohama",
                   "lat": 35.45,
                   "lng": 139.65,
-                  "nameZh": "橫濱港"
+                  "nameZh": "横滨港"
                 },
                 {
                   "code": "JPYOS",
@@ -5981,7 +5981,7 @@
                   "city": "Ho Chi Minh City",
                   "lat": 10.7667,
                   "lng": 106.6667,
-                  "nameZh": "西貢港"
+                  "nameZh": "西贡港"
                 },
                 {
                   "code": "VNSH9",
@@ -8797,7 +8797,7 @@
                   "city": "Karachi Container Terminal",
                   "lat": 24.8333,
                   "lng": 66.9667,
-                  "nameZh": "卡拉奇港"
+                  "nameZh": "KARACHI"
                 },
                 {
                   "code": "PKKIA",
@@ -10162,7 +10162,7 @@
                   "city": "Jeddah",
                   "lat": 21.4667,
                   "lng": 39.1667,
-                  "nameZh": "吉達港"
+                  "nameZh": "吉达港"
                 },
                 {
                   "code": "SAJUB",
@@ -21709,7 +21709,7 @@
                   "city": "Le Havre",
                   "lat": 49.5,
                   "lng": 0.1,
-                  "nameZh": "阿弗尔港"
+                  "nameZh": "勒阿弗尔港口"
                 },
                 {
                   "code": "FRLEZ",
@@ -29703,7 +29703,7 @@
                   "city": "Antwerpen",
                   "lat": 51.2167,
                   "lng": 4.4167,
-                  "nameZh": "安特衛普港"
+                  "nameZh": "安特卫普港"
                 },
                 {
                   "code": "BEAPL",
@@ -44659,7 +44659,8 @@
                   "name": "Vuosaari (Nordsjö)",
                   "city": "Vuosaari (Nordsjö)",
                   "lat": 60.2167,
-                  "lng": 25.1833
+                  "lng": 25.1833,
+                  "nameZh": "乌萨里港"
                 },
                 {
                   "code": "FIVTF",
@@ -57402,7 +57403,7 @@
                   "city": "Pionerskiy",
                   "lat": 54.95,
                   "lng": 20.2167,
-                  "nameZh": "皮奧涅爾斯基"
+                  "nameZh": "皮奥涅尔斯基"
                 },
                 {
                   "code": "RUPOK",
@@ -57530,7 +57531,7 @@
                   "city": "Svetlyy",
                   "lat": 54.7,
                   "lng": 20.5,
-                  "nameZh": "斯韋特雷"
+                  "nameZh": "斯韦特雷"
                 },
                 {
                   "code": "RUSZZ",
@@ -58053,7 +58054,7 @@
                   "city": "Nowy Port/Gdansk",
                   "lat": 54.4,
                   "lng": 18.6667,
-                  "nameZh": "新港"
+                  "nameZh": "纽法瓦泽"
                 },
                 {
                   "code": "PLNWA",
@@ -64306,7 +64307,7 @@
                   "city": "Los Angeles",
                   "lat": 34.05,
                   "lng": -118.25,
-                  "nameZh": "洛杉磯港"
+                  "nameZh": "洛杉矶港务局"
                 },
                 {
                   "code": "USLB2",
@@ -80015,7 +80016,7 @@
                   "city": "Callao",
                   "lat": -12.05,
                   "lng": -77.1333,
-                  "nameZh": "卡亞俄"
+                  "nameZh": "卡亚俄"
                 },
                 {
                   "code": "PECON",
@@ -80332,7 +80333,7 @@
                   "city": "Dégrad des Cannes",
                   "lat": 4.8667,
                   "lng": -52.2667,
-                  "nameZh": "卡宴"
+                  "nameZh": "圭亞那港"
                 },
                 {
                   "code": "GFLCY",
@@ -81709,7 +81710,7 @@
                   "city": "Dar es Salaam",
                   "lat": -6.8,
                   "lng": 39.2833,
-                  "nameZh": "達累斯薩拉姆港"
+                  "nameZh": "达累斯萨拉姆港"
                 },
                 {
                   "code": "TZIKW",
