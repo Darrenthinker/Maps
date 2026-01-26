@@ -178,6 +178,12 @@ body {
   transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
+.search input::placeholder {
+  font-size: 12px;
+  color: #b0b8c4;
+  font-weight: 400;
+}
+
 .search input:focus {
   outline: none;
   border-color: rgba(37, 99, 235, 0.6);
