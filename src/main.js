@@ -1030,12 +1030,13 @@ function renderSearchResults() {
       const intlLabel = node.intl ? "🌐" : "";
       // 获取中文名称
       const zhName = getChineseName(node);
+      const nameZh = zhName || '';
       // 显示格式：有中文时显示 "中文名 / 英文名"
       const displayName = zhName 
         ? `<span class="result-name-zh">${zhName}</span> <span class="result-name-divider">/</span> <span class="result-name-en">${node.name}</span>`
         : node.name;
       return `
-        <li class="result-item result-item--search" data-lat="${node.lat}" data-lng="${node.lng}" data-type="${type}">
+        <li class="result-item result-item--search" data-lat="${node.lat}" data-lng="${node.lng}" data-type="${type}" data-code="${code}" data-name="${node.name}" data-name-zh="${nameZh}" data-intl="${node.intl ? 1 : 0}">
           <div class="result-item__title">${intlLabel} ${code} · ${displayName}</div>
           <div class="result-item__meta">${node.city}, ${node.country} · ${sub}</div>
         </li>
@@ -1655,9 +1656,16 @@ function wireEvents() {
       const type = item.dataset.type || 'airport';
       const category = item.dataset.category || null;
       if (!isNaN(lat) && !isNaN(lng)) {
+        // 构建节点信息用于 popup 显示
+        const nodeInfo = {
+          code: item.dataset.code || '',
+          name: item.dataset.name || '',
+          nameZh: item.dataset.nameZh || '',
+          intl: item.dataset.intl === '1'
+        };
         // 清除批量标记，避免与类型图标重叠
         mapAdapter.setMarkers([]);
-        mapAdapter.focusOnCoords(lat, lng, 12, type, category);
+        mapAdapter.focusOnCoords(lat, lng, 12, type, category, nodeInfo);
         if (window.innerWidth <= 768) {
           app.classList.remove("app--sidebar-open");
         }
