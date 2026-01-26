@@ -266,8 +266,6 @@ export function createLeafletAdapter(mapId) {
   map.on('zoomend', updateMarkerIcon);
   
   function focusOnCoords(lat, lng, zoom = 10, type = null, category = null, nodeInfo = null) {
-    map.setView([lat, lng], zoom, { animate: true });
-    
     // 移除旧的地址标记
     if (addressMarker) {
       map.removeLayer(addressMarker);
@@ -311,8 +309,22 @@ export function createLeafletAdapter(mapId) {
       addressMarker.bindPopup(popupContent, {
         className: 'custom-popup custom-popup--apple',
         closeButton: false,
-        offset: [0, -5]
-      }).openPopup();
+        offset: [0, -5],
+        autoPan: false  // 禁用自动平移，我们手动控制
+      });
+      
+      // 先设置视图，向上偏移一点以留出 popup 空间
+      // 计算偏移：popup 高度约 80px，转换为纬度偏移
+      const offsetLat = 0.015 * Math.pow(2, 12 - zoom); // 根据缩放级别调整偏移
+      map.setView([lat + offsetLat, lng], zoom, { animate: true });
+      
+      // 延迟打开 popup，确保地图已居中
+      setTimeout(() => {
+        addressMarker.openPopup();
+      }, 300);
+    } else {
+      // 无 popup 时直接居中
+      map.setView([lat, lng], zoom, { animate: true });
     }
   }
 
