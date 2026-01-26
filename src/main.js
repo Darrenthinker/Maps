@@ -4,6 +4,7 @@ import { createMapAdapter } from "./mapAdapters/index.js";
 
 const app = document.querySelector(".app");
 const searchInput = document.getElementById("searchInput");
+const searchSuggestions = document.getElementById("searchSuggestions");
 const resultsCount = document.getElementById("resultsCount");
 const resultsList = document.getElementById("resultsList");
 const sidebarToggle = document.getElementById("sidebarToggle");
@@ -1349,6 +1350,125 @@ function updateTabCounts() {
   }
 }
 
+// ========== 搜索联想功能 ==========
+
+function showSearchSuggestions() {
+  const query = searchInput.value.trim();
+  
+  if (query.length < 1) {
+    hideSuggestions();
+    applyFilters();
+    return;
+  }
+  
+  // 获取所有类型的搜索结果（限制数量）
+  const airportResults = searchInNodes(query, 'airport').slice(0, 5);
+  const portResults = searchInNodes(query, 'port').slice(0, 5);
+  const warehouseResults = searchWarehouses(query).slice(0, 5);
+  
+  // 合并结果
+  const allResults = [
+    ...airportResults.map(r => ({ ...r, _type: 'airport' })),
+    ...portResults.map(r => ({ ...r, _type: 'port' })),
+    ...warehouseResults.map(r => ({ ...r, _type: 'warehouse' }))
+  ];
+  
+  if (allResults.length === 0) {
+    hideSuggestions();
+    applyFilters();
+    return;
+  }
+  
+  // 按相关性排序（精确匹配优先）
+  const qUpper = query.toUpperCase();
+  allResults.sort((a, b) => {
+    const aExact = (a.code || '').toUpperCase() === qUpper ? 0 : 1;
+    const bExact = (b.code || '').toUpperCase() === qUpper ? 0 : 1;
+    return aExact - bExact;
+  });
+  
+  // 渲染联想列表（最多显示10个）
+  const displayResults = allResults.slice(0, 10);
+  
+  searchSuggestions.innerHTML = displayResults.map((item, index) => {
+    const code = item.code || '';
+    const name = item.name || '';
+    const highlightedCode = highlightMatch(code, query);
+    
+    let meta = '';
+    let tagClass = '';
+    let tagText = '';
+    
+    if (item._type === 'airport') {
+      meta = `${item.city}, ${item.country}`;
+      tagClass = 'suggestion-item__tag--airport';
+      tagText = '机场';
+    } else if (item._type === 'port') {
+      meta = `${item.city}, ${item.country}`;
+      tagClass = 'suggestion-item__tag--port';
+      tagText = '港口';
+    } else {
+      meta = `${item.city} · ${item.categoryName}`;
+      tagClass = 'suggestion-item__tag--warehouse';
+      tagText = '海外仓';
+    }
+    
+    return `
+      <div class="suggestion-item" data-index="${index}" data-lat="${item.lat}" data-lng="${item.lng}" data-type="${item._type}" data-code="${code}">
+        <div class="suggestion-item__title">
+          ${highlightedCode} · ${name}
+          <span class="suggestion-item__tag ${tagClass}">${tagText}</span>
+        </div>
+        <div class="suggestion-item__meta">${meta}</div>
+      </div>
+    `;
+  }).join('');
+  
+  searchSuggestions.classList.add('search-suggestions--visible');
+  
+  // 绑定点击事件
+  searchSuggestions.querySelectorAll('.suggestion-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const lat = parseFloat(item.dataset.lat);
+      const lng = parseFloat(item.dataset.lng);
+      const type = item.dataset.type;
+      const code = item.dataset.code;
+      
+      // 更新输入框
+      searchInput.value = code;
+      hideSuggestions();
+      
+      // 切换到对应Tab
+      if (type === 'airport') {
+        switchHubTab('airports');
+      } else if (type === 'port') {
+        switchHubTab('ports');
+      } else {
+        switchHubTab('warehouses');
+      }
+      
+      // 跳转地图
+      if (!isNaN(lat) && !isNaN(lng)) {
+        mapAdapter.focusOnCoords(lat, lng, 12);
+      }
+      
+      // 应用过滤
+      applyFilters();
+    });
+  });
+}
+
+function hideSuggestions() {
+  searchSuggestions.classList.remove('search-suggestions--visible');
+  searchSuggestions.innerHTML = '';
+}
+
+function highlightMatch(text, query) {
+  if (!query) return text;
+  const regex = new RegExp(`(${query})`, 'gi');
+  return text.replace(regex, '<span class="highlight">$1</span>');
+}
+
 function wireEvents() {
   // 标签切换
   tabHubs.addEventListener("click", () => {
@@ -1375,11 +1495,56 @@ function wireEvents() {
   // 初始化地址搜索（使用服务端代理）
   initAddressSearch();
   
-  // 机场/港口搜索
+  // 机场/港口/海外仓搜索 - 带联想功能
   let debounceTimer;
+  let suggestionIndex = -1;
+  
   searchInput.addEventListener("input", () => {
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(applyFilters, 150);
+    suggestionIndex = -1;
+    debounceTimer = setTimeout(() => {
+      showSearchSuggestions();
+    }, 100);
+  });
+  
+  // 键盘导航联想列表
+  searchInput.addEventListener("keydown", (e) => {
+    const items = searchSuggestions.querySelectorAll(".suggestion-item");
+    if (items.length === 0) return;
+    
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      suggestionIndex = Math.min(suggestionIndex + 1, items.length - 1);
+      updateSuggestionSelection(items);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      suggestionIndex = Math.max(suggestionIndex - 1, 0);
+      updateSuggestionSelection(items);
+    } else if (e.key === "Enter" && suggestionIndex >= 0) {
+      e.preventDefault();
+      items[suggestionIndex].click();
+    } else if (e.key === "Escape") {
+      hideSuggestions();
+    }
+  });
+  
+  function updateSuggestionSelection(items) {
+    items.forEach((item, i) => {
+      item.classList.toggle("suggestion-item--selected", i === suggestionIndex);
+    });
+  }
+  
+  // 点击外部关闭联想
+  document.addEventListener("click", (e) => {
+    if (!searchInput.contains(e.target) && !searchSuggestions.contains(e.target)) {
+      hideSuggestions();
+    }
+  });
+  
+  searchInput.addEventListener("focus", () => {
+    if (searchInput.value.trim().length >= 1) {
+      showSearchSuggestions();
+    }
   });
   
   resultsList.addEventListener("click", (event) => {

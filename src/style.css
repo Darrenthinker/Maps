@@ -444,6 +444,88 @@ body {
   color: #3b82f6;
 }
 
+/* ========== 搜索联想下拉框 ========== */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  margin-top: 4px;
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+}
+
+.search-suggestions--visible {
+  display: block;
+}
+
+.suggestion-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  transition: background 0.15s ease;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item--selected {
+  background: #f1f5f9;
+}
+
+.suggestion-item__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.suggestion-item__title .highlight {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.suggestion-item__meta {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.suggestion-item__tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+.suggestion-item__tag--airport {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.suggestion-item__tag--port {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.suggestion-item__tag--warehouse {
+  background: #d1fae5;
+  color: #047857;
+}
+
+#hubSearch {
+  position: relative;
+}
+
 .view-modes {
   margin-top: 14px;
   display: flex;

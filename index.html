@@ -46,7 +46,8 @@
             <button id="tabAddress" class="search-tab" type="button">地址搜索</button>
           </div>
           <div id="hubSearch" class="search-panel">
-            <input id="searchInput" type="text" placeholder="搜索 IATA / ICAO / 城市 / 国家（支持中英文）" />
+            <input id="searchInput" type="text" placeholder="搜索 IATA / ICAO / 城市 / 国家（支持中英文）" autocomplete="off" />
+            <div id="searchSuggestions" class="search-suggestions"></div>
             <!-- 三个Tab切换：机场 / 港口 / 海外仓 -->
             <div class="hub-tabs">
               <button id="tabAirports" class="hub-tab hub-tab--active" type="button">
