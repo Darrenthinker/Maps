@@ -852,11 +852,14 @@ function applyFilters() {
 }
 
 // 在机场或港口中搜索（同时搜索分类数据）
+// 支持：代码、名称、城市、国家（中英文）
 function searchInNodes(query, type) {
   const q = query.toLowerCase();
   const qUpper = query.toUpperCase();
   let exactMatches = [];  // 精确匹配（代码完全相同）
   let prefixMatches = []; // 前缀匹配（代码以搜索词开头）
+  let cityMatches = [];   // 城市匹配
+  let countryMatches = []; // 国家匹配
   let otherMatches = [];  // 其他匹配
   
   if (type === 'airport' && state.airportsClassified) {
@@ -864,11 +867,18 @@ function searchInNodes(query, type) {
     for (const continent of Object.values(state.airportsClassified.continents)) {
       for (const region of Object.values(continent.regions)) {
         for (const country of Object.values(region.countries)) {
+          // 检查是否匹配国家名（中文或英文）
+          const countryNameZh = (country.name || '').toLowerCase();
+          const countryNameEn = (country.nameEn || '').toLowerCase();
+          const countryCode = (country.code || '').toUpperCase();
+          const isCountryMatch = countryNameZh.includes(q) || countryNameEn.includes(q) || countryCode === qUpper;
+          
           for (const airport of country.airports) {
             const code = (airport.code || '').toUpperCase();
             const icao = (airport.icao || '').toUpperCase();
             const iata = (airport.iata || '').toUpperCase();
             const name = (airport.name || '').toLowerCase();
+            const nameZh = (airport.nameZh || '').toLowerCase();
             const city = (airport.city || '').toLowerCase();
             
             const item = {
@@ -885,8 +895,16 @@ function searchInNodes(query, type) {
             else if (code.startsWith(qUpper) || icao.startsWith(qUpper) || iata.startsWith(qUpper)) {
               prefixMatches.push(item);
             }
-            // 其他匹配（名称、城市包含搜索词）
-            else if (name.includes(q) || city.includes(q)) {
+            // 城市匹配（精确优先）
+            else if (city === q || city.startsWith(q)) {
+              cityMatches.push(item);
+            }
+            // 国家匹配
+            else if (isCountryMatch) {
+              countryMatches.push(item);
+            }
+            // 其他匹配（名称包含搜索词）
+            else if (name.includes(q) || nameZh.includes(q) || city.includes(q)) {
               otherMatches.push(item);
             }
           }
@@ -898,9 +916,16 @@ function searchInNodes(query, type) {
     for (const continent of Object.values(state.portsClassified.continents)) {
       for (const region of Object.values(continent.regions)) {
         for (const country of Object.values(region.countries)) {
+          // 检查是否匹配国家名
+          const countryNameZh = (country.name || '').toLowerCase();
+          const countryNameEn = (country.nameEn || '').toLowerCase();
+          const countryCode = (country.code || '').toUpperCase();
+          const isCountryMatch = countryNameZh.includes(q) || countryNameEn.includes(q) || countryCode === qUpper;
+          
           for (const port of country.ports) {
             const code = (port.code || '').toUpperCase();
             const name = (port.name || '').toLowerCase();
+            const nameZh = (port.nameZh || '').toLowerCase();
             const city = (port.city || '').toLowerCase();
             
             const item = {
@@ -917,8 +942,16 @@ function searchInNodes(query, type) {
             else if (code.startsWith(qUpper)) {
               prefixMatches.push(item);
             }
-            // 其他匹配（名称、城市包含搜索词）
-            else if (name.includes(q) || city.includes(q)) {
+            // 城市匹配
+            else if (city === q || city.startsWith(q)) {
+              cityMatches.push(item);
+            }
+            // 国家匹配
+            else if (isCountryMatch) {
+              countryMatches.push(item);
+            }
+            // 其他匹配
+            else if (name.includes(q) || nameZh.includes(q) || city.includes(q)) {
               otherMatches.push(item);
             }
           }
@@ -927,8 +960,10 @@ function searchInNodes(query, type) {
     }
   }
   
-  // 返回排序后的结果：精确匹配 > 前缀匹配 > 其他匹配
-  return [...exactMatches, ...prefixMatches, ...otherMatches];
+  // 返回排序后的结果：精确匹配 > 前缀匹配 > 城市匹配 > 国家匹配 > 其他匹配
+  // 国家匹配时限制返回前100个（避免返回太多）
+  const limitedCountryMatches = countryMatches.slice(0, 100);
+  return [...exactMatches, ...prefixMatches, ...cityMatches, ...limitedCountryMatches, ...otherMatches];
 }
 
 // 搜索海外仓数据
