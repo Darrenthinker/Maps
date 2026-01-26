@@ -1,0 +1,431 @@
+{
+  "version": "2026.01",
+  "description": "世界大洲/区域/国家分类结构 - 用于机场数据分类",
+  "lastUpdated": "2026-01-26",
+  "continents": {
+    "AS": {
+      "name": "亚洲",
+      "nameEn": "Asia",
+      "regions": {
+        "EA": {
+          "name": "东亚",
+          "nameEn": "East Asia",
+          "countries": {
+            "CN": {"name": "中国", "nameEn": "China"},
+            "JP": {"name": "日本", "nameEn": "Japan"},
+            "KR": {"name": "韩国", "nameEn": "South Korea"},
+            "KP": {"name": "朝鲜", "nameEn": "North Korea"},
+            "MN": {"name": "蒙古", "nameEn": "Mongolia"},
+            "HK": {"name": "香港", "nameEn": "Hong Kong"},
+            "MO": {"name": "澳门", "nameEn": "Macau"},
+            "TW": {"name": "台湾", "nameEn": "Taiwan"},
+            "XP": {"name": "南海诸岛", "nameEn": "South China Sea Islands"}
+          }
+        },
+        "SEA": {
+          "name": "东南亚",
+          "nameEn": "Southeast Asia",
+          "countries": {
+            "TH": {"name": "泰国", "nameEn": "Thailand"},
+            "VN": {"name": "越南", "nameEn": "Vietnam"},
+            "MY": {"name": "马来西亚", "nameEn": "Malaysia"},
+            "SG": {"name": "新加坡", "nameEn": "Singapore"},
+            "ID": {"name": "印度尼西亚", "nameEn": "Indonesia"},
+            "PH": {"name": "菲律宾", "nameEn": "Philippines"},
+            "MM": {"name": "缅甸", "nameEn": "Myanmar"},
+            "KH": {"name": "柬埔寨", "nameEn": "Cambodia"},
+            "LA": {"name": "老挝", "nameEn": "Laos"},
+            "BN": {"name": "文莱", "nameEn": "Brunei"},
+            "TL": {"name": "东帝汶", "nameEn": "Timor-Leste"}
+          }
+        },
+        "SA": {
+          "name": "南亚",
+          "nameEn": "South Asia",
+          "countries": {
+            "IN": {"name": "印度", "nameEn": "India"},
+            "PK": {"name": "巴基斯坦", "nameEn": "Pakistan"},
+            "BD": {"name": "孟加拉国", "nameEn": "Bangladesh"},
+            "LK": {"name": "斯里兰卡", "nameEn": "Sri Lanka"},
+            "NP": {"name": "尼泊尔", "nameEn": "Nepal"},
+            "BT": {"name": "不丹", "nameEn": "Bhutan"},
+            "MV": {"name": "马尔代夫", "nameEn": "Maldives"},
+            "AF": {"name": "阿富汗", "nameEn": "Afghanistan"}
+          }
+        },
+        "WA": {
+          "name": "西亚/中东",
+          "nameEn": "West Asia / Middle East",
+          "countries": {
+            "AE": {"name": "阿联酋", "nameEn": "United Arab Emirates"},
+            "SA": {"name": "沙特阿拉伯", "nameEn": "Saudi Arabia"},
+            "TR": {"name": "土耳其", "nameEn": "Turkey"},
+            "IL": {"name": "以色列", "nameEn": "Israel"},
+            "IR": {"name": "伊朗", "nameEn": "Iran"},
+            "IQ": {"name": "伊拉克", "nameEn": "Iraq"},
+            "JO": {"name": "约旦", "nameEn": "Jordan"},
+            "LB": {"name": "黎巴嫩", "nameEn": "Lebanon"},
+            "SY": {"name": "叙利亚", "nameEn": "Syria"},
+            "KW": {"name": "科威特", "nameEn": "Kuwait"},
+            "QA": {"name": "卡塔尔", "nameEn": "Qatar"},
+            "BH": {"name": "巴林", "nameEn": "Bahrain"},
+            "OM": {"name": "阿曼", "nameEn": "Oman"},
+            "YE": {"name": "也门", "nameEn": "Yemen"},
+            "PS": {"name": "巴勒斯坦", "nameEn": "Palestine"},
+            "CY": {"name": "塞浦路斯", "nameEn": "Cyprus"},
+            "GE": {"name": "格鲁吉亚", "nameEn": "Georgia"},
+            "AM": {"name": "亚美尼亚", "nameEn": "Armenia"},
+            "AZ": {"name": "阿塞拜疆", "nameEn": "Azerbaijan"}
+          }
+        },
+        "CA": {
+          "name": "中亚",
+          "nameEn": "Central Asia",
+          "countries": {
+            "KZ": {"name": "哈萨克斯坦", "nameEn": "Kazakhstan"},
+            "UZ": {"name": "乌兹别克斯坦", "nameEn": "Uzbekistan"},
+            "TM": {"name": "土库曼斯坦", "nameEn": "Turkmenistan"},
+            "KG": {"name": "吉尔吉斯斯坦", "nameEn": "Kyrgyzstan"},
+            "TJ": {"name": "塔吉克斯坦", "nameEn": "Tajikistan"}
+          }
+        }
+      }
+    },
+    "EU": {
+      "name": "欧洲",
+      "nameEn": "Europe",
+      "regions": {
+        "WE": {
+          "name": "西欧",
+          "nameEn": "Western Europe",
+          "countries": {
+            "GB": {"name": "英国", "nameEn": "United Kingdom"},
+            "FR": {"name": "法国", "nameEn": "France"},
+            "DE": {"name": "德国", "nameEn": "Germany"},
+            "NL": {"name": "荷兰", "nameEn": "Netherlands"},
+            "BE": {"name": "比利时", "nameEn": "Belgium"},
+            "LU": {"name": "卢森堡", "nameEn": "Luxembourg"},
+            "IE": {"name": "爱尔兰", "nameEn": "Ireland"},
+            "AT": {"name": "奥地利", "nameEn": "Austria"},
+            "CH": {"name": "瑞士", "nameEn": "Switzerland"},
+            "MC": {"name": "摩纳哥", "nameEn": "Monaco"},
+            "LI": {"name": "列支敦士登", "nameEn": "Liechtenstein"},
+            "GG": {"name": "根西岛", "nameEn": "Guernsey"},
+            "JE": {"name": "泽西岛", "nameEn": "Jersey"},
+            "IM": {"name": "马恩岛", "nameEn": "Isle of Man"},
+            "GI": {"name": "直布罗陀", "nameEn": "Gibraltar"}
+          }
+        },
+        "NE": {
+          "name": "北欧",
+          "nameEn": "Northern Europe",
+          "countries": {
+            "SE": {"name": "瑞典", "nameEn": "Sweden"},
+            "NO": {"name": "挪威", "nameEn": "Norway"},
+            "FI": {"name": "芬兰", "nameEn": "Finland"},
+            "DK": {"name": "丹麦", "nameEn": "Denmark"},
+            "IS": {"name": "冰岛", "nameEn": "Iceland"},
+            "EE": {"name": "爱沙尼亚", "nameEn": "Estonia"},
+            "LV": {"name": "拉脱维亚", "nameEn": "Latvia"},
+            "LT": {"name": "立陶宛", "nameEn": "Lithuania"},
+            "FO": {"name": "法罗群岛", "nameEn": "Faroe Islands"},
+            "GL": {"name": "格陵兰", "nameEn": "Greenland"}
+          }
+        },
+        "SE": {
+          "name": "南欧",
+          "nameEn": "Southern Europe",
+          "countries": {
+            "IT": {"name": "意大利", "nameEn": "Italy"},
+            "ES": {"name": "西班牙", "nameEn": "Spain"},
+            "PT": {"name": "葡萄牙", "nameEn": "Portugal"},
+            "GR": {"name": "希腊", "nameEn": "Greece"},
+            "MT": {"name": "马耳他", "nameEn": "Malta"},
+            "SM": {"name": "圣马力诺", "nameEn": "San Marino"},
+            "VA": {"name": "梵蒂冈", "nameEn": "Vatican City"},
+            "AD": {"name": "安道尔", "nameEn": "Andorra"},
+            "HR": {"name": "克罗地亚", "nameEn": "Croatia"},
+            "SI": {"name": "斯洛文尼亚", "nameEn": "Slovenia"},
+            "BA": {"name": "波黑", "nameEn": "Bosnia and Herzegovina"},
+            "RS": {"name": "塞尔维亚", "nameEn": "Serbia"},
+            "ME": {"name": "黑山", "nameEn": "Montenegro"},
+            "MK": {"name": "北马其顿", "nameEn": "North Macedonia"},
+            "AL": {"name": "阿尔巴尼亚", "nameEn": "Albania"},
+            "XK": {"name": "科索沃", "nameEn": "Kosovo"}
+          }
+        },
+        "EE": {
+          "name": "东欧",
+          "nameEn": "Eastern Europe",
+          "countries": {
+            "RU": {"name": "俄罗斯", "nameEn": "Russia"},
+            "UA": {"name": "乌克兰", "nameEn": "Ukraine"},
+            "PL": {"name": "波兰", "nameEn": "Poland"},
+            "CZ": {"name": "捷克", "nameEn": "Czech Republic"},
+            "SK": {"name": "斯洛伐克", "nameEn": "Slovakia"},
+            "HU": {"name": "匈牙利", "nameEn": "Hungary"},
+            "RO": {"name": "罗马尼亚", "nameEn": "Romania"},
+            "BG": {"name": "保加利亚", "nameEn": "Bulgaria"},
+            "MD": {"name": "摩尔多瓦", "nameEn": "Moldova"},
+            "BY": {"name": "白俄罗斯", "nameEn": "Belarus"}
+          }
+        }
+      }
+    },
+    "NA": {
+      "name": "北美洲",
+      "nameEn": "North America",
+      "regions": {
+        "NAM": {
+          "name": "北美",
+          "nameEn": "North America",
+          "countries": {
+            "US": {"name": "美国", "nameEn": "United States"},
+            "CA": {"name": "加拿大", "nameEn": "Canada"},
+            "MX": {"name": "墨西哥", "nameEn": "Mexico"}
+          }
+        },
+        "CAM": {
+          "name": "中美洲",
+          "nameEn": "Central America",
+          "countries": {
+            "GT": {"name": "危地马拉", "nameEn": "Guatemala"},
+            "BZ": {"name": "伯利兹", "nameEn": "Belize"},
+            "SV": {"name": "萨尔瓦多", "nameEn": "El Salvador"},
+            "HN": {"name": "洪都拉斯", "nameEn": "Honduras"},
+            "NI": {"name": "尼加拉瓜", "nameEn": "Nicaragua"},
+            "CR": {"name": "哥斯达黎加", "nameEn": "Costa Rica"},
+            "PA": {"name": "巴拿马", "nameEn": "Panama"}
+          }
+        },
+        "CAR": {
+          "name": "加勒比海",
+          "nameEn": "Caribbean",
+          "countries": {
+            "CU": {"name": "古巴", "nameEn": "Cuba"},
+            "JM": {"name": "牙买加", "nameEn": "Jamaica"},
+            "HT": {"name": "海地", "nameEn": "Haiti"},
+            "DO": {"name": "多米尼加", "nameEn": "Dominican Republic"},
+            "PR": {"name": "波多黎各", "nameEn": "Puerto Rico"},
+            "BS": {"name": "巴哈马", "nameEn": "Bahamas"},
+            "TT": {"name": "特立尼达和多巴哥", "nameEn": "Trinidad and Tobago"},
+            "BB": {"name": "巴巴多斯", "nameEn": "Barbados"},
+            "LC": {"name": "圣卢西亚", "nameEn": "Saint Lucia"},
+            "VC": {"name": "圣文森特和格林纳丁斯", "nameEn": "Saint Vincent and the Grenadines"},
+            "GD": {"name": "格林纳达", "nameEn": "Grenada"},
+            "AG": {"name": "安提瓜和巴布达", "nameEn": "Antigua and Barbuda"},
+            "DM": {"name": "多米尼克", "nameEn": "Dominica"},
+            "KN": {"name": "圣基茨和尼维斯", "nameEn": "Saint Kitts and Nevis"},
+            "AW": {"name": "阿鲁巴", "nameEn": "Aruba"},
+            "CW": {"name": "库拉索", "nameEn": "Curaçao"},
+            "SX": {"name": "荷属圣马丁", "nameEn": "Sint Maarten"},
+            "MF": {"name": "法属圣马丁", "nameEn": "Saint Martin"},
+            "BQ": {"name": "荷属加勒比", "nameEn": "Caribbean Netherlands"},
+            "KY": {"name": "开曼群岛", "nameEn": "Cayman Islands"},
+            "TC": {"name": "特克斯和凯科斯群岛", "nameEn": "Turks and Caicos Islands"},
+            "VG": {"name": "英属维尔京群岛", "nameEn": "British Virgin Islands"},
+            "VI": {"name": "美属维尔京群岛", "nameEn": "U.S. Virgin Islands"},
+            "AI": {"name": "安圭拉", "nameEn": "Anguilla"},
+            "MS": {"name": "蒙特塞拉特", "nameEn": "Montserrat"},
+            "GP": {"name": "瓜德罗普", "nameEn": "Guadeloupe"},
+            "MQ": {"name": "马提尼克", "nameEn": "Martinique"},
+            "BL": {"name": "圣巴泰勒米", "nameEn": "Saint Barthélemy"},
+            "BM": {"name": "百慕大", "nameEn": "Bermuda"},
+            "PM": {"name": "圣皮埃尔和密克隆", "nameEn": "Saint Pierre and Miquelon"},
+            "UM": {"name": "美国本土外小岛屿", "nameEn": "U.S. Minor Outlying Islands"}
+          }
+        }
+      }
+    },
+    "SA": {
+      "name": "南美洲",
+      "nameEn": "South America",
+      "regions": {
+        "SAM": {
+          "name": "南美",
+          "nameEn": "South America",
+          "countries": {
+            "BR": {"name": "巴西", "nameEn": "Brazil"},
+            "AR": {"name": "阿根廷", "nameEn": "Argentina"},
+            "CO": {"name": "哥伦比亚", "nameEn": "Colombia"},
+            "PE": {"name": "秘鲁", "nameEn": "Peru"},
+            "VE": {"name": "委内瑞拉", "nameEn": "Venezuela"},
+            "CL": {"name": "智利", "nameEn": "Chile"},
+            "EC": {"name": "厄瓜多尔", "nameEn": "Ecuador"},
+            "BO": {"name": "玻利维亚", "nameEn": "Bolivia"},
+            "PY": {"name": "巴拉圭", "nameEn": "Paraguay"},
+            "UY": {"name": "乌拉圭", "nameEn": "Uruguay"},
+            "GY": {"name": "圭亚那", "nameEn": "Guyana"},
+            "SR": {"name": "苏里南", "nameEn": "Suriname"},
+            "GF": {"name": "法属圭亚那", "nameEn": "French Guiana"},
+            "FK": {"name": "福克兰群岛", "nameEn": "Falkland Islands"}
+          }
+        }
+      }
+    },
+    "AF": {
+      "name": "非洲",
+      "nameEn": "Africa",
+      "regions": {
+        "NAF": {
+          "name": "北非",
+          "nameEn": "North Africa",
+          "countries": {
+            "EG": {"name": "埃及", "nameEn": "Egypt"},
+            "LY": {"name": "利比亚", "nameEn": "Libya"},
+            "TN": {"name": "突尼斯", "nameEn": "Tunisia"},
+            "DZ": {"name": "阿尔及利亚", "nameEn": "Algeria"},
+            "MA": {"name": "摩洛哥", "nameEn": "Morocco"},
+            "SD": {"name": "苏丹", "nameEn": "Sudan"},
+            "SS": {"name": "南苏丹", "nameEn": "South Sudan"},
+            "EH": {"name": "西撒哈拉", "nameEn": "Western Sahara"}
+          }
+        },
+        "WAF": {
+          "name": "西非",
+          "nameEn": "West Africa",
+          "countries": {
+            "NG": {"name": "尼日利亚", "nameEn": "Nigeria"},
+            "GH": {"name": "加纳", "nameEn": "Ghana"},
+            "CI": {"name": "科特迪瓦", "nameEn": "Côte d'Ivoire"},
+            "SN": {"name": "塞内加尔", "nameEn": "Senegal"},
+            "ML": {"name": "马里", "nameEn": "Mali"},
+            "BF": {"name": "布基纳法索", "nameEn": "Burkina Faso"},
+            "NE": {"name": "尼日尔", "nameEn": "Niger"},
+            "GN": {"name": "几内亚", "nameEn": "Guinea"},
+            "BJ": {"name": "贝宁", "nameEn": "Benin"},
+            "TG": {"name": "多哥", "nameEn": "Togo"},
+            "SL": {"name": "塞拉利昂", "nameEn": "Sierra Leone"},
+            "LR": {"name": "利比里亚", "nameEn": "Liberia"},
+            "MR": {"name": "毛里塔尼亚", "nameEn": "Mauritania"},
+            "GM": {"name": "冈比亚", "nameEn": "Gambia"},
+            "GW": {"name": "几内亚比绍", "nameEn": "Guinea-Bissau"},
+            "CV": {"name": "佛得角", "nameEn": "Cape Verde"}
+          }
+        },
+        "EAF": {
+          "name": "东非",
+          "nameEn": "East Africa",
+          "countries": {
+            "KE": {"name": "肯尼亚", "nameEn": "Kenya"},
+            "TZ": {"name": "坦桑尼亚", "nameEn": "Tanzania"},
+            "ET": {"name": "埃塞俄比亚", "nameEn": "Ethiopia"},
+            "UG": {"name": "乌干达", "nameEn": "Uganda"},
+            "RW": {"name": "卢旺达", "nameEn": "Rwanda"},
+            "BI": {"name": "布隆迪", "nameEn": "Burundi"},
+            "SO": {"name": "索马里", "nameEn": "Somalia"},
+            "ER": {"name": "厄立特里亚", "nameEn": "Eritrea"},
+            "DJ": {"name": "吉布提", "nameEn": "Djibouti"},
+            "SC": {"name": "塞舌尔", "nameEn": "Seychelles"},
+            "KM": {"name": "科摩罗", "nameEn": "Comoros"},
+            "MU": {"name": "毛里求斯", "nameEn": "Mauritius"},
+            "MG": {"name": "马达加斯加", "nameEn": "Madagascar"},
+            "RE": {"name": "留尼汪", "nameEn": "Réunion"},
+            "YT": {"name": "马约特", "nameEn": "Mayotte"},
+            "IO": {"name": "英属印度洋领地", "nameEn": "British Indian Ocean Territory"}
+          }
+        },
+        "CAF": {
+          "name": "中非",
+          "nameEn": "Central Africa",
+          "countries": {
+            "CD": {"name": "刚果民主共和国", "nameEn": "Democratic Republic of the Congo"},
+            "CG": {"name": "刚果共和国", "nameEn": "Republic of the Congo"},
+            "CM": {"name": "喀麦隆", "nameEn": "Cameroon"},
+            "GA": {"name": "加蓬", "nameEn": "Gabon"},
+            "GQ": {"name": "赤道几内亚", "nameEn": "Equatorial Guinea"},
+            "CF": {"name": "中非共和国", "nameEn": "Central African Republic"},
+            "TD": {"name": "乍得", "nameEn": "Chad"},
+            "AO": {"name": "安哥拉", "nameEn": "Angola"},
+            "ST": {"name": "圣多美和普林西比", "nameEn": "São Tomé and Príncipe"}
+          }
+        },
+        "SAF": {
+          "name": "南非地区",
+          "nameEn": "Southern Africa",
+          "countries": {
+            "ZA": {"name": "南非", "nameEn": "South Africa"},
+            "ZW": {"name": "津巴布韦", "nameEn": "Zimbabwe"},
+            "ZM": {"name": "赞比亚", "nameEn": "Zambia"},
+            "MW": {"name": "马拉维", "nameEn": "Malawi"},
+            "MZ": {"name": "莫桑比克", "nameEn": "Mozambique"},
+            "BW": {"name": "博茨瓦纳", "nameEn": "Botswana"},
+            "NA": {"name": "纳米比亚", "nameEn": "Namibia"},
+            "SZ": {"name": "斯威士兰", "nameEn": "Eswatini"},
+            "LS": {"name": "莱索托", "nameEn": "Lesotho"},
+            "SH": {"name": "圣赫勒拿", "nameEn": "Saint Helena"}
+          }
+        }
+      }
+    },
+    "OC": {
+      "name": "大洋洲",
+      "nameEn": "Oceania",
+      "regions": {
+        "ANZ": {
+          "name": "澳新",
+          "nameEn": "Australia and New Zealand",
+          "countries": {
+            "AU": {"name": "澳大利亚", "nameEn": "Australia"},
+            "NZ": {"name": "新西兰", "nameEn": "New Zealand"},
+            "CC": {"name": "科科斯群岛", "nameEn": "Cocos Islands"},
+            "CX": {"name": "圣诞岛", "nameEn": "Christmas Island"},
+            "NF": {"name": "诺福克岛", "nameEn": "Norfolk Island"}
+          }
+        },
+        "MEL": {
+          "name": "美拉尼西亚",
+          "nameEn": "Melanesia",
+          "countries": {
+            "PG": {"name": "巴布亚新几内亚", "nameEn": "Papua New Guinea"},
+            "FJ": {"name": "斐济", "nameEn": "Fiji"},
+            "SB": {"name": "所罗门群岛", "nameEn": "Solomon Islands"},
+            "VU": {"name": "瓦努阿图", "nameEn": "Vanuatu"},
+            "NC": {"name": "新喀里多尼亚", "nameEn": "New Caledonia"}
+          }
+        },
+        "MIC": {
+          "name": "密克罗尼西亚",
+          "nameEn": "Micronesia",
+          "countries": {
+            "GU": {"name": "关岛", "nameEn": "Guam"},
+            "FM": {"name": "密克罗尼西亚联邦", "nameEn": "Federated States of Micronesia"},
+            "MH": {"name": "马绍尔群岛", "nameEn": "Marshall Islands"},
+            "PW": {"name": "帕劳", "nameEn": "Palau"},
+            "KI": {"name": "基里巴斯", "nameEn": "Kiribati"},
+            "NR": {"name": "瑙鲁", "nameEn": "Nauru"},
+            "MP": {"name": "北马里亚纳群岛", "nameEn": "Northern Mariana Islands"}
+          }
+        },
+        "POL": {
+          "name": "波利尼西亚",
+          "nameEn": "Polynesia",
+          "countries": {
+            "PF": {"name": "法属波利尼西亚", "nameEn": "French Polynesia"},
+            "WS": {"name": "萨摩亚", "nameEn": "Samoa"},
+            "TO": {"name": "汤加", "nameEn": "Tonga"},
+            "TV": {"name": "图瓦卢", "nameEn": "Tuvalu"},
+            "CK": {"name": "库克群岛", "nameEn": "Cook Islands"},
+            "NU": {"name": "纽埃", "nameEn": "Niue"},
+            "TK": {"name": "托克劳", "nameEn": "Tokelau"},
+            "WF": {"name": "瓦利斯和富图纳", "nameEn": "Wallis and Futuna"},
+            "AS": {"name": "美属萨摩亚", "nameEn": "American Samoa"}
+          }
+        }
+      }
+    },
+    "AQ": {
+      "name": "南极洲",
+      "nameEn": "Antarctica",
+      "regions": {
+        "ANT": {
+          "name": "南极",
+          "nameEn": "Antarctica",
+          "countries": {
+            "AQ": {"name": "南极洲", "nameEn": "Antarctica"}
+          }
+        }
+      }
+    }
+  }
+}
