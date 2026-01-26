@@ -720,18 +720,18 @@ async function calculateAndShowDistance() {
 
 function applyFilters() {
   const query = searchInput.value.trim();
-  let currentTab = state.currentTab;
+  const currentTab = state.currentTab;
 
-  // 有搜索词时，如果当前是海外仓Tab，自动切换到机场Tab
-  if (query && currentTab === 'warehouses') {
-    switchHubTab('airports');
-    return; // switchHubTab 会重新调用 applyFilters
-  }
-
-  // 海外仓Tab无搜索词，显示分类视图
+  // 海外仓Tab：搜索海外仓数据
   if (currentTab === 'warehouses') {
-    state.filteredNodes = [];
-    renderResults();
+    if (query && state.warehousesData) {
+      const results = searchWarehouses(query);
+      state.filteredNodes = results;
+      renderWarehouseSearchResults(results);
+    } else {
+      state.filteredNodes = [];
+      renderResults();
+    }
     mapAdapter.setMarkers([]);
     return;
   }
@@ -761,6 +761,47 @@ function applyFilters() {
     // 无搜索词时不显示标记，提升加载速度
     mapAdapter.setMarkers([]);
   }
+}
+
+// 搜索海外仓数据
+function searchWarehouses(query) {
+  const results = [];
+  const q = query.toLowerCase();
+  
+  if (!state.warehousesData) return results;
+  
+  for (const [catKey, category] of Object.entries(state.warehousesData.categories)) {
+    for (const [countryCode, country] of Object.entries(category.countries)) {
+      for (const warehouse of country.warehouses) {
+        const code = (warehouse.code || '').toLowerCase();
+        const name = (warehouse.name || '').toLowerCase();
+        const city = (warehouse.city || '').toLowerCase();
+        const company = (warehouse.company || '').toLowerCase();
+        
+        if (code.includes(q) || name.includes(q) || city.includes(q) || company.includes(q)) {
+          results.push({
+            ...warehouse,
+            categoryName: category.name,
+            countryName: country.name
+          });
+        }
+      }
+    }
+  }
+  
+  return results;
+}
+
+// 渲染海外仓搜索结果
+function renderWarehouseSearchResults(results) {
+  resultsList.innerHTML = results.length === 0 
+    ? '<li class="result-item"><div class="result-item__meta">未找到匹配的海外仓</div></li>'
+    : results.map(w => `
+        <li class="result-item result-item--search" data-lat="${w.lat}" data-lng="${w.lng}">
+          <div class="result-item__title">${w.code} · ${w.name}</div>
+          <div class="result-item__meta">${w.city} · ${w.categoryName} · ${w.countryName}</div>
+        </li>
+      `).join('');
 }
 
 function renderResults() {
