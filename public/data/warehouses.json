@@ -13916,111 +13916,379 @@
       "name": "沃尔玛 WFS",
       "nameEn": "Walmart Fulfillment Services",
       "icon": "🏬",
-      "totalWarehouses": 11,
+      "totalWarehouses": 36,
       "countries": {
         "US": {
           "name": "美国",
           "nameEn": "United States",
-          "totalWarehouses": 11,
+          "totalWarehouses": 32,
           "warehouses": [
             {
-              "code": "WFS-CAL1",
-              "name": "Chino, CA",
+              "code": "LAX2",
+              "name": "LAX2",
               "city": "Chino, CA",
               "state": "CA",
-              "address": "Chino, CA",
+              "address": "6720 Kimball Ave, Chino, CA 91708",
+              "type": "WFS",
               "lat": 33.9898,
               "lng": -117.6874
             },
             {
-              "code": "WFS-CAL2",
-              "name": "Perris, CA",
-              "city": "Perris, CA",
+              "code": "NJ3",
+              "name": "NJ3",
+              "city": "Pedricktown, NJ",
+              "state": "NJ",
+              "address": "3 Sorbello Rd, Pedricktown, NJ 08067",
+              "type": "WFS",
+              "lat": 39.7576,
+              "lng": -75.4027
+            },
+            {
+              "code": "KY1",
+              "name": "KY1",
+              "city": "Shepherdsville, KY",
+              "state": "KY",
+              "address": "120 Velocity Way, Shepherdsville, KY 40165",
+              "type": "WFS",
+              "lat": 37.9884,
+              "lng": -85.7158
+            },
+            {
+              "code": "IND1",
+              "name": "IND1",
+              "city": "PLAINFIELD, IN",
+              "state": "IN",
+              "address": "9590 ALLPOINTS PARKWAY, PLAINFIELD, IN 46168",
+              "type": "WFS",
+              "lat": 39.7042,
+              "lng": -86.3994
+            },
+            {
+              "code": "ATL3",
+              "name": "ATL3",
+              "city": "Pendergrass, GA",
+              "state": "GA",
+              "address": "445 Valentine Industrial Parkway, Pendergrass, GA 30567",
+              "type": "WFS",
+              "lat": 34.1615,
+              "lng": -83.6768
+            },
+            {
+              "code": "PHX1",
+              "name": "PHX1",
+              "city": "Litchfield Park, AZ",
+              "state": "AZ",
+              "address": "6600 North Sarival Avenue, Litchfield Park, AZ 85340",
+              "type": "WFS",
+              "lat": 33.4934,
+              "lng": -112.3579
+            },
+            {
+              "code": "PHL2",
+              "name": "PHL2",
+              "city": "Bethlehem, PA",
+              "state": "PA",
+              "address": "2785 Commerce Center Blvd, Bethlehem, PA 18015",
+              "type": "WFS",
+              "lat": 40.6259,
+              "lng": -75.3705
+            },
+            {
+              "code": "LAX1",
+              "name": "LAX1",
+              "city": "Chino, CA",
               "state": "CA",
-              "address": "Perris, CA",
-              "lat": 33.7825,
-              "lng": -117.2286
+              "address": "6750 Kimball Avenue, Chino, CA 91708",
+              "type": "WFS",
+              "lat": 33.9898,
+              "lng": -117.6874
             },
             {
-              "code": "WFS-TEX1",
-              "name": "Fort Worth, TX",
-              "city": "Fort Worth, TX",
-              "state": "TX",
-              "address": "Fort Worth, TX",
-              "lat": 32.7555,
-              "lng": -97.3308
-            },
-            {
-              "code": "WFS-TEX2",
-              "name": "Dallas, TX",
-              "city": "Dallas, TX",
-              "state": "TX",
-              "address": "Dallas, TX",
-              "lat": 32.7767,
-              "lng": -96.797
-            },
-            {
-              "code": "WFS-FLO1",
-              "name": "Davenport, FL",
-              "city": "Davenport, FL",
+              "code": "MCO1",
+              "name": "MCO1",
+              "city": "DAVENPORT, FL",
               "state": "FL",
-              "address": "Davenport, FL",
+              "address": "5100 NORTH RIDGE TRAIL, DAVENPORT, FL 33897",
+              "type": "WFS",
               "lat": 28.1614,
               "lng": -81.6017
             },
             {
-              "code": "WFS-GEO1",
-              "name": "Atlanta, GA",
+              "code": "SMF1",
+              "name": "SMF1",
+              "city": "Sacramento, CA",
+              "state": "CA",
+              "address": "7000 Powerline Rd, Sacramento, CA 95837",
+              "type": "WFS",
+              "lat": 38.5816,
+              "lng": -121.4944
+            },
+            {
+              "code": "IND2",
+              "name": "IND2",
+              "city": "Avon, IN",
+              "state": "IN",
+              "address": "9360 AllPoints Pkwy, Avon, IN 46123",
+              "type": "WFS",
+              "lat": 39.7628,
+              "lng": -86.3997
+            },
+            {
+              "code": "W-PHL2",
+              "name": "W-PHL2",
+              "city": "Bethlehem, PA",
+              "state": "PA",
+              "address": "2785 Commerce Center Boulevard, Bethlehem, PA 18015",
+              "type": "WFS",
+              "lat": 40.6259,
+              "lng": -75.3705
+            },
+            {
+              "code": "KS1",
+              "name": "KS1",
+              "city": "EDGERTON, KS",
+              "state": "KS",
+              "address": "30801 W 191st St, EDGERTON, KS 66021",
+              "type": "WFS",
+              "lat": 38.7642,
+              "lng": -95.0169
+            },
+            {
+              "code": "ATL2",
+              "name": "ATL2",
+              "city": "Carrollton, GA",
+              "state": "GA",
+              "address": "3101 US-27, Carrollton, GA 30117",
+              "type": "WFS",
+              "lat": 33.5801,
+              "lng": -85.0766
+            },
+            {
+              "code": "MCI1n",
+              "name": "MCI1n",
+              "city": "Topeka, KS",
+              "state": "KS",
+              "address": "1303 Sw Innovation Pkway, Topeka, KS 66619",
+              "type": "WFS",
+              "lat": 39.0473,
+              "lng": -95.6752
+            },
+            {
+              "code": "ATL1",
+              "name": "ATL1",
               "city": "Atlanta, GA",
               "state": "GA",
-              "address": "Atlanta, GA",
+              "address": "6055 S Fulton Pkwy, Atlanta, GA 30349",
+              "type": "WFS",
               "lat": 33.749,
               "lng": -84.388
             },
             {
-              "code": "WFS-PEN1",
-              "name": "Bethlehem, PA",
-              "city": "Bethlehem, PA",
-              "state": "PA",
-              "address": "Bethlehem, PA",
-              "lat": 40.6259,
-              "lng": -75.3704
+              "code": "IND2T",
+              "name": "IND2T",
+              "city": "Plainfield, IN",
+              "state": "IN",
+              "address": "9360 AllPoints Pkwy. Suite 162, Plainfield, IN 46168",
+              "type": "WFS",
+              "lat": 39.7042,
+              "lng": -86.3994
             },
             {
-              "code": "WFS-NJE1",
-              "name": "Pedricktown, NJ",
+              "code": "IND2N",
+              "name": "IND2N",
+              "city": "PLAINFIELD, IN",
+              "state": "IN",
+              "address": "9360 ALLPOINTS PKWY. SUITE 107, PLAINFIELD, IN 46168",
+              "type": "WFS",
+              "lat": 39.7042,
+              "lng": -86.3994
+            },
+            {
+              "code": "ATL2n",
+              "name": "ATL2n",
+              "city": "Carrollton, GA",
+              "state": "GA",
+              "address": "3101 N. Highway 27, Carrollton, GA 30117",
+              "type": "WFS",
+              "lat": 33.5801,
+              "lng": -85.0766
+            },
+            {
+              "code": "MEM1-S",
+              "name": "MEM1-S",
+              "city": "Olive Branch, MS",
+              "state": "MS",
+              "address": "9200 Alexander Road, Olive Branch, MS 38654",
+              "type": "WFS",
+              "lat": 34.9617,
+              "lng": -89.8295
+            },
+            {
+              "code": "PHL4n",
+              "name": "PHL4n",
+              "city": "Shippensburg, PA",
+              "state": "PA",
+              "address": "1410 United Dr, Shippensburg, PA 17257",
+              "type": "WFS",
+              "lat": 40.0507,
+              "lng": -77.5203
+            },
+            {
+              "code": "ORD1s",
+              "name": "ORD1s",
+              "city": "Joliet, IL",
+              "state": "IL",
+              "address": "3501 Brandon Road, Joliet, IL 60436",
+              "type": "WFS",
+              "lat": 41.525,
+              "lng": -88.0817
+            },
+            {
+              "code": "BNA1s",
+              "name": "BNA1s",
+              "city": "Lebanon, TN",
+              "state": "TN",
+              "address": "1015 Hixson Blvd, Lebanon, TN 37090",
+              "type": "WFS",
+              "lat": 36.2081,
+              "lng": -86.2911
+            },
+            {
+              "code": "W-MEM1s",
+              "name": "W-MEM1s",
+              "city": "Olive Branch, MS",
+              "state": "MS",
+              "address": "10480 Marina Drive, Olive Branch, MS 38654",
+              "type": "WFS",
+              "lat": 34.9617,
+              "lng": -89.8295
+            },
+            {
+              "code": "W-IND3",
+              "name": "W-IND3",
+              "city": "Mccordsville, IN",
+              "state": "IN",
+              "address": "5756 Enterprise Dr, Mccordsville, IN 46055",
+              "type": "WFS",
+              "lat": 39.9067,
+              "lng": -85.9227
+            },
+            {
+              "code": "CVG1n",
+              "name": "CVG1n",
+              "city": "Monroe, OH",
+              "state": "OH",
+              "address": "650 Gateway Blvd, Monroe, OH 45050",
+              "type": "WFS",
+              "lat": 39.4401,
+              "lng": -84.3621
+            },
+            {
+              "code": "DFW5s",
+              "name": "DFW5s",
+              "city": "Lancaster, TX",
+              "state": "TX",
+              "address": "2500 E Belt Line Rd, Lancaster, TX 75146",
+              "type": "WFS",
+              "lat": 32.5921,
+              "lng": -96.7561
+            },
+            {
+              "code": "NJ3T",
+              "name": "NJ3T",
               "city": "Pedricktown, NJ",
               "state": "NJ",
-              "address": "Pedricktown, NJ",
+              "address": "7 Sorbello Rd, Pedricktown, NJ 08067",
+              "type": "WFS",
               "lat": 39.7576,
-              "lng": -75.4093
+              "lng": -75.4027
             },
             {
-              "code": "WFS-ILL1",
-              "name": "Elwood, IL",
-              "city": "Elwood, IL",
-              "state": "IL",
-              "address": "Elwood, IL",
-              "lat": 41.4039,
-              "lng": -88.1115
+              "code": "DFW2n",
+              "name": "DFW2n",
+              "city": "Fort Worth, TX",
+              "state": "TX",
+              "address": "15101 N Beach ST, Fort Worth, TX 76177",
+              "type": "WFS",
+              "lat": 32.7555,
+              "lng": -97.3308
             },
             {
-              "code": "WFS-IND1",
-              "name": "Indianapolis, IN",
-              "city": "Indianapolis, IN",
-              "state": "IN",
-              "address": "Indianapolis, IN",
-              "lat": 39.7684,
-              "lng": -86.1581
+              "code": "PHL5s",
+              "name": "PHL5s",
+              "city": "Greencastle, PA",
+              "state": "PA",
+              "address": "1915 Ebberts Spg Ct, Greencastle, PA 17225",
+              "type": "WFS",
+              "lat": 39.7898,
+              "lng": -77.7272
             },
             {
-              "code": "WFS-ARK1",
-              "name": "Bentonville, AR",
-              "city": "Bentonville, AR",
-              "state": "AR",
-              "address": "Bentonville, AR",
-              "lat": 36.3728,
-              "lng": -94.2088
+              "code": "PHL1s",
+              "name": "PHL1s",
+              "city": "Bethlehem, PA",
+              "state": "PA",
+              "address": "3215 Commerce Center Blvd, Bethlehem, PA 18015",
+              "type": "WFS",
+              "lat": 40.6259,
+              "lng": -75.3705
+            },
+            {
+              "code": "DFW6s",
+              "name": "DFW6s",
+              "city": "Fort Worth, TX",
+              "state": "TX",
+              "address": "14700 Blue Mound Rd, Fort Worth, TX 76052",
+              "type": "WFS",
+              "lat": 32.7555,
+              "lng": -97.3308
+            }
+          ]
+        },
+        "CA": {
+          "name": "加拿大",
+          "nameEn": "Canada",
+          "totalWarehouses": 4,
+          "warehouses": [
+            {
+              "code": "W-DC2030",
+              "name": "W-DC2030",
+              "city": "Mississauga, ON",
+              "state": "ON",
+              "address": "233 Madill Blvd., Mississauga, ON L5W 1Y6",
+              "type": "WFS",
+              "lat": 43.589,
+              "lng": -79.6441
+            },
+            {
+              "code": "0003503GDM",
+              "name": "0003503GDM",
+              "city": "Mississauga, ON",
+              "state": "ON",
+              "address": "233 Madill Blvd., Mississauga, ON L5W 0H1",
+              "type": "WFS",
+              "lat": 43.589,
+              "lng": -79.6441
+            },
+            {
+              "code": "DC2028",
+              "name": "DC2028",
+              "city": "Rocky View, AB",
+              "state": "AB",
+              "address": "10 High Plns Tr, Rocky View, AB T4A 3M6",
+              "type": "WFS",
+              "lat": 51.2537,
+              "lng": -114.0179
+            },
+            {
+              "code": "DC2093",
+              "name": "DC2093",
+              "city": "Mississauga, ON",
+              "state": "ON",
+              "address": "6175 Edwards Blvd, Mississauga, ON L5T 2W7",
+              "type": "WFS",
+              "lat": 43.589,
+              "lng": -79.6441
             }
           ]
         }
