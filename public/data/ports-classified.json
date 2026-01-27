@@ -806,6 +806,14 @@
                   "lng": 130.4167
                 },
                 {
+                  "code": "JPKKJ",
+                  "name": "Kitakyushu",
+                  "nameZh": "北九州港",
+                  "city": "Kitakyushu",
+                  "lat": 33.8333,
+                  "lng": 130.8333
+                },
+                {
                   "code": "JPAMX",
                   "name": "AmagasakiNishinomiyaAshiya",
                   "nameZh": "尼崎西宫芦屋港",
@@ -828,14 +836,6 @@
                   "city": "Ishikariwan Shinko",
                   "lat": 43.35,
                   "lng": 141.5
-                },
-                {
-                  "code": "JPKKJ",
-                  "name": "Kitakyushu",
-                  "nameZh": "北九州港",
-                  "city": "Kitakyushu",
-                  "lat": 33.8333,
-                  "lng": 130.8333
                 },
                 {
                   "code": "JPSHJ",
@@ -862,6 +862,14 @@
                   "lng": 129.05
                 },
                 {
+                  "code": "KRBNP",
+                  "name": "Busan New Port",
+                  "nameZh": "釜山新港",
+                  "city": "Busan New Port",
+                  "lat": 35.0833,
+                  "lng": 128.8167
+                },
+                {
                   "code": "KRINC",
                   "name": "Incheon",
                   "nameZh": "仁川港",
@@ -876,14 +884,6 @@
                   "city": "Pyeongtaek",
                   "lat": 36.9667,
                   "lng": 127.1
-                },
-                {
-                  "code": "KRBNP",
-                  "name": "Busan New Port",
-                  "nameZh": "釜山新港",
-                  "city": "Busan New Port",
-                  "lat": 35.0833,
-                  "lng": 128.8167
                 },
                 {
                   "code": "KRSHG",
@@ -950,6 +950,14 @@
                   "lng": 105.25
                 },
                 {
+                  "code": "VNCMT",
+                  "name": "Cai Mep International Terminal",
+                  "nameZh": "凯梅普国际码头",
+                  "city": "Cai Mep International Terminal",
+                  "lat": 10.5167,
+                  "lng": 107
+                },
+                {
                   "code": "VNCCA",
                   "name": "Cua Cam Terminal",
                   "nameZh": "芽康码头",
@@ -964,14 +972,6 @@
                   "city": "Cai Cui Port",
                   "lat": 9.9833,
                   "lng": 106.5
-                },
-                {
-                  "code": "VNCMT",
-                  "name": "Cai Mep International Terminal",
-                  "nameZh": "凯梅普国际码头",
-                  "city": "Cai Mep International Terminal",
-                  "lat": 10.5167,
-                  "lng": 107
                 },
                 {
                   "code": "VNCMY",
@@ -2421,14 +2421,6 @@
                   "lng": -4.6833
                 },
                 {
-                  "code": "GBBAD",
-                  "name": "Barry Dock",
-                  "nameZh": "巴里码头",
-                  "city": "Barry Dock",
-                  "lat": 51.3833,
-                  "lng": -3.25
-                },
-                {
                   "code": "GBBEL",
                   "name": "Belfast",
                   "nameZh": "贝尔法斯特港",
@@ -2443,6 +2435,14 @@
                   "city": "Burry Port",
                   "lat": 51.6833,
                   "lng": -4.25
+                },
+                {
+                  "code": "GBBAD",
+                  "name": "Barry Dock",
+                  "nameZh": "巴里码头",
+                  "city": "Barry Dock",
+                  "lat": 51.3833,
+                  "lng": -3.25
                 },
                 {
                   "code": "GBBWV",
@@ -3493,14 +3493,6 @@
                   "lng": 8.1333
                 },
                 {
-                  "code": "DEDEO",
-                  "name": "Oberthal",
-                  "nameZh": "上塔尔",
-                  "city": "Oberthal",
-                  "lat": 49.5167,
-                  "lng": 7.1
-                },
-                {
                   "code": "DEDUI",
                   "name": "Duisburg",
                   "nameZh": "杜伊斯堡港",
@@ -3515,6 +3507,14 @@
                   "city": "Ludwigshafen",
                   "lat": 49.4667,
                   "lng": 8.4333
+                },
+                {
+                  "code": "DEDEO",
+                  "name": "Oberthal",
+                  "nameZh": "上塔尔",
+                  "city": "Oberthal",
+                  "lat": 49.5167,
+                  "lng": 7.1
                 },
                 {
                   "code": "DEOEX",

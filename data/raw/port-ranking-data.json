@@ -51,26 +51,23 @@
       "name": "日本",
       "ports": {
         "JPTYO": { "cargo": 9500000, "intl": 1 },
-        "JPARI": { "cargo": 9000000, "intl": 1 },
-        "JPNTO": { "cargo": 8500000, "intl": 1 },
-        "JPSHG": { "cargo": 8000000, "intl": 1 },
-        "JPYOK": { "cargo": 7500000, "intl": 1 },
-        "JPNGO": { "cargo": 7000000, "intl": 1 },
-        "JPUKB": { "cargo": 6500000, "intl": 1 },
-        "JPOSA": { "cargo": 6000000, "intl": 1 },
+        "JPYOK": { "cargo": 8500000, "intl": 1 },
         "JPHKT": { "cargo": 5000000, "intl": 1 },
-        "JPCHB": { "cargo": 4000000, "intl": 1 },
-        "JPKIT": { "cargo": 3000000, "intl": 1 }
+        "JPKKJ": { "cargo": 4500000, "intl": 1 },
+        "JPAMX": { "cargo": 4000000, "intl": 1 },
+        "JPHBK": { "cargo": 3500000, "intl": 1 },
+        "JPICW": { "cargo": 3000000, "intl": 1 },
+        "JPSHJ": { "cargo": 2500000, "intl": 1 }
       }
     },
     "KR": {
       "name": "韩国",
       "ports": {
         "KRPUS": { "cargo": 22000000, "intl": 1 },
+        "KRBNP": { "cargo": 18000000, "intl": 1 },
         "KRINC": { "cargo": 3500000, "intl": 1 },
-        "KRKAN": { "cargo": 2500000, "intl": 1 },
-        "KRULS": { "cargo": 2000000, "intl": 1 },
-        "KRPTK": { "cargo": 1500000, "intl": 1 }
+        "KRPTK": { "cargo": 3000000, "intl": 1 },
+        "KRSHG": { "cargo": 1500000, "intl": 1 }
       }
     },
     "HK": {
@@ -87,7 +84,10 @@
     },
     "SG": {
       "name": "新加坡",
-      "ports": { "SGSIN": { "cargo": 39000000, "intl": 1 } }
+      "ports": {
+        "SGPAP": { "cargo": 39000000, "intl": 1 },
+        "SGPPT": { "cargo": 38000000, "intl": 1 }
+      }
     },
     "MY": {
       "name": "马来西亚",
@@ -101,18 +101,22 @@
     "TH": {
       "name": "泰国",
       "ports": {
-        "THLCH": { "cargo": 8500000, "intl": 1 },
-        "THBKK": { "cargo": 1500000, "intl": 1 },
-        "THSGZ": { "cargo": 800000, "intl": 1 }
+        "THBMT": { "cargo": 8500000, "intl": 1 },
+        "THSBP": { "cargo": 6000000, "intl": 1 },
+        "THPKT": { "cargo": 2000000, "intl": 1 },
+        "THBTC": { "cargo": 1500000, "intl": 1 },
+        "THECT": { "cargo": 1200000, "intl": 1 }
       }
     },
     "VN": {
       "name": "越南",
       "ports": {
         "VNSGN": { "cargo": 8500000, "intl": 1 },
-        "VNHPH": { "cargo": 6500000, "intl": 1 },
-        "VNDAD": { "cargo": 1200000, "intl": 1 },
-        "VNHAN": { "cargo": 800000, "intl": 1 }
+        "VNDAD": { "cargo": 3000000, "intl": 1 },
+        "VNBCD": { "cargo": 2500000, "intl": 1 },
+        "VNBDG": { "cargo": 2000000, "intl": 1 },
+        "VNBLG": { "cargo": 1500000, "intl": 1 },
+        "VNCMT": { "cargo": 1200000, "intl": 1 }
       }
     },
     "ID": {
@@ -300,17 +304,20 @@
       "name": "德国",
       "ports": {
         "DEHAM": { "cargo": 8500000, "intl": 1 },
-        "DEBRV": { "cargo": 3000000, "intl": 1 },
-        "DEWVN": { "cargo": 800000, "intl": 1 }
+        "DEWVN": { "cargo": 3000000, "intl": 1 },
+        "DEDUI": { "cargo": 2000000, "intl": 1 },
+        "DELUH": { "cargo": 1500000, "intl": 1 }
       }
     },
     "GB": {
       "name": "英国",
       "ports": {
-        "GBFXT": { "cargo": 4500000, "intl": 1 },
-        "GBSOU": { "cargo": 2000000, "intl": 1 },
-        "GBLIV": { "cargo": 900000, "intl": 1 },
-        "GBLON": { "cargo": 2500000, "intl": 1 }
+        "GBLGP": { "cargo": 4500000, "intl": 1 },
+        "GBLTP": { "cargo": 4000000, "intl": 1 },
+        "GBMSC": { "cargo": 2500000, "intl": 1 },
+        "GBPGG": { "cargo": 2000000, "intl": 1 },
+        "GBBEL": { "cargo": 1500000, "intl": 1 },
+        "GBBPT": { "cargo": 1000000, "intl": 1 }
       }
     },
     "FR": {
@@ -323,13 +330,16 @@
     },
     "NL": {
       "name": "荷兰",
-      "ports": { "NLRTM": { "cargo": 15000000, "intl": 1 } }
+      "ports": {
+        "NLRTM": { "cargo": 15000000, "intl": 1 },
+        "NLSAT": { "cargo": 2000000, "intl": 1 }
+      }
     },
     "BE": {
       "name": "比利时",
       "ports": {
         "BEANR": { "cargo": 14000000, "intl": 1 },
-        "BEZEE": { "cargo": 1500000, "intl": 1 }
+        "BESPI": { "cargo": 1000000, "intl": 1 }
       }
     },
     "IT": {
