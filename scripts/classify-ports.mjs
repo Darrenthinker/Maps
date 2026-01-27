@@ -109,24 +109,26 @@ function loadPortNamesZh() {
   return data.names || {};
 }
 
-// 加载国际港口数据
+// 加载国际港口数据和货物吞吐量数据
 function loadPortRankingData() {
   if (!fs.existsSync(PORT_RANKING_JSON)) {
     console.warn("Warning: port-ranking-data.json not found, intl info will be empty");
-    return {};
+    return { intlMap: {}, cargoMap: {} };
   }
   const data = JSON.parse(fs.readFileSync(PORT_RANKING_JSON, "utf8"));
   
-  // 构建港口代码到国际标记的映射
+  // 构建港口代码到国际标记和货物吞吐量的映射
   const intlMap = {};
+  const cargoMap = {};
   for (const [countryCode, countryData] of Object.entries(data.countries || {})) {
     for (const [portCode, portData] of Object.entries(countryData.ports || {})) {
       intlMap[portCode] = portData.intl === 1;
+      cargoMap[portCode] = portData.cargo || 0;
     }
   }
   
   console.log(`已加载 ${Object.keys(intlMap).length} 个港口国际标记数据`);
-  return intlMap;
+  return { intlMap, cargoMap };
 }
 
 // 加载港口坐标修正数据
@@ -157,7 +159,7 @@ function extractCountryCode(countryField) {
 }
 
 // 处理单个大洲的港口
-function processContinent(continentCode, ports, worldRegions, namesZh, intlMap, coordsFix) {
+function processContinent(continentCode, ports, worldRegions, namesZh, intlMap, cargoMap, coordsFix) {
   const { data, countryToContinent, countryToRegion, countryInfo } = worldRegions;
   const continent = data.continents[continentCode];
   
@@ -267,8 +269,21 @@ function processContinent(continentCode, ports, worldRegions, namesZh, intlMap, 
         };
       });
       
-      // 按港口代码排序
-      portList.sort((a, b) => a.code.localeCompare(b.code));
+      // 按规则排序：国际港口优先 > 货物吞吐量
+      portList.sort((a, b) => {
+        // 1. 国际港口优先
+        if (a.intl !== b.intl) {
+          return a.intl ? -1 : 1;
+        }
+        // 2. 货物吞吐量（高到低）
+        const cargoA = cargoMap[a.code] || 0;
+        const cargoB = cargoMap[b.code] || 0;
+        if (cargoA !== cargoB) {
+          return cargoB - cargoA;
+        }
+        // 3. 按代码字母顺序
+        return a.code.localeCompare(b.code);
+      });
       
       regionResult.countries[countryCode] = {
         code: countryCode,
@@ -296,8 +311,8 @@ function main() {
   // 加载静态中文名映射
   const namesZh = loadPortNamesZh();
   
-  // 加载国际港口数据
-  const intlMap = loadPortRankingData();
+  // 加载国际港口数据和货物吞吐量数据
+  const { intlMap, cargoMap } = loadPortRankingData();
   
   // 加载坐标修正数据
   const coordsFix = loadPortCoordinatesFix();
@@ -350,7 +365,7 @@ function main() {
   };
   
   for (const contCode of continentOrder) {
-    const result = processContinent(contCode, ports, worldRegions, namesZh, intlMap, coordsFix);
+    const result = processContinent(contCode, ports, worldRegions, namesZh, intlMap, cargoMap, coordsFix);
     if (result && result.totalPorts > 0) {
       allResults.continents[contCode] = result;
     }
