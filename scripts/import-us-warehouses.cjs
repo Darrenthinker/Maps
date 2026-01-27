@@ -181,7 +181,8 @@ function processExcel() {
     const code = row['仓库编码'] || '';
     const state = row['州/郡'] || '';
     const city = row['城市'] || '';
-    const address = row['地址'] || '';
+    const streetAddress = row['地址'] || '';
+    const zipCode = row['邮编'] || '';
     const status = row['状态'] || '';
     
     // 跳过无效数据
@@ -196,6 +197,36 @@ function processExcel() {
       continue;
     }
     
+    // 组合完整地址：街道地址, 城市, 州 邮编
+    let fullAddress = streetAddress.trim();
+    if (city) {
+      // 检查街道地址是否已包含城市名
+      if (!fullAddress.toUpperCase().includes(city.toUpperCase())) {
+        fullAddress += fullAddress ? `, ${city}` : city;
+      }
+    }
+    if (state) {
+      // 检查是否已包含州名
+      if (!fullAddress.toUpperCase().includes(`, ${state.toUpperCase()}`) && 
+          !fullAddress.toUpperCase().endsWith(state.toUpperCase())) {
+        fullAddress += `, ${state}`;
+      }
+    }
+    if (zipCode) {
+      // 检查是否已包含邮编
+      const zipClean = zipCode.toString().split('-')[0]; // 取主邮编
+      if (!fullAddress.includes(zipClean)) {
+        fullAddress += ` ${zipCode}`;
+      }
+    }
+    
+    // 清理地址格式
+    fullAddress = fullAddress
+      .replace(/\s+/g, ' ')
+      .replace(/\s*,\s*/g, ', ')
+      .replace(/,\s*,/g, ',')
+      .trim();
+    
     // 获取坐标
     const coords = getCityCoordinates(city, state) || { lat: 39.8283, lng: -98.5795 }; // 默认美国中心
     
@@ -207,7 +238,7 @@ function processExcel() {
       name: code.trim(),
       city: cityFormatted,
       state: state.trim(),
-      address: address.trim(),
+      address: fullAddress,
       type: 'FC',
       lat: coords.lat,
       lng: coords.lng
