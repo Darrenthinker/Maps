@@ -1239,12 +1239,36 @@ function renderClassifiedView() {
         if (isRegExpanded) {
           html += '<ul class="tree-children">';
           
-          // 按数量排序国家
+          // 按数量排序国家，东亚地区特殊排序（四字名称的国家排在后面，朝鲜除外）
           const sortedCountries = Object.entries(region.countries)
             .sort((a, b) => {
-              const aTotal = isAirports ? b[1].totalAirports : b[1].totalPorts;
-              const bTotal = isAirports ? a[1].totalAirports : a[1].totalPorts;
-              return aTotal - bTotal;
+              const aTotal = isAirports ? a[1].totalAirports : a[1].totalPorts;
+              const bTotal = isAirports ? b[1].totalAirports : b[1].totalPorts;
+              
+              // 东亚地区特殊排序：朝鲜排在中国台湾前面
+              if (regCode === 'EA') {
+                // 四字名称国家的优先级（数字越大越靠后）
+                const fourCharOrder = {
+                  'KP': 10,  // 朝鲜 - 排在四字名称前
+                  'TW': 20,  // 中国台湾
+                  'HK': 30,  // 中国香港
+                  'MO': 40,  // 中国澳门
+                  'XS': 50   // 南海诸岛
+                };
+                const aOrder = fourCharOrder[a[0]] || 0;
+                const bOrder = fourCharOrder[b[0]] || 0;
+                
+                // 如果两个都有特殊排序，按特殊顺序
+                if (aOrder > 0 && bOrder > 0) {
+                  return aOrder - bOrder;
+                }
+                // 如果只有一个有特殊排序，没有特殊排序的排前面
+                if (aOrder > 0) return 1;
+                if (bOrder > 0) return -1;
+              }
+              
+              // 默认按数量降序排序
+              return bTotal - aTotal;
             });
           
           for (const [countryCode, country] of sortedCountries) {
