@@ -779,6 +779,27 @@ body {
   color: #64748b;
 }
 
+/* 子地区层级（港澳台） */
+.tree-item--subregion {
+  margin-left: 20px;
+}
+
+.tree-item__header--subregion {
+  padding-left: 44px;
+  background: #fefefe;
+}
+
+.tree-item__header--subregion .tree-name {
+  font-size: 13px;
+  color: #475569;
+}
+
+.tree-item__header--subregion .tree-count {
+  font-size: 11px;
+  background: #f1f5f9;
+  color: #64748b;
+}
+
 /* 子级容器 */
 .tree-children {
   margin: 0;

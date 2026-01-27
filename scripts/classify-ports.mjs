@@ -12,6 +12,13 @@ const RAW_DIR = path.join(ROOT, "data", "raw");
 const PORTS_JSON = path.join(DATA_DIR, "ports.json");
 const WORLD_REGIONS_JSON = path.join(RAW_DIR, "world-regions.json");
 
+// 港澳台归入中国 - 这些地区显示在中国下面
+const CHINA_REGIONS = {
+  HK: { name: "中国香港", nameEn: "Hong Kong, China" },
+  MO: { name: "中国澳门", nameEn: "Macao, China" },
+  TW: { name: "中国台湾", nameEn: "Taiwan, China" }
+};
+
 // 加载世界区域分类
 function loadWorldRegions() {
   const data = JSON.parse(fs.readFileSync(WORLD_REGIONS_JSON, "utf8"));
@@ -108,9 +115,31 @@ function processContinent(continentCode, ports, worldRegions) {
     }
     
     // 按港口数量排序国家
-    const sortedCountries = Object.entries(countryGroups).sort((a, b) => b[1].length - a[1].length);
+    let sortedCountries = Object.entries(countryGroups).sort((a, b) => b[1].length - a[1].length);
+    
+    // 处理中国及港澳台的合并
+    const chinaRegionCodes = ["HK", "MO", "TW"];
+    const chinaMainPorts = countryGroups["CN"] || [];
+    const chinaSubRegions = {};
+    
+    // 提取港澳台数据
+    for (const code of chinaRegionCodes) {
+      if (countryGroups[code]) {
+        chinaSubRegions[code] = countryGroups[code];
+        delete countryGroups[code];
+      }
+    }
+    
+    // 如果有中国数据，合并港澳台
+    if (chinaMainPorts.length > 0 || Object.keys(chinaSubRegions).length > 0) {
+      const filteredCountries = sortedCountries.filter(([code]) => code !== "CN" && !chinaRegionCodes.includes(code));
+      sortedCountries = [["CN", chinaMainPorts], ...filteredCountries];
+    }
     
     for (const [countryCode, countryPorts] of sortedCountries) {
+      // 跳过港澳台，它们会在中国下面处理
+      if (chinaRegionCodes.includes(countryCode)) continue;
+      
       const info = countryInfo[countryCode] || { name: countryCode, nameEn: countryCode };
       
       const portList = countryPorts.map(p => ({
@@ -124,13 +153,50 @@ function processContinent(continentCode, ports, worldRegions) {
       // 按港口代码排序
       portList.sort((a, b) => a.code.localeCompare(b.code));
       
-      regionResult.countries[countryCode] = {
-        code: countryCode,
-        name: info.name,
-        nameEn: info.nameEn,
-        totalPorts: countryPorts.length,
-        ports: portList
-      };
+      // 特殊处理中国：添加港澳台子地区
+      if (countryCode === "CN") {
+        const subRegions = {};
+        for (const [subCode, subPorts] of Object.entries(chinaSubRegions)) {
+          const subPortList = subPorts.map(p => ({
+            code: p.code,
+            name: p.name,
+            city: p.city,
+            lat: p.lat,
+            lng: p.lng
+          }));
+          subPortList.sort((a, b) => a.code.localeCompare(b.code));
+          
+          const subInfo = CHINA_REGIONS[subCode];
+          subRegions[subCode] = {
+            code: subCode,
+            name: subInfo.name,
+            nameEn: subInfo.nameEn,
+            totalPorts: subPorts.length,
+            ports: subPortList
+          };
+          
+          console.log(`      ${subInfo.name} (${subCode}): ${subPorts.length} 港口`);
+        }
+        
+        const totalWithSubRegions = countryPorts.length + Object.values(chinaSubRegions).reduce((sum, arr) => sum + arr.length, 0);
+        
+        regionResult.countries[countryCode] = {
+          code: countryCode,
+          name: info.name,
+          nameEn: info.nameEn,
+          totalPorts: totalWithSubRegions,
+          ports: portList,
+          subRegions: Object.keys(subRegions).length > 0 ? subRegions : undefined
+        };
+      } else {
+        regionResult.countries[countryCode] = {
+          code: countryCode,
+          name: info.name,
+          nameEn: info.nameEn,
+          totalPorts: countryPorts.length,
+          ports: portList
+        };
+      }
       
       console.log(`    ${info.name} (${countryCode}): ${countryPorts.length} 港口`);
     }
