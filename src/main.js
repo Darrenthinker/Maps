@@ -1050,7 +1050,7 @@ function searchWarehouses(query) {
   return [...exactMatches, ...prefixMatches, ...cityMatches, ...otherMatches];
 }
 
-// 渲染海外仓搜索结果
+// 渲染海外仓搜索结果 - 与列表视图格式保持一致
 function renderWarehouseSearchResults(results) {
   resultsList.innerHTML = results.length === 0 
     ? '<li class="result-item"><div class="result-item__meta">未找到匹配的海外仓</div></li>'
@@ -1062,11 +1062,37 @@ function renderWarehouseSearchResults(results) {
         } else if (w.categoryName && w.categoryName.includes('沃尔玛')) {
           category = 'walmart';
         }
-        const addressAttr = w.address ? `data-address="${w.address.replace(/"/g, '&quot;')}"` : '';
+        
+        // 处理地址
+        let address = w.address || '';
+        address = address
+          .replace(/\s+/g, ' ')
+          .replace(/\s*,\s*/g, ', ')
+          .replace(/,\s*,/g, ',')
+          .replace(/[,\s]*-?\s*United\s*[Ss]tates?\s*$/i, ', US')
+          .replace(/[,\s]*-?\s*US\s*$/i, ', US')
+          .replace(/,\s*$/g, '')
+          .replace(/^\s*,\s*/g, '')
+          .trim();
+        
+        // 获取州名中文
+        const stateCode = w.state || '';
+        const stateZh = state.usStatesZh?.states?.[stateCode] || '';
+        const stateLabel = stateCode ? `<span class="warehouse-state">${stateCode}${stateZh ? ' ' + stateZh : ''}</span>` : '';
+        
+        // 类型标签
+        const typeLabel = w.type ? `<span class="warehouse-type-tag">${w.type}</span>` : '';
+        
+        const addressAttr = address ? `data-address="${address.replace(/"/g, '&quot;')}"` : '';
+        const addressLine = address ? `<div class="result-item__address">${address}</div>` : '';
+        
         return `
           <li class="result-item result-item--search result-item--warehouse" data-lat="${w.lat}" data-lng="${w.lng}" data-type="warehouse" data-category="${category}" data-code="${w.code}" ${addressAttr}>
-            <div class="result-item__title">${w.code} · ${w.name}</div>
-            <div class="result-item__meta">${w.city} · ${w.categoryName} · ${w.countryName}</div>
+            <div class="result-item__title">
+              <span class="warehouse-code-group">${w.code} ${typeLabel}</span>
+              ${stateLabel}
+            </div>
+            ${addressLine}
           </li>
         `;
       }).join('');
@@ -1090,7 +1116,7 @@ function renderResults() {
   }
 }
 
-// 渲染搜索结果（平铺列表）
+// 渲染搜索结果（平铺列表）- 与列表视图格式保持一致
 function renderSearchResults() {
   const displayNodes = state.filteredNodes.slice(0, 200);
   
@@ -1103,19 +1129,45 @@ function renderSearchResults() {
     .map((node) => {
       const code = node.code || "";
       const type = node.type || "airport";
-      const sub = type === "airport" ? "机场" : "港口";
-      const intlLabel = node.intl ? "🌐" : "";
+      const isAirport = type === "airport";
+      const isIntl = node.intl === 1;
+      
       // 获取中文名称
       const zhName = getChineseName(node);
       const nameZh = zhName || '';
-      // 显示格式：有中文时显示 "中文名 / 英文名"
-      const displayName = zhName 
-        ? `<span class="result-name-zh">${zhName}</span> <span class="result-name-divider">/</span> <span class="result-name-en">${node.name}</span>`
-        : node.name;
+      
+      // 中英文名称格式 - 与列表视图一致
+      const namesHtml = nameZh 
+        ? `<span class="airport-name-zh">${nameZh}</span><span class="airport-name-divider">/</span><span class="airport-name-en">${node.name}</span>`
+        : `<span class="airport-name-en" style="color:#0f172a;font-weight:500;">${node.name}</span>`;
+      
+      // 类型标签 - 与列表视图一致
+      let typeTag;
+      if (isAirport) {
+        typeTag = isIntl 
+          ? '<span class="airport-type-tag airport-type-tag--intl">国际机场</span>'
+          : '<span class="airport-type-tag airport-type-tag--domestic">国内机场</span>';
+      } else {
+        typeTag = isIntl 
+          ? '<span class="airport-type-tag airport-type-tag--intl port-type-tag">国际港口</span>'
+          : '<span class="airport-type-tag airport-type-tag--domestic port-type-tag">国内港口</span>';
+      }
+      
+      const codeClass = isAirport ? 'airport-code' : 'airport-code port-code';
+      const itemClass = isAirport 
+        ? 'result-item result-item--search result-item--airport result-item--airport-new'
+        : 'result-item result-item--search result-item--airport result-item--airport-new result-item--port-new';
+      
       return `
-        <li class="result-item result-item--search" data-lat="${node.lat}" data-lng="${node.lng}" data-type="${type}" data-code="${code}" data-name="${node.name}" data-name-zh="${nameZh}" data-intl="${node.intl ? 1 : 0}">
-          <div class="result-item__title">${intlLabel} ${code} · ${displayName}</div>
-          <div class="result-item__meta">${node.city}, ${node.country} · ${sub}</div>
+        <li class="${itemClass}" data-lat="${node.lat}" data-lng="${node.lng}" data-type="${type}" data-code="${code}" data-name="${node.name}" data-name-zh="${nameZh}" data-intl="${node.intl ? 1 : 0}">
+          <div class="airport-row1">
+            <span class="${codeClass}">${code}</span>
+            <span class="airport-names">${namesHtml}</span>
+          </div>
+          <div class="airport-row2">
+            <span class="airport-city">${node.city}</span>
+            ${typeTag}
+          </div>
         </li>
       `;
     })
