@@ -1204,18 +1204,24 @@ function renderClassifiedView() {
               } else {
                 for (const port of country.ports) {
                   const nameZh = port.nameZh || '';
+                  const isIntl = port.intl || false;
                   // 显示中英文名称
                   const namesHtml = nameZh 
                     ? `<span class="airport-name-zh">${nameZh}</span><span class="airport-name-divider">/</span><span class="airport-name-en">${port.name}</span>`
                     : `<span class="airport-name-en" style="color:#0f172a;font-weight:500;">${port.name}</span>`;
+                  // 港口类型标签
+                  const typeTag = isIntl 
+                    ? `<span class="airport-type-tag airport-type-tag--intl port-type-tag">国际港口</span>`
+                    : `<span class="airport-type-tag airport-type-tag--domestic port-type-tag">国内港口</span>`;
                   html += `
-                    <li class="result-item result-item--airport result-item--airport-new result-item--port-new" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}" data-name-zh="${nameZh}" data-code="${port.code}" data-intl="0" data-type="port">
+                    <li class="result-item result-item--airport result-item--airport-new result-item--port-new" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}" data-name-zh="${nameZh}" data-code="${port.code}" data-intl="${isIntl ? 1 : 0}" data-type="port">
                       <div class="airport-row1">
                         <span class="airport-code port-code">${port.code}</span>
                         <span class="airport-names">${namesHtml}</span>
                       </div>
                       <div class="airport-row2">
                         <span class="airport-city">${port.city}</span>
+                        ${typeTag}
                       </div>
                     </li>
                   `;

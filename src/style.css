@@ -915,6 +915,15 @@ body {
   color: #ea580c;
 }
 
+/* 港口类型标签颜色 */
+.result-item--port-new .airport-type-tag--intl.port-type-tag {
+  color: #ea580c;
+}
+
+.result-item--port-new .airport-type-tag--domestic.port-type-tag {
+  color: #94a3b8;
+}
+
 .map-wrapper {
   flex: 1;
   position: relative;
