@@ -1179,16 +1179,25 @@ function renderClassifiedView() {
               
               if (isAirports) {
                 for (const airport of country.airports) {
-                  const intlLabel = airport.intl ? '🌐' : '';
                   const nameZh = airport.nameZh || '';
+                  const isIntl = airport.intl === 1;
+                  const typeTag = isIntl 
+                    ? '<span class="airport-type-tag airport-type-tag--intl">国际机场</span>'
+                    : '<span class="airport-type-tag airport-type-tag--domestic">国内机场</span>';
                   // 显示中英文名称
-                  const displayName = nameZh 
-                    ? `<span class="result-name-zh">${nameZh}</span> <span class="result-name-divider">/</span> <span class="result-name-en">${airport.name}</span>`
-                    : airport.name;
+                  const namesHtml = nameZh 
+                    ? `<span class="airport-name-zh">${nameZh}</span><span class="airport-name-divider">/</span><span class="airport-name-en">${airport.name}</span>`
+                    : `<span class="airport-name-en" style="color:#0f172a;font-weight:500;">${airport.name}</span>`;
                   html += `
-                    <li class="result-item result-item--airport" data-lat="${airport.lat}" data-lng="${airport.lng}" data-name="${airport.name}" data-name-zh="${nameZh}" data-code="${airport.code}" data-intl="${airport.intl ? 1 : 0}" data-type="airport">
-                      <div class="result-item__title">${intlLabel} ${airport.code} · ${displayName}</div>
-                      <div class="result-item__meta">${airport.city}</div>
+                    <li class="result-item result-item--airport result-item--airport-new" data-lat="${airport.lat}" data-lng="${airport.lng}" data-name="${airport.name}" data-name-zh="${nameZh}" data-code="${airport.code}" data-intl="${airport.intl ? 1 : 0}" data-type="airport">
+                      <div class="airport-row1">
+                        <span class="airport-code">${airport.code}</span>
+                        <span class="airport-names">${namesHtml}</span>
+                      </div>
+                      <div class="airport-row2">
+                        <span class="airport-city">${airport.city}</span>
+                        ${typeTag}
+                      </div>
                     </li>
                   `;
                 }
@@ -1196,13 +1205,18 @@ function renderClassifiedView() {
                 for (const port of country.ports) {
                   const nameZh = port.nameZh || '';
                   // 显示中英文名称
-                  const displayName = nameZh 
-                    ? `<span class="result-name-zh">${nameZh}</span> <span class="result-name-divider">/</span> <span class="result-name-en">${port.name}</span>`
-                    : port.name;
+                  const namesHtml = nameZh 
+                    ? `<span class="airport-name-zh">${nameZh}</span><span class="airport-name-divider">/</span><span class="airport-name-en">${port.name}</span>`
+                    : `<span class="airport-name-en" style="color:#0f172a;font-weight:500;">${port.name}</span>`;
                   html += `
-                    <li class="result-item result-item--airport" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}" data-name-zh="${nameZh}" data-code="${port.code}" data-intl="0" data-type="port">
-                      <div class="result-item__title">${port.code} · ${displayName}</div>
-                      <div class="result-item__meta">${port.city}</div>
+                    <li class="result-item result-item--airport result-item--airport-new result-item--port-new" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}" data-name-zh="${nameZh}" data-code="${port.code}" data-intl="0" data-type="port">
+                      <div class="airport-row1">
+                        <span class="airport-code port-code">${port.code}</span>
+                        <span class="airport-names">${namesHtml}</span>
+                      </div>
+                      <div class="airport-row2">
+                        <span class="airport-city">${port.city}</span>
+                      </div>
                     </li>
                   `;
                 }
