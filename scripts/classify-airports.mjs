@@ -13,6 +13,7 @@ const OUT_DIR = path.join(ROOT, "public", "data");
 const AIRPORTS_CSV = path.join(RAW_DIR, "airports.csv");
 const WORLD_REGIONS_JSON = path.join(RAW_DIR, "world-regions.json");
 const INTL_AIRPORTS_JSON = path.join(RAW_DIR, "international-airports.json");
+const AIRPORT_NAMES_ZH_JSON = path.join(RAW_DIR, "airport-names-zh.json");
 
 // 常用国家中英文映射
 const COUNTRY_CN = {
@@ -91,8 +92,19 @@ function loadInternationalAirports() {
   return codes;
 }
 
+// 加载静态中文名映射（从已翻译的数据中提取保存的）
+function loadAirportNamesZh() {
+  if (!fs.existsSync(AIRPORT_NAMES_ZH_JSON)) {
+    console.warn("Warning: airport-names-zh.json not found, Chinese names will be empty");
+    return {};
+  }
+  const data = JSON.parse(fs.readFileSync(AIRPORT_NAMES_ZH_JSON, "utf8"));
+  console.log(`已加载 ${data.totalCount} 个机场中文名 (更新于 ${data.lastUpdated})`);
+  return data.names || {};
+}
+
 // 处理单个大洲的机场
-function processContinent(continentCode, airports, worldRegions, intlCodes) {
+function processContinent(continentCode, airports, worldRegions, intlCodes, namesZh) {
   const { data, countryToContinent, countryToRegion, countryInfo } = worldRegions;
   const continent = data.continents[continentCode];
   
@@ -176,11 +188,15 @@ function processContinent(continentCode, airports, worldRegions, intlCodes) {
         if (isIntl) intlCount++;
         else domesticCount++;
         
+        // 从静态映射中获取中文名
+        const nameZh = namesZh[a.code] || namesZh[a.iata] || namesZh[a.icao] || "";
+        
         return {
           code: a.code,
           icao: a.icao,
           iata: a.iata,
           name: a.name,
+          nameZh: nameZh,
           city: a.city,
           lat: a.lat,
           lng: a.lng,
@@ -230,6 +246,9 @@ function main() {
   const worldRegions = loadWorldRegions();
   const intlCodes = loadInternationalAirports();
   console.log(`已加载 ${intlCodes.size} 个国际机场代码`);
+  
+  // 加载静态中文名映射
+  const namesZh = loadAirportNamesZh();
   
   // 读取机场数据
   const rows = parseCsv(AIRPORTS_CSV);
@@ -305,7 +324,7 @@ function main() {
   };
   
   for (const contCode of continentOrder) {
-    const result = processContinent(contCode, airports, worldRegions, intlCodes);
+    const result = processContinent(contCode, airports, worldRegions, intlCodes, namesZh);
     if (result) {
       allResults.continents[contCode] = result;
     }
