@@ -16,6 +16,55 @@ const PORT_NAMES_ZH_JSON = path.join(RAW_DIR, "port-names-zh.json");
 // 港澳台排序权重（排在中国后面）
 const CHINA_REGION_ORDER = { CN: 0, HK: 1, MO: 2, TW: 3 };
 
+// 港口名称关键词 - 用于识别真正的港口
+const PORT_KEYWORDS = [
+  // 英文关键词
+  'port', 'pt', 'terminal', 'harbour', 'harbor', 'dock', 'wharf', 'quay', 'pier',
+  'anchorage', 'berth', 'jetty', 'marina', 'seaport', 'freeport',
+  // 中文关键词
+  '港', '码头', '泊位', '锚地', '船厂', '堆场'
+];
+
+// 检查是否是真正的港口（而不是城市）
+function isRealPort(port) {
+  const name = (port.name || '').toLowerCase();
+  const nameZh = port.nameZh || '';
+  const city = (port.city || '').toLowerCase();
+  
+  // 优先检查：如果中文名以"市"、"区"、"县"结尾，一定是城市而非港口
+  if (nameZh && (nameZh.endsWith('市') || nameZh.endsWith('区') || nameZh.endsWith('县'))) {
+    return false;
+  }
+  
+  // 1. 中文名包含港口关键词
+  const zhPortKeywords = ['港', '码头', '泊位', '锚地', '船厂', '堆场', '航运'];
+  for (const keyword of zhPortKeywords) {
+    if (nameZh.includes(keyword)) {
+      return true;
+    }
+  }
+  
+  // 2. 英文名包含港口关键词
+  const enPortKeywords = ['port', ' pt', 'terminal', 'harbour', 'harbor', 'dock', 'wharf', 
+                          'quay', 'pier', 'anchorage', 'berth', 'jetty', 'marina', 'seaport', 'freeport'];
+  for (const keyword of enPortKeywords) {
+    if (name.includes(keyword)) {
+      return true;
+    }
+  }
+  
+  // 3. 如果名称和城市完全相同，说明这是城市而不是港口
+  const nameClean = name.replace(/[,\s]/g, '').toLowerCase();
+  const cityClean = city.replace(/[,\s]/g, '').toLowerCase();
+  
+  if (nameClean === cityClean) {
+    return false;
+  }
+  
+  // 4. 默认不保留（更严格的过滤）
+  return false;
+}
+
 // 加载世界区域分类
 function loadWorldRegions() {
   const data = JSON.parse(fs.readFileSync(WORLD_REGIONS_JSON, "utf8"));
@@ -112,14 +161,29 @@ function processContinent(continentCode, ports, worldRegions, namesZh) {
       countries: {}
     };
     
-    // 按国家分类
+    // 按国家分类，同时过滤非港口条目
     const countryGroups = {};
+    let filteredCount = 0;
     for (const port of regionPorts) {
       const cc = extractCountryCode(port.country);
+      
+      // 预先获取中文名用于判断
+      const portWithZh = { ...port, nameZh: namesZh[port.code] || '' };
+      
+      // 过滤非真正的港口
+      if (!isRealPort(portWithZh)) {
+        filteredCount++;
+        continue;
+      }
+      
       if (!countryGroups[cc]) {
         countryGroups[cc] = [];
       }
       countryGroups[cc].push(port);
+    }
+    
+    if (filteredCount > 0) {
+      console.log(`    (过滤了 ${filteredCount} 个非港口条目)`);
     }
     
     // 按港口数量排序国家，但港澳台特殊处理（排在中国后面）
