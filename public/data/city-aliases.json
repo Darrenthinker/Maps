@@ -1,0 +1,707 @@
+{
+  "description": "城市别名映射表 - 将常用城市名映射到机场和港口",
+  "cities": {
+    "caracas": {
+      "nameEn": "Caracas",
+      "nameZh": "加拉加斯",
+      "country": "委内瑞拉",
+      "airports": ["CCS"],
+      "ports": ["VECCS", "VELGR"]
+    },
+    "tokyo": {
+      "nameEn": "Tokyo",
+      "nameZh": "东京",
+      "country": "日本",
+      "airports": ["NRT", "HND"],
+      "ports": ["JPTYO"]
+    },
+    "osaka": {
+      "nameEn": "Osaka",
+      "nameZh": "大阪",
+      "country": "日本",
+      "airports": ["KIX", "ITM"],
+      "ports": ["JPOSA"]
+    },
+    "seoul": {
+      "nameEn": "Seoul",
+      "nameZh": "首尔",
+      "country": "韩国",
+      "airports": ["ICN", "GMP"],
+      "ports": ["KRINC"]
+    },
+    "beijing": {
+      "nameEn": "Beijing",
+      "nameZh": "北京",
+      "country": "中国",
+      "airports": ["PEK", "PKX"],
+      "ports": []
+    },
+    "shanghai": {
+      "nameEn": "Shanghai",
+      "nameZh": "上海",
+      "country": "中国",
+      "airports": ["PVG", "SHA"],
+      "ports": ["CNSHA"]
+    },
+    "guangzhou": {
+      "nameEn": "Guangzhou",
+      "nameZh": "广州",
+      "country": "中国",
+      "airports": ["CAN"],
+      "ports": ["CNGUA"]
+    },
+    "shenzhen": {
+      "nameEn": "Shenzhen",
+      "nameZh": "深圳",
+      "country": "中国",
+      "airports": ["SZX"],
+      "ports": ["CNSZX", "CNYTN", "CNSHK"]
+    },
+    "hongkong": {
+      "nameEn": "Hong Kong",
+      "nameZh": "香港",
+      "country": "中国香港",
+      "airports": ["HKG"],
+      "ports": ["HKHKG"]
+    },
+    "newyork": {
+      "nameEn": "New York",
+      "nameZh": "纽约",
+      "country": "美国",
+      "airports": ["JFK", "LGA", "EWR"],
+      "ports": ["USNYC"]
+    },
+    "losangeles": {
+      "nameEn": "Los Angeles",
+      "nameZh": "洛杉矶",
+      "country": "美国",
+      "airports": ["LAX"],
+      "ports": ["USLAX", "USLGB"]
+    },
+    "chicago": {
+      "nameEn": "Chicago",
+      "nameZh": "芝加哥",
+      "country": "美国",
+      "airports": ["ORD", "MDW"],
+      "ports": ["USCHI"]
+    },
+    "london": {
+      "nameEn": "London",
+      "nameZh": "伦敦",
+      "country": "英国",
+      "airports": ["LHR", "LGW", "STN", "LTN", "LCY"],
+      "ports": ["GBLON"]
+    },
+    "paris": {
+      "nameEn": "Paris",
+      "nameZh": "巴黎",
+      "country": "法国",
+      "airports": ["CDG", "ORY"],
+      "ports": ["FRPAR"]
+    },
+    "frankfurt": {
+      "nameEn": "Frankfurt",
+      "nameZh": "法兰克福",
+      "country": "德国",
+      "airports": ["FRA"],
+      "ports": ["DEFRA"]
+    },
+    "amsterdam": {
+      "nameEn": "Amsterdam",
+      "nameZh": "阿姆斯特丹",
+      "country": "荷兰",
+      "airports": ["AMS"],
+      "ports": ["NLAMS"]
+    },
+    "singapore": {
+      "nameEn": "Singapore",
+      "nameZh": "新加坡",
+      "country": "新加坡",
+      "airports": ["SIN"],
+      "ports": ["SGSIN"]
+    },
+    "bangkok": {
+      "nameEn": "Bangkok",
+      "nameZh": "曼谷",
+      "country": "泰国",
+      "airports": ["BKK", "DMK"],
+      "ports": ["THBKK"]
+    },
+    "dubai": {
+      "nameEn": "Dubai",
+      "nameZh": "迪拜",
+      "country": "阿联酋",
+      "airports": ["DXB", "DWC"],
+      "ports": ["AEJEA"]
+    },
+    "sydney": {
+      "nameEn": "Sydney",
+      "nameZh": "悉尼",
+      "country": "澳大利亚",
+      "airports": ["SYD"],
+      "ports": ["AUSYD"]
+    },
+    "melbourne": {
+      "nameEn": "Melbourne",
+      "nameZh": "墨尔本",
+      "country": "澳大利亚",
+      "airports": ["MEL"],
+      "ports": ["AUMEL"]
+    },
+    "toronto": {
+      "nameEn": "Toronto",
+      "nameZh": "多伦多",
+      "country": "加拿大",
+      "airports": ["YYZ", "YTZ"],
+      "ports": ["CATOR"]
+    },
+    "vancouver": {
+      "nameEn": "Vancouver",
+      "nameZh": "温哥华",
+      "country": "加拿大",
+      "airports": ["YVR"],
+      "ports": ["CAVAN"]
+    },
+    "moscow": {
+      "nameEn": "Moscow",
+      "nameZh": "莫斯科",
+      "country": "俄罗斯",
+      "airports": ["SVO", "DME", "VKO"],
+      "ports": []
+    },
+    "istanbul": {
+      "nameEn": "Istanbul",
+      "nameZh": "伊斯坦布尔",
+      "country": "土耳其",
+      "airports": ["IST", "SAW"],
+      "ports": ["TRIST"]
+    },
+    "mumbai": {
+      "nameEn": "Mumbai",
+      "nameZh": "孟买",
+      "country": "印度",
+      "airports": ["BOM"],
+      "ports": ["INBOM"]
+    },
+    "delhi": {
+      "nameEn": "Delhi",
+      "nameZh": "德里",
+      "country": "印度",
+      "airports": ["DEL"],
+      "ports": []
+    },
+    "kualalumpur": {
+      "nameEn": "Kuala Lumpur",
+      "nameZh": "吉隆坡",
+      "country": "马来西亚",
+      "airports": ["KUL"],
+      "ports": ["MYPKG"]
+    },
+    "jakarta": {
+      "nameEn": "Jakarta",
+      "nameZh": "雅加达",
+      "country": "印度尼西亚",
+      "airports": ["CGK"],
+      "ports": ["IDJKT"]
+    },
+    "manila": {
+      "nameEn": "Manila",
+      "nameZh": "马尼拉",
+      "country": "菲律宾",
+      "airports": ["MNL"],
+      "ports": ["PHMNL"]
+    },
+    "hanoi": {
+      "nameEn": "Hanoi",
+      "nameZh": "河内",
+      "country": "越南",
+      "airports": ["HAN"],
+      "ports": ["VNHAN"]
+    },
+    "hochiminhcity": {
+      "nameEn": "Ho Chi Minh City",
+      "nameZh": "胡志明市",
+      "aliases": ["西贡", "Saigon"],
+      "country": "越南",
+      "airports": ["SGN"],
+      "ports": ["VNSGN"]
+    },
+    "taipei": {
+      "nameEn": "Taipei",
+      "nameZh": "台北",
+      "country": "中国台湾",
+      "airports": ["TPE", "TSA"],
+      "ports": ["TWKEL"]
+    },
+    "riodejaneiro": {
+      "nameEn": "Rio de Janeiro",
+      "nameZh": "里约热内卢",
+      "country": "巴西",
+      "airports": ["GIG"],
+      "ports": ["BRRIO"]
+    },
+    "saopaulo": {
+      "nameEn": "São Paulo",
+      "nameZh": "圣保罗",
+      "country": "巴西",
+      "airports": ["GRU", "CGH", "VCP"],
+      "ports": ["BRSSZ"]
+    },
+    "mexicocity": {
+      "nameEn": "Mexico City",
+      "nameZh": "墨西哥城",
+      "country": "墨西哥",
+      "airports": ["MEX"],
+      "ports": []
+    },
+    "buenosaires": {
+      "nameEn": "Buenos Aires",
+      "nameZh": "布宜诺斯艾利斯",
+      "country": "阿根廷",
+      "airports": ["EZE", "AEP"],
+      "ports": ["ARBUE"]
+    },
+    "cairo": {
+      "nameEn": "Cairo",
+      "nameZh": "开罗",
+      "country": "埃及",
+      "airports": ["CAI"],
+      "ports": []
+    },
+    "johannesburg": {
+      "nameEn": "Johannesburg",
+      "nameZh": "约翰内斯堡",
+      "country": "南非",
+      "airports": ["JNB"],
+      "ports": []
+    },
+    "capetown": {
+      "nameEn": "Cape Town",
+      "nameZh": "开普敦",
+      "country": "南非",
+      "airports": ["CPT"],
+      "ports": ["ZACPT"]
+    },
+    "nairobi": {
+      "nameEn": "Nairobi",
+      "nameZh": "内罗毕",
+      "country": "肯尼亚",
+      "airports": ["NBO"],
+      "ports": []
+    },
+    "rome": {
+      "nameEn": "Rome",
+      "nameZh": "罗马",
+      "country": "意大利",
+      "airports": ["FCO", "CIA"],
+      "ports": ["ITCVV"]
+    },
+    "milan": {
+      "nameEn": "Milan",
+      "nameZh": "米兰",
+      "country": "意大利",
+      "airports": ["MXP", "LIN", "BGY"],
+      "ports": []
+    },
+    "madrid": {
+      "nameEn": "Madrid",
+      "nameZh": "马德里",
+      "country": "西班牙",
+      "airports": ["MAD"],
+      "ports": []
+    },
+    "barcelona": {
+      "nameEn": "Barcelona",
+      "nameZh": "巴塞罗那",
+      "country": "西班牙",
+      "airports": ["BCN"],
+      "ports": ["ESBCN"]
+    },
+    "zurich": {
+      "nameEn": "Zurich",
+      "nameZh": "苏黎世",
+      "country": "瑞士",
+      "airports": ["ZRH"],
+      "ports": []
+    },
+    "geneva": {
+      "nameEn": "Geneva",
+      "nameZh": "日内瓦",
+      "country": "瑞士",
+      "airports": ["GVA"],
+      "ports": []
+    },
+    "vienna": {
+      "nameEn": "Vienna",
+      "nameZh": "维也纳",
+      "country": "奥地利",
+      "airports": ["VIE"],
+      "ports": []
+    },
+    "munich": {
+      "nameEn": "Munich",
+      "nameZh": "慕尼黑",
+      "country": "德国",
+      "airports": ["MUC"],
+      "ports": []
+    },
+    "berlin": {
+      "nameEn": "Berlin",
+      "nameZh": "柏林",
+      "country": "德国",
+      "airports": ["BER"],
+      "ports": []
+    },
+    "brussels": {
+      "nameEn": "Brussels",
+      "nameZh": "布鲁塞尔",
+      "country": "比利时",
+      "airports": ["BRU"],
+      "ports": ["BEANT"]
+    },
+    "copenhagen": {
+      "nameEn": "Copenhagen",
+      "nameZh": "哥本哈根",
+      "country": "丹麦",
+      "airports": ["CPH"],
+      "ports": ["DKCPH"]
+    },
+    "stockholm": {
+      "nameEn": "Stockholm",
+      "nameZh": "斯德哥尔摩",
+      "country": "瑞典",
+      "airports": ["ARN"],
+      "ports": ["SESTO"]
+    },
+    "oslo": {
+      "nameEn": "Oslo",
+      "nameZh": "奥斯陆",
+      "country": "挪威",
+      "airports": ["OSL"],
+      "ports": ["NOOSL"]
+    },
+    "helsinki": {
+      "nameEn": "Helsinki",
+      "nameZh": "赫尔辛基",
+      "country": "芬兰",
+      "airports": ["HEL"],
+      "ports": ["FIHEL"]
+    },
+    "lisbon": {
+      "nameEn": "Lisbon",
+      "nameZh": "里斯本",
+      "country": "葡萄牙",
+      "airports": ["LIS"],
+      "ports": ["PTLIS"]
+    },
+    "athens": {
+      "nameEn": "Athens",
+      "nameZh": "雅典",
+      "country": "希腊",
+      "airports": ["ATH"],
+      "ports": ["GRPIR"]
+    },
+    "warsaw": {
+      "nameEn": "Warsaw",
+      "nameZh": "华沙",
+      "country": "波兰",
+      "airports": ["WAW"],
+      "ports": ["PLGDN"]
+    },
+    "prague": {
+      "nameEn": "Prague",
+      "nameZh": "布拉格",
+      "country": "捷克",
+      "airports": ["PRG"],
+      "ports": []
+    },
+    "budapest": {
+      "nameEn": "Budapest",
+      "nameZh": "布达佩斯",
+      "country": "匈牙利",
+      "airports": ["BUD"],
+      "ports": []
+    },
+    "auckland": {
+      "nameEn": "Auckland",
+      "nameZh": "奥克兰",
+      "country": "新西兰",
+      "airports": ["AKL"],
+      "ports": ["NZAKL"]
+    },
+    "wellington": {
+      "nameEn": "Wellington",
+      "nameZh": "惠灵顿",
+      "country": "新西兰",
+      "airports": ["WLG"],
+      "ports": ["NZWLG"]
+    },
+    "sanfrancisco": {
+      "nameEn": "San Francisco",
+      "nameZh": "旧金山",
+      "aliases": ["三藩市"],
+      "country": "美国",
+      "airports": ["SFO", "OAK", "SJC"],
+      "ports": ["USSFO", "USOAK"]
+    },
+    "seattle": {
+      "nameEn": "Seattle",
+      "nameZh": "西雅图",
+      "country": "美国",
+      "airports": ["SEA"],
+      "ports": ["USSEA"]
+    },
+    "miami": {
+      "nameEn": "Miami",
+      "nameZh": "迈阿密",
+      "country": "美国",
+      "airports": ["MIA"],
+      "ports": ["USMIA"]
+    },
+    "dallas": {
+      "nameEn": "Dallas",
+      "nameZh": "达拉斯",
+      "country": "美国",
+      "airports": ["DFW", "DAL"],
+      "ports": []
+    },
+    "houston": {
+      "nameEn": "Houston",
+      "nameZh": "休斯顿",
+      "country": "美国",
+      "airports": ["IAH", "HOU"],
+      "ports": ["USHOU"]
+    },
+    "atlanta": {
+      "nameEn": "Atlanta",
+      "nameZh": "亚特兰大",
+      "country": "美国",
+      "airports": ["ATL"],
+      "ports": []
+    },
+    "boston": {
+      "nameEn": "Boston",
+      "nameZh": "波士顿",
+      "country": "美国",
+      "airports": ["BOS"],
+      "ports": ["USBOS"]
+    },
+    "washington": {
+      "nameEn": "Washington",
+      "nameZh": "华盛顿",
+      "country": "美国",
+      "airports": ["IAD", "DCA", "BWI"],
+      "ports": []
+    },
+    "denver": {
+      "nameEn": "Denver",
+      "nameZh": "丹佛",
+      "country": "美国",
+      "airports": ["DEN"],
+      "ports": []
+    },
+    "phoenix": {
+      "nameEn": "Phoenix",
+      "nameZh": "凤凰城",
+      "country": "美国",
+      "airports": ["PHX"],
+      "ports": []
+    },
+    "lasvegas": {
+      "nameEn": "Las Vegas",
+      "nameZh": "拉斯维加斯",
+      "country": "美国",
+      "airports": ["LAS"],
+      "ports": []
+    },
+    "chengdu": {
+      "nameEn": "Chengdu",
+      "nameZh": "成都",
+      "country": "中国",
+      "airports": ["CTU", "TFU"],
+      "ports": []
+    },
+    "chongqing": {
+      "nameEn": "Chongqing",
+      "nameZh": "重庆",
+      "country": "中国",
+      "airports": ["CKG"],
+      "ports": ["CNCKG"]
+    },
+    "xian": {
+      "nameEn": "Xi'an",
+      "nameZh": "西安",
+      "country": "中国",
+      "airports": ["XIY"],
+      "ports": []
+    },
+    "hangzhou": {
+      "nameEn": "Hangzhou",
+      "nameZh": "杭州",
+      "country": "中国",
+      "airports": ["HGH"],
+      "ports": []
+    },
+    "nanjing": {
+      "nameEn": "Nanjing",
+      "nameZh": "南京",
+      "country": "中国",
+      "airports": ["NKG"],
+      "ports": ["CNNJG"]
+    },
+    "wuhan": {
+      "nameEn": "Wuhan",
+      "nameZh": "武汉",
+      "country": "中国",
+      "airports": ["WUH"],
+      "ports": ["CNWUH"]
+    },
+    "tianjin": {
+      "nameEn": "Tianjin",
+      "nameZh": "天津",
+      "country": "中国",
+      "airports": ["TSN"],
+      "ports": ["CNTXG"]
+    },
+    "qingdao": {
+      "nameEn": "Qingdao",
+      "nameZh": "青岛",
+      "country": "中国",
+      "airports": ["TAO"],
+      "ports": ["CNTAO"]
+    },
+    "dalian": {
+      "nameEn": "Dalian",
+      "nameZh": "大连",
+      "country": "中国",
+      "airports": ["DLC"],
+      "ports": ["CNDLC"]
+    },
+    "xiamen": {
+      "nameEn": "Xiamen",
+      "nameZh": "厦门",
+      "country": "中国",
+      "airports": ["XMN"],
+      "ports": ["CNXMN"]
+    },
+    "ningbo": {
+      "nameEn": "Ningbo",
+      "nameZh": "宁波",
+      "country": "中国",
+      "airports": ["NGB"],
+      "ports": ["CNNGB"]
+    },
+    "suzhou": {
+      "nameEn": "Suzhou",
+      "nameZh": "苏州",
+      "country": "中国",
+      "airports": [],
+      "ports": ["CNSZH"]
+    },
+    "fuzhou": {
+      "nameEn": "Fuzhou",
+      "nameZh": "福州",
+      "country": "中国",
+      "airports": ["FOC"],
+      "ports": ["CNFOC"]
+    },
+    "kunming": {
+      "nameEn": "Kunming",
+      "nameZh": "昆明",
+      "country": "中国",
+      "airports": ["KMG"],
+      "ports": []
+    },
+    "zhengzhou": {
+      "nameEn": "Zhengzhou",
+      "nameZh": "郑州",
+      "country": "中国",
+      "airports": ["CGO"],
+      "ports": []
+    },
+    "changsha": {
+      "nameEn": "Changsha",
+      "nameZh": "长沙",
+      "country": "中国",
+      "airports": ["CSX"],
+      "ports": []
+    },
+    "jinan": {
+      "nameEn": "Jinan",
+      "nameZh": "济南",
+      "country": "中国",
+      "airports": ["TNA"],
+      "ports": []
+    },
+    "shenyang": {
+      "nameEn": "Shenyang",
+      "nameZh": "沈阳",
+      "country": "中国",
+      "airports": ["SHE"],
+      "ports": []
+    },
+    "harbin": {
+      "nameEn": "Harbin",
+      "nameZh": "哈尔滨",
+      "country": "中国",
+      "airports": ["HRB"],
+      "ports": []
+    },
+    "nanning": {
+      "nameEn": "Nanning",
+      "nameZh": "南宁",
+      "country": "中国",
+      "airports": ["NNG"],
+      "ports": []
+    },
+    "haikou": {
+      "nameEn": "Haikou",
+      "nameZh": "海口",
+      "country": "中国",
+      "airports": ["HAK"],
+      "ports": ["CNHAK"]
+    },
+    "macau": {
+      "nameEn": "Macau",
+      "nameZh": "澳门",
+      "country": "中国澳门",
+      "airports": ["MFM"],
+      "ports": []
+    },
+    "doha": {
+      "nameEn": "Doha",
+      "nameZh": "多哈",
+      "country": "卡塔尔",
+      "airports": ["DOH"],
+      "ports": ["QADOH"]
+    },
+    "abudhabi": {
+      "nameEn": "Abu Dhabi",
+      "nameZh": "阿布扎比",
+      "country": "阿联酋",
+      "airports": ["AUH"],
+      "ports": ["AEAUH"]
+    },
+    "jeddah": {
+      "nameEn": "Jeddah",
+      "nameZh": "吉达",
+      "country": "沙特阿拉伯",
+      "airports": ["JED"],
+      "ports": ["SAJED"]
+    },
+    "riyadh": {
+      "nameEn": "Riyadh",
+      "nameZh": "利雅得",
+      "country": "沙特阿拉伯",
+      "airports": ["RUH"],
+      "ports": []
+    },
+    "telaviv": {
+      "nameEn": "Tel Aviv",
+      "nameZh": "特拉维夫",
+      "country": "以色列",
+      "airports": ["TLV"],
+      "ports": ["ILASH"]
+    }
+  }
+}

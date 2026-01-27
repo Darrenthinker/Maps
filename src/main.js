@@ -59,7 +59,11 @@ const state = {
   expandedCountries: new Set(),
   expandedCategories: new Set(),  // 海外仓分类展开状态
   // 当前视图模式：'classified' 分类视图 | 'search' 搜索视图
-  viewMode: 'classified'
+  viewMode: 'classified',
+  // 城市别名映射（城市名 -> 机场/港口代码）
+  cityAliases: null,
+  // 美国州名中文
+  usStatesZh: null
 };
 
 // 加载偏远地区数据
@@ -872,14 +876,44 @@ function getEnglishCityNames(chineseQuery) {
   return matches;
 }
 
+// 从城市别名中获取关联的机场/港口代码
+function getCityAliasedCodes(query, type) {
+  if (!state.cityAliases || !state.cityAliases.cities) return [];
+  
+  const q = query.toLowerCase().replace(/\s+/g, '');
+  const codes = [];
+  
+  for (const [key, city] of Object.entries(state.cityAliases.cities)) {
+    // 匹配城市名（英文、中文、别名）
+    const nameEn = (city.nameEn || '').toLowerCase().replace(/\s+/g, '');
+    const nameZh = (city.nameZh || '').toLowerCase();
+    const aliases = (city.aliases || []).map(a => a.toLowerCase());
+    
+    if (key.includes(q) || nameEn.includes(q) || nameZh.includes(q) || 
+        q.includes(nameZh) || aliases.some(a => a.includes(q) || q.includes(a))) {
+      if (type === 'airport' && city.airports) {
+        codes.push(...city.airports);
+      } else if (type === 'port' && city.ports) {
+        codes.push(...city.ports);
+      }
+    }
+  }
+  
+  return codes;
+}
+
 // 在机场或港口中搜索（同时搜索分类数据）
-// 支持：代码、名称、城市、国家（中英文）
+// 支持：代码、名称、城市、国家（中英文）、城市别名
 function searchInNodes(query, type) {
   const q = query.toLowerCase();
   const qUpper = query.toUpperCase();
   
   // 获取中文城市名对应的英文城市名
   const englishCityNames = getEnglishCityNames(query);
+  
+  // 从城市别名中获取关联的机场/港口代码
+  const aliasedCodes = getCityAliasedCodes(query, type);
+  
   let exactMatches = [];  // 精确匹配（代码完全相同）
   let prefixMatches = []; // 前缀匹配（代码以搜索词开头）
   let cityMatches = [];   // 城市匹配
@@ -914,8 +948,12 @@ function searchInNodes(query, type) {
             // 检查英文城市名是否匹配（支持中文搜索）
             const cityMatchesEnglish = englishCityNames.some(en => city === en || city.startsWith(en) || city.includes(en));
             
+            // 城市别名匹配（最高优先级）
+            if (aliasedCodes.includes(code) || aliasedCodes.includes(iata)) {
+              exactMatches.push(item);
+            }
             // 精确匹配代码
-            if (code === qUpper || icao === qUpper || iata === qUpper) {
+            else if (code === qUpper || icao === qUpper || iata === qUpper) {
               exactMatches.push(item);
             }
             // 前缀匹配代码
@@ -964,8 +1002,12 @@ function searchInNodes(query, type) {
             // 检查英文城市名是否匹配（支持中文搜索）
             const cityMatchesEnglish = englishCityNames.some(en => city === en || city.startsWith(en) || city.includes(en));
             
+            // 城市别名匹配（最高优先级）
+            if (aliasedCodes.includes(code)) {
+              exactMatches.push(item);
+            }
             // 精确匹配代码
-            if (code === qUpper) {
+            else if (code === qUpper) {
               exactMatches.push(item);
             }
             // 前缀匹配代码
@@ -2053,6 +2095,17 @@ wireEvents();
 loadData();
 loadRemoteAreas(); // 加载偏远地区数据
 loadCityNamesZh(); // 加载中英文对照数据
+loadCityAliases(); // 加载城市别名数据
+
+// 加载城市别名数据
+async function loadCityAliases() {
+  try {
+    const res = await fetch("/data/city-aliases.json");
+    state.cityAliases = await res.json();
+  } catch (e) {
+    state.cityAliases = null;
+  }
+}
 
 // 注册 Service Worker 缓存瓦片
 if ('serviceWorker' in navigator) {
