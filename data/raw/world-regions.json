@@ -16,9 +16,9 @@
             "KR": {"name": "韩国", "nameEn": "South Korea"},
             "KP": {"name": "朝鲜", "nameEn": "North Korea"},
             "MN": {"name": "蒙古", "nameEn": "Mongolia"},
-            "HK": {"name": "香港", "nameEn": "Hong Kong"},
-            "MO": {"name": "澳门", "nameEn": "Macau"},
-            "TW": {"name": "台湾", "nameEn": "Taiwan"},
+            "HK": {"name": "中国香港", "nameEn": "Hong Kong, China"},
+            "MO": {"name": "中国澳门", "nameEn": "Macao, China"},
+            "TW": {"name": "中国台湾", "nameEn": "Taiwan, China"},
             "XP": {"name": "南海诸岛", "nameEn": "South China Sea Islands"}
           }
         },

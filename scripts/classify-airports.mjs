@@ -31,12 +31,8 @@ const COUNTRY_CN = {
   YE: "也门", AF: "阿富汗", PG: "巴布亚新几内亚", FJ: "斐济"
 };
 
-// 港澳台归入中国 - 这些地区显示在中国下面
-const CHINA_REGIONS = {
-  HK: { name: "中国香港", nameEn: "Hong Kong, China" },
-  MO: { name: "中国澳门", nameEn: "Macao, China" },
-  TW: { name: "中国台湾", nameEn: "Taiwan, China" }
-};
+// 港澳台排序权重（排在中国后面）
+const CHINA_REGION_ORDER = { CN: 0, HK: 1, MO: 2, TW: 3 };
 
 function parseCsv(filePath) {
   const content = fs.readFileSync(filePath, "utf8");
@@ -141,52 +137,34 @@ function processContinent(continentCode, airports, worldRegions, intlCodes) {
       countries: {}
     };
     
-    // 按国家分类（港澳台归入中国）
+    // 按国家分类
     const countryGroups = {};
     for (const airport of regionAirports) {
-      let countryCode = airport.country;
-      // 港澳台作为中国的子地区，但先单独分组
-      if (!countryGroups[countryCode]) {
-        countryGroups[countryCode] = [];
+      if (!countryGroups[airport.country]) {
+        countryGroups[airport.country] = [];
       }
-      countryGroups[countryCode].push(airport);
+      countryGroups[airport.country].push(airport);
     }
     
-    // 按机场数量排序国家
-    let sortedCountries = Object.entries(countryGroups).sort((a, b) => b[1].length - a[1].length);
-    
-    // 先处理中国及港澳台的合并
-    const chinaRegionCodes = ["HK", "MO", "TW"];
-    let chinaMainAirports = countryGroups["CN"] || [];
-    const chinaSubRegions = {};
-    
-    // 提取港澳台数据
-    for (const code of chinaRegionCodes) {
-      if (countryGroups[code]) {
-        chinaSubRegions[code] = countryGroups[code];
-        delete countryGroups[code];
-      }
-    }
-    
-    // 如果有中国数据，合并港澳台
-    if (chinaMainAirports.length > 0 || Object.keys(chinaSubRegions).length > 0) {
-      // 从排序列表中移除 CN 和港澳台
-      const filteredCountries = sortedCountries.filter(([code]) => code !== "CN" && !chinaRegionCodes.includes(code));
+    // 按机场数量排序国家，但港澳台特殊处理（排在中国后面）
+    const sortedCountries = Object.entries(countryGroups).sort((a, b) => {
+      const aCode = a[0];
+      const bCode = b[0];
+      const aOrder = CHINA_REGION_ORDER[aCode];
+      const bOrder = CHINA_REGION_ORDER[bCode];
       
-      // 计算中国总数（含港澳台）
-      let totalChinaAirports = chinaMainAirports.length;
-      for (const subAirports of Object.values(chinaSubRegions)) {
-        totalChinaAirports += subAirports.length;
+      // 如果都是中国相关地区，按指定顺序排
+      if (aOrder !== undefined && bOrder !== undefined) {
+        return aOrder - bOrder;
       }
-      
-      // 把中国放在最前面
-      sortedCountries = [["CN", chinaMainAirports], ...filteredCountries];
-    }
+      // 如果只有一个是中国相关地区，中国相关排前面
+      if (aOrder !== undefined) return -1;
+      if (bOrder !== undefined) return 1;
+      // 其他国家按数量排序
+      return b[1].length - a[1].length;
+    });
     
     for (const [countryCode, countryAirports] of sortedCountries) {
-      // 跳过港澳台，它们会在中国下面处理
-      if (chinaRegionCodes.includes(countryCode)) continue;
-      
       const info = countryInfo[countryCode] || { name: countryCode, nameEn: countryCode };
       
       // 统计国际/国内机场
@@ -213,73 +191,15 @@ function processContinent(continentCode, airports, worldRegions, intlCodes) {
       // 按机场代码排序
       airportList.sort((a, b) => a.code.localeCompare(b.code));
       
-      // 特殊处理中国：添加港澳台子地区
-      if (countryCode === "CN") {
-        // 处理港澳台子地区
-        const subRegions = {};
-        for (const [subCode, subAirports] of Object.entries(chinaSubRegions)) {
-          let subIntlCount = 0;
-          let subDomesticCount = 0;
-          
-          const subAirportList = subAirports.map(a => {
-            const isIntl = intlCodes.has(a.iata) || intlCodes.has(a.icao);
-            if (isIntl) subIntlCount++;
-            else subDomesticCount++;
-            
-            return {
-              code: a.code,
-              icao: a.icao,
-              iata: a.iata,
-              name: a.name,
-              city: a.city,
-              lat: a.lat,
-              lng: a.lng,
-              intl: isIntl ? 1 : 0
-            };
-          });
-          
-          subAirportList.sort((a, b) => a.code.localeCompare(b.code));
-          
-          const subInfo = CHINA_REGIONS[subCode];
-          subRegions[subCode] = {
-            code: subCode,
-            name: subInfo.name,
-            nameEn: subInfo.nameEn,
-            totalAirports: subAirports.length,
-            intlAirports: subIntlCount,
-            domesticAirports: subDomesticCount,
-            airports: subAirportList
-          };
-          
-          intlCount += subIntlCount;
-          domesticCount += subDomesticCount;
-          
-          console.log(`      ${subInfo.name} (${subCode}): ${subAirports.length} 机场 (国际: ${subIntlCount}, 国内: ${subDomesticCount})`);
-        }
-        
-        const totalWithSubRegions = countryAirports.length + Object.values(chinaSubRegions).reduce((sum, arr) => sum + arr.length, 0);
-        
-        regionResult.countries[countryCode] = {
-          code: countryCode,
-          name: info.name,
-          nameEn: info.nameEn,
-          totalAirports: totalWithSubRegions,
-          intlAirports: intlCount,
-          domesticAirports: domesticCount,
-          airports: airportList,
-          subRegions: Object.keys(subRegions).length > 0 ? subRegions : undefined
-        };
-      } else {
-        regionResult.countries[countryCode] = {
-          code: countryCode,
-          name: info.name,
-          nameEn: info.nameEn,
-          totalAirports: countryAirports.length,
-          intlAirports: intlCount,
-          domesticAirports: domesticCount,
-          airports: airportList
-        };
-      }
+      regionResult.countries[countryCode] = {
+        code: countryCode,
+        name: info.name,
+        nameEn: info.nameEn,
+        totalAirports: countryAirports.length,
+        intlAirports: intlCount,
+        domesticAirports: domesticCount,
+        airports: airportList
+      };
       
       regionResult.totalIntl += intlCount;
       regionResult.totalDomestic += domesticCount;

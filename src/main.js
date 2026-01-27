@@ -57,7 +57,6 @@ const state = {
   expandedContinents: new Set(),
   expandedRegions: new Set(),
   expandedCountries: new Set(),
-  expandedSubRegions: new Set(),  // 子地区展开状态（港澳台）
   expandedCategories: new Set(),  // 海外仓分类展开状态
   // 当前视图模式：'classified' 分类视图 | 'search' 搜索视图
   viewMode: 'classified'
@@ -1193,50 +1192,6 @@ function renderClassifiedView() {
                     </li>
                   `;
                 }
-                
-                // 显示子地区（港澳台）
-                if (country.subRegions) {
-                  const subRegionOrder = ['HK', 'MO', 'TW'];
-                  for (const subCode of subRegionOrder) {
-                    const subRegion = country.subRegions[subCode];
-                    if (!subRegion) continue;
-                    
-                    const subKey = `${contCode}-${regCode}-${countryCode}-${subCode}`;
-                    const isSubExpanded = state.expandedSubRegions?.has(subKey);
-                    const subIcon = isSubExpanded ? '▼' : '▶';
-                    const subTotal = subRegion.totalAirports;
-                    const subIntl = subRegion.intlAirports || 0;
-                    
-                    html += `
-                      <li class="tree-item tree-item--subregion" data-continent="${contCode}" data-region="${regCode}" data-country="${countryCode}" data-subregion="${subCode}">
-                        <div class="tree-item__header tree-item__header--subregion">
-                          <span class="tree-icon">${subIcon}</span>
-                          <span class="tree-name">${subRegion.name}</span>
-                          <span class="tree-count">${subTotal} (${subIntl})</span>
-                        </div>
-                    `;
-                    
-                    if (isSubExpanded) {
-                      html += '<ul class="tree-children tree-children--airports">';
-                      for (const airport of subRegion.airports) {
-                        const intlLabel = airport.intl ? '🌐' : '';
-                        const nameZh = airport.nameZh || '';
-                        const displayName = nameZh 
-                          ? `<span class="result-name-zh">${nameZh}</span> <span class="result-name-divider">/</span> <span class="result-name-en">${airport.name}</span>`
-                          : airport.name;
-                        html += `
-                          <li class="result-item result-item--airport" data-lat="${airport.lat}" data-lng="${airport.lng}" data-name="${airport.name}" data-name-zh="${nameZh}" data-code="${airport.code}" data-intl="${airport.intl ? 1 : 0}" data-type="airport">
-                            <div class="result-item__title">${intlLabel} ${airport.code} · ${displayName}</div>
-                            <div class="result-item__meta">${airport.city}</div>
-                          </li>
-                        `;
-                      }
-                      html += '</ul>';
-                    }
-                    
-                    html += '</li>';
-                  }
-                }
               } else {
                 for (const port of country.ports) {
                   const nameZh = port.nameZh || '';
@@ -1250,48 +1205,6 @@ function renderClassifiedView() {
                       <div class="result-item__meta">${port.city}</div>
                     </li>
                   `;
-                }
-                
-                // 显示子地区（港澳台）港口
-                if (country.subRegions) {
-                  const subRegionOrder = ['HK', 'MO', 'TW'];
-                  for (const subCode of subRegionOrder) {
-                    const subRegion = country.subRegions[subCode];
-                    if (!subRegion) continue;
-                    
-                    const subKey = `${contCode}-${regCode}-${countryCode}-${subCode}`;
-                    const isSubExpanded = state.expandedSubRegions?.has(subKey);
-                    const subIcon = isSubExpanded ? '▼' : '▶';
-                    const subTotal = subRegion.totalPorts;
-                    
-                    html += `
-                      <li class="tree-item tree-item--subregion" data-continent="${contCode}" data-region="${regCode}" data-country="${countryCode}" data-subregion="${subCode}">
-                        <div class="tree-item__header tree-item__header--subregion">
-                          <span class="tree-icon">${subIcon}</span>
-                          <span class="tree-name">${subRegion.name}</span>
-                          <span class="tree-count">${subTotal}</span>
-                        </div>
-                    `;
-                    
-                    if (isSubExpanded) {
-                      html += '<ul class="tree-children tree-children--airports">';
-                      for (const port of subRegion.ports) {
-                        const nameZh = port.nameZh || '';
-                        const displayName = nameZh 
-                          ? `<span class="result-name-zh">${nameZh}</span> <span class="result-name-divider">/</span> <span class="result-name-en">${port.name}</span>`
-                          : port.name;
-                        html += `
-                          <li class="result-item result-item--airport" data-lat="${port.lat}" data-lng="${port.lng}" data-name="${port.name}" data-name-zh="${nameZh}" data-code="${port.code}" data-intl="0" data-type="port">
-                            <div class="result-item__title">${port.code} · ${displayName}</div>
-                            <div class="result-item__meta">${port.city}</div>
-                          </li>
-                        `;
-                      }
-                      html += '</ul>';
-                    }
-                    
-                    html += '</li>';
-                  }
                 }
               }
               
@@ -1497,24 +1410,6 @@ function bindTreeEvents() {
     });
   });
   
-  // 子地区点击（港澳台）
-  document.querySelectorAll('.tree-item--subregion > .tree-item__header').forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const contCode = el.parentElement.dataset.continent;
-      const regCode = el.parentElement.dataset.region;
-      const countryCode = el.parentElement.dataset.country;
-      const subCode = el.parentElement.dataset.subregion;
-      const key = `${contCode}-${regCode}-${countryCode}-${subCode}`;
-      if (state.expandedSubRegions.has(key)) {
-        state.expandedSubRegions.delete(key);
-      } else {
-        state.expandedSubRegions.add(key);
-      }
-      renderClassifiedView();
-    });
-  });
-  
   // 机场/港口项点击 - 跳转到地图（使用分类数据中的坐标和类型图标）
   document.querySelectorAll('.result-item--airport[data-lat][data-type]').forEach(el => {
     el.addEventListener('click', (e) => {
@@ -1550,7 +1445,6 @@ function switchHubTab(tabName) {
   state.expandedContinents.clear();
   state.expandedRegions.clear();
   state.expandedCountries.clear();
-  state.expandedSubRegions.clear();
   
   // 更新 Tab 样式
   tabAirports.classList.toggle('hub-tab--active', tabName === 'airports');
