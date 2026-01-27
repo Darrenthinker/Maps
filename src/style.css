@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Helvetica Neue", sans-serif;
   color: #0b1220;
   background: #f2f4f8;
   letter-spacing: 0.1px;
@@ -849,7 +849,7 @@ body {
 }
 
 .result-item--airport-new .airport-code {
-  font-family: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+  font-family: "Inter", "SF Mono", "Menlo", monospace;
   font-weight: 700;
   font-size: 13px;
   color: #2563eb;
@@ -1080,7 +1080,7 @@ body {
   border-radius: 6px;
   font-size: 13px;
   font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
   white-space: nowrap;
   max-width: 200px;
   overflow: hidden;
@@ -1142,7 +1142,7 @@ body {
   border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
   white-space: nowrap;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
@@ -1475,7 +1475,7 @@ body {
 }
 
 .map-popup--apple {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
 }
 
 .map-popup__header {
