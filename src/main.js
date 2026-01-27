@@ -850,11 +850,32 @@ function applyFilters() {
   }
 }
 
+// 获取中文城市名对应的英文城市名列表
+function getEnglishCityNames(chineseQuery) {
+  if (!state.cityNamesZh || !state.cityNamesZh.cities) return [];
+  
+  const cities = state.cityNamesZh.cities;
+  const q = chineseQuery.toLowerCase();
+  const matches = [];
+  
+  // 遍历城市映射，找出中文名包含查询词的英文城市名
+  for (const [englishName, chineseName] of Object.entries(cities)) {
+    if (chineseName && chineseName.toLowerCase().includes(q)) {
+      matches.push(englishName.toLowerCase());
+    }
+  }
+  
+  return matches;
+}
+
 // 在机场或港口中搜索（同时搜索分类数据）
 // 支持：代码、名称、城市、国家（中英文）
 function searchInNodes(query, type) {
   const q = query.toLowerCase();
   const qUpper = query.toUpperCase();
+  
+  // 获取中文城市名对应的英文城市名
+  const englishCityNames = getEnglishCityNames(query);
   let exactMatches = [];  // 精确匹配（代码完全相同）
   let prefixMatches = []; // 前缀匹配（代码以搜索词开头）
   let cityMatches = [];   // 城市匹配
@@ -886,6 +907,9 @@ function searchInNodes(query, type) {
               country: country.name
             };
             
+            // 检查英文城市名是否匹配（支持中文搜索）
+            const cityMatchesEnglish = englishCityNames.some(en => city === en || city.startsWith(en) || city.includes(en));
+            
             // 精确匹配代码
             if (code === qUpper || icao === qUpper || iata === qUpper) {
               exactMatches.push(item);
@@ -894,8 +918,8 @@ function searchInNodes(query, type) {
             else if (code.startsWith(qUpper) || icao.startsWith(qUpper) || iata.startsWith(qUpper)) {
               prefixMatches.push(item);
             }
-            // 城市匹配（精确优先）
-            else if (city === q || city.startsWith(q)) {
+            // 城市匹配（精确优先，支持中英文）
+            else if (city === q || city.startsWith(q) || cityMatchesEnglish) {
               cityMatches.push(item);
             }
             // 国家匹配
@@ -933,6 +957,9 @@ function searchInNodes(query, type) {
               country: country.name
             };
             
+            // 检查英文城市名是否匹配（支持中文搜索）
+            const cityMatchesEnglish = englishCityNames.some(en => city === en || city.startsWith(en) || city.includes(en));
+            
             // 精确匹配代码
             if (code === qUpper) {
               exactMatches.push(item);
@@ -941,8 +968,8 @@ function searchInNodes(query, type) {
             else if (code.startsWith(qUpper)) {
               prefixMatches.push(item);
             }
-            // 城市匹配
-            else if (city === q || city.startsWith(q)) {
+            // 城市匹配（支持中英文）
+            else if (city === q || city.startsWith(q) || cityMatchesEnglish) {
               cityMatches.push(item);
             }
             // 国家匹配
@@ -971,9 +998,13 @@ function searchWarehouses(query) {
   const qUpper = query.toUpperCase();
   let exactMatches = [];  // 精确匹配
   let prefixMatches = []; // 前缀匹配
+  let cityMatches = [];   // 城市匹配
   let otherMatches = [];  // 其他匹配
   
   if (!state.warehousesData) return [];
+  
+  // 获取中文城市名对应的英文城市名
+  const englishCityNames = getEnglishCityNames(query);
   
   for (const [catKey, category] of Object.entries(state.warehousesData.categories)) {
     for (const [countryCode, country] of Object.entries(category.countries)) {
@@ -989,6 +1020,9 @@ function searchWarehouses(query) {
           countryName: country.name
         };
         
+        // 检查英文城市名是否匹配（支持中文搜索）
+        const cityMatchesEnglish = englishCityNames.some(en => city === en || city.startsWith(en) || city.includes(en));
+        
         // 精确匹配代码
         if (code === qUpper) {
           exactMatches.push(item);
@@ -996,6 +1030,10 @@ function searchWarehouses(query) {
         // 前缀匹配代码
         else if (code.startsWith(qUpper)) {
           prefixMatches.push(item);
+        }
+        // 城市匹配（支持中英文）
+        else if (city === q || city.startsWith(q) || cityMatchesEnglish) {
+          cityMatches.push(item);
         }
         // 其他匹配
         else if (name.includes(q) || city.includes(q) || company.includes(q)) {
@@ -1005,7 +1043,7 @@ function searchWarehouses(query) {
     }
   }
   
-  return [...exactMatches, ...prefixMatches, ...otherMatches];
+  return [...exactMatches, ...prefixMatches, ...cityMatches, ...otherMatches];
 }
 
 // 渲染海外仓搜索结果
