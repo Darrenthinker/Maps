@@ -24,11 +24,9 @@
         "Suzhou": { "nameZh": "苏州", "population": 12750000, "gdp": 24650 },
         "Zhengzhou": { "nameZh": "郑州", "population": 12600000, "gdp": 13800 },
         "Qingdao": { "nameZh": "青岛", "population": 10070000, "gdp": 15000 },
-        "Dongguan": { "nameZh": "东莞", "population": 10470000, "gdp": 11260 },
         "Changsha": { "nameZh": "长沙", "population": 10470000, "gdp": 14000 },
         "Shenyang": { "nameZh": "沈阳", "population": 9070000, "gdp": 7700 },
         "Ningbo": { "nameZh": "宁波", "population": 9540000, "gdp": 16100 },
-        "Foshan": { "nameZh": "佛山", "population": 9500000, "gdp": 12700 },
         "Kunming": { "nameZh": "昆明", "population": 8460000, "gdp": 7600 },
         "Dalian": { "nameZh": "大连", "population": 7450000, "gdp": 8500 },
         "Harbin": { "nameZh": "哈尔滨", "population": 10010000, "gdp": 5350 },
@@ -38,7 +36,6 @@
         "Changchun": { "nameZh": "长春", "population": 9070000, "gdp": 7100 },
         "Hefei": { "nameZh": "合肥", "population": 9370000, "gdp": 12000 },
         "Urumqi": { "nameZh": "乌鲁木齐", "population": 4050000, "gdp": 4000 },
-        "Shijiazhuang": { "nameZh": "石家庄", "population": 11240000, "gdp": 7100 },
         "Nanchang": { "nameZh": "南昌", "population": 6250000, "gdp": 7200 },
         "Nanning": { "nameZh": "南宁", "population": 8740000, "gdp": 5400 },
         "Taiyuan": { "nameZh": "太原", "population": 5300000, "gdp": 5700 },
@@ -47,14 +44,7 @@
         "Haikou": { "nameZh": "海口", "population": 2880000, "gdp": 2100 },
         "Sanya": { "nameZh": "三亚", "population": 1030000, "gdp": 900 },
         "Hohhot": { "nameZh": "呼和浩特", "population": 3450000, "gdp": 3500 },
-        "Yinchuan": { "nameZh": "银川", "population": 2860000, "gdp": 2500 },
-        "Xining": { "nameZh": "西宁", "population": 2470000, "gdp": 1600 },
-        "Lhasa": { "nameZh": "拉萨", "population": 870000, "gdp": 800 },
-        "Wuxi": { "nameZh": "无锡", "population": 7460000, "gdp": 14800 },
-        "Wenzhou": { "nameZh": "温州", "population": 9570000, "gdp": 8000 },
-        "Quanzhou": { "nameZh": "泉州", "population": 8780000, "gdp": 12100 },
-        "Zhuhai": { "nameZh": "珠海", "population": 2440000, "gdp": 4000 },
-        "Tangshan": { "nameZh": "唐山", "population": 7720000, "gdp": 8900 }
+        "Lhasa": { "nameZh": "拉萨", "population": 870000, "gdp": 800 }
       },
       "airports": {
         "PVG": { "cargo": 3600000 }, "PEK": { "cargo": 1850000 }, "CAN": { "cargo": 2040000 },
@@ -64,13 +54,11 @@
         "TAO": { "cargo": 280000 }, "KMG": { "cargo": 520000 }, "XMN": { "cargo": 420000 },
         "CSX": { "cargo": 300000 }, "SHE": { "cargo": 220000 }, "DLC": { "cargo": 230000 },
         "HRB": { "cargo": 180000 }, "TNA": { "cargo": 190000 }, "FOC": { "cargo": 180000 },
-        "NNG": { "cargo": 170000 }, "HFE": { "cargo": 160000 }, "SJW": { "cargo": 100000 },
-        "URC": { "cargo": 250000 }, "KWE": { "cargo": 140000 }, "TYN": { "cargo": 80000 },
-        "HAK": { "cargo": 320000 }, "LHW": { "cargo": 70000 }, "KHN": { "cargo": 90000 },
-        "NGB": { "cargo": 180000 }, "WNZ": { "cargo": 70000 }, "SYX": { "cargo": 80000 },
-        "CGQ": { "cargo": 100000 }, "HET": { "cargo": 50000 }, "INC": { "cargo": 40000 },
-        "XNN": { "cargo": 30000 }, "LXA": { "cargo": 50000 }, "PKX": { "cargo": 200000 },
-        "SHA": { "cargo": 500000 }
+        "NNG": { "cargo": 170000 }, "HFE": { "cargo": 160000 }, "URC": { "cargo": 250000 },
+        "KWE": { "cargo": 140000 }, "TYN": { "cargo": 80000 }, "HAK": { "cargo": 320000 },
+        "LHW": { "cargo": 70000 }, "KHN": { "cargo": 90000 }, "NGB": { "cargo": 180000 },
+        "SYX": { "cargo": 80000 }, "CGQ": { "cargo": 100000 }, "HET": { "cargo": 50000 },
+        "LXA": { "cargo": 50000 }, "PKX": { "cargo": 200000 }, "SHA": { "cargo": 500000 }
       }
     },
     "JP": {
@@ -84,8 +72,6 @@
         "Sendai": { "nameZh": "仙台", "population": 2320000, "gdp": 5000 },
         "Hiroshima": { "nameZh": "广岛", "population": 2000000, "gdp": 5000 },
         "Naha": { "nameZh": "那霸", "population": 800000, "gdp": 2000 },
-        "Kobe": { "nameZh": "神户", "population": 1530000, "gdp": 6500 },
-        "Kitakyushu": { "nameZh": "北九州", "population": 940000, "gdp": 3500 },
         "Narita": { "nameZh": "成田", "population": 130000, "gdp": 500 }
       },
       "airports": {
@@ -102,58 +88,38 @@
         "Busan": { "nameZh": "釜山", "population": 3430000, "gdp": 9000 },
         "Incheon": { "nameZh": "仁川", "population": 2940000, "gdp": 8500 },
         "Daegu": { "nameZh": "大邱", "population": 2430000, "gdp": 5500 },
-        "Daejeon": { "nameZh": "大田", "population": 1470000, "gdp": 4200 },
         "Gwangju": { "nameZh": "光州", "population": 1450000, "gdp": 4000 },
         "Jeju": { "nameZh": "济州", "population": 670000, "gdp": 2000 }
       },
       "airports": {
         "ICN": { "cargo": 2950000 }, "GMP": { "cargo": 250000 }, "PUS": { "cargo": 180000 },
-        "CJU": { "cargo": 80000 }, "TAE": { "cargo": 50000 }, "CJJ": { "cargo": 30000 },
-        "KWJ": { "cargo": 20000 }
+        "CJU": { "cargo": 80000 }, "TAE": { "cargo": 50000 }, "KWJ": { "cargo": 20000 }
       }
     },
-    "HK": {
-      "name": "中国香港",
-      "cities": { "Hong Kong": { "nameZh": "香港", "population": 7500000, "gdp": 38000 } },
-      "airports": { "HKG": { "cargo": 4300000 } }
-    },
-    "MO": {
-      "name": "中国澳门",
-      "cities": { "Macau": { "nameZh": "澳门", "population": 680000, "gdp": 4500 } },
-      "airports": { "MFM": { "cargo": 45000 } }
-    },
+    "HK": { "name": "中国香港", "cities": { "Hong Kong": { "nameZh": "香港", "population": 7500000, "gdp": 38000 } }, "airports": { "HKG": { "cargo": 4300000 } } },
+    "MO": { "name": "中国澳门", "cities": { "Macau": { "nameZh": "澳门", "population": 680000, "gdp": 4500 } }, "airports": { "MFM": { "cargo": 45000 } } },
     "TW": {
       "name": "中国台湾",
       "cities": {
         "Taipei": { "nameZh": "台北", "population": 7050000, "gdp": 32000 },
-        "Taoyuan": { "nameZh": "桃园", "population": 2270000, "gdp": 9000 },
         "Kaohsiung": { "nameZh": "高雄", "population": 2770000, "gdp": 8500 },
         "Taichung": { "nameZh": "台中", "population": 2820000, "gdp": 8000 },
         "Tainan": { "nameZh": "台南", "population": 1880000, "gdp": 5500 }
       },
-      "airports": {
-        "TPE": { "cargo": 2320000 }, "KHH": { "cargo": 100000 }, "RMQ": { "cargo": 20000 },
-        "TSA": { "cargo": 10000 }, "TNN": { "cargo": 5000 }
-      }
+      "airports": { "TPE": { "cargo": 2320000 }, "KHH": { "cargo": 100000 }, "RMQ": { "cargo": 20000 }, "TSA": { "cargo": 10000 } }
     },
-    "SG": {
-      "name": "新加坡",
-      "cities": { "Singapore": { "nameZh": "新加坡", "population": 5850000, "gdp": 42000 } },
-      "airports": { "SIN": { "cargo": 2010000 } }
-    },
+    "MN": { "name": "蒙古", "cities": { "Ulaanbaatar": { "nameZh": "乌兰巴托", "population": 1540000, "gdp": 1800 } }, "airports": { "ULN": { "cargo": 15000 } } },
+    "KP": { "name": "朝鲜", "cities": { "Pyongyang": { "nameZh": "平壤", "population": 3250000, "gdp": 800 } }, "airports": { "FNJ": { "cargo": 5000 } } },
+    "SG": { "name": "新加坡", "cities": { "Singapore": { "nameZh": "新加坡", "population": 5850000, "gdp": 42000 } }, "airports": { "SIN": { "cargo": 2010000 } } },
     "TH": {
       "name": "泰国",
       "cities": {
         "Bangkok": { "nameZh": "曼谷", "population": 10720000, "gdp": 24000 },
         "Chiang Mai": { "nameZh": "清迈", "population": 1270000, "gdp": 2000 },
         "Phuket": { "nameZh": "普吉", "population": 420000, "gdp": 1500 },
-        "Pattaya": { "nameZh": "芭提雅", "population": 120000, "gdp": 800 },
         "Hat Yai": { "nameZh": "合艾", "population": 160000, "gdp": 600 }
       },
-      "airports": {
-        "BKK": { "cargo": 1400000 }, "DMK": { "cargo": 100000 }, "CNX": { "cargo": 30000 },
-        "HKT": { "cargo": 25000 }, "HDY": { "cargo": 15000 }, "USM": { "cargo": 10000 }
-      }
+      "airports": { "BKK": { "cargo": 1400000 }, "DMK": { "cargo": 100000 }, "CNX": { "cargo": 30000 }, "HKT": { "cargo": 25000 }, "HDY": { "cargo": 15000 } }
     },
     "MY": {
       "name": "马来西亚",
@@ -164,10 +130,7 @@
         "Kota Kinabalu": { "nameZh": "哥打基纳巴卢", "population": 500000, "gdp": 1200 },
         "Kuching": { "nameZh": "古晋", "population": 660000, "gdp": 1500 }
       },
-      "airports": {
-        "KUL": { "cargo": 880000 }, "PEN": { "cargo": 150000 }, "JHB": { "cargo": 50000 },
-        "BKI": { "cargo": 35000 }, "KCH": { "cargo": 30000 }, "LGK": { "cargo": 20000 }
-      }
+      "airports": { "KUL": { "cargo": 880000 }, "PEN": { "cargo": 150000 }, "JHB": { "cargo": 50000 }, "BKI": { "cargo": 35000 }, "KCH": { "cargo": 30000 } }
     },
     "VN": {
       "name": "越南",
@@ -175,13 +138,9 @@
         "Ho Chi Minh City": { "nameZh": "胡志明市", "population": 9100000, "gdp": 8500 },
         "Hanoi": { "nameZh": "河内", "population": 8400000, "gdp": 6500 },
         "Da Nang": { "nameZh": "岘港", "population": 1200000, "gdp": 1500 },
-        "Hai Phong": { "nameZh": "海防", "population": 2100000, "gdp": 2000 },
-        "Can Tho": { "nameZh": "芹苴", "population": 1280000, "gdp": 800 }
+        "Hai Phong": { "nameZh": "海防", "population": 2100000, "gdp": 2000 }
       },
-      "airports": {
-        "SGN": { "cargo": 650000 }, "HAN": { "cargo": 400000 }, "DAD": { "cargo": 50000 },
-        "HPH": { "cargo": 30000 }, "CXR": { "cargo": 20000 }, "VCA": { "cargo": 15000 }
-      }
+      "airports": { "SGN": { "cargo": 650000 }, "HAN": { "cargo": 400000 }, "DAD": { "cargo": 50000 }, "HPH": { "cargo": 30000 } }
     },
     "ID": {
       "name": "印度尼西亚",
@@ -190,29 +149,40 @@
         "Surabaya": { "nameZh": "泗水", "population": 3460000, "gdp": 5500 },
         "Medan": { "nameZh": "棉兰", "population": 2480000, "gdp": 3000 },
         "Bandung": { "nameZh": "万隆", "population": 2570000, "gdp": 2800 },
-        "Makassar": { "nameZh": "望加锡", "population": 1530000, "gdp": 1800 },
         "Denpasar": { "nameZh": "登巴萨", "population": 950000, "gdp": 2000 },
-        "Semarang": { "nameZh": "三宝垄", "population": 1770000, "gdp": 2200 }
+        "Makassar": { "nameZh": "望加锡", "population": 1530000, "gdp": 1800 }
       },
-      "airports": {
-        "CGK": { "cargo": 750000 }, "SUB": { "cargo": 120000 }, "DPS": { "cargo": 80000 },
-        "KNO": { "cargo": 50000 }, "UPG": { "cargo": 40000 }, "SRG": { "cargo": 30000 },
-        "BDO": { "cargo": 25000 }, "JOG": { "cargo": 20000 }
-      }
+      "airports": { "CGK": { "cargo": 750000 }, "SUB": { "cargo": 120000 }, "DPS": { "cargo": 80000 }, "KNO": { "cargo": 50000 }, "UPG": { "cargo": 40000 } }
     },
     "PH": {
       "name": "菲律宾",
       "cities": {
         "Manila": { "nameZh": "马尼拉", "population": 14400000, "gdp": 12000 },
         "Cebu": { "nameZh": "宿务", "population": 3000000, "gdp": 2500 },
-        "Davao": { "nameZh": "达沃", "population": 1900000, "gdp": 1500 },
-        "Clark": { "nameZh": "克拉克", "population": 500000, "gdp": 800 }
+        "Davao": { "nameZh": "达沃", "population": 1900000, "gdp": 1500 }
       },
-      "airports": {
-        "MNL": { "cargo": 680000 }, "CEB": { "cargo": 80000 }, "CRK": { "cargo": 60000 },
-        "DVO": { "cargo": 40000 }, "ILO": { "cargo": 20000 }
-      }
+      "airports": { "MNL": { "cargo": 680000 }, "CEB": { "cargo": 80000 }, "CRK": { "cargo": 60000 }, "DVO": { "cargo": 40000 } }
     },
+    "MM": {
+      "name": "缅甸",
+      "cities": {
+        "Yangon": { "nameZh": "仰光", "population": 5570000, "gdp": 3500 },
+        "Mandalay": { "nameZh": "曼德勒", "population": 1730000, "gdp": 1200 }
+      },
+      "airports": { "RGN": { "cargo": 80000 }, "MDL": { "cargo": 20000 } }
+    },
+    "LA": {
+      "name": "老挝",
+      "cities": { "Vientiane": { "nameZh": "万象", "population": 950000, "gdp": 800 } },
+      "airports": { "VTE": { "cargo": 15000 } }
+    },
+    "KH": {
+      "name": "柬埔寨",
+      "cities": { "Phnom Penh": { "nameZh": "金边", "population": 2280000, "gdp": 2000 }, "Siem Reap": { "nameZh": "暹粒", "population": 250000, "gdp": 500 } },
+      "airports": { "PNH": { "cargo": 60000 }, "REP": { "cargo": 10000 } }
+    },
+    "BN": { "name": "文莱", "cities": { "Bandar Seri Begawan": { "nameZh": "斯里巴加湾", "population": 50000, "gdp": 1500 } }, "airports": { "BWN": { "cargo": 20000 } } },
+    "TL": { "name": "东帝汶", "cities": { "Dili": { "nameZh": "帝力", "population": 280000, "gdp": 200 } }, "airports": { "DIL": { "cargo": 5000 } } },
     "IN": {
       "name": "印度",
       "cities": {
@@ -224,39 +194,36 @@
         "Hyderabad": { "nameZh": "海德拉巴", "population": 10270000, "gdp": 7500 },
         "Ahmedabad": { "nameZh": "艾哈迈达巴德", "population": 8450000, "gdp": 6000 },
         "Pune": { "nameZh": "浦那", "population": 7400000, "gdp": 5500 },
-        "Cochin": { "nameZh": "科钦", "population": 2120000, "gdp": 2000 },
-        "Jaipur": { "nameZh": "斋浦尔", "population": 4100000, "gdp": 2500 }
+        "Cochin": { "nameZh": "科钦", "population": 2120000, "gdp": 2000 }
       },
-      "airports": {
-        "DEL": { "cargo": 1050000 }, "BOM": { "cargo": 950000 }, "BLR": { "cargo": 450000 },
-        "MAA": { "cargo": 420000 }, "CCU": { "cargo": 180000 }, "HYD": { "cargo": 200000 },
-        "AMD": { "cargo": 120000 }, "COK": { "cargo": 100000 }, "PNQ": { "cargo": 80000 },
-        "JAI": { "cargo": 50000 }
-      }
+      "airports": { "DEL": { "cargo": 1050000 }, "BOM": { "cargo": 950000 }, "BLR": { "cargo": 450000 }, "MAA": { "cargo": 420000 }, "CCU": { "cargo": 180000 }, "HYD": { "cargo": 200000 }, "AMD": { "cargo": 120000 }, "COK": { "cargo": 100000 } }
     },
     "PK": {
       "name": "巴基斯坦",
       "cities": {
         "Karachi": { "nameZh": "卡拉奇", "population": 16840000, "gdp": 8500 },
         "Lahore": { "nameZh": "拉合尔", "population": 13540000, "gdp": 5500 },
-        "Islamabad": { "nameZh": "伊斯兰堡", "population": 1150000, "gdp": 2000 },
-        "Faisalabad": { "nameZh": "费萨拉巴德", "population": 3600000, "gdp": 1800 }
+        "Islamabad": { "nameZh": "伊斯兰堡", "population": 1150000, "gdp": 2000 }
       },
-      "airports": {
-        "KHI": { "cargo": 280000 }, "LHE": { "cargo": 150000 }, "ISB": { "cargo": 80000 },
-        "LYP": { "cargo": 30000 }
-      }
+      "airports": { "KHI": { "cargo": 280000 }, "LHE": { "cargo": 150000 }, "ISB": { "cargo": 80000 } }
     },
     "BD": {
       "name": "孟加拉国",
-      "cities": {
-        "Dhaka": { "nameZh": "达卡", "population": 22480000, "gdp": 12000 },
-        "Chittagong": { "nameZh": "吉大港", "population": 5300000, "gdp": 3500 }
-      },
-      "airports": {
-        "DAC": { "cargo": 350000 }, "CGP": { "cargo": 50000 }
-      }
+      "cities": { "Dhaka": { "nameZh": "达卡", "population": 22480000, "gdp": 12000 }, "Chittagong": { "nameZh": "吉大港", "population": 5300000, "gdp": 3500 } },
+      "airports": { "DAC": { "cargo": 350000 }, "CGP": { "cargo": 50000 } }
     },
+    "LK": {
+      "name": "斯里兰卡",
+      "cities": { "Colombo": { "nameZh": "科伦坡", "population": 5650000, "gdp": 4500 } },
+      "airports": { "CMB": { "cargo": 280000 } }
+    },
+    "NP": {
+      "name": "尼泊尔",
+      "cities": { "Kathmandu": { "nameZh": "加德满都", "population": 1470000, "gdp": 1200 } },
+      "airports": { "KTM": { "cargo": 50000 } }
+    },
+    "MV": { "name": "马尔代夫", "cities": { "Male": { "nameZh": "马累", "population": 250000, "gdp": 600 } }, "airports": { "MLE": { "cargo": 80000 } } },
+    "AF": { "name": "阿富汗", "cities": { "Kabul": { "nameZh": "喀布尔", "population": 4600000, "gdp": 1000 } }, "airports": { "KBL": { "cargo": 30000 } } },
     "AE": {
       "name": "阿联酋",
       "cities": {
@@ -264,10 +231,7 @@
         "Abu Dhabi": { "nameZh": "阿布扎比", "population": 1500000, "gdp": 25000 },
         "Sharjah": { "nameZh": "沙迦", "population": 1800000, "gdp": 5000 }
       },
-      "airports": {
-        "DXB": { "cargo": 2650000 }, "AUH": { "cargo": 700000 }, "SHJ": { "cargo": 150000 },
-        "DWC": { "cargo": 1200000 }
-      }
+      "airports": { "DXB": { "cargo": 2650000 }, "AUH": { "cargo": 700000 }, "DWC": { "cargo": 1200000 }, "SHJ": { "cargo": 150000 } }
     },
     "SA": {
       "name": "沙特阿拉伯",
@@ -275,13 +239,9 @@
         "Riyadh": { "nameZh": "利雅得", "population": 7680000, "gdp": 18000 },
         "Jeddah": { "nameZh": "吉达", "population": 4700000, "gdp": 12000 },
         "Dammam": { "nameZh": "达曼", "population": 1250000, "gdp": 8000 },
-        "Medina": { "nameZh": "麦地那", "population": 1540000, "gdp": 3000 },
-        "Mecca": { "nameZh": "麦加", "population": 2090000, "gdp": 4000 }
+        "Medina": { "nameZh": "麦地那", "population": 1540000, "gdp": 3000 }
       },
-      "airports": {
-        "JED": { "cargo": 850000 }, "RUH": { "cargo": 600000 }, "DMM": { "cargo": 350000 },
-        "MED": { "cargo": 80000 }
-      }
+      "airports": { "JED": { "cargo": 850000 }, "RUH": { "cargo": 600000 }, "DMM": { "cargo": 350000 }, "MED": { "cargo": 80000 } }
     },
     "TR": {
       "name": "土耳其",
@@ -291,27 +251,59 @@
         "Izmir": { "nameZh": "伊兹密尔", "population": 4420000, "gdp": 6500 },
         "Antalya": { "nameZh": "安塔利亚", "population": 2620000, "gdp": 3500 }
       },
-      "airports": {
-        "IST": { "cargo": 1750000 }, "SAW": { "cargo": 200000 }, "ESB": { "cargo": 120000 },
-        "ADB": { "cargo": 80000 }, "AYT": { "cargo": 50000 }
-      }
+      "airports": { "IST": { "cargo": 1750000 }, "SAW": { "cargo": 200000 }, "ESB": { "cargo": 120000 }, "ADB": { "cargo": 80000 }, "AYT": { "cargo": 50000 } }
     },
     "IL": {
       "name": "以色列",
+      "cities": { "Tel Aviv": { "nameZh": "特拉维夫", "population": 4180000, "gdp": 18000 }, "Jerusalem": { "nameZh": "耶路撒冷", "population": 970000, "gdp": 3500 } },
+      "airports": { "TLV": { "cargo": 450000 } }
+    },
+    "QA": { "name": "卡塔尔", "cities": { "Doha": { "nameZh": "多哈", "population": 2380000, "gdp": 22000 } }, "airports": { "DOH": { "cargo": 2500000 } } },
+    "KW": { "name": "科威特", "cities": { "Kuwait City": { "nameZh": "科威特城", "population": 3100000, "gdp": 15000 } }, "airports": { "KWI": { "cargo": 250000 } } },
+    "BH": { "name": "巴林", "cities": { "Manama": { "nameZh": "麦纳麦", "population": 700000, "gdp": 4000 } }, "airports": { "BAH": { "cargo": 400000 } } },
+    "OM": {
+      "name": "阿曼",
+      "cities": { "Muscat": { "nameZh": "马斯喀特", "population": 1550000, "gdp": 5000 } },
+      "airports": { "MCT": { "cargo": 180000 } }
+    },
+    "JO": { "name": "约旦", "cities": { "Amman": { "nameZh": "安曼", "population": 4300000, "gdp": 5500 } }, "airports": { "AMM": { "cargo": 180000 } } },
+    "LB": { "name": "黎巴嫩", "cities": { "Beirut": { "nameZh": "贝鲁特", "population": 2420000, "gdp": 5000 } }, "airports": { "BEY": { "cargo": 150000 } } },
+    "IR": {
+      "name": "伊朗",
       "cities": {
-        "Tel Aviv": { "nameZh": "特拉维夫", "population": 4180000, "gdp": 18000 },
-        "Jerusalem": { "nameZh": "耶路撒冷", "population": 970000, "gdp": 3500 },
-        "Haifa": { "nameZh": "海法", "population": 1090000, "gdp": 4000 }
+        "Tehran": { "nameZh": "德黑兰", "population": 9380000, "gdp": 15000 },
+        "Mashhad": { "nameZh": "马什哈德", "population": 3370000, "gdp": 4000 },
+        "Isfahan": { "nameZh": "伊斯法罕", "population": 2070000, "gdp": 3500 }
       },
-      "airports": {
-        "TLV": { "cargo": 450000 }, "ETH": { "cargo": 20000 }
-      }
+      "airports": { "IKA": { "cargo": 350000 }, "THR": { "cargo": 100000 }, "MHD": { "cargo": 80000 } }
     },
-    "QA": {
-      "name": "卡塔尔",
-      "cities": { "Doha": { "nameZh": "多哈", "population": 2380000, "gdp": 22000 } },
-      "airports": { "DOH": { "cargo": 2500000 } }
+    "IQ": {
+      "name": "伊拉克",
+      "cities": { "Baghdad": { "nameZh": "巴格达", "population": 8130000, "gdp": 8000 }, "Basra": { "nameZh": "巴士拉", "population": 2950000, "gdp": 3500 } },
+      "airports": { "BGW": { "cargo": 80000 }, "BSR": { "cargo": 40000 } }
     },
+    "YE": { "name": "也门", "cities": { "Sanaa": { "nameZh": "萨那", "population": 3930000, "gdp": 1500 } }, "airports": { "SAH": { "cargo": 20000 } } },
+    "SY": { "name": "叙利亚", "cities": { "Damascus": { "nameZh": "大马士革", "population": 2500000, "gdp": 2000 } }, "airports": { "DAM": { "cargo": 15000 } } },
+    "CY": { "name": "塞浦路斯", "cities": { "Nicosia": { "nameZh": "尼科西亚", "population": 350000, "gdp": 2500 } }, "airports": { "LCA": { "cargo": 50000 } } },
+    "GE": { "name": "格鲁吉亚", "cities": { "Tbilisi": { "nameZh": "第比利斯", "population": 1200000, "gdp": 2000 } }, "airports": { "TBS": { "cargo": 30000 } } },
+    "AM": { "name": "亚美尼亚", "cities": { "Yerevan": { "nameZh": "埃里温", "population": 1080000, "gdp": 1500 } }, "airports": { "EVN": { "cargo": 25000 } } },
+    "AZ": { "name": "阿塞拜疆", "cities": { "Baku": { "nameZh": "巴库", "population": 2320000, "gdp": 5000 } }, "airports": { "GYD": { "cargo": 100000 } } },
+    "KZ": {
+      "name": "哈萨克斯坦",
+      "cities": {
+        "Almaty": { "nameZh": "阿拉木图", "population": 2040000, "gdp": 6000 },
+        "Astana": { "nameZh": "阿斯塔纳", "population": 1350000, "gdp": 4500 }
+      },
+      "airports": { "ALA": { "cargo": 80000 }, "NQZ": { "cargo": 40000 } }
+    },
+    "UZ": {
+      "name": "乌兹别克斯坦",
+      "cities": { "Tashkent": { "nameZh": "塔什干", "population": 2870000, "gdp": 3500 } },
+      "airports": { "TAS": { "cargo": 60000 } }
+    },
+    "TM": { "name": "土库曼斯坦", "cities": { "Ashgabat": { "nameZh": "阿什哈巴德", "population": 1030000, "gdp": 2000 } }, "airports": { "ASB": { "cargo": 20000 } } },
+    "KG": { "name": "吉尔吉斯斯坦", "cities": { "Bishkek": { "nameZh": "比什凯克", "population": 1120000, "gdp": 1000 } }, "airports": { "FRU": { "cargo": 15000 } } },
+    "TJ": { "name": "塔吉克斯坦", "cities": { "Dushanbe": { "nameZh": "杜尚别", "population": 920000, "gdp": 800 } }, "airports": { "DYU": { "cargo": 10000 } } },
     "US": {
       "name": "美国",
       "cities": {
@@ -330,7 +322,6 @@
         "Detroit": { "nameZh": "底特律", "population": 4340000, "gdp": 26000 },
         "Memphis": { "nameZh": "孟菲斯", "population": 1340000, "gdp": 8000 },
         "Louisville": { "nameZh": "路易斯维尔", "population": 1270000, "gdp": 7500 },
-        "Indianapolis": { "nameZh": "印第安纳波利斯", "population": 2050000, "gdp": 15000 },
         "Anchorage": { "nameZh": "安克雷奇", "population": 290000, "gdp": 3000 }
       },
       "airports": {
@@ -353,10 +344,7 @@
         "Edmonton": { "nameZh": "埃德蒙顿", "population": 1470000, "gdp": 9000 },
         "Ottawa": { "nameZh": "渥太华", "population": 1420000, "gdp": 8500 }
       },
-      "airports": {
-        "YYZ": { "cargo": 550000 }, "YVR": { "cargo": 320000 }, "YUL": { "cargo": 250000 },
-        "YYC": { "cargo": 150000 }, "YEG": { "cargo": 80000 }, "YOW": { "cargo": 40000 }
-      }
+      "airports": { "YYZ": { "cargo": 550000 }, "YVR": { "cargo": 320000 }, "YUL": { "cargo": 250000 }, "YYC": { "cargo": 150000 }, "YEG": { "cargo": 80000 } }
     },
     "MX": {
       "name": "墨西哥",
@@ -367,11 +355,77 @@
         "Tijuana": { "nameZh": "蒂华纳", "population": 2160000, "gdp": 3500 },
         "Cancun": { "nameZh": "坎昆", "population": 890000, "gdp": 2500 }
       },
-      "airports": {
-        "MEX": { "cargo": 650000 }, "GDL": { "cargo": 280000 }, "MTY": { "cargo": 150000 },
-        "TIJ": { "cargo": 80000 }, "CUN": { "cargo": 60000 }
-      }
+      "airports": { "MEX": { "cargo": 650000 }, "GDL": { "cargo": 280000 }, "MTY": { "cargo": 150000 }, "TIJ": { "cargo": 80000 }, "CUN": { "cargo": 60000 } }
     },
+    "PA": { "name": "巴拿马", "cities": { "Panama City": { "nameZh": "巴拿马城", "population": 1900000, "gdp": 8000 } }, "airports": { "PTY": { "cargo": 350000 } } },
+    "CR": { "name": "哥斯达黎加", "cities": { "San Jose": { "nameZh": "圣何塞", "population": 1450000, "gdp": 3500 } }, "airports": { "SJO": { "cargo": 80000 } } },
+    "GT": { "name": "危地马拉", "cities": { "Guatemala City": { "nameZh": "危地马拉城", "population": 3280000, "gdp": 4500 } }, "airports": { "GUA": { "cargo": 50000 } } },
+    "HN": { "name": "洪都拉斯", "cities": { "Tegucigalpa": { "nameZh": "特古西加尔巴", "population": 1200000, "gdp": 1500 } }, "airports": { "TGU": { "cargo": 25000 } } },
+    "SV": { "name": "萨尔瓦多", "cities": { "San Salvador": { "nameZh": "圣萨尔瓦多", "population": 1770000, "gdp": 2500 } }, "airports": { "SAL": { "cargo": 50000 } } },
+    "NI": { "name": "尼加拉瓜", "cities": { "Managua": { "nameZh": "马那瓜", "population": 1050000, "gdp": 1200 } }, "airports": { "MGA": { "cargo": 20000 } } },
+    "BZ": { "name": "伯利兹", "cities": { "Belize City": { "nameZh": "伯利兹城", "population": 80000, "gdp": 200 } }, "airports": { "BZE": { "cargo": 10000 } } },
+    "CU": { "name": "古巴", "cities": { "Havana": { "nameZh": "哈瓦那", "population": 2130000, "gdp": 3500 } }, "airports": { "HAV": { "cargo": 50000 } } },
+    "JM": { "name": "牙买加", "cities": { "Kingston": { "nameZh": "金斯敦", "population": 1240000, "gdp": 2000 } }, "airports": { "KIN": { "cargo": 40000 } } },
+    "DO": { "name": "多米尼加", "cities": { "Santo Domingo": { "nameZh": "圣多明各", "population": 3340000, "gdp": 4500 } }, "airports": { "SDQ": { "cargo": 120000 } } },
+    "HT": { "name": "海地", "cities": { "Port-au-Prince": { "nameZh": "太子港", "population": 2770000, "gdp": 1000 } }, "airports": { "PAP": { "cargo": 30000 } } },
+    "PR": { "name": "波多黎各", "cities": { "San Juan": { "nameZh": "圣胡安", "population": 2450000, "gdp": 10000 } }, "airports": { "SJU": { "cargo": 200000 } } },
+    "TT": { "name": "特立尼达和多巴哥", "cities": { "Port of Spain": { "nameZh": "西班牙港", "population": 550000, "gdp": 2500 } }, "airports": { "POS": { "cargo": 80000 } } },
+    "BS": { "name": "巴哈马", "cities": { "Nassau": { "nameZh": "拿骚", "population": 280000, "gdp": 1500 } }, "airports": { "NAS": { "cargo": 30000 } } },
+    "BR": {
+      "name": "巴西",
+      "cities": {
+        "Sao Paulo": { "nameZh": "圣保罗", "population": 22430000, "gdp": 35000 },
+        "Rio de Janeiro": { "nameZh": "里约热内卢", "population": 13630000, "gdp": 18000 },
+        "Brasilia": { "nameZh": "巴西利亚", "population": 4800000, "gdp": 12000 },
+        "Belo Horizonte": { "nameZh": "贝洛奥里藏特", "population": 5990000, "gdp": 7500 },
+        "Manaus": { "nameZh": "马瑙斯", "population": 2250000, "gdp": 4000 },
+        "Campinas": { "nameZh": "坎皮纳斯", "population": 1220000, "gdp": 5500 }
+      },
+      "airports": { "GRU": { "cargo": 620000 }, "VCP": { "cargo": 350000 }, "GIG": { "cargo": 150000 }, "BSB": { "cargo": 80000 }, "CNF": { "cargo": 50000 }, "MAO": { "cargo": 100000 } }
+    },
+    "AR": {
+      "name": "阿根廷",
+      "cities": {
+        "Buenos Aires": { "nameZh": "布宜诺斯艾利斯", "population": 15490000, "gdp": 20000 },
+        "Cordoba": { "nameZh": "科尔多瓦", "population": 1590000, "gdp": 3000 },
+        "Mendoza": { "nameZh": "门多萨", "population": 1000000, "gdp": 1800 }
+      },
+      "airports": { "EZE": { "cargo": 350000 }, "AEP": { "cargo": 50000 }, "COR": { "cargo": 30000 } }
+    },
+    "CL": {
+      "name": "智利",
+      "cities": { "Santiago": { "nameZh": "圣地亚哥", "population": 6770000, "gdp": 18000 } },
+      "airports": { "SCL": { "cargo": 450000 } }
+    },
+    "CO": {
+      "name": "哥伦比亚",
+      "cities": {
+        "Bogota": { "nameZh": "波哥大", "population": 11340000, "gdp": 15000 },
+        "Medellin": { "nameZh": "麦德林", "population": 4040000, "gdp": 5500 },
+        "Cali": { "nameZh": "卡利", "population": 2830000, "gdp": 3500 }
+      },
+      "airports": { "BOG": { "cargo": 750000 }, "MDE": { "cargo": 100000 }, "CLO": { "cargo": 50000 } }
+    },
+    "PE": {
+      "name": "秘鲁",
+      "cities": { "Lima": { "nameZh": "利马", "population": 11040000, "gdp": 12000 } },
+      "airports": { "LIM": { "cargo": 450000 } }
+    },
+    "VE": {
+      "name": "委内瑞拉",
+      "cities": { "Caracas": { "nameZh": "加拉加斯", "population": 2940000, "gdp": 5000 } },
+      "airports": { "CCS": { "cargo": 80000 } }
+    },
+    "EC": {
+      "name": "厄瓜多尔",
+      "cities": { "Quito": { "nameZh": "基多", "population": 2820000, "gdp": 5000 }, "Guayaquil": { "nameZh": "瓜亚基尔", "population": 3000000, "gdp": 5500 } },
+      "airports": { "UIO": { "cargo": 200000 }, "GYE": { "cargo": 150000 } }
+    },
+    "BO": { "name": "玻利维亚", "cities": { "La Paz": { "nameZh": "拉巴斯", "population": 2000000, "gdp": 3000 }, "Santa Cruz": { "nameZh": "圣克鲁斯", "population": 1900000, "gdp": 4000 } }, "airports": { "VVI": { "cargo": 50000 }, "LPB": { "cargo": 30000 } } },
+    "PY": { "name": "巴拉圭", "cities": { "Asuncion": { "nameZh": "亚松森", "population": 3220000, "gdp": 4000 } }, "airports": { "ASU": { "cargo": 40000 } } },
+    "UY": { "name": "乌拉圭", "cities": { "Montevideo": { "nameZh": "蒙得维的亚", "population": 1870000, "gdp": 5000 } }, "airports": { "MVD": { "cargo": 60000 } } },
+    "GY": { "name": "圭亚那", "cities": { "Georgetown": { "nameZh": "乔治敦", "population": 240000, "gdp": 500 } }, "airports": { "GEO": { "cargo": 15000 } } },
+    "SR": { "name": "苏里南", "cities": { "Paramaribo": { "nameZh": "帕拉马里博", "population": 240000, "gdp": 400 } }, "airports": { "PBM": { "cargo": 10000 } } },
     "DE": {
       "name": "德国",
       "cities": {
@@ -380,14 +434,9 @@
         "Munich": { "nameZh": "慕尼黑", "population": 1470000, "gdp": 12500 },
         "Hamburg": { "nameZh": "汉堡", "population": 1850000, "gdp": 13000 },
         "Cologne": { "nameZh": "科隆", "population": 1080000, "gdp": 6500 },
-        "Dusseldorf": { "nameZh": "杜塞尔多夫", "population": 620000, "gdp": 5500 },
         "Leipzig": { "nameZh": "莱比锡", "population": 590000, "gdp": 4000 }
       },
-      "airports": {
-        "FRA": { "cargo": 2070000 }, "LEJ": { "cargo": 1400000 }, "CGN": { "cargo": 900000 },
-        "MUC": { "cargo": 350000 }, "DUS": { "cargo": 120000 }, "HAM": { "cargo": 90000 },
-        "BER": { "cargo": 50000 }
-      }
+      "airports": { "FRA": { "cargo": 2070000 }, "LEJ": { "cargo": 1400000 }, "CGN": { "cargo": 900000 }, "MUC": { "cargo": 350000 }, "DUS": { "cargo": 120000 }, "HAM": { "cargo": 90000 }, "BER": { "cargo": 50000 } }
     },
     "GB": {
       "name": "英国",
@@ -399,11 +448,7 @@
         "Edinburgh": { "nameZh": "爱丁堡", "population": 540000, "gdp": 5000 },
         "East Midlands": { "nameZh": "东米德兰", "population": 300000, "gdp": 2000 }
       },
-      "airports": {
-        "LHR": { "cargo": 1550000 }, "EMA": { "cargo": 400000 }, "STN": { "cargo": 280000 },
-        "MAN": { "cargo": 120000 }, "LGW": { "cargo": 100000 }, "BHX": { "cargo": 50000 },
-        "GLA": { "cargo": 30000 }, "EDI": { "cargo": 25000 }
-      }
+      "airports": { "LHR": { "cargo": 1550000 }, "EMA": { "cargo": 400000 }, "STN": { "cargo": 280000 }, "MAN": { "cargo": 120000 }, "LGW": { "cargo": 100000 }, "BHX": { "cargo": 50000 } }
     },
     "FR": {
       "name": "法国",
@@ -414,33 +459,17 @@
         "Toulouse": { "nameZh": "图卢兹", "population": 1360000, "gdp": 5500 },
         "Nice": { "nameZh": "尼斯", "population": 1010000, "gdp": 4000 }
       },
-      "airports": {
-        "CDG": { "cargo": 2150000 }, "ORY": { "cargo": 150000 }, "LYS": { "cargo": 80000 },
-        "MRS": { "cargo": 50000 }, "TLS": { "cargo": 45000 }, "NCE": { "cargo": 30000 }
-      }
+      "airports": { "CDG": { "cargo": 2150000 }, "ORY": { "cargo": 150000 }, "LYS": { "cargo": 80000 }, "MRS": { "cargo": 50000 }, "TLS": { "cargo": 45000 } }
     },
     "NL": {
       "name": "荷兰",
-      "cities": {
-        "Amsterdam": { "nameZh": "阿姆斯特丹", "population": 1170000, "gdp": 18000 },
-        "Rotterdam": { "nameZh": "鹿特丹", "population": 650000, "gdp": 9500 },
-        "Eindhoven": { "nameZh": "埃因霍温", "population": 240000, "gdp": 3500 }
-      },
-      "airports": {
-        "AMS": { "cargo": 1700000 }, "RTM": { "cargo": 50000 }, "EIN": { "cargo": 30000 },
-        "MST": { "cargo": 100000 }
-      }
+      "cities": { "Amsterdam": { "nameZh": "阿姆斯特丹", "population": 1170000, "gdp": 18000 }, "Rotterdam": { "nameZh": "鹿特丹", "population": 650000, "gdp": 9500 } },
+      "airports": { "AMS": { "cargo": 1700000 }, "MST": { "cargo": 100000 }, "RTM": { "cargo": 50000 } }
     },
     "BE": {
       "name": "比利时",
-      "cities": {
-        "Brussels": { "nameZh": "布鲁塞尔", "population": 2100000, "gdp": 12000 },
-        "Antwerp": { "nameZh": "安特卫普", "population": 530000, "gdp": 5500 },
-        "Liege": { "nameZh": "列日", "population": 200000, "gdp": 2000 }
-      },
-      "airports": {
-        "BRU": { "cargo": 700000 }, "LGG": { "cargo": 900000 }, "ANR": { "cargo": 50000 }
-      }
+      "cities": { "Brussels": { "nameZh": "布鲁塞尔", "population": 2100000, "gdp": 12000 }, "Liege": { "nameZh": "列日", "population": 200000, "gdp": 2000 } },
+      "airports": { "LGG": { "cargo": 900000 }, "BRU": { "cargo": 700000 } }
     },
     "IT": {
       "name": "意大利",
@@ -448,14 +477,10 @@
         "Milan": { "nameZh": "米兰", "population": 3160000, "gdp": 22000 },
         "Rome": { "nameZh": "罗马", "population": 4340000, "gdp": 18000 },
         "Naples": { "nameZh": "那不勒斯", "population": 2180000, "gdp": 6000 },
-        "Turin": { "nameZh": "都灵", "population": 1780000, "gdp": 7500 },
         "Venice": { "nameZh": "威尼斯", "population": 260000, "gdp": 2500 },
         "Bologna": { "nameZh": "博洛尼亚", "population": 400000, "gdp": 4500 }
       },
-      "airports": {
-        "MXP": { "cargo": 700000 }, "FCO": { "cargo": 200000 }, "BGY": { "cargo": 150000 },
-        "VCE": { "cargo": 80000 }, "BLQ": { "cargo": 60000 }, "NAP": { "cargo": 40000 }
-      }
+      "airports": { "MXP": { "cargo": 700000 }, "FCO": { "cargo": 200000 }, "BGY": { "cargo": 150000 }, "VCE": { "cargo": 80000 }, "BLQ": { "cargo": 60000 } }
     },
     "ES": {
       "name": "西班牙",
@@ -463,14 +488,92 @@
         "Madrid": { "nameZh": "马德里", "population": 6750000, "gdp": 25000 },
         "Barcelona": { "nameZh": "巴塞罗那", "population": 5600000, "gdp": 20000 },
         "Valencia": { "nameZh": "巴伦西亚", "population": 1600000, "gdp": 5500 },
-        "Seville": { "nameZh": "塞维利亚", "population": 700000, "gdp": 3000 },
         "Zaragoza": { "nameZh": "萨拉戈萨", "population": 710000, "gdp": 3500 }
       },
-      "airports": {
-        "MAD": { "cargo": 650000 }, "BCN": { "cargo": 180000 }, "ZAZ": { "cargo": 80000 },
-        "VLC": { "cargo": 50000 }, "SVQ": { "cargo": 30000 }
-      }
+      "airports": { "MAD": { "cargo": 650000 }, "BCN": { "cargo": 180000 }, "ZAZ": { "cargo": 80000 }, "VLC": { "cargo": 50000 } }
     },
+    "PT": {
+      "name": "葡萄牙",
+      "cities": { "Lisbon": { "nameZh": "里斯本", "population": 2940000, "gdp": 12000 }, "Porto": { "nameZh": "波尔图", "population": 1310000, "gdp": 4500 } },
+      "airports": { "LIS": { "cargo": 180000 }, "OPO": { "cargo": 50000 } }
+    },
+    "GR": {
+      "name": "希腊",
+      "cities": { "Athens": { "nameZh": "雅典", "population": 3150000, "gdp": 12000 }, "Thessaloniki": { "nameZh": "塞萨洛尼基", "population": 810000, "gdp": 2500 } },
+      "airports": { "ATH": { "cargo": 150000 }, "SKG": { "cargo": 30000 } }
+    },
+    "CH": {
+      "name": "瑞士",
+      "cities": { "Zurich": { "nameZh": "苏黎世", "population": 1420000, "gdp": 18000 }, "Geneva": { "nameZh": "日内瓦", "population": 620000, "gdp": 8500 }, "Basel": { "nameZh": "巴塞尔", "population": 550000, "gdp": 5000 } },
+      "airports": { "ZRH": { "cargo": 450000 }, "GVA": { "cargo": 100000 }, "BSL": { "cargo": 80000 } }
+    },
+    "AT": {
+      "name": "奥地利",
+      "cities": { "Vienna": { "nameZh": "维也纳", "population": 1960000, "gdp": 12000 } },
+      "airports": { "VIE": { "cargo": 280000 } }
+    },
+    "IE": {
+      "name": "爱尔兰",
+      "cities": { "Dublin": { "nameZh": "都柏林", "population": 1440000, "gdp": 15000 }, "Shannon": { "nameZh": "香农", "population": 10000, "gdp": 500 } },
+      "airports": { "DUB": { "cargo": 200000 }, "SNN": { "cargo": 50000 } }
+    },
+    "LU": { "name": "卢森堡", "cities": { "Luxembourg": { "nameZh": "卢森堡", "population": 130000, "gdp": 8000 } }, "airports": { "LUX": { "cargo": 900000 } } },
+    "SE": {
+      "name": "瑞典",
+      "cities": { "Stockholm": { "nameZh": "斯德哥尔摩", "population": 1620000, "gdp": 18000 }, "Gothenburg": { "nameZh": "哥德堡", "population": 600000, "gdp": 6000 }, "Malmo": { "nameZh": "马尔默", "population": 350000, "gdp": 3000 } },
+      "airports": { "ARN": { "cargo": 180000 }, "GOT": { "cargo": 50000 } }
+    },
+    "NO": {
+      "name": "挪威",
+      "cities": { "Oslo": { "nameZh": "奥斯陆", "population": 1070000, "gdp": 15000 }, "Bergen": { "nameZh": "卑尔根", "population": 290000, "gdp": 3500 } },
+      "airports": { "OSL": { "cargo": 150000 }, "BGO": { "cargo": 30000 } }
+    },
+    "DK": {
+      "name": "丹麦",
+      "cities": { "Copenhagen": { "nameZh": "哥本哈根", "population": 1350000, "gdp": 15000 }, "Billund": { "nameZh": "比隆", "population": 7000, "gdp": 500 } },
+      "airports": { "CPH": { "cargo": 300000 }, "BLL": { "cargo": 50000 } }
+    },
+    "FI": {
+      "name": "芬兰",
+      "cities": { "Helsinki": { "nameZh": "赫尔辛基", "population": 1320000, "gdp": 12000 } },
+      "airports": { "HEL": { "cargo": 250000 } }
+    },
+    "IS": { "name": "冰岛", "cities": { "Reykjavik": { "nameZh": "雷克雅未克", "population": 230000, "gdp": 2500 } }, "airports": { "KEF": { "cargo": 50000 } } },
+    "PL": {
+      "name": "波兰",
+      "cities": {
+        "Warsaw": { "nameZh": "华沙", "population": 1790000, "gdp": 12000 },
+        "Krakow": { "nameZh": "克拉科夫", "population": 780000, "gdp": 4000 },
+        "Katowice": { "nameZh": "卡托维兹", "population": 290000, "gdp": 3000 }
+      },
+      "airports": { "WAW": { "cargo": 200000 }, "KTW": { "cargo": 50000 }, "KRK": { "cargo": 30000 } }
+    },
+    "CZ": {
+      "name": "捷克",
+      "cities": { "Prague": { "nameZh": "布拉格", "population": 1310000, "gdp": 10000 } },
+      "airports": { "PRG": { "cargo": 100000 } }
+    },
+    "HU": { "name": "匈牙利", "cities": { "Budapest": { "nameZh": "布达佩斯", "population": 1760000, "gdp": 8000 } }, "airports": { "BUD": { "cargo": 200000 } } },
+    "RO": {
+      "name": "罗马尼亚",
+      "cities": { "Bucharest": { "nameZh": "布加勒斯特", "population": 1880000, "gdp": 7500 } },
+      "airports": { "OTP": { "cargo": 80000 } }
+    },
+    "BG": { "name": "保加利亚", "cities": { "Sofia": { "nameZh": "索菲亚", "population": 1310000, "gdp": 4500 } }, "airports": { "SOF": { "cargo": 50000 } } },
+    "SK": { "name": "斯洛伐克", "cities": { "Bratislava": { "nameZh": "布拉迪斯拉发", "population": 440000, "gdp": 3500 } }, "airports": { "BTS": { "cargo": 40000 } } },
+    "SI": { "name": "斯洛文尼亚", "cities": { "Ljubljana": { "nameZh": "卢布尔雅那", "population": 290000, "gdp": 2500 } }, "airports": { "LJU": { "cargo": 30000 } } },
+    "HR": { "name": "克罗地亚", "cities": { "Zagreb": { "nameZh": "萨格勒布", "population": 690000, "gdp": 3500 } }, "airports": { "ZAG": { "cargo": 20000 } } },
+    "RS": { "name": "塞尔维亚", "cities": { "Belgrade": { "nameZh": "贝尔格莱德", "population": 1400000, "gdp": 4500 } }, "airports": { "BEG": { "cargo": 50000 } } },
+    "UA": {
+      "name": "乌克兰",
+      "cities": { "Kiev": { "nameZh": "基辅", "population": 2960000, "gdp": 6000 }, "Kharkiv": { "nameZh": "哈尔科夫", "population": 1430000, "gdp": 2500 } },
+      "airports": { "KBP": { "cargo": 100000 }, "IEV": { "cargo": 30000 } }
+    },
+    "BY": { "name": "白俄罗斯", "cities": { "Minsk": { "nameZh": "明斯克", "population": 2020000, "gdp": 4000 } }, "airports": { "MSQ": { "cargo": 60000 } } },
+    "MD": { "name": "摩尔多瓦", "cities": { "Chisinau": { "nameZh": "基希讷乌", "population": 640000, "gdp": 1500 } }, "airports": { "KIV": { "cargo": 20000 } } },
+    "LT": { "name": "立陶宛", "cities": { "Vilnius": { "nameZh": "维尔纽斯", "population": 590000, "gdp": 3500 } }, "airports": { "VNO": { "cargo": 40000 } } },
+    "LV": { "name": "拉脱维亚", "cities": { "Riga": { "nameZh": "里加", "population": 630000, "gdp": 2800 } }, "airports": { "RIX": { "cargo": 50000 } } },
+    "EE": { "name": "爱沙尼亚", "cities": { "Tallinn": { "nameZh": "塔林", "population": 450000, "gdp": 2500 } }, "airports": { "TLL": { "cargo": 30000 } } },
     "RU": {
       "name": "俄罗斯",
       "cities": {
@@ -478,56 +581,47 @@
         "Saint Petersburg": { "nameZh": "圣彼得堡", "population": 5600000, "gdp": 18000 },
         "Novosibirsk": { "nameZh": "新西伯利亚", "population": 1630000, "gdp": 4000 },
         "Yekaterinburg": { "nameZh": "叶卡捷琳堡", "population": 1490000, "gdp": 4500 },
-        "Vladivostok": { "nameZh": "海参崴", "population": 610000, "gdp": 1500 },
-        "Krasnoyarsk": { "nameZh": "克拉斯诺亚尔斯克", "population": 1190000, "gdp": 3000 }
+        "Vladivostok": { "nameZh": "海参崴", "population": 610000, "gdp": 1500 }
       },
-      "airports": {
-        "SVO": { "cargo": 350000 }, "DME": { "cargo": 200000 }, "VKO": { "cargo": 150000 },
-        "LED": { "cargo": 80000 }, "OVB": { "cargo": 50000 }, "SVX": { "cargo": 40000 },
-        "VVO": { "cargo": 30000 }, "KJA": { "cargo": 25000 }
-      }
+      "airports": { "SVO": { "cargo": 350000 }, "DME": { "cargo": 200000 }, "VKO": { "cargo": 150000 }, "LED": { "cargo": 80000 }, "OVB": { "cargo": 50000 }, "SVX": { "cargo": 40000 } }
     },
-    "BR": {
-      "name": "巴西",
+    "ZA": {
+      "name": "南非",
       "cities": {
-        "Sao Paulo": { "nameZh": "圣保罗", "population": 22430000, "gdp": 35000 },
-        "Rio de Janeiro": { "nameZh": "里约热内卢", "population": 13630000, "gdp": 18000 },
-        "Brasilia": { "nameZh": "巴西利亚", "population": 4800000, "gdp": 12000 },
-        "Salvador": { "nameZh": "萨尔瓦多", "population": 4180000, "gdp": 5000 },
-        "Fortaleza": { "nameZh": "福塔莱萨", "population": 4120000, "gdp": 4500 },
-        "Belo Horizonte": { "nameZh": "贝洛奥里藏特", "population": 5990000, "gdp": 7500 },
-        "Manaus": { "nameZh": "马瑙斯", "population": 2250000, "gdp": 4000 },
-        "Campinas": { "nameZh": "坎皮纳斯", "population": 1220000, "gdp": 5500 }
+        "Johannesburg": { "nameZh": "约翰内斯堡", "population": 5930000, "gdp": 18000 },
+        "Cape Town": { "nameZh": "开普敦", "population": 4710000, "gdp": 12000 },
+        "Durban": { "nameZh": "德班", "population": 3770000, "gdp": 7000 }
       },
-      "airports": {
-        "GRU": { "cargo": 620000 }, "VCP": { "cargo": 350000 }, "GIG": { "cargo": 150000 },
-        "BSB": { "cargo": 80000 }, "CNF": { "cargo": 50000 }, "MAO": { "cargo": 100000 },
-        "REC": { "cargo": 40000 }, "FOR": { "cargo": 35000 }, "SSA": { "cargo": 30000 }
-      }
+      "airports": { "JNB": { "cargo": 450000 }, "CPT": { "cargo": 80000 }, "DUR": { "cargo": 40000 } }
     },
-    "AR": {
-      "name": "阿根廷",
-      "cities": {
-        "Buenos Aires": { "nameZh": "布宜诺斯艾利斯", "population": 15490000, "gdp": 20000 },
-        "Cordoba": { "nameZh": "科尔多瓦", "population": 1590000, "gdp": 3000 },
-        "Rosario": { "nameZh": "罗萨里奥", "population": 1320000, "gdp": 2500 },
-        "Mendoza": { "nameZh": "门多萨", "population": 1000000, "gdp": 1800 }
-      },
-      "airports": {
-        "EZE": { "cargo": 350000 }, "AEP": { "cargo": 50000 }, "COR": { "cargo": 30000 },
-        "MDZ": { "cargo": 20000 }
-      }
+    "EG": {
+      "name": "埃及",
+      "cities": { "Cairo": { "nameZh": "开罗", "population": 21320000, "gdp": 15000 }, "Alexandria": { "nameZh": "亚历山大", "population": 5380000, "gdp": 4500 } },
+      "airports": { "CAI": { "cargo": 350000 }, "HBE": { "cargo": 50000 } }
     },
-    "CL": {
-      "name": "智利",
-      "cities": {
-        "Santiago": { "nameZh": "圣地亚哥", "population": 6770000, "gdp": 18000 },
-        "Valparaiso": { "nameZh": "瓦尔帕莱索", "population": 1000000, "gdp": 2500 }
-      },
-      "airports": {
-        "SCL": { "cargo": 450000 }, "IQQ": { "cargo": 30000 }, "ANF": { "cargo": 25000 }
-      }
+    "KE": {
+      "name": "肯尼亚",
+      "cities": { "Nairobi": { "nameZh": "内罗毕", "population": 5120000, "gdp": 5500 } },
+      "airports": { "NBO": { "cargo": 400000 } }
     },
+    "NG": {
+      "name": "尼日利亚",
+      "cities": { "Lagos": { "nameZh": "拉各斯", "population": 15390000, "gdp": 12000 }, "Abuja": { "nameZh": "阿布贾", "population": 3620000, "gdp": 5000 } },
+      "airports": { "LOS": { "cargo": 180000 }, "ABV": { "cargo": 50000 } }
+    },
+    "ET": { "name": "埃塞俄比亚", "cities": { "Addis Ababa": { "nameZh": "亚的斯亚贝巴", "population": 5230000, "gdp": 4500 } }, "airports": { "ADD": { "cargo": 550000 } } },
+    "MA": { "name": "摩洛哥", "cities": { "Casablanca": { "nameZh": "卡萨布兰卡", "population": 3710000, "gdp": 5500 }, "Rabat": { "nameZh": "拉巴特", "population": 1930000, "gdp": 3000 } }, "airports": { "CMN": { "cargo": 100000 }, "RBA": { "cargo": 20000 } } },
+    "DZ": { "name": "阿尔及利亚", "cities": { "Algiers": { "nameZh": "阿尔及尔", "population": 3420000, "gdp": 5000 } }, "airports": { "ALG": { "cargo": 80000 } } },
+    "TN": { "name": "突尼斯", "cities": { "Tunis": { "nameZh": "突尼斯", "population": 2740000, "gdp": 4500 } }, "airports": { "TUN": { "cargo": 50000 } } },
+    "GH": { "name": "加纳", "cities": { "Accra": { "nameZh": "阿克拉", "population": 4560000, "gdp": 4000 } }, "airports": { "ACC": { "cargo": 80000 } } },
+    "AO": { "name": "安哥拉", "cities": { "Luanda": { "nameZh": "罗安达", "population": 8950000, "gdp": 6500 } }, "airports": { "LAD": { "cargo": 100000 } } },
+    "TZ": { "name": "坦桑尼亚", "cities": { "Dar es Salaam": { "nameZh": "达累斯萨拉姆", "population": 7050000, "gdp": 3000 } }, "airports": { "DAR": { "cargo": 50000 } } },
+    "UG": { "name": "乌干达", "cities": { "Kampala": { "nameZh": "坎帕拉", "population": 3650000, "gdp": 2000 } }, "airports": { "EBB": { "cargo": 100000 } } },
+    "RW": { "name": "卢旺达", "cities": { "Kigali": { "nameZh": "基加利", "population": 1160000, "gdp": 1200 } }, "airports": { "KGL": { "cargo": 60000 } } },
+    "SN": { "name": "塞内加尔", "cities": { "Dakar": { "nameZh": "达喀尔", "population": 3940000, "gdp": 2500 } }, "airports": { "DSS": { "cargo": 50000 } } },
+    "CI": { "name": "科特迪瓦", "cities": { "Abidjan": { "nameZh": "阿比让", "population": 5620000, "gdp": 4000 } }, "airports": { "ABJ": { "cargo": 40000 } } },
+    "CM": { "name": "喀麦隆", "cities": { "Douala": { "nameZh": "杜阿拉", "population": 3660000, "gdp": 2500 } }, "airports": { "DLA": { "cargo": 30000 } } },
+    "MU": { "name": "毛里求斯", "cities": { "Port Louis": { "nameZh": "路易港", "population": 150000, "gdp": 1500 } }, "airports": { "MRU": { "cargo": 80000 } } },
     "AU": {
       "name": "澳大利亚",
       "cities": {
@@ -537,72 +631,17 @@
         "Perth": { "nameZh": "珀斯", "population": 2130000, "gdp": 16000 },
         "Adelaide": { "nameZh": "阿德莱德", "population": 1380000, "gdp": 9500 }
       },
-      "airports": {
-        "SYD": { "cargo": 550000 }, "MEL": { "cargo": 350000 }, "BNE": { "cargo": 150000 },
-        "PER": { "cargo": 100000 }, "ADL": { "cargo": 50000 }
-      }
+      "airports": { "SYD": { "cargo": 550000 }, "MEL": { "cargo": 350000 }, "BNE": { "cargo": 150000 }, "PER": { "cargo": 100000 }, "ADL": { "cargo": 50000 } }
     },
     "NZ": {
       "name": "新西兰",
-      "cities": {
-        "Auckland": { "nameZh": "奥克兰", "population": 1660000, "gdp": 12000 },
-        "Wellington": { "nameZh": "惠灵顿", "population": 420000, "gdp": 4500 },
-        "Christchurch": { "nameZh": "基督城", "population": 390000, "gdp": 3500 }
-      },
-      "airports": {
-        "AKL": { "cargo": 200000 }, "CHC": { "cargo": 50000 }, "WLG": { "cargo": 30000 }
-      }
+      "cities": { "Auckland": { "nameZh": "奥克兰", "population": 1660000, "gdp": 12000 }, "Wellington": { "nameZh": "惠灵顿", "population": 420000, "gdp": 4500 }, "Christchurch": { "nameZh": "基督城", "population": 390000, "gdp": 3500 } },
+      "airports": { "AKL": { "cargo": 200000 }, "CHC": { "cargo": 50000 }, "WLG": { "cargo": 30000 } }
     },
-    "ZA": {
-      "name": "南非",
-      "cities": {
-        "Johannesburg": { "nameZh": "约翰内斯堡", "population": 5930000, "gdp": 18000 },
-        "Cape Town": { "nameZh": "开普敦", "population": 4710000, "gdp": 12000 },
-        "Durban": { "nameZh": "德班", "population": 3770000, "gdp": 7000 }
-      },
-      "airports": {
-        "JNB": { "cargo": 450000 }, "CPT": { "cargo": 80000 }, "DUR": { "cargo": 40000 }
-      }
-    },
-    "EG": {
-      "name": "埃及",
-      "cities": {
-        "Cairo": { "nameZh": "开罗", "population": 21320000, "gdp": 15000 },
-        "Alexandria": { "nameZh": "亚历山大", "population": 5380000, "gdp": 4500 }
-      },
-      "airports": {
-        "CAI": { "cargo": 350000 }, "HBE": { "cargo": 50000 }
-      }
-    },
-    "KE": {
-      "name": "肯尼亚",
-      "cities": {
-        "Nairobi": { "nameZh": "内罗毕", "population": 5120000, "gdp": 5500 },
-        "Mombasa": { "nameZh": "蒙巴萨", "population": 1400000, "gdp": 1500 }
-      },
-      "airports": {
-        "NBO": { "cargo": 400000 }, "MBA": { "cargo": 30000 }
-      }
-    },
-    "NG": {
-      "name": "尼日利亚",
-      "cities": {
-        "Lagos": { "nameZh": "拉各斯", "population": 15390000, "gdp": 12000 },
-        "Abuja": { "nameZh": "阿布贾", "population": 3620000, "gdp": 5000 },
-        "Kano": { "nameZh": "卡诺", "population": 4190000, "gdp": 3000 }
-      },
-      "airports": {
-        "LOS": { "cargo": 180000 }, "ABV": { "cargo": 50000 }, "KAN": { "cargo": 30000 }
-      }
-    },
-    "ET": {
-      "name": "埃塞俄比亚",
-      "cities": {
-        "Addis Ababa": { "nameZh": "亚的斯亚贝巴", "population": 5230000, "gdp": 4500 }
-      },
-      "airports": {
-        "ADD": { "cargo": 550000 }
-      }
-    }
+    "PG": { "name": "巴布亚新几内亚", "cities": { "Port Moresby": { "nameZh": "莫尔兹比港", "population": 400000, "gdp": 1500 } }, "airports": { "POM": { "cargo": 30000 } } },
+    "FJ": { "name": "斐济", "cities": { "Suva": { "nameZh": "苏瓦", "population": 180000, "gdp": 500 } }, "airports": { "NAN": { "cargo": 20000 }, "SUV": { "cargo": 10000 } } },
+    "NC": { "name": "新喀里多尼亚", "cities": { "Noumea": { "nameZh": "努美阿", "population": 100000, "gdp": 800 } }, "airports": { "NOU": { "cargo": 15000 } } },
+    "WS": { "name": "萨摩亚", "cities": { "Apia": { "nameZh": "阿皮亚", "population": 40000, "gdp": 100 } }, "airports": { "APW": { "cargo": 5000 } } },
+    "GU": { "name": "关岛", "cities": { "Hagatna": { "nameZh": "阿加尼亚", "population": 170000, "gdp": 600 } }, "airports": { "GUM": { "cargo": 50000 } } }
   }
 }
