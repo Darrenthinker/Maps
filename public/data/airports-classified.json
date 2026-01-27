@@ -772,7 +772,8 @@
                   "city": "Dazu",
                   "lat": 29.6362,
                   "lng": 105.7736,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "大足空军基地"
                 },
                 {
                   "code": "EHU",
@@ -3059,7 +3060,8 @@
                   "city": "Huludao (Xingcheng)",
                   "lat": 40.5803,
                   "lng": 120.7004,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "兴城空军基地"
                 },
                 {
                   "code": "XFN",
@@ -3102,7 +3104,8 @@
                   "city": "Meizhou (Xingning)",
                   "lat": 24.1492,
                   "lng": 115.758,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "兴宁空军基地"
                 },
                 {
                   "code": "XIY",
@@ -3617,7 +3620,8 @@
                   "city": "Okinawa",
                   "lat": 26.3517,
                   "lng": 127.7694,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "嘉手纳空军基地"
                 },
                 {
                   "code": "FKJ",
@@ -3858,7 +3862,8 @@
                   "city": "Ogasawara",
                   "lat": 24.7842,
                   "lng": 141.3226,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "硫磺岛空军基地"
                 },
                 {
                   "code": "IZO",
@@ -4088,7 +4093,8 @@
                   "city": "Ogasawara",
                   "lat": 24.2897,
                   "lng": 153.979,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "日本海上自卫队南鸟岛空军基地"
                 },
                 {
                   "code": "MYE",
@@ -4142,7 +4148,8 @@
                   "city": "Ayase / Yamato",
                   "lat": 35.4546,
                   "lng": 139.45,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "日本海上自卫队厚木空军基地/厚木海军航空设施"
                 },
                 {
                   "code": "NKM",
@@ -4295,7 +4302,8 @@
                   "city": "Fussa",
                   "lat": 35.7485,
                   "lng": 139.348,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "横田空军基地"
                 },
                 {
                   "code": "OMJ",
@@ -4305,7 +4313,8 @@
                   "city": "Nagasaki",
                   "lat": 32.928,
                   "lng": 129.9342,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "日本海上自卫队大村空军基地"
                 },
                 {
                   "code": "ONJ",
@@ -4688,7 +4697,8 @@
                   "city": "Seosan",
                   "lat": 36.704,
                   "lng": 126.486,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "瑞山空军基地"
                 },
                 {
                   "code": "ICN",
@@ -4786,7 +4796,8 @@
                   "city": "Pyeongtaek",
                   "lat": 37.0915,
                   "lng": 127.0294,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "乌山空军基地"
                 },
                 {
                   "code": "PUS",
@@ -4906,7 +4917,8 @@
                   "city": "Yecheon-ri",
                   "lat": 36.6304,
                   "lng": 128.3497,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "醴泉空军基地"
                 },
                 {
                   "code": "YNY",
@@ -6404,7 +6416,8 @@
                   "city": "Long Rungan",
                   "lat": 3.5994,
                   "lng": 115.8418,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "龙龙空军基地"
                 },
                 {
                   "code": "ID-0100",
@@ -9262,7 +9275,8 @@
                   "city": "Cavite",
                   "lat": 14.4954,
                   "lng": 120.904,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "达尼洛·阿廷萨空军基地"
                 },
                 {
                   "code": "SJI",
@@ -9535,7 +9549,8 @@
                   "city": "Butterworth",
                   "lat": 5.4659,
                   "lng": 100.391,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "马来西亚皇家空军巴特沃斯空军基地"
                 },
                 {
                   "code": "GSA",
@@ -11837,7 +11852,8 @@
                   "city": "Paya Lebar",
                   "lat": 1.3604,
                   "lng": 103.91,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "巴耶利巴空军基地"
                 },
                 {
                   "code": "SIN",
@@ -11858,7 +11874,8 @@
                   "city": "Western Water Catchment",
                   "lat": 1.3876,
                   "lng": 103.7083,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "登加空军基地"
                 },
                 {
                   "code": "XSP",
@@ -13515,7 +13532,8 @@
                   "city": "Sherpur Naqeebpur",
                   "lat": 29.9943,
                   "lng": 77.4246,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "萨尔萨瓦空军基地"
                 },
                 {
                   "code": "SXR",
@@ -13591,7 +13609,8 @@
                   "city": "Thanjavur",
                   "lat": 10.7238,
                   "lng": 79.1095,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "坦贾武尔空军基地"
                 },
                 {
                   "code": "TNI",
@@ -13743,7 +13762,8 @@
                   "city": "Kamra",
                   "lat": 33.8691,
                   "lng": 72.4009,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "明哈斯空军基地"
                 },
                 {
                   "code": "BDN",
@@ -13940,7 +13960,8 @@
                   "city": "Jacobabad",
                   "lat": 28.2842,
                   "lng": 68.4497,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "沙赫巴兹空军基地"
                 },
                 {
                   "code": "JIW",
@@ -14082,7 +14103,8 @@
                   "city": "Mianwali",
                   "lat": 32.5631,
                   "lng": 71.5707,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "米安瓦利空军基地"
                 },
                 {
                   "code": "OHT",
@@ -14235,7 +14257,8 @@
                   "city": "Sargodha",
                   "lat": 32.0486,
                   "lng": 72.665,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "穆沙夫空军基地"
                 },
                 {
                   "code": "SKT",
@@ -15101,7 +15124,8 @@
                   "city": "Baraki Barak",
                   "lat": 33.9222,
                   "lng": 69.0779,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "尚克空军基地"
                 },
                 {
                   "code": "OAH",
@@ -15111,7 +15135,8 @@
                   "city": "Shindand",
                   "lat": 33.3913,
                   "lng": 62.261,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "辛丹德空军基地"
                 },
                 {
                   "code": "OAI",
@@ -16446,7 +16471,8 @@
                   "city": "Amirabad",
                   "lat": 35.2116,
                   "lng": 48.6534,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "诺杰空军基地"
                 },
                 {
                   "code": "OMH",
@@ -17082,7 +17108,8 @@
                   "city": "Çiğli",
                   "lat": 38.513,
                   "lng": 27.0101,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "奇利空军基地"
                 },
                 {
                   "code": "ISE",
@@ -17389,7 +17416,8 @@
                   "city": "Sarıçam",
                   "lat": 37.0021,
                   "lng": 35.4259,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "因吉尔利克空军基地"
                 },
                 {
                   "code": "USQ",
@@ -18210,7 +18238,8 @@
                   "city": "Masirah",
                   "lat": 20.6754,
                   "lng": 58.8905,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "马西拉皇家空军基地"
                 },
                 {
                   "code": "OHS",
@@ -18275,7 +18304,8 @@
                   "city": "Thumrait",
                   "lat": 17.666,
                   "lng": 54.0246,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "图姆赖特空军基地"
                 },
                 {
                   "code": "UKH",
@@ -18339,7 +18369,8 @@
                   "city": "",
                   "lat": 24.2482,
                   "lng": 54.5477,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "阿尔达夫拉空军基地"
                 },
                 {
                   "code": "DWC",
@@ -18382,7 +18413,8 @@
                   "city": "Dubai",
                   "lat": 25.0268,
                   "lng": 55.3662,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "阿尔米纳德空军基地"
                 },
                 {
                   "code": "RKT",
@@ -18490,7 +18522,8 @@
                   "city": "Hīt",
                   "lat": 33.7856,
                   "lng": 42.4412,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "阿尔阿萨德空军基地"
                 },
                 {
                   "code": "ISU",
@@ -18555,7 +18588,8 @@
                   "city": "Al Habbaniyah",
                   "lat": 33.3381,
                   "lng": 43.5971,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "阿尔塔卡杜姆空军基地"
                 },
                 {
                   "code": "XNH",
@@ -18565,7 +18599,8 @@
                   "city": "Nasiriyah",
                   "lat": 30.9358,
                   "lng": 46.0901,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "阿里空军基地"
                 }
               ]
             },
@@ -18695,7 +18730,8 @@
                   "city": "Beersheba",
                   "lat": 31.2083,
                   "lng": 35.0123,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "涅瓦蒂姆空军基地"
                 }
               ]
             },
@@ -19009,7 +19045,8 @@
                   "city": "Akrotiri",
                   "lat": 34.5904,
                   "lng": 32.9879,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家空军阿克罗蒂里空军基地"
                 },
                 {
                   "code": "ECN",
@@ -19224,7 +19261,8 @@
                   "city": "Ahmed Al Jaber AB",
                   "lat": 28.9348,
                   "lng": 47.7919,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "艾哈迈德·阿尔贾比尔空军基地"
                 }
               ]
             },
@@ -19255,7 +19293,8 @@
                   "city": "Tripoli",
                   "lat": 34.5893,
                   "lng": 36.0113,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "雷内·穆阿瓦德空军基地"
                 }
               ]
             },
@@ -20168,7 +20207,8 @@
                   "city": "Huez, Isère",
                   "lat": 45.0874,
                   "lng": 6.0836,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "阿尔卑杜埃 - 亨利·吉罗高山机场"
                 },
                 {
                   "code": "AJA",
@@ -20277,7 +20317,8 @@
                   "city": "Bangor",
                   "lat": 47.3253,
                   "lng": -3.2013,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "贝尔岛机场"
                 },
                 {
                   "code": "BIQ",
@@ -20496,7 +20537,8 @@
                   "city": "Cognac/Châteaubernard",
                   "lat": 45.6583,
                   "lng": -0.3175,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "科尼亚克-沙托贝尔纳尔空军基地"
                 },
                 {
                   "code": "CQF",
@@ -20517,7 +20559,8 @@
                   "city": "Creil",
                   "lat": 49.2535,
                   "lng": 2.5191,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "克雷伊尔空军基地"
                 },
                 {
                   "code": "CTT",
@@ -20538,7 +20581,8 @@
                   "city": "Saint-Bon",
                   "lat": 45.3975,
                   "lng": 6.635,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "库尔舍维尔高山机场"
                 },
                 {
                   "code": "DCM",
@@ -20680,7 +20724,8 @@
                   "city": "Fauville, Eure",
                   "lat": 49.0287,
                   "lng": 1.2199,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "埃夫勒-福维尔空军基地"
                 },
                 {
                   "code": "FNI",
@@ -20822,7 +20867,8 @@
                   "city": "Landivisiau",
                   "lat": 48.5303,
                   "lng": -4.1516,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "兰迪维苏空军基地"
                 },
                 {
                   "code": "LEH",
@@ -21008,7 +21054,8 @@
                   "city": "Les Allues",
                   "lat": 45.4075,
                   "lng": 6.5776,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "梅里贝尔高山机场"
                 },
                 {
                   "code": "MPL",
@@ -21040,7 +21087,8 @@
                   "city": "Megève",
                   "lat": 45.823,
                   "lng": 6.6494,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "梅热夫高山机场"
                 },
                 {
                   "code": "MXN",
@@ -21193,7 +21241,8 @@
                   "city": "Cormeilles-en-Vexin, Val-d'Oise",
                   "lat": 49.0961,
                   "lng": 2.0355,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "庞图瓦兹-科尔梅耶机场"
                 },
                 {
                   "code": "PRP",
@@ -21313,7 +21362,8 @@
                   "city": "Solenzara",
                   "lat": 41.9244,
                   "lng": 9.406,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "索兰扎拉空军基地"
                 },
                 {
                   "code": "SXB",
@@ -21433,7 +21483,8 @@
                   "city": "Vélizy-Villacoublay, Yvelines",
                   "lat": 48.7744,
                   "lng": 2.2031,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "维利齐-维拉库布莱空军基地"
                 },
                 {
                   "code": "VNE",
@@ -21541,7 +21592,8 @@
                   "city": "Bury Saint Edmunds, Suffolk",
                   "lat": 52.3426,
                   "lng": 0.7729,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家空军霍宁顿基地"
                 },
                 {
                   "code": "BEX",
@@ -21661,7 +21713,8 @@
                   "city": "Carterton, Oxfordshire",
                   "lat": 51.75,
                   "lng": -1.5836,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家空军布赖兹-诺顿基地"
                 },
                 {
                   "code": "CAL",
@@ -21847,7 +21900,8 @@
                   "city": "Fairford, Gloucestershire",
                   "lat": 51.6836,
                   "lng": -1.7892,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家空军费尔福德基地"
                 },
                 {
                   "code": "FIE",
@@ -21989,7 +22043,8 @@
                   "city": "King's Lynn, Norfolk",
                   "lat": 52.6484,
                   "lng": 0.5507,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家空军马翰基地"
                 },
                 {
                   "code": "KOI",
@@ -22076,7 +22131,8 @@
                   "city": "Brandon, Suffolk",
                   "lat": 52.4095,
                   "lng": 0.5612,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家空军莱肯希斯基地"
                 },
                 {
                   "code": "LMO",
@@ -22086,7 +22142,8 @@
                   "city": "Lossiemouth, Moray",
                   "lat": 57.7052,
                   "lng": -3.3392,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家空军洛西茅斯基地"
                 },
                 {
                   "code": "LPL",
@@ -22162,7 +22219,8 @@
                   "city": "Bury Saint Edmunds, Suffolk",
                   "lat": 52.3619,
                   "lng": 0.4864,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家空军米尔登霍尔基地"
                 },
                 {
                   "code": "MME",
@@ -22282,7 +22340,8 @@
                   "city": "Northampton, Northamptonshire",
                   "lat": 52.3053,
                   "lng": -0.7931,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "赛威尔机场"
                 },
                 {
                   "code": "OXF",
@@ -22336,7 +22395,8 @@
                   "city": "Lincoln, Lincolnshire",
                   "lat": 53.093,
                   "lng": -0.166,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家空军康宁斯比基地"
                 },
                 {
                   "code": "QUG",
@@ -22346,7 +22406,8 @@
                   "city": "Chichester, West Sussex",
                   "lat": 50.8598,
                   "lng": -0.7601,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "古德伍德机场"
                 },
                 {
                   "code": "RCS",
@@ -22455,7 +22516,8 @@
                   "city": "Pewsey, Wiltshire",
                   "lat": 51.2866,
                   "lng": -1.7822,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "乌帕冯机场"
                 },
                 {
                   "code": "VLY",
@@ -22498,7 +22560,8 @@
                   "city": "Warton",
                   "lat": 53.7451,
                   "lng": -2.8831,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "瓦顿机场"
                 },
                 {
                   "code": "WRY",
@@ -22519,7 +22582,8 @@
                   "city": "Lincoln, Lincolnshire",
                   "lat": 53.1662,
                   "lng": -0.5238,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家空军沃丁顿基地"
                 },
                 {
                   "code": "YEO",
@@ -22529,7 +22593,8 @@
                   "city": "Yeovil, Somerset",
                   "lat": 51.0094,
                   "lng": -2.6388,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "英国皇家海军耶维尔顿基地"
                 }
               ]
             },
@@ -22945,7 +23010,8 @@
                   "city": "Geilenkirchen",
                   "lat": 50.9608,
                   "lng": 6.0424,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "盖伦基兴空军基地"
                 },
                 {
                   "code": "GTI",
@@ -23362,7 +23428,8 @@
                   "city": "Ramstein-Miesenbach",
                   "lat": 49.4369,
                   "lng": 7.6003,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "兰斯坦空军基地"
                 },
                 {
                   "code": "SCN",
@@ -23394,7 +23461,8 @@
                   "city": "Trier",
                   "lat": 49.9765,
                   "lng": 6.6984,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "斯潘格达勒姆空军基地"
                 },
                 {
                   "code": "STR",
@@ -23437,7 +23505,8 @@
                   "city": "Jagel",
                   "lat": 54.4593,
                   "lng": 9.5163,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "施莱斯威格空军基地"
                 },
                 {
                   "code": "WIE",
@@ -23545,7 +23614,8 @@
                   "city": "Inis Meáin",
                   "lat": 53.093,
                   "lng": -9.5681,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "因尼什曼机场"
                 },
                 {
                   "code": "INQ",
@@ -23555,7 +23625,8 @@
                   "city": "Inis Oírr",
                   "lat": 53.0647,
                   "lng": -9.5109,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "因尼希尔机场"
                 },
                 {
                   "code": "IOR",
@@ -23565,7 +23636,8 @@
                   "city": "Inis Mór",
                   "lat": 53.1067,
                   "lng": -9.6536,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "因尼斯莫尔机场"
                 },
                 {
                   "code": "KIR",
@@ -23717,7 +23789,8 @@
                   "city": "Rijen",
                   "lat": 51.5674,
                   "lng": 4.9318,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "吉尔泽-赖恩空军基地"
                 },
                 {
                   "code": "GRQ",
@@ -23749,7 +23822,8 @@
                   "city": "Leeuwarden",
                   "lat": 53.2286,
                   "lng": 5.7606,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "利瓦登空军基地"
                 },
                 {
                   "code": "MST",
@@ -23781,7 +23855,8 @@
                   "city": "Uden",
                   "lat": 51.6572,
                   "lng": 5.7078,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "沃尔克尔空军基地"
                 },
                 {
                   "code": "WOE",
@@ -23791,7 +23866,8 @@
                   "city": "Hoogerheide",
                   "lat": 51.4491,
                   "lng": 4.342,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "文斯布雷赫特空军基地"
                 }
               ]
             },
@@ -23844,7 +23920,8 @@
                   "city": "Emmen",
                   "lat": 47.0924,
                   "lng": 8.3052,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "埃门空军基地"
                 },
                 {
                   "code": "GVA",
@@ -23898,7 +23975,8 @@
                   "city": "Payerne",
                   "lat": 46.8432,
                   "lng": 6.9151,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "帕耶恩空军基地"
                 },
                 {
                   "code": "ZRH",
@@ -24987,7 +25065,8 @@
                   "city": "Hamar",
                   "lat": 60.8181,
                   "lng": 11.068,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "斯塔夫斯贝里机场"
                 },
                 {
                   "code": "HOV",
@@ -26489,7 +26568,8 @@
                   "city": "Pituffik",
                   "lat": 76.5306,
                   "lng": -68.7005,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "皮图菲克太空基地"
                 },
                 {
                   "code": "UAK",
@@ -26618,7 +26698,8 @@
                   "city": "Panevėžys",
                   "lat": 55.7294,
                   "lng": 24.4608,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "帕内韦日空军基地"
                 },
                 {
                   "code": "SQQ",
@@ -27042,7 +27123,8 @@
                   "city": "Morón",
                   "lat": 37.1749,
                   "lng": -5.6159,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "莫龙空军基地"
                 },
                 {
                   "code": "PMI",
@@ -27348,7 +27430,8 @@
                   "city": "Aviano (PN)",
                   "lat": 46.0319,
                   "lng": 12.5965,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "阿维亚诺空军基地"
                 },
                 {
                   "code": "BDS",
@@ -27490,7 +27573,8 @@
                   "city": "Decimomannu",
                   "lat": 39.3542,
                   "lng": 8.9725,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "德奇莫曼努空军基地"
                 },
                 {
                   "code": "EBA",
@@ -28181,7 +28265,8 @@
                   "city": "Larissa",
                   "lat": 39.6503,
                   "lng": 22.4655,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "拉里萨空军基地"
                 },
                 {
                   "code": "LRS",
@@ -28257,7 +28342,8 @@
                   "city": "Andravida",
                   "lat": 37.9207,
                   "lng": 21.2926,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "安德拉维达空军基地"
                 },
                 {
                   "code": "RHO",
@@ -28704,7 +28790,8 @@
                   "city": "Zemun",
                   "lat": 44.9353,
                   "lng": 20.2575,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "巴塔伊尼察空军基地"
                 },
                 {
                   "code": "INI",
@@ -29288,7 +29375,8 @@
                   "city": "Moscow",
                   "lat": 55.8783,
                   "lng": 38.0617,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "契卡洛夫斯基空军基地"
                 },
                 {
                   "code": "CSH",
@@ -29881,7 +29969,8 @@
                   "city": "Tver",
                   "lat": 56.8247,
                   "lng": 35.7577,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "米加洛沃空军基地"
                 },
                 {
                   "code": "KLF",
@@ -30287,7 +30376,8 @@
                   "city": "Krymsk",
                   "lat": 44.9629,
                   "lng": 37.9991,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "克里姆斯克空军基地"
                 },
                 {
                   "code": "NOJ",
@@ -30715,7 +30805,8 @@
                   "city": "Pudozh",
                   "lat": 61.825,
                   "lng": 36.58,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "普多日"
                 },
                 {
                   "code": "RYB",
@@ -31033,7 +31124,8 @@
                   "city": "Tula",
                   "lat": 54.239,
                   "lng": 37.6,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "克洛科沃空军基地"
                 },
                 {
                   "code": "TYD",
@@ -31856,7 +31948,8 @@
                   "city": "Myrhorod",
                   "lat": 49.932,
                   "lng": 33.641,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "米尔霍罗德空军基地"
                 },
                 {
                   "code": "NLV",
@@ -32490,7 +32583,8 @@
                   "city": "Přerov",
                   "lat": 49.4258,
                   "lng": 17.4047,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "普热罗夫空军基地"
                 },
                 {
                   "code": "UHE",
@@ -32587,7 +32681,8 @@
                   "city": "Prešov",
                   "lat": 49.0297,
                   "lng": 21.3156,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "普雷绍夫空军基地"
                 },
                 {
                   "code": "PZY",
@@ -32662,7 +32757,8 @@
                   "city": "Bezmer",
                   "lat": 42.4549,
                   "lng": 26.3522,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "贝兹梅尔空军基地"
                 },
                 {
                   "code": "PDV",
@@ -33238,7 +33334,8 @@
                   "city": "Camp Springs",
                   "lat": 38.8108,
                   "lng": -76.867,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "安德鲁斯联合基地"
                 },
                 {
                   "code": "AEL",
@@ -34623,7 +34720,8 @@
                   "city": "Bradford",
                   "lat": 41.2309,
                   "lng": -89.6157,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "林肯伯格限制着陆区"
                 },
                 {
                   "code": "BDG",
@@ -34776,7 +34874,8 @@
                   "city": "Aurora",
                   "lat": 39.7017,
                   "lng": -104.752,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "巴克利太空部队基地"
                 },
                 {
                   "code": "BFL",
@@ -41034,7 +41133,8 @@
                   "city": "Peru",
                   "lat": 40.6481,
                   "lng": -86.1521,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "格里索姆空军预备基地"
                 },
                 {
                   "code": "GUY",
@@ -42430,7 +42530,8 @@
                   "city": "Nikolski",
                   "lat": 52.9416,
                   "lng": -168.8495,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "尼科尔斯基空军基地"
                 },
                 {
                   "code": "ILE",
@@ -45322,7 +45423,8 @@
                   "city": "Marietta",
                   "lat": 33.9154,
                   "lng": -84.5163,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "多宾斯空军预备役基地"
                 },
                 {
                   "code": "MGI",
@@ -53439,7 +53541,8 @@
                   "city": "Lompoc",
                   "lat": 34.7373,
                   "lng": -120.584,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "范登堡太空部队基地"
                 },
                 {
                   "code": "VCT",
@@ -54735,7 +54838,8 @@
                   "city": "Kennedy Lake",
                   "lat": 63.4352,
                   "lng": -109.1448,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "加科库"
                 },
                 {
                   "code": "GSL",
@@ -54778,7 +54882,8 @@
                   "city": "Albian Village",
                   "lat": 57.2239,
                   "lng": -111.419,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "麦凯堡/阿尔比安机场"
                 },
                 {
                   "code": "JOJ",
@@ -56031,7 +56136,8 @@
                   "city": "Suncor Energy Site",
                   "lat": 57.2758,
                   "lng": -110.9767,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "麦凯堡/火袋"
                 },
                 {
                   "code": "YFJ",
@@ -57207,7 +57313,8 @@
                   "city": "Éléonore Mine",
                   "lat": 52.2219,
                   "lng": -76.6119,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "奥皮纳卡机场"
                 },
                 {
                   "code": "YOJ",
@@ -59010,7 +59117,8 @@
                   "city": "Greenwood",
                   "lat": 44.9844,
                   "lng": -64.9169,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "格林伍德皇家加拿大空军基地"
                 },
                 {
                   "code": "YZZ",
@@ -60207,7 +60315,8 @@
                   "city": "Salina Cruz",
                   "lat": 16.2126,
                   "lng": -95.2016,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "萨利纳克鸟类空军基地"
                 },
                 {
                   "code": "SFH",
@@ -60404,7 +60513,8 @@
                   "city": "Tulum",
                   "lat": 20.2273,
                   "lng": -87.4382,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "图卢姆海军航空基地"
                 },
                 {
                   "code": "TZM",
@@ -60414,7 +60524,8 @@
                   "city": "Tizimin",
                   "lat": 21.1557,
                   "lng": -88.1729,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "库普尔机场"
                 },
                 {
                   "code": "UAC",
@@ -62199,7 +62310,8 @@
                   "city": "Siuna",
                   "lat": 13.7272,
                   "lng": -84.7778,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "西瓦纳"
                 },
                 {
                   "code": "WSP",
@@ -66111,7 +66223,8 @@
                   "city": "Patos",
                   "lat": -7.039,
                   "lng": -37.2516,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "阿尔梅达·布里加迪罗·艾雷斯机场"
                 },
                 {
                   "code": "JPR",
@@ -67254,7 +67367,8 @@
                   "city": "Pirassununga",
                   "lat": -21.9847,
                   "lng": -47.3412,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "方丹内尔军事基地"
                 },
                 {
                   "code": "QSC",
@@ -69254,7 +69368,8 @@
                   "city": "La Dorada",
                   "lat": 5.4836,
                   "lng": -74.6574,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "赫尔曼·奥拉诺空军基地"
                 },
                 {
                   "code": "PBE",
@@ -69759,7 +69874,8 @@
                   "city": "Tres Esquinas",
                   "lat": 0.7459,
                   "lng": -75.234,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "厄内斯托·埃斯格拉·库比德斯上校空军基地"
                 },
                 {
                   "code": "TTM",
@@ -69955,7 +70071,8 @@
                   "city": "El Soberbio",
                   "lat": -27.1803,
                   "lng": -54.1074,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "亚博蒂机场"
                 },
                 {
                   "code": "ARR",
@@ -70856,7 +70973,8 @@
                   "city": "Presidencia Roca",
                   "lat": -26.2959,
                   "lng": -59.5353,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "唐·帕诺斯牧场机场"
                 },
                 {
                   "code": "SAOV",
@@ -72854,7 +72972,8 @@
                   "city": "Quince Mil",
                   "lat": -13.2314,
                   "lng": -70.7514,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "昆西米尔空军基地"
                 },
                 {
                   "code": "VVN",
@@ -74333,7 +74452,8 @@
                   "city": "Filadelfia",
                   "lat": -22.3546,
                   "lng": -60.0532,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "费拉德菲亚机场"
                 },
                 {
                   "code": "OLK",
@@ -74354,7 +74474,8 @@
                   "city": "Puerto Leda",
                   "lat": -20.9046,
                   "lng": -57.9271,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "莱达港机场"
                 },
                 {
                   "code": "PCJ",
@@ -75873,7 +75994,8 @@
                   "city": "Kenitra",
                   "lat": 34.2989,
                   "lng": -6.5959,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "克尼特拉空军基地"
                 },
                 {
                   "code": "OUD",
@@ -76025,7 +76147,8 @@
                   "city": "Martuba",
                   "lat": 32.542,
                   "lng": 22.745,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "马图巴空军基地"
                 },
                 {
                   "code": "GHT",
@@ -80564,7 +80687,8 @@
                   "city": "Grumeti Game Reserve",
                   "lat": -2.1608,
                   "lng": 34.2256,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "基拉维拉B机场"
                 },
                 {
                   "code": "IRI",
@@ -81751,7 +81875,8 @@
                   "city": "Diego Garcia",
                   "lat": -7.3133,
                   "lng": 72.4111,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "迭戈加西亚海军支援设施"
                 }
               ]
             },
@@ -82143,7 +82268,8 @@
                   "city": "Kotakoli",
                   "lat": 4.157,
                   "lng": 21.6667,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "科塔科利空军基地"
                 },
                 {
                   "code": "KLY",
@@ -86911,7 +87037,8 @@
                   "city": "Gweru",
                   "lat": -19.4367,
                   "lng": 29.8619,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "格韦鲁-索恩希尔空军基地"
                 },
                 {
                   "code": "HRE",
@@ -90281,7 +90408,8 @@
                   "city": "Cloudbreak Village",
                   "lat": -22.2908,
                   "lng": 119.4371,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "福特斯克-戴夫·福雷斯特机场"
                 },
                 {
                   "code": "KFG",
@@ -91754,7 +91882,8 @@
                   "city": "Norseman",
                   "lat": -32.203,
                   "lng": 121.7581,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "诺斯曼机场"
                 },
                 {
                   "code": "NSO",
@@ -91852,7 +91981,8 @@
                   "city": "",
                   "lat": -22.5411,
                   "lng": 117.2694,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "布尔吉达"
                 },
                 {
                   "code": "ODD",
@@ -91917,7 +92047,8 @@
                   "city": "",
                   "lat": -27.4093,
                   "lng": 151.7367,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "奥基陆军航空中心"
                 },
                 {
                   "code": "OLP",
@@ -93049,7 +93180,8 @@
                   "city": "Tumut",
                   "lat": -35.2683,
                   "lng": 148.2405,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "图穆特机场"
                 },
                 {
                   "code": "TWB",
@@ -93367,7 +93499,8 @@
                   "city": "",
                   "lat": -22.4284,
                   "lng": 116.8879,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "埃利瓦纳"
                 },
                 {
                   "code": "WHL",
@@ -93992,7 +94125,8 @@
                   "city": "Fox Glacier",
                   "lat": -43.4611,
                   "lng": 170.017,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "福克斯冰川机场"
                 },
                 {
                   "code": "GBZ",
@@ -94266,7 +94400,8 @@
                   "city": "Koromiko",
                   "lat": -41.3461,
                   "lng": 173.956,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "皮克顿机场"
                 },
                 {
                   "code": "PMR",
@@ -94298,7 +94433,8 @@
                   "city": "Raglan",
                   "lat": -37.8047,
                   "lng": 174.86,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "拉格兰机场"
                 },
                 {
                   "code": "ROT",
@@ -94341,7 +94477,8 @@
                   "city": "Taharoa",
                   "lat": -38.1811,
                   "lng": 174.708,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "塔哈罗亚机场"
                 },
                 {
                   "code": "TIU",
@@ -94373,7 +94510,8 @@
                   "city": "",
                   "lat": -37.1567,
                   "lng": 175.55,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "泰晤士机场"
                 },
                 {
                   "code": "TRG",
@@ -94438,7 +94576,8 @@
                   "city": "",
                   "lat": -43.3631,
                   "lng": 170.134,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "弗朗茨·约瑟夫机场"
                 },
                 {
                   "code": "WIK",
@@ -95972,7 +96111,8 @@
                   "city": "",
                   "lat": -6.1555,
                   "lng": 147.1915,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "卡布温"
                 },
                 {
                   "code": "KCJ",
@@ -98467,7 +98607,8 @@
                   "city": "Batuna Mission Station",
                   "lat": -8.562,
                   "lng": 158.1193,
-                  "intl": 0
+                  "intl": 0,
+                  "nameZh": "巴图纳机场"
                 },
                 {
                   "code": "CHY",
