@@ -298,18 +298,18 @@ export function createLeafletAdapter(mapId) {
       
       let popupContent = '';
       
-      // 仓库类型 - 显示地址
-      if (type === 'warehouse' && address) {
+      // 仓库类型 - 显示地址（不显示国内/国际标签）
+      if (type === 'warehouse') {
         popupContent = `
           <div class="map-popup map-popup--apple map-popup--warehouse">
             <div class="map-popup__header">
               <span class="map-popup__code">${code}</span>
             </div>
-            <div class="map-popup__address">${address}</div>
+            ${address ? `<div class="map-popup__address">${address}</div>` : ''}
           </div>
         `;
       } else {
-        // 机场/港口类型
+        // 机场/港口类型 - 显示国内/国际标签
         popupContent = `
           <div class="map-popup map-popup--apple">
             <div class="map-popup__header">

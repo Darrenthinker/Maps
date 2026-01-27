@@ -835,7 +835,11 @@ function applyFilters() {
     mapAdapter.setMarkers([]);
     // 如果只有一个结果，自动跳转到地图
     if (results.length === 1) {
-      mapAdapter.focusOnCoords(results[0].lat, results[0].lng, 12, 'warehouse', results[0].categoryName);
+      const w = results[0];
+      mapAdapter.focusOnCoords(w.lat, w.lng, 14, 'warehouse', w.categoryName, {
+        code: w.code,
+        address: w.address || ''
+      });
     }
   } else {
     renderSearchResults();
@@ -1058,8 +1062,9 @@ function renderWarehouseSearchResults(results) {
         } else if (w.categoryName && w.categoryName.includes('沃尔玛')) {
           category = 'walmart';
         }
+        const addressAttr = w.address ? `data-address="${w.address.replace(/"/g, '&quot;')}"` : '';
         return `
-          <li class="result-item result-item--search result-item--warehouse" data-lat="${w.lat}" data-lng="${w.lng}" data-type="warehouse" data-category="${category}">
+          <li class="result-item result-item--search result-item--warehouse" data-lat="${w.lat}" data-lng="${w.lng}" data-type="warehouse" data-category="${category}" data-code="${w.code}" ${addressAttr}>
             <div class="result-item__title">${w.code} · ${w.name}</div>
             <div class="result-item__meta">${w.city} · ${w.categoryName} · ${w.countryName}</div>
           </li>
@@ -1803,11 +1808,14 @@ function wireEvents() {
           code: item.dataset.code || '',
           name: item.dataset.name || '',
           nameZh: item.dataset.nameZh || '',
-          intl: item.dataset.intl === '1'
+          intl: item.dataset.intl === '1',
+          address: item.dataset.address || ''
         };
         // 清除批量标记，避免与类型图标重叠
         mapAdapter.setMarkers([]);
-        mapAdapter.focusOnCoords(lat, lng, 12, type, category, nodeInfo);
+        // 仓库用更大的缩放级别
+        const zoomLevel = type === 'warehouse' ? 14 : 12;
+        mapAdapter.focusOnCoords(lat, lng, zoomLevel, type, category, nodeInfo);
         if (window.innerWidth <= 768) {
           app.classList.remove("app--sidebar-open");
         }
