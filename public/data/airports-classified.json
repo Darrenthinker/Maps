@@ -33041,17 +33041,6 @@
                   "intl": 1
                 },
                 {
-                  "code": "LGA",
-                  "icao": "KLGA",
-                  "iata": "LGA",
-                  "name": "LaGuardia Airport",
-                  "nameZh": "拉瓜迪亚机场",
-                  "city": "New York",
-                  "lat": 40.7772,
-                  "lng": -73.8726,
-                  "intl": 0
-                },
-                {
                   "code": "ORD",
                   "icao": "KORD",
                   "iata": "ORD",
@@ -33831,6 +33820,17 @@
                   "lat": 32.6509,
                   "lng": -114.6094,
                   "intl": 1
+                },
+                {
+                  "code": "LGA",
+                  "icao": "KLGA",
+                  "iata": "LGA",
+                  "name": "LaGuardia Airport",
+                  "nameZh": "拉瓜迪亚机场",
+                  "city": "New York",
+                  "lat": 40.7772,
+                  "lng": -73.8726,
+                  "intl": 0
                 },
                 {
                   "code": "AUZ",
