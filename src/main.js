@@ -1357,10 +1357,17 @@ function renderWarehousesView() {
             const stateZh = state.usStatesZh?.states?.[stateCode] || '';
             const stateLabel = stateCode ? `<span class="warehouse-state">${stateCode}${stateZh ? ' ' + stateZh : ''}</span>` : '';
             
-            // 处理地址：替换 United States/United states 为 US
+            // 处理地址：清理多余空格，替换 United States 为 US
             let address = warehouse.address || '';
-            address = address.replace(/[,\s]*-?\s*United\s*[Ss]tates?\s*$/i, ', US')
-                            .replace(/[,\s]*-?\s*US\s*$/i, ', US');
+            address = address
+              .replace(/\s+/g, ' ')                          // 多个空格变单个
+              .replace(/\s*,\s*/g, ', ')                     // 逗号前后空格统一
+              .replace(/,\s*,/g, ',')                        // 连续逗号
+              .replace(/[,\s]*-?\s*United\s*[Ss]tates?\s*$/i, ', US')  // United States → US
+              .replace(/[,\s]*-?\s*US\s*$/i, ', US')         // 统一 US 格式
+              .replace(/,\s*$/g, '')                         // 去除末尾逗号
+              .replace(/^\s*,\s*/g, '')                      // 去除开头逗号
+              .trim();
             const addressLine = address ? `<div class="result-item__address">${address}</div>` : '';
             
             html += `
