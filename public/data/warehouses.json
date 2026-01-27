@@ -19,7 +19,7 @@
               "name": "CH01",
               "city": "Fishersville, VA",
               "state": "VA",
-              "address": "32 TRADER RD 22939-2437-FISHERSVILLE, VA- United states, VA",
+              "address": "32 TRADER RD, Fishersville, VA 22939",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -29,7 +29,7 @@
               "name": "TYS5",
               "city": "MARYVILLE, TN",
               "state": "TN",
-              "address": "210 Partnership Parkway MARYVILLE, TN 37801, TN",
+              "address": "210 Partnership Parkway MARYVILLE, TN 37801",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -39,14 +39,14 @@
               "name": "PSP3",
               "city": "SPRINGS, CA",
               "state": "CA",
-              "address": "64165 19th AVE，DESERT HOT SPRINGS，CA，92240，US, CA",
+              "address": "64165 19th AVE, DESERT HOT SPRINGS, CA 92240",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
             },
             {
-              "code": "WBW2 UPS",
-              "name": "WBW2 UPS",
+              "code": "WBW2",
+              "name": "WBW2",
               "city": "Pocono Lake Preserve, PA",
               "state": "PA",
               "address": "1300 Corporate Way, Pocono Lake Preserve, PA 18348",
@@ -59,7 +59,7 @@
               "name": "MCC1",
               "city": "Rancho Cordova, CA",
               "state": "CA",
-              "address": "3300 Rancho Cordova Pkwy 95742 - RANCHO CORDOVA, CA - United State",
+              "address": "3300 Rancho Cordova Pkwy, RANCHO CORDOVA, CA 95742",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -75,11 +75,11 @@
               "lng": -98.5795
             },
             {
-              "code": "MCO1-沃",
-              "name": "MCO1-沃",
+              "code": "MCO1",
+              "name": "MCO1",
               "city": "Davenport, FL",
               "state": "FL",
-              "address": "33897 FL DAVENPORT 5100 NORTH RIDGE TRAIL, FL",
+              "address": "FL DAVENPORT 5100 NORTH RIDGE TRAIL, FL 33897",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -89,7 +89,7 @@
               "name": "QXY8",
               "city": "Fresno, CA",
               "state": "CA",
-              "address": "3611 S NORTHPOINTE DR 93725-1962 - FRESNO, CA - United States",
+              "address": "3611 S NORTHPOINTE DR, FRESNO, CA 93725",
               "type": "FC",
               "lat": 36.7378,
               "lng": -119.7871
@@ -99,7 +99,7 @@
               "name": "LAX2T",
               "city": "Chino, CA",
               "state": "CA",
-              "address": "6730 Kimball Ave CHINO CA 91708, CA",
+              "address": "6730 Kimball Ave CHINO, CA 91708",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -109,7 +109,7 @@
               "name": "XPB2",
               "city": "Apopka, FL",
               "state": "FL",
-              "address": "4661 Apopka Logistics Pkwy 32712-Apopka, FL- United States",
+              "address": "4661 Apopka Logistics Pkwy, FL 32712",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -119,7 +119,7 @@
               "name": "ORD1S",
               "city": "Joliet, IL",
               "state": "IL",
-              "address": "3501 Brandon Road Joliet IL 60436 ORD1S-沃, IL",
+              "address": "3501 Brandon Road Joliet, IL 60436",
               "type": "FC",
               "lat": 41.525,
               "lng": -88.0817
@@ -139,7 +139,7 @@
               "name": "XAV3",
               "city": "Port Wentworth, GA",
               "state": "GA",
-              "address": "120 Crossgate Dr Port Wentworth, GA 31407 USA",
+              "address": "120 Crossgate Dr Port Wentworth, GA 31407",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -149,7 +149,7 @@
               "name": "XEW5",
               "city": "Riverton, NJ",
               "state": "NJ",
-              "address": "995 Taylors Ln 08077-2015 - Cinnaminson, NJ - United States, Riverton",
+              "address": "995 Taylors Ln, Cinnaminson, Riverton, NJ 08077",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -159,7 +159,7 @@
               "name": "PBI3",
               "city": "Port Saint Lucie, FL",
               "state": "FL",
-              "address": "7600 LTC Parkway 34986 - PORT SAINT LUCIE, FL",
+              "address": "7600 LTC Parkway, PORT SAINT LUCIE, FL 34986",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -169,7 +169,7 @@
               "name": "TCY1",
               "city": "Stockton, CA",
               "state": "CA",
-              "address": "2690 East Arch Airport Road 95206 - STOCKTON, CA - United States",
+              "address": "2690 East Arch Airport Road, STOCKTON, CA 95206",
               "type": "FC",
               "lat": 37.9577,
               "lng": -121.2908
@@ -179,7 +179,7 @@
               "name": "TCY2",
               "city": "Stockton, CA",
               "state": "CA",
-              "address": "6201 Newcastle Rd 95215 - STOCKTON, CA - United States",
+              "address": "6201 Newcastle Rd, STOCKTON, CA 95215",
               "type": "FC",
               "lat": 37.9577,
               "lng": -121.2908
@@ -199,7 +199,7 @@
               "name": "BOS4",
               "city": "Milford, MA",
               "state": "MA",
-              "address": "01757 1 National St Milford MA 美国, MA",
+              "address": "1 National St Milford, MA 01757",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -229,7 +229,7 @@
               "name": "BOS2",
               "city": "Drive Stoughton, MA",
               "state": "MA",
-              "address": "1000 Tech Centre Drive Stoughton MA 02072",
+              "address": "1000 Tech Centre Drive Stoughton, MA 02072",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -249,7 +249,7 @@
               "name": "BOS6",
               "city": "Everett, MA",
               "state": "MA",
-              "address": "02149 201 Beacham Street Everett MA 美国, MA",
+              "address": "201 Beacham Street Everett, MA 02149",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -259,7 +259,7 @@
               "name": "BOS8",
               "city": "Boston, MA",
               "state": "MA",
-              "address": "870 Commonwealth Ave Brookline MA 02215, Boston, MA",
+              "address": "870 Commonwealth Ave Brookline, Boston, MA 02215",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -269,7 +269,7 @@
               "name": "BOS7",
               "city": "Fall River, MA",
               "state": "MA",
-              "address": "Amazon.com.dedc LLC 1180 Innovation Way, Fall River, MA 02720-4766",
+              "address": "1180 Innovation Way, Fall River, MA 02720-4766",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -329,7 +329,7 @@
               "name": "BEL6",
               "city": "CROMWELLCT, CROMWELLCT",
               "state": "CROMWELLCT",
-              "address": "BDL6120 County Line Drivenull, CROMWELLCT, 06416-1186, US(BDL6)",
+              "address": "BDL6120 County Line Drivenull, CROMWELLCT 06416-1186",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -339,7 +339,7 @@
               "name": "BDL3",
               "city": "North Haven, CT",
               "state": "CT",
-              "address": "409 Washington Avenue North Haven, CT06473-1307, CT",
+              "address": "409 Washington Avenue North Haven, CT 06473-1307",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -489,7 +489,7 @@
               "name": "ACY2",
               "city": "BURLINGTON, NJ",
               "state": "NJ",
-              "address": "ACY2 1101 E PEARL ST BURLINGTON, NJ 08016-1934 US (ACY2)",
+              "address": "1101 E PEARL ST BURLINGTON, NJ 08016-1934",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -509,7 +509,7 @@
               "name": "NJ3",
               "city": "Pedricktown, NJ",
               "state": "NJ",
-              "address": "NJ3-Walmart-3 Sorbello Rd, Pedricktown, N 08067, NJ",
+              "address": "-Walmart-3 Sorbello Rd, Pedricktown, N 08067, NJ 08067",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -519,7 +519,7 @@
               "name": "TEB4",
               "city": "PENNS GROVE, NJ",
               "state": "NJ",
-              "address": "747 COURSES LANDING RD PENNS GROVE, NJ 08069-2957 US (TEB4)",
+              "address": "747 COURSES LANDING RD PENNS GROVE, NJ 08069-2957",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -579,7 +579,7 @@
               "name": "ABE8",
               "city": "Florence, NJ",
               "state": "NJ",
-              "address": "401 Independence Road Florence, NJ 08518-2200 United States, NJ",
+              "address": "401 Independence Road Florence, NJ 08518-2200",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -589,7 +589,7 @@
               "name": "ABE8-309",
               "city": "Florence, NJ",
               "state": "NJ",
-              "address": "309 Cedar Lane Florence, NJ 08518",
+              "address": "309 Cedar Lane Florence, NJ 08518-2802",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -619,7 +619,7 @@
               "name": "EWR1",
               "city": "Robinsville, NJ",
               "state": "NJ",
-              "address": "EWR1 50 New Canton Way, Robinsville, NJ 08691-2350",
+              "address": "50 New Canton Way, Robinsville, NJ 08691-2350",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -629,7 +629,7 @@
               "name": "LGA9",
               "city": "Edison, NJ",
               "state": "NJ",
-              "address": "08817 Edison NJ - New Jersey Middlesex US, NJ",
+              "address": "Edison NJ, New Jersey Middlesex, NJ 08817",
               "type": "FC",
               "lat": 40.5187,
               "lng": -74.4121
@@ -649,7 +649,7 @@
               "name": "TEB9",
               "city": "SOMERSET, NJ",
               "state": "NJ",
-              "address": "601 Randolph Road SOMERSET, NJ 08873 US (TEB9)",
+              "address": "601 Randolph Road SOMERSET, NJ 08873",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -749,7 +749,7 @@
               "name": "MAS1",
               "city": "Amherst, MA",
               "state": "MA",
-              "address": "220 Campus Center, 1 Campus Center Way, Amherst, MA 1003",
+              "address": "220 Campus Center, 1 Campus Center Way, Amherst, MA 01003",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1079,7 +1079,7 @@
               "name": "ALB1",
               "city": "Castleton, NY, Castleton, NY",
               "state": "Castleton, NY",
-              "address": "1835 US Route 9 Castleton, NY 12033-9634 US ( ALB1), Castleton, NY",
+              "address": "1835 US Route 9-9634, Castleton, NY 12033",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1089,7 +1089,7 @@
               "name": "SWF2",
               "city": "Hopewell Junction, NY",
               "state": "NY",
-              "address": "76 PATRIOT WAY，Hopewell junction NY 12533, NY",
+              "address": "76 PATRIOT WAY, Hopewell junction, NY 12533",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1159,7 +1159,7 @@
               "name": "DBU1",
               "city": "TONAWANDA NY, NY",
               "state": "NY",
-              "address": "400 RIVERWALK PKWY, TONAWANDA NY 14150-5815",
+              "address": "400 RIVERWALK PKWY, TONAWANDA NY, NY 14150-5815",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1209,7 +1209,7 @@
               "name": "PIT2",
               "city": "IMPERIAL, PA",
               "state": "PA",
-              "address": "1200 Westport Rd IMPERIAL, PA 15126-1002 US (PIT2)",
+              "address": "1200 Westport Rd IMPERIAL, PA 15126",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1249,7 +1249,7 @@
               "name": "OWD5",
               "city": "NORTHBOROUGH, MA",
               "state": "MA",
-              "address": "330 BARTLETT ST, NORTHBOROUGH, MA 1532",
+              "address": "330 BARTLETT ST, NORTHBOROUGH, MA 01532",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1259,7 +1259,7 @@
               "name": "OWD9",
               "city": "NORTHBOROUGH, MA",
               "state": "MA",
-              "address": "350 BARTLETT ST, NORTHBOROUGH, MA 1532",
+              "address": "350 BARTLETT ST, NORTHBOROUGH, MA 01532",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1269,7 +1269,7 @@
               "name": "LBE1-UPS",
               "city": "Greensburg, PA",
               "state": "PA",
-              "address": "165 Glen Fox Road, Greensburg, PA 15605 15672",
+              "address": "165 Glen Fox Road, Greensburg, PA 15672",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1279,7 +1279,7 @@
               "name": "LBE1",
               "city": "New Stanton, PA",
               "state": "PA",
-              "address": "165 GLENN FOX RD NEW STANTON, PA 15672-9703 US",
+              "address": "165 GLENN FOX RD NEW STANTON, PA 15672",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1339,7 +1339,7 @@
               "name": "MDT4",
               "city": "York, PA",
               "state": "PA",
-              "address": "17048 5125 Commerce Dr York PA US, PA",
+              "address": "5125 Commerce Dr York, PA 17048",
               "type": "FC",
               "lat": 40.7128,
               "lng": -74.006
@@ -1349,7 +1349,7 @@
               "name": "HIA1",
               "city": "MIDDLETOWN, PA",
               "state": "PA",
-              "address": "3327 E Harrisburg Pik 17057 - MIDDLETOWN, PA - United States",
+              "address": "3327 E Harrisburg Pik, MIDDLETOWN, PA 17057",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1409,7 +1409,7 @@
               "name": "PHL2",
               "city": "Bethlehem, PA",
               "state": "PA",
-              "address": "PHL2 2785 Commerce Center Blvd Bethlehem PA 18015, PA",
+              "address": "2785 Commerce Center Blvd Bethlehem, PA 18015",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1509,7 +1509,7 @@
               "name": "AVP9",
               "city": "VALLEY VIEW, PA",
               "state": "PA",
-              "address": "AVP9 - 45 VALLEY VIEW DR 18434-1153 - JESSUP, PA -, PA",
+              "address": "45 VALLEY VIEW DR, JESSUP, PA -, PA 18434",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1519,7 +1519,7 @@
               "name": "WBW2-UPS",
               "city": " Pocono Lake Preserve , PA",
               "state": "PA",
-              "address": "1300 Corporate Way, Pocono Lake Preserve, PA 18348, Pocono Lake Preserve",
+              "address": "1300 Corporate Way, Pocono Lake Preserve, Pocono Lake Preserve, PA 18348",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1529,7 +1529,7 @@
               "name": "WBW2",
               "city": "Olyphant, PA",
               "state": "PA",
-              "address": "1300 Corporate Way 18447 - OLYPHANT, PA - United States",
+              "address": "1300 Corporate Way, OLYPHANT, PA 18447",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1589,7 +1589,7 @@
               "name": "DAS8",
               "city": "WILMINGTON, MA",
               "state": "MA",
-              "address": "110 Fordham Rd., WILMINGTON, MA 1887",
+              "address": "110 Fordham Rd., WILMINGTON, MA 01887",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1749,7 +1749,7 @@
               "name": "RDG1",
               "city": "HAMBURG, PA",
               "state": "PA",
-              "address": "RDG1 - 3563 Mountain Road 19526-7947 - HAMBURG, PA - United States, PA",
+              "address": "3563 Mountain Road, HAMBURG, PA 19526-7947",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1799,7 +1799,7 @@
               "name": "ILG1",
               "city": "NEW CASTLE, DE",
               "state": "DE",
-              "address": "780 S. DuPont Highway NEW CASTLE, DE 19720-4610",
+              "address": "780 S. DuPont Highway NEW CASTLE, DE 19720",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1879,7 +1879,7 @@
               "name": "DVA5",
               "city": "Manassas, VA",
               "state": "VA",
-              "address": "11920 Balls Ford Rd, Manassas, VA 20109-2484",
+              "address": "Balls Ford Rd, Manassas, VA 20109-2484",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1899,7 +1899,7 @@
               "name": "DCB8",
               "city": "BELLINGHAM, MA",
               "state": "MA",
-              "address": "351 MAPLE ST, BELLINGHAM, MA 2019",
+              "address": "351 MAPLE ST, BELLINGHAM, MA 02019",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1909,7 +1909,7 @@
               "name": "DB02",
               "city": "Dedham, MA",
               "state": "MA",
-              "address": "500 Sprague St., Dedham, MA 2026",
+              "address": "500 Sprague St., Dedham, MA 02026",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1919,7 +1919,7 @@
               "name": "DBC6",
               "city": "HINGHAM, MA",
               "state": "MA",
-              "address": "100 INDUSTRIAL PARK RD, HINGHAM, MA 2043",
+              "address": "100 INDUSTRIAL PARK RD, HINGHAM, MA 02043",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1929,7 +1929,7 @@
               "name": "DCB2",
               "city": "MANSFIELD, MA",
               "state": "MA",
-              "address": "560 WEST ST, MANSFIELD 2048",
+              "address": "560 WEST ST, MANSFIELD, MA 02048",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -1949,7 +1949,7 @@
               "name": "DLD7",
               "city": "LANHAM, MD",
               "state": "MD",
-              "address": "10100 WILLOWDALE RD, LANHAM, MD 20706",
+              "address": "WILLOWDALE RD, LANHAM, MD 20706",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2069,7 +2069,7 @@
               "name": "UMA3",
               "city": "Boston, MA",
               "state": "MA",
-              "address": "30 Northampton Street, Boston, MA 2118",
+              "address": "30 Northampton Street, Boston, MA 02118",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2079,7 +2079,7 @@
               "name": "TMA3",
               "city": "Boston, MA",
               "state": "MA",
-              "address": "30 Northampton Street, Boston, MA 2118",
+              "address": "30 Northampton Street, Boston, MA 02118",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2109,7 +2109,7 @@
               "name": "DCA1",
               "city": "Sparrows Point, MD",
               "state": "MD",
-              "address": "1700 Sparrows Point Boulevard Sparrows Point, MD 21219 US (DCA1)",
+              "address": "1700 Sparrows Point Boulevard Sparrows Point, MD 21219",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2119,7 +2119,7 @@
               "name": "DCA6",
               "city": "BETHLEHEN BIRD, MD",
               "state": "MD",
-              "address": "DCA6 6001 Bethlehem Blvd BALTIMORE, MD 21219-1041 US ( DCA6), BETHLEHEN BIRD",
+              "address": "6001 Bethlehem Blvd BALTIMORE, BETHLEHEN BIRD, MD 21219",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2239,7 +2239,7 @@
               "name": "HEA1",
               "city": "DORCHESTER CENTER, MA",
               "state": "MA",
-              "address": "9 Livingstone St, DORCHESTER CENTER, MA 2124",
+              "address": "9 Livingstone St, DORCHESTER CENTER, MA 02124",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2249,7 +2249,7 @@
               "name": "DBO8",
               "city": "BOSTON, MA",
               "state": "MA",
-              "address": "24 ALGER ST, BOSTON, MA 2127",
+              "address": "24 ALGER ST, BOSTON, MA 02127",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2259,7 +2259,7 @@
               "name": "DB01",
               "city": "Everett (Chelsea), MA",
               "state": "MA",
-              "address": "201 Beacham Street, Everett (Chelsea), MA 2149",
+              "address": "201 Beacham Street, Everett (Chelsea), MA 02149",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2269,7 +2269,7 @@
               "name": "UMA4",
               "city": "Chelsea, MA",
               "state": "MA",
-              "address": "201 Beacham St, Chelsea, MA 2150",
+              "address": "201 Beacham St, Chelsea, MA 02150",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2279,7 +2279,7 @@
               "name": "DMH9",
               "city": "REVERE, MA",
               "state": "MA",
-              "address": "135 AMERICAN LEGION HWY, REVERE, MA 2151",
+              "address": "135 AMERICAN LEGION HWY, REVERE, MA 02151",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2289,7 +2289,7 @@
               "name": "HGR6",
               "city": "Hagerstown, MD",
               "state": "MD",
-              "address": "55 West Oak Ridge Drive 21740-7301 - HAGERSTOWN, MD - United States, MD",
+              "address": "55 West Oak Ridge Drive, HAGERSTOWN, MD 21740",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2309,7 +2309,7 @@
               "name": "XLX1",
               "city": "HAGERSTOWN, MD",
               "state": "MD",
-              "address": "XLX1 - 1115 Wesel Blvd 21740-8126 - HAGERSTOWN, MD - United States",
+              "address": "1115 Wesel Blvd, HAGERSTOWN, MD 21740-8126",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2319,7 +2319,7 @@
               "name": "HGR2",
               "city": "WESEL BLVD, MD",
               "state": "MD",
-              "address": "HGR2 - 1115 WESEL BLVD 21740-8126 - HAGERSTOWN, MD - United States",
+              "address": "1115 WESEL BLVD, HAGERSTOWN, MD 21740-8126",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2329,7 +2329,7 @@
               "name": "HSE1",
               "city": "HAGERSTOWN, MD",
               "state": "MD",
-              "address": "13905 CRAYTON BLVD, HAGERSTOWN, MD 21742",
+              "address": "CRAYTON BLVD, HAGERSTOWN, MD 21742",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2339,7 +2339,7 @@
               "name": "HMD3",
               "city": "HAGERSTOWN, MD",
               "state": "MD",
-              "address": "13905 Crayton Blvd, HAGERSTOWN, MD 21742",
+              "address": "Crayton Blvd, HAGERSTOWN, MD 21742",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2349,7 +2349,7 @@
               "name": "DBA7",
               "city": "WILLIAMSPORT, MD",
               "state": "MD",
-              "address": "16604 INDUSTRIAL LANE, WILLIAMSPORT, MD 21795",
+              "address": "INDUSTRIAL LANE, WILLIAMSPORT, MD 21795",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2379,7 +2379,7 @@
               "name": "MAB3",
               "city": "Fairfax, VA",
               "state": "VA",
-              "address": "10354 Fairfax Blvd, VA 22030",
+              "address": "Fairfax Blvd, VA 22030",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2439,7 +2439,7 @@
               "name": "RMN3",
               "city": "Fredericksburg, VA",
               "state": "VA",
-              "address": "RMN3 -220 Centreport Pkwy, Fredericksburg, VA 22406",
+              "address": "-220 Centreport Pkwy, Fredericksburg, VA 22406",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2459,7 +2459,7 @@
               "name": "CHO1",
               "city": "Fishersville, VA",
               "state": "VA",
-              "address": "32 Trader Rd Fishersville VA US, VA 22939",
+              "address": "32 Trader Rd Fishersville, VA 22939",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2469,7 +2469,7 @@
               "name": "RIC5",
               "city": "ASHLAND, VA",
               "state": "VA",
-              "address": "11600 N. LAKERIDGE PARKWAY, ASHLAND, VA 23005",
+              "address": "N. LAKERIDGE PARKWAY, ASHLAND, VA 23005",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2479,7 +2479,7 @@
               "name": "RIC9",
               "city": "Ashland, VA",
               "state": "VA",
-              "address": "11600 N Lakeridge Pkwy, Ashland, VA 23005",
+              "address": "N Lakeridge Pkwy, Ashland, VA 23005",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2549,7 +2549,7 @@
               "name": "XRI3",
               "city": "Richmond, VA",
               "state": "VA",
-              "address": "XRI3 - 4949 Commerce Rd 23234 - RICHMOND, VA - United States, VA",
+              "address": "4949 Commerce Rd, RICHMOND, VA 23234",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2569,7 +2569,7 @@
               "name": "SMA2",
               "city": "BRIDGEWATER, MA",
               "state": "MA",
-              "address": "1025 ELM ST, BRIDGEWATER, MA 2324",
+              "address": "1025 ELM ST, BRIDGEWATER, MA 02324",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2579,7 +2579,7 @@
               "name": "ORF2",
               "city": "Richmond, VA",
               "state": "VA",
-              "address": "23297 9603 Coach Road Richmond VA US, VA",
+              "address": "9603 Coach Road Richmond, VA 23297",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2589,7 +2589,7 @@
               "name": "ORF2-UPS",
               "city": "Richmond, VA",
               "state": "VA",
-              "address": "ORF2 - 9603 Coach Road，Richmond VA 23297, VA",
+              "address": "ORF2, 9603 Coach Road, Richmond, VA 23297",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2639,7 +2639,7 @@
               "name": "DBO9",
               "city": "MIDDLEBOROUGH, MA",
               "state": "MA",
-              "address": "30 COMMERCE BLVD, MIDDLEBOROUGH, MA 2346",
+              "address": "30 COMMERCE BLVD, MIDDLEBOROUGH, MA 02346",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2689,7 +2689,7 @@
               "name": "KRB2",
               "city": "RPRINCE GEORGE, VA",
               "state": "VA",
-              "address": "KRB2 7000 HARDWARE DRPRINCE GEORGE, VA 23875-3041US ( KRB2)",
+              "address": "7000 HARDWARE DRPRINCE GEORGE, VA 23875-3041",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2699,7 +2699,7 @@
               "name": "BOS3",
               "city": "Fall River, MA",
               "state": "MA",
-              "address": "Fall River, MA 2720",
+              "address": "Fall River, MA 02720",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2759,7 +2759,7 @@
               "name": "RDU9",
               "city": "Mebane, NC",
               "state": "NC",
-              "address": "13875 Senator Ralph Scott Prkwy, Mebane, NC 27302",
+              "address": "Senator Ralph Scott Prkwy, Mebane, NC 27302",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2769,7 +2769,7 @@
               "name": "RDU1",
               "city": "GARNER, NC",
               "state": "NC",
-              "address": "4851 Jones Sausage Rd GARNER, NC 27529-9438",
+              "address": "4851 Jones Sausage Rd GARNER, NC 27529",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2839,7 +2839,7 @@
               "name": "DBC3",
               "city": "TAUNTON, MA",
               "state": "MA",
-              "address": "800 JOHN QUINCY ADAMDS RD, TAUNTON, MA 2780",
+              "address": "800 JOHN QUINCY ADAMDS RD, TAUNTON, MA 02780",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2899,7 +2899,7 @@
               "name": "SNC2",
               "city": "HUNTERSVILLE, NC",
               "state": "NC",
-              "address": "10622 BRYTON CORPORATE CENTER DR, HUNTERSVILLE, NC 28078",
+              "address": "BRYTON CORPORATE CENTER DR, HUNTERSVILLE, NC 28078",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2909,7 +2909,7 @@
               "name": "HCL9",
               "city": "PINEVILLE, NC",
               "state": "NC",
-              "address": "12220 Carolina Logistics Drive, PINEVILLE, NC 28134",
+              "address": "Carolina Logistics Drive, PINEVILLE, NC 28134",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2919,7 +2919,7 @@
               "name": "XLX6",
               "city": "PINEVILLE, NC",
               "state": "NC",
-              "address": "12220 Carolina Logistics Drive PINEVILLE NC 28134, NC",
+              "address": "Carolina Logistics Drive PINEVILLE, NC 28134",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -2989,7 +2989,7 @@
               "name": "CLT2",
               "city": "Charlotte, NC",
               "state": "NC",
-              "address": "Am azon.com .dedc LLC 10240 O ld D owd Rd Charlotte, N C 28214-8082 U nited States, NC",
+              "address": "Am azon.com .dedc LLC O ld D owd Rd Charlotte, N C U nited States, NC 28214-8082",
               "type": "FC",
               "lat": 35.2271,
               "lng": -80.8431
@@ -3019,7 +3019,7 @@
               "name": "RDU4",
               "city": "FAYETTEVILLE, NC",
               "state": "NC",
-              "address": "6309 Bragg Blvd 28303-FAYETTEVILLE, NC- United states",
+              "address": "6309 Bragg Blvd, FAYETTEVILLE, NC 28303",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -3149,7 +3149,7 @@
               "name": "ATL2n",
               "city": "Carrollton, GA",
               "state": "GA",
-              "address": "ATL2n 3101 N. Highway 27 Carrollton GA 30117, GA",
+              "address": "3101 N. Highway 27 Carrollton, GA 30117",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -3199,7 +3199,7 @@
               "name": "RYY2",
               "city": "White, GA, GA",
               "state": "GA",
-              "address": "RYY2 - 1250 Cassville White Road 30184 - White, GA - United States",
+              "address": "1250 Cassville White Road, White, White, GA 30184",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -3249,7 +3249,7 @@
               "name": "ATL7",
               "city": "UNION CITY, GA",
               "state": "GA",
-              "address": "6855 SHANNON PKWY UNION CITY, GA 30291-2091 US ( ATL7)",
+              "address": "6855 SHANNON PKWY UNION CITY, GA 30291-2091",
               "type": "FC",
               "lat": 33.5873,
               "lng": -84.5424
@@ -3359,7 +3359,7 @@
               "name": "ATL1",
               "city": "Atlanta, GA",
               "state": "GA",
-              "address": "ATL1, 6055 S Fulton Pkwy, Atlanta, GA, 30349",
+              "address": "6055 S Fulton Pkwy, Atlanta, GA 30349",
               "type": "FC",
               "lat": 33.749,
               "lng": -84.388
@@ -3379,7 +3379,7 @@
               "name": "ASH1",
               "city": "HUDSON, NH",
               "state": "NH",
-              "address": "267 LOWELL RD, HUDSON, NH 3051",
+              "address": "267 LOWELL RD, HUDSON, NH 03051",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -3389,7 +3389,7 @@
               "name": "ASH2",
               "city": "HUDSON, NH",
               "state": "NH",
-              "address": "15 STEELE RD, HUDSON, NH 3051",
+              "address": "15 STEELE RD, HUDSON, NH 03051",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -3419,7 +3419,7 @@
               "name": "MGE1",
               "city": "Braselton, GA",
               "state": "GA",
-              "address": "650 Broadway Avenue Braselton, GA 30517-3002 US (MGE1)",
+              "address": "650 Broadway Avenue Braselton, GA 30517",
               "type": "FC",
               "lat": 34.1098,
               "lng": -83.7626
@@ -3499,7 +3499,7 @@
               "name": "ATL3",
               "city": "Pendergrass, GA",
               "state": "GA",
-              "address": "445 Valentine Industrial Parkway Pendergrass GA 30567, GA",
+              "address": "445 Valentine Industrial Parkway Pendergrass, GA 30567",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -3559,7 +3559,7 @@
               "name": "SAV1",
               "city": "Garden City, GA",
               "state": "GA",
-              "address": "Georgia Ports Authority, Garden City Terminal, Building CFS #2 31408",
+              "address": "Georgia Ports Authority, Garden City Terminal, Building CFS #2, GA 31408",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -3589,7 +3589,7 @@
               "name": "PBI3-UPS",
               "city": "Jacksonville, FL",
               "state": "FL",
-              "address": "21 Jump Street, Jacksonville FL 32206, FL",
+              "address": "21 Jump Street, Jacksonville, FL 32206",
               "type": "FC",
               "lat": 30.3322,
               "lng": -81.6557
@@ -3599,7 +3599,7 @@
               "name": "JAX3",
               "city": "Jacksonville, FL",
               "state": "FL",
-              "address": "Amazon.com.dedc LLC 13333 103rd Street, Jacksonville, FL 32210",
+              "address": "13333 103rd Street, Jacksonville, FL 32210",
               "type": "FC",
               "lat": 30.3322,
               "lng": -81.6557
@@ -3629,7 +3629,7 @@
               "name": "JAX7",
               "city": "JACKSONVILLE, FL",
               "state": "FL",
-              "address": "10501 COLD STORAGE RD, JACKSONVILLE, FL 32218",
+              "address": "COLD STORAGE RD, JACKSONVILLE, FL 32218",
               "type": "FC",
               "lat": 30.3322,
               "lng": -81.6557
@@ -3649,7 +3649,7 @@
               "name": "JAX2",
               "city": "Jacksonville, FL",
               "state": "FL",
-              "address": "12900 Pecan Park Road Jacksonville, FL 32218",
+              "address": "Pecan Park Road Jacksonville, FL 32218",
               "type": "FC",
               "lat": 30.3322,
               "lng": -81.6557
@@ -3659,7 +3659,7 @@
               "name": "JAX1",
               "city": "Jacksonville, FL",
               "state": "FL",
-              "address": "12900 Pecan Park Road, Jacksonville, FL 32218-2432",
+              "address": "Pecan Park Road, Jacksonville, FL 32218-2432",
               "type": "FC",
               "lat": 30.3322,
               "lng": -81.6557
@@ -3679,7 +3679,7 @@
               "name": "DJA1",
               "city": "Jacksonville, FL",
               "state": "FL",
-              "address": "11084 Cabot Commerce Circle, Jacksonville, FL 32226",
+              "address": "Cabot Commerce Circle, Jacksonville, FL 32226",
               "type": "FC",
               "lat": 30.3322,
               "lng": -81.6557
@@ -3719,7 +3719,7 @@
               "name": "MCO2",
               "city": "MCO22600 N Normandy BlvdDeltona,, FL",
               "state": "FL",
-              "address": "MCO22600 N Normandy BlvdDeltona, FL 32725-2610US (MCO2)",
+              "address": "2600 N Normandy BlvdDeltona, MCO22600 N Normandy BlvdDeltona, FL 32725-2610",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -3809,7 +3809,7 @@
               "name": "MCO1",
               "city": "Orlando, FL",
               "state": "FL",
-              "address": "12340 Boggy Creek Rd, Orlando, FL 32824",
+              "address": "Boggy Creek Rd, Orlando, FL 32824",
               "type": "FC",
               "lat": 28.5383,
               "lng": -81.3792
@@ -3839,7 +3839,7 @@
               "name": "MIA2",
               "city": "OPA LOCKA, FL",
               "state": "FL",
-              "address": "14250 AVIATION DR, OPA LOCKA, FL 33054",
+              "address": "AVIATION DR, OPA LOCKA, FL 33054",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -3849,7 +3849,7 @@
               "name": "TMB8-UPS",
               "city": "Opa Locka, FL",
               "state": "FL",
-              "address": "8675309 Jenny Ln, Miami Gardens, FL 33055, Opa Locka",
+              "address": "8675309 Jenny Ln, Miami Gardens, Opa Locka, FL 33055",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -3929,7 +3929,7 @@
               "name": "UFL1",
               "city": "Miami Gardens, FL",
               "state": "FL",
-              "address": "15600 NW 15th Ave, Miami Gardens, FL 33169",
+              "address": "NW 15th Ave, Miami Gardens, FL 33169",
               "type": "FC",
               "lat": 25.7617,
               "lng": -80.1918
@@ -3939,7 +3939,7 @@
               "name": "DM11",
               "city": "Miami Gardens, FL",
               "state": "FL",
-              "address": "15600 NW 15th Ave., Miami Gardens, FL 33169",
+              "address": "NW 15th Ave., Miami Gardens, FL 33169",
               "type": "FC",
               "lat": 25.7617,
               "lng": -80.1918
@@ -3969,7 +3969,7 @@
               "name": "DMF5",
               "city": "Miami, FL",
               "state": "FL",
-              "address": "13450 NW 14th St, Miami, FL 33182-1418",
+              "address": "NW 14th St, Miami, FL 33182-1418",
               "type": "FC",
               "lat": 25.7617,
               "lng": -80.1918
@@ -4009,7 +4009,7 @@
               "name": "PBI2",
               "city": "Jupiter, FL",
               "state": "FL",
-              "address": "14490 CORPORATE RD N JUPITER FL 33478-6456, FL",
+              "address": "CORPORATE RD N JUPITER-6456, FL 33478",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4159,7 +4159,7 @@
               "name": "TPA3",
               "city": "Auburndale, FL",
               "state": "FL",
-              "address": "TPA3 676 C Fred Jones Blvd Auburndale, FL 33823-9429 US",
+              "address": "676 C Fred Jones Blvd Auburndale, FL 33823-9429",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4219,7 +4219,7 @@
               "name": "RSW5",
               "city": "Fort Myers, FL",
               "state": "FL",
-              "address": "16581 Domestic Ave, Fort Myers, FL 33912",
+              "address": "Domestic Ave, Fort Myers, FL 33912",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4229,7 +4229,7 @@
               "name": "LAL4",
               "city": "FORT MYERS, FL",
               "state": "FL",
-              "address": "16581 DOMESTIC AVE, FORT MYERS, FL 33912",
+              "address": "DOMESTIC AVE, FORT MYERS, FL 33912",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4279,7 +4279,7 @@
               "name": "TPA6",
               "city": "OCALA, FL",
               "state": "FL",
-              "address": "34475 3400 NW 35th Avenue Road OCALA FL US, FL",
+              "address": "3400 NW 35th Avenue Road OCALA, FL 34475",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4299,7 +4299,7 @@
               "name": "HSV2",
               "city": "Madison, AL",
               "state": "AL",
-              "address": "28869 Fanning Dr NW MADISON AL 35756, AL",
+              "address": "Fanning Dr NW MADISON, AL 35756",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4309,7 +4309,7 @@
               "name": "HSV1",
               "city": "RoadMADISON, AL",
               "state": "AL",
-              "address": "HSV17817 Greenbrier RoadMADISON, AL 35756-44",
+              "address": "7817 Greenbrier RoadMADISON-44, AL 35756-44",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4349,7 +4349,7 @@
               "name": "BNA6-UPS",
               "city": "Nashville, TN",
               "state": "TN",
-              "address": "3207 Whites Creek Pike Nashville, TN 37207 37040",
+              "address": "3207 Whites Creek Pike Nashville, TN 37040",
               "type": "FC",
               "lat": 36.1627,
               "lng": -86.7816
@@ -4359,7 +4359,7 @@
               "name": "BNA6",
               "city": "Clarksville, TN",
               "state": "TN",
-              "address": "3875 GUTHRIE HWY 37040-5502, Clarksville, TN",
+              "address": "3875 GUTHRIE HWY 37040-5502, Clarksville, TN 37040",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4399,7 +4399,7 @@
               "name": "BNA1",
               "city": "Lebanon, TN",
               "state": "TN",
-              "address": "14840 Central Pike Suite 190, Lebanon, TN 37090",
+              "address": "Central Pike Suite 190, Lebanon, TN 37090",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4409,7 +4409,7 @@
               "name": "BNA2",
               "city": "Lebanon, TN",
               "state": "TN",
-              "address": "500 Duke Dr Lebanon, TN 37090-8123 US ( BNA2)",
+              "address": "500 Duke Dr Lebanon, TN 37090-8123",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4629,7 +4629,7 @@
               "name": "MEM1s",
               "city": "Olive Branch, MS",
               "state": "MS",
-              "address": "10480 Marina Drive，Olive Branch，MS，38654, MS",
+              "address": "Marina Drive, Olive Branch, MS 38654",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4639,7 +4639,7 @@
               "name": "MEM6",
               "city": "OLIVE BRANCH, MS",
               "state": "MS",
-              "address": "11505 Progress Way OLIVE BRANCH, MS 38654-2510 US ( MEM6)",
+              "address": "Progress Way OLIVE BRANCH, MS 38654-2510",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4669,7 +4669,7 @@
               "name": "ZAP3",
               "city": "LOUISVILLE, KY",
               "state": "KY",
-              "address": "12415 OLD LAGRANGE RD, LOUISVILLE, KY 40245",
+              "address": "OLD LAGRANGE RD, LOUISVILLE, KY 40245",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4929,7 +4929,7 @@
               "name": "CMH7",
               "city": "New Albany, OH",
               "state": "OH",
-              "address": "43054 1245 Beech Rd SW New Albany OH",
+              "address": "1245 Beech Rd SW New Albany, OH 43054",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4949,7 +4949,7 @@
               "name": "CMH0",
               "city": "Etna, OH",
               "state": "OH",
-              "address": "11903 National RD SW Etna Township Park, OH 43062",
+              "address": "National RD SW Etna Township Park, OH 43062",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4959,7 +4959,7 @@
               "name": "CMH1",
               "city": "Etna, OH",
               "state": "OH",
-              "address": "11903 National Road SW, Etna, OH 43062",
+              "address": "National Road SW, Etna, OH 43062",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -4979,7 +4979,7 @@
               "name": "CMH2",
               "city": "COLUMBUS, OH",
               "state": "OH",
-              "address": "Amazon.com.dedc LLC 6050 Gateway Court Groveport, OH, 43125-9016, COLUMBUS",
+              "address": "6050 Gateway Court Groveport, COLUMBUS, OH 43125-9016",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5039,7 +5039,7 @@
               "name": "CMH6",
               "city": "LOCKBOURNE, OH",
               "state": "OH",
-              "address": "CMH6 3538 TRADEPORT CT LOCKBOURNE, OH 43137-9670, OH",
+              "address": "3538 TRADEPORT CT LOCKBOURNE, OH 43137-9670",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5059,7 +5059,7 @@
               "name": "CMH4",
               "city": "WEST JEFFERSON, OH,",
               "state": "OH,",
-              "address": "CMH4, 1550 W. Main Street, WEST JEFFERSON, OH, US, WEST JEFFERSON, OH, 43162-9747",
+              "address": "1550 W. Main Street, WEST JEFFERSON, OH, 43162-9747",
               "type": "FC",
               "lat": 34.1118,
               "lng": -83.6007
@@ -5129,7 +5129,7 @@
               "name": "PCW1",
               "city": "Rossford, OH",
               "state": "OH",
-              "address": "43460 27400 Crossroads Parkway Rossford OH US, OH",
+              "address": "Crossroads Parkway Rossford, OH 43460",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5169,7 +5169,7 @@
               "name": "CLE2",
               "city": "North Randall, OH",
               "state": "OH",
-              "address": "CLE2 - 21500 Emery Rd 44128 - North Randall, OH - United States",
+              "address": "Emery Rd, North Randall, OH 44128",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5209,7 +5209,7 @@
               "name": "DCM3",
               "city": "SOLON, OH",
               "state": "OH",
-              "address": "43500 VICTORY PARKWAY, SOLON, OH 44139",
+              "address": "VICTORY PARKWAY, SOLON, OH 44139",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5219,7 +5219,7 @@
               "name": "DCL4",
               "city": "BEDFORD, OH",
               "state": "OH",
-              "address": "24800 MILES RD, BEDFORD, OH 44146",
+              "address": "MILES RD, BEDFORD, OH 44146",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5229,7 +5229,7 @@
               "name": "CLE6",
               "city": "Bedford Heights, OH",
               "state": "OH",
-              "address": "23371 Aurora Road, Bedford Heights, OH 44146",
+              "address": "Aurora Road, Bedford Heights, OH 44146",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5259,7 +5259,7 @@
               "name": "AKC1",
               "city": "Akron, OH",
               "state": "OH",
-              "address": "44320 2400 Romig Rd Akron OH",
+              "address": "2400 Romig Rd Akron, OH 44320",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5269,7 +5269,7 @@
               "name": "AKR1",
               "city": "Canton, OH",
               "state": "OH",
-              "address": "AKR1 4747 Rebar Ave NE, Canton, OH 44705",
+              "address": "4747 Rebar Ave NE, Canton, OH 44705",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5319,7 +5319,7 @@
               "name": "CHM3",
               "city": "Monroe, OH",
               "state": "OH",
-              "address": "45050 700 Gateway Blvd Monroe OH 美国, OH",
+              "address": "700 Gateway Blvd Monroe, OH 45050",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5339,7 +5339,7 @@
               "name": "CMH3",
               "city": "Gateway Blvdmonroe, OH",
               "state": "OH",
-              "address": "CMH3700 GATEWAY BLVDMonroe, OH 45050-1848US (CMH3)",
+              "address": "700 GATEWAY BLVDMonroe, OH 45050-1848",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5399,7 +5399,7 @@
               "name": "LUK2",
               "city": "VANDALIA, OH",
               "state": "OH",
-              "address": "10791 DOG LEG RD, VANDALIA, OH 45377",
+              "address": "DOG LEG RD, VANDALIA, OH 45377",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5419,7 +5419,7 @@
               "name": "VUH2",
               "city": "FRANKLIN, IN",
               "state": "IN",
-              "address": "2001 Commerce Parkway, FRANKLIN 46131",
+              "address": "2001 Commerce Parkway, FRANKLIN, IN 46131",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5429,7 +5429,7 @@
               "name": "MQJ9",
               "city": "FRANKLIN, IN",
               "state": "IN",
-              "address": "120 JIM BLACK RD, FRANKLIN 46131",
+              "address": "120 JIM BLACK RD, FRANKLIN, IN 46131",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5439,7 +5439,7 @@
               "name": "MQJ1-UPS",
               "city": "Plainfield, IN",
               "state": "IN",
-              "address": "4412 W CR 300 N, Plainfield, IN, 46168, IN",
+              "address": "4412 W CR 300 N, Plainfield, IN 46168",
               "type": "FC",
               "lat": 39.7042,
               "lng": -86.3994
@@ -5449,7 +5449,7 @@
               "name": "MQJ1",
               "city": "GREENFIELD, IN",
               "state": "IN",
-              "address": "4412 W 300 RD N GREENFIELD, IN 46140-7099 US (MQJ1), IN",
+              "address": "4412 W 300 RD N GREENFIELD, IN 46140",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5479,7 +5479,7 @@
               "name": "IND9",
               "city": "GREENWOOD, GREENWOOD",
               "state": "GREENWOOD",
-              "address": "IND9 1151 S GRAHAM RD GREENWOOD, IN 46143-7830 US (IND9), GREENWOOD",
+              "address": "1151 S GRAHAM RD GREENWOOD, IN 46143-7830, GREENWOOD 46143-7830",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5539,7 +5539,7 @@
               "name": "TIN1",
               "city": "Indianapolis, IN",
               "state": "IN",
-              "address": "710 S. Girls School Road, Indianapolis 46231",
+              "address": "710 S. Girls School Road, Indianapolis, IN 46231",
               "type": "FC",
               "lat": 39.7684,
               "lng": -86.1581
@@ -5549,7 +5549,7 @@
               "name": "PIN2",
               "city": "INDIANAPOLIS, IN",
               "state": "IN",
-              "address": "3620 PLAINSFIELD RD, INDIANAPOLIS 46231",
+              "address": "3620 PLAINSFIELD RD, INDIANAPOLIS, IN 46231",
               "type": "FC",
               "lat": 39.7684,
               "lng": -86.1581
@@ -5569,7 +5569,7 @@
               "name": "IND4",
               "city": "Indianapolis, IN",
               "state": "IN",
-              "address": "710 S. Girls School Rd, Indianapolis 46231",
+              "address": "710 S. Girls School Rd, Indianapolis, IN 46231",
               "type": "FC",
               "lat": 39.7684,
               "lng": -86.1581
@@ -5579,7 +5579,7 @@
               "name": "UIN1",
               "city": "Indianapolis, IN",
               "state": "IN",
-              "address": "710 S. Girls School Road, Indianapolis 46231-1132",
+              "address": "710 S. Girls School Road, Indianapolis, IN 46231-1132",
               "type": "FC",
               "lat": 39.7684,
               "lng": -86.1581
@@ -5599,7 +5599,7 @@
               "name": "IND7",
               "city": "Indianapolis, IN",
               "state": "IN",
-              "address": "9101 Orly Drive, Indianapolis 46241-9605",
+              "address": "9101 Orly Drive, Indianapolis, IN 46241-9605",
               "type": "FC",
               "lat": 39.7684,
               "lng": -86.1581
@@ -5609,7 +5609,7 @@
               "name": "PPO4",
               "city": "Merrillville, IN",
               "state": "IN",
-              "address": "9850 Mississippi Street 46410 - MERRILLVILLE, IN - United States, IN",
+              "address": "9850 Mississippi Street, MERRILLVILLE, IN 46410",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5639,7 +5639,7 @@
               "name": "FWA4",
               "city": "WAYNE, IN, IN",
               "state": "IN",
-              "address": "49798 Smith RoadFORT WAYNE, IN 46809-9771US (FWA4)",
+              "address": "Smith RoadFORT WAYNE, WAYNE, IN 46809",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5709,7 +5709,7 @@
               "name": "DTW9",
               "city": "NEW BOSTON, MI",
               "state": "MI",
-              "address": "18000 VINING RD, NEW BOSTON, MI 48164",
+              "address": "VINING RD, NEW BOSTON, MI 48164",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5719,7 +5719,7 @@
               "name": "HDT9",
               "city": "PLYMOUTH, MN",
               "state": "MN",
-              "address": "12795 Premier Ctr. Ct, PLYMOUTH, MN 48170",
+              "address": "Premier Ctr. Ct, PLYMOUTH, MN 48170",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5739,7 +5739,7 @@
               "name": "DET7",
               "city": "ROMULUS, MI",
               "state": "MI",
-              "address": "33700 Prescott Street, ROMULUS, MI 48174",
+              "address": "Prescott Street, ROMULUS, MI 48174",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5749,7 +5749,7 @@
               "name": "DTW3",
               "city": "Romulus, MI",
               "state": "MI",
-              "address": "33701 Prescott St, Romulus, MI 48174",
+              "address": "Prescott St, Romulus, MI 48174",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5759,7 +5759,7 @@
               "name": "DTW1",
               "city": "Romulus, MI",
               "state": "MI",
-              "address": "32801 Ecorse Road, Romulus, MI 48174",
+              "address": "Ecorse Road, Romul, Romulus, MI 48174",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5769,7 +5769,7 @@
               "name": "DTW5",
               "city": "TRENTON, MI",
               "state": "MI",
-              "address": "19991 BROWNSTONE CENTER DRIVE, TRENTON, MI 48183",
+              "address": "BROWNSTONE CENTER DRIVE, TRENTON, MI 48183",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5789,7 +5789,7 @@
               "name": "DGR3",
               "city": "Sterling Heights, MI",
               "state": "MI",
-              "address": "33600 Mound Rd, Sterling Heights, MI 48310-6526",
+              "address": "Mound Rd, Sterling Heights, MI 48310-6526",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5799,7 +5799,7 @@
               "name": "DET2",
               "city": "Shelby Township, MI",
               "state": "MI",
-              "address": "50500 Mound Rd, Shelby Township, MI 48317-1318",
+              "address": "Mound Rd, Shelby Township, MI 48317-1318",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5829,7 +5829,7 @@
               "name": "DDT3",
               "city": "WIXOM, MI",
               "state": "MI",
-              "address": "28415 AUTOMATION BLVD., WIXOM, MI 48393",
+              "address": "AUTOMATION BLVD., WIXOM, MI 48393",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5849,7 +5849,7 @@
               "name": "LAN2",
               "city": "Lansing, Michigan",
               "state": "Michigan",
-              "address": "LAN2 - 6500 W Mt Hope Hwy 48917 - LANSING, MI - United States, Michigan",
+              "address": "6500 W Mt Hope Hwy, LANSING, MI, Michigan 48917",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5859,7 +5859,7 @@
               "name": "GRR1",
               "city": "Caledonia, MI",
               "state": "MI",
-              "address": "49316 4500 68th St SE Caledonia MI",
+              "address": "4500 68th St SE Caledonia, MI 49316",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -5879,7 +5879,7 @@
               "name": "MKE1",
               "city": "Kenosha, WI",
               "state": "WI",
-              "address": "3501 120th Ave, Kenosha, WI 53144, WI",
+              "address": "3501 120th Ave, Kenosha, WI 53144",
               "type": "FC",
               "lat": 42.5847,
               "lng": -87.8212
@@ -5969,7 +5969,7 @@
               "name": "MKE9",
               "city": "Kenosha, WI",
               "state": "WI",
-              "address": "11211 Burlington Road, Kenosha, WI 53144",
+              "address": "Burlington Road, Kenosha, WI 53144",
               "type": "FC",
               "lat": 42.5847,
               "lng": -87.8212
@@ -5989,7 +5989,7 @@
               "name": "XIX5",
               "city": "KENOSHA, WI",
               "state": "WI",
-              "address": "11211 Burlington Road, KENOSHA, WI 53144-7449",
+              "address": "Burlington Road, KENOSHA, WI 53144-7449",
               "type": "FC",
               "lat": 42.5847,
               "lng": -87.8212
@@ -5999,7 +5999,7 @@
               "name": "MKE5",
               "city": "Kenosha, WI",
               "state": "WI",
-              "address": "11121 Burlington Rd, Kenosha, WI 53144-7449",
+              "address": "Burlington Rd, Kenosha, WI 53144-7449",
               "type": "FC",
               "lat": 42.5847,
               "lng": -87.8212
@@ -6009,7 +6009,7 @@
               "name": "HMK4",
               "city": "New Berlin, WI",
               "state": "WI",
-              "address": "16555 W Small Rd, New Berlin, WI 53151",
+              "address": "W Small Rd, New Berlin, WI 53151",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6019,7 +6019,7 @@
               "name": "DML5",
               "city": "STURTEVANT, WI",
               "state": "WI",
-              "address": "11201 ENTERPRISE WAY, STURTEVANT, WI 53177",
+              "address": "ENTERPRISE WAY, STURTEVANT, WI 53177",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6039,7 +6039,7 @@
               "name": "JVL1",
               "city": "Gateway BlvdBELOIT, WI, WI",
               "state": "WI",
-              "address": "JVL11255 Gateway BlvdBELOIT, WI 53511-9709US (JVL1)",
+              "address": "1255 Gateway BlvdBELOIT, Gateway BlvdBELOIT, WI 53511-9709",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6049,7 +6049,7 @@
               "name": "MKE2",
               "city": "Oak Creek, WI",
               "state": "WI",
-              "address": "53514 9700 South 13th Street Oak Creek WI",
+              "address": "9700 South 13th Street Oak Creek, WI 53514",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6129,7 +6129,7 @@
               "name": "MSP4",
               "city": "WOODBURY, MN",
               "state": "MN",
-              "address": "10608 HUDSON RD, WOODBURY, MN 55129-9113",
+              "address": "HUDSON RD, WOODBURY, MN 55129-9113",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6139,7 +6139,7 @@
               "name": "STP2",
               "city": "MAPLEGROVE, MN",
               "state": "MN",
-              "address": "10655 COUNTY ROAD 81, MAPLEGROVE, MN 55369",
+              "address": "COUNTY ROAD 81, MAPLEGROVE, MN 55369",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6149,7 +6149,7 @@
               "name": "MSP7",
               "city": "Maple Grove, MN",
               "state": "MN",
-              "address": "10655 County Road 81, Maple Grove, MN 55369-4016",
+              "address": "County Road 81, Maple Grove, MN 55369-4016",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6239,7 +6239,7 @@
               "name": "FAR1",
               "city": "FARGO, SD",
               "state": "SD",
-              "address": "FAR1 3701 40TH AVE N FARGO, ND 58102-7400, SD",
+              "address": "3701 40TH AVE N FARGO, ND 58102-7400, SD 58102-7400",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6329,7 +6329,7 @@
               "name": "RFD4",
               "city": "Huntley, IL",
               "state": "IL",
-              "address": "60142 11400 Venture Court Huntley IL US, IL",
+              "address": "Venture Court Huntley, IL 60142",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6339,7 +6339,7 @@
               "name": "RFD2",
               "city": "Huntley, IL",
               "state": "IL",
-              "address": "11500 Freeman Road 60142 - HUNTLEY, IL - United States, IL",
+              "address": "Freeman Road, HUNTLEY, IL 60142",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6409,7 +6409,7 @@
               "name": "ORD3",
               "city": "CHANNAHON, IL",
               "state": "IL",
-              "address": "24101 S Frontage Rd W, CHANNAHON, IL 60410",
+              "address": "S Frontage Rd W, CHANNAHON, IL 60410",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6419,7 +6419,7 @@
               "name": "ORD2",
               "city": "CHANNAHON, IL",
               "state": "IL",
-              "address": "23714 W Amoco Rd CHANNAHON, IL 60410-8758 US (ORD2)",
+              "address": "W Amoco Rd CHANNAHON, IL 60410-8758",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6459,7 +6459,7 @@
               "name": "IGQ1",
               "city": "MARKHAM, IL",
               "state": "IL",
-              "address": "15924 WESTERN AVE, MARKHAM, IL 60428",
+              "address": "WESTERN AVE, MARKHAM, IL 60428",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6499,7 +6499,7 @@
               "name": "MDW5",
               "city": "CREST HILL, IL",
               "state": "IL",
-              "address": "16824 ENTERPRISE BLVD, CREST HILL, IL 60435",
+              "address": "ENTERPRISE BLVD, CREST HILL, IL 60435",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6529,7 +6529,7 @@
               "name": "ORD4",
               "city": "Monee, IL",
               "state": "IL",
-              "address": "25810 S. Ridgeland Ave., Monee, IL 60449",
+              "address": "S. Ridgeland Ave., Monee, IL 60449",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6569,7 +6569,7 @@
               "name": "HMW1",
               "city": "WILMINGTON, IL",
               "state": "IL",
-              "address": "30260 GRAASKAMP BLVD, WILMINGTON, IL 60481",
+              "address": "GRAASKAMP BLVD, WILMINGTON, IL 60481",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6579,7 +6579,7 @@
               "name": "HIL3",
               "city": "WILMINGTON, IL",
               "state": "IL",
-              "address": "30260 Graaskamp Blvd, WILMINGTON, IL 60481",
+              "address": "Graaskamp Blvd, WILMINGTON, IL 60481",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6589,7 +6589,7 @@
               "name": "IGQ2",
               "city": "芝加哥, ILLINOIS",
               "state": "ILLINOIS",
-              "address": "University Park, IL - United States, 芝加哥, ILLINOIS 60484",
+              "address": "University Park, IL, 芝加哥, ILLINOIS 60484",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6769,7 +6769,7 @@
               "name": "DLN4",
               "city": "CHICAGO, IL",
               "state": "IL",
-              "address": "10500 S. WOODLAWN AVE, CHICAGO, IL 60628",
+              "address": "S. WOODLAWN AVE, CHICAGO, IL 60628",
               "type": "FC",
               "lat": 41.8781,
               "lng": -87.6298
@@ -6869,7 +6869,7 @@
               "name": "BDL4",
               "city": "WINDSOR, CT",
               "state": "CT",
-              "address": "1215 KENNEDY RD, WINDSOR, CT 6095",
+              "address": "1215 KENNEDY RD, WINDSOR, CT 06095",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -6949,7 +6949,7 @@
               "name": "STL6",
               "city": "Edwardsville, IL",
               "state": "IL",
-              "address": "3931 Lakeview Corporate Drive Edwardsville, IL 62025-2801 US (STL6), IL",
+              "address": "3931 Lakeview Corporate Drive Edwardsville, IL 62025",
               "type": "FC",
               "lat": 38.8114,
               "lng": -89.9531
@@ -6989,7 +6989,7 @@
               "name": "CON1",
               "city": "Mansfield, CT",
               "state": "CT",
-              "address": "40 Wilbur Cross Way, Suite 104, Mansfield, CT 6268",
+              "address": "40 Wilbur Cross Way, Suite 104, Mansfield, CT 06268",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7059,7 +7059,7 @@
               "name": "STL8",
               "city": "SAINT PETERS, MO",
               "state": "MO",
-              "address": "63376 4000 Premier Parkway SAINT PETERS MO",
+              "address": "4000 Premier Parkway SAINT PETERS, MO 63376",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7069,7 +7069,7 @@
               "name": "MCI3",
               "city": "Liberty, MO",
               "state": "MO",
-              "address": "64068 2361 S Withers Rd Liberty MO",
+              "address": "2361 S Withers Rd Liberty, MO 64068",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7079,7 +7079,7 @@
               "name": "MCI2",
               "city": "KANSAS CITY, MO",
               "state": "MO",
-              "address": "14500 BOTTS RD, KANSAS CITY, MO 64147",
+              "address": "BOTTS RD, KANSAS CITY, MO 64147",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7089,7 +7089,7 @@
               "name": "DCY9",
               "city": "Orange, CT",
               "state": "CT",
-              "address": "48 Boston Post Rd, Orange, CT 6477",
+              "address": "48 Boston Post Rd, Orange, CT 06477",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7109,7 +7109,7 @@
               "name": "DOB2",
               "city": "WALLINGFORD, CT",
               "state": "CT",
-              "address": "425 S. CHERRY ST, WALLINGFORD, CT 6492",
+              "address": "425 S. CHERRY ST, WALLINGFORD, CT 06492",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7129,7 +7129,7 @@
               "name": "PKC1",
               "city": "EDGERTON, KS",
               "state": "KS",
-              "address": "30901 W 185th St, EDGERTON, KS 66021",
+              "address": "W 185th St, EDGERTON, KS 66021",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7139,7 +7139,7 @@
               "name": "MKC4",
               "city": "Edgerton, KS",
               "state": "KS",
-              "address": "19645 Waverly Rd, Edgerton, KS 66021-9588",
+              "address": "Waverly Rd, Edgerton, KS 66021-9588",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7149,7 +7149,7 @@
               "name": "MCI7",
               "city": "NEW CENTURY, KS",
               "state": "KS",
-              "address": "27200 W. 157TH ST., NEW CENTURY, KS 66031-1114",
+              "address": "W. 157TH ST., NEW CENTURY, KS 66031-1114",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7159,7 +7159,7 @@
               "name": "VUI3",
               "city": "OLATHE, KS",
               "state": "KS",
-              "address": "17150 Mercury St., OLATHE, KS 66061",
+              "address": "Mercury St., OLATHE, KS 66061",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7179,7 +7179,7 @@
               "name": "FOE1",
               "city": "KANSAS CITY, KS",
               "state": "KS",
-              "address": "FOE1 9400 LEAVENWORTH RD KANSAS CITY, KS 66109-3665 US (FOE1)",
+              "address": "9400 LEAVENWORTH RD KANSAS CITY, KS 66109",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7189,7 +7189,7 @@
               "name": "DOB4",
               "city": "STRATFORD, CT",
               "state": "CT",
-              "address": "500 LONG BEACH BLVD, STRATFORD, CT 6615",
+              "address": "500 LONG BEACH BLVD, STRATFORD, CT 06615",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7199,7 +7199,7 @@
               "name": "MCI5",
               "city": "Lenexa, KS",
               "state": "KS",
-              "address": "16851 W 113th St, Lenexa, KS 66219",
+              "address": "W 113th St, Lenexa, KS 66219",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7229,7 +7229,7 @@
               "name": "ICT2",
               "city": "United Stat, KS",
               "state": "KS",
-              "address": "ICT2 - 7130 N BROADWAY AVE 67219-1410 - PARK CITY, KS - United Stat",
+              "address": "7130 N BROADWAY AVE, PARK CITY, United Stat, KS 67219-1410",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7249,7 +7249,7 @@
               "name": "DBL8",
               "city": "DANBURY, CT",
               "state": "CT",
-              "address": "8 OLD SHERMAN TURNPIKE, #24, DANBURY, CT 6810",
+              "address": "8 OLD SHERMAN TURNPIKE, #24, DANBURY, CT 06810",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7259,7 +7259,7 @@
               "name": "OMA2",
               "city": "Omaha, NE",
               "state": "NE",
-              "address": "10809 S 144 St, Omaha, NE 68138-3849",
+              "address": "S 144 St, Omaha, NE 68138-3849",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7269,7 +7269,7 @@
               "name": "SNJ1",
               "city": "West Caldwell, NJ",
               "state": "NJ",
-              "address": "5 Dedrick Place, West Caldwell, NJ 7006",
+              "address": "5 Dedrick Place, West Caldwell, NJ 07006",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7279,7 +7279,7 @@
               "name": "LGA8",
               "city": "Carteret, NJ",
               "state": "NJ",
-              "address": "380 Middlesex Avenue, Carteret, NJ 7008",
+              "address": "380 Middlesex Avenue, Carteret, NJ 07008",
               "type": "FC",
               "lat": 40.5773,
               "lng": -74.2285
@@ -7289,7 +7289,7 @@
               "name": "DJZ3",
               "city": "CARTERET, NJ",
               "state": "NJ",
-              "address": "377 ROOSEVELT AVE, CARTERET, NJ 7008",
+              "address": "377 ROOSEVELT AVE, CARTERET, NJ 07008",
               "type": "FC",
               "lat": 40.5773,
               "lng": -74.2285
@@ -7309,7 +7309,7 @@
               "name": "SNY3",
               "city": "CLIFTON, NJ",
               "state": "NJ",
-              "address": "153 NOTCH RD, CLIFTON, NJ 7013",
+              "address": "153 NOTCH RD, CLIFTON, NJ 07013",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7319,7 +7319,7 @@
               "name": "UNJ1",
               "city": "Hoboken, NJ",
               "state": "NJ",
-              "address": "940 Monroe Street, Hoboken, NJ 7030",
+              "address": "940 Monroe Street, Hoboken, NJ 07030",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7329,7 +7329,7 @@
               "name": "HNJ2",
               "city": "Hoboken, NJ",
               "state": "NJ",
-              "address": "940 Monroe Street, Hoboken, NJ 7030",
+              "address": "940 Monroe Street, Hoboken, NJ 07030",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7339,7 +7339,7 @@
               "name": "DJZ4",
               "city": "KEARNY, NJ",
               "state": "NJ",
-              "address": "50 CENTRAL AVE, KEARNY, NJ 7032",
+              "address": "50 CENTRAL AVE, KEARNY, NJ 07032",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7349,7 +7349,7 @@
               "name": "LFT1",
               "city": "CARENCRO, LA",
               "state": "LA",
-              "address": "LFT1- 3550 NE EVANGELINE TRWY 70520-5976 - CARENCRO, LA",
+              "address": "- 3550 NE EVANGELINE TRWY, CARENCRO, LA 70520",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7359,7 +7359,7 @@
               "name": "DNJ6",
               "city": "CARLSTADT, NJ",
               "state": "NJ",
-              "address": "118 MOONACHIE AVE, CARLSTADT, NJ 7072",
+              "address": "118 MOONACHIE AVE, CARLSTADT, NJ 07072",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7369,7 +7369,7 @@
               "name": "DJZ2",
               "city": "CARLSTADT, NJ",
               "state": "NJ",
-              "address": "610 WASHINGTON AVE, CARLSTADT, NJ 7072",
+              "address": "610 WASHINGTON AVE, CARLSTADT, NJ 07072",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7379,7 +7379,7 @@
               "name": "DEW1",
               "city": "Moonachie, NJ",
               "state": "NJ",
-              "address": "2 Empire Boulevard, Moonachie, NJ 7074",
+              "address": "2 Empire Boulevard, Moonachie, NJ 07074",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7399,7 +7399,7 @@
               "name": "DLB2",
               "city": "Baton Rouge, LA",
               "state": "LA",
-              "address": "11100 Honore Lane, Baton Rouge, LA 70809-3918",
+              "address": "Honore Lane, Baton Rouge, LA 70809-3918",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7409,7 +7409,7 @@
               "name": "DJZ5",
               "city": "NEWARK, NJ",
               "state": "NJ",
-              "address": "429 DELANCY ST, NEWARK, NJ 7105",
+              "address": "429 DELANCY ST, NEWARK, NJ 07105",
               "type": "FC",
               "lat": 37.5175,
               "lng": -122.0157
@@ -7429,7 +7429,7 @@
               "name": "LIT2",
               "city": "NORTH LITTLE ROCK, AR",
               "state": "AR",
-              "address": "13001 HIGHWAY 70, NORTH LITTLE ROCK, AR 72117-5026",
+              "address": "HIGHWAY 70, NORTH LITTLE ROCK, AR 72117-5026",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7439,7 +7439,7 @@
               "name": "LIT1",
               "city": "Little Rock, AR",
               "state": "AR",
-              "address": "7001 Zeuber Rd Little Rock AR US 72206, AR",
+              "address": "7001 Zeuber Rd Little Rock AR US 72206, AR 72206",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7449,7 +7449,7 @@
               "name": "DLR2",
               "city": "LITTLE ROCK, AR",
               "state": "AR",
-              "address": "12401 I-30, LITTLE ROCK, AR 72209",
+              "address": "I-30, LITTLE ROCK, AR 72209",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7469,7 +7469,7 @@
               "name": "DJE6",
               "city": "JERSEY CITY, NJ",
               "state": "NJ",
-              "address": "79 THOMAS MCGOVERN DR, JERSEY CITY, NJ 7305",
+              "address": "79 THOMAS MCGOVERN DR, JERSEY CITY, NJ 07305",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7479,7 +7479,7 @@
               "name": "OKC5",
               "city": "OKLAHOMA CITY, OK",
               "state": "OK",
-              "address": "1414 S. COUNCIL RD., OKLAHOMA CITY 73128",
+              "address": "1414 S. COUNCIL RD., OKLAHOMA CITY, OK 73128",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7489,7 +7489,7 @@
               "name": "DOK4",
               "city": "OKLAHOMA CITY, OK",
               "state": "OK",
-              "address": "6801 S AIR DEPOT BLVD, OKLAHOMA CITY 73135",
+              "address": "6801 S AIR DEPOT BLVD, OKLAHOMA CITY, OK 73135",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7499,7 +7499,7 @@
               "name": "OKC1",
               "city": "OKLAHOMA CITY, OK",
               "state": "OK",
-              "address": "OKC1 9201 S Portland Avenue OKLAHOMA CITY, OK 73159-0003 US (OKC1)",
+              "address": "9201 S Portland Avenue OKLAHOMA CITY, OK 73159-0003",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7509,7 +7509,7 @@
               "name": "OKC2",
               "city": "United States, OK",
               "state": "OK",
-              "address": "OKC2 - 8991 S Portland Avenue 73159-0003 - OKLAHOMA CITY, OK - United States",
+              "address": "8991 S Portland Avenue, OKLAHOMA CITY, United States, OK 73159-0003",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7519,7 +7519,7 @@
               "name": "DOK3",
               "city": "OKLAHOMA CITY, OK",
               "state": "OK",
-              "address": "6101 SW 44TH ST, OKLAHOMA CITY 73179",
+              "address": "6101 SW 44TH ST, OKLAHOMA CITY, OK 73179",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7549,7 +7549,7 @@
               "name": "TUL2",
               "city": "TULSA, OK",
               "state": "OK",
-              "address": "4040 North 125th East Avenue TULSA, OK 74116-2102 US (TUL2)",
+              "address": "4040 North 125th East Avenue TULSA, OK 74116",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7629,7 +7629,7 @@
               "name": "FTW7",
               "city": "Coppell, TX",
               "state": "TX",
-              "address": "75019 944 W Sandy Lake Rd Coppell TX US, TX",
+              "address": "944 W Sandy Lake Rd Coppell, TX 75019",
               "type": "FC",
               "lat": 32.9546,
               "lng": -97.015
@@ -7639,7 +7639,7 @@
               "name": "FTW9",
               "city": "Coppell, TX",
               "state": "TX",
-              "address": "FTW9 944 West Sandy Lake Road Coppell, TX 75019-3989 U.S.A",
+              "address": "944 West Sandy Lake Road Coppell U.S.A, TX 75019",
               "type": "FC",
               "lat": 32.9546,
               "lng": -97.015
@@ -7729,7 +7729,7 @@
               "name": "DDX6",
               "city": "FRISCO, TX",
               "state": "TX",
-              "address": "16399 GATEWAY PATH, FRISCO, TX 75078",
+              "address": "GATEWAY PATH, FRISCO, TX 75078",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7809,7 +7809,7 @@
               "name": "AFW2",
               "city": "DALLAS, TX",
               "state": "TX",
-              "address": "12728 LAKE JUNERD, DALLAS, TX 75180",
+              "address": "LAKE JUNERD, DALLAS, TX 75180",
               "type": "FC",
               "lat": 32.7767,
               "lng": -96.797
@@ -7829,7 +7829,7 @@
               "name": "DAL3",
               "city": "DALLAS, TX",
               "state": "TX",
-              "address": "1301 Chalk Hill RoadDALLAS, TX 75211US (DAL3) 75212",
+              "address": "1301 Chalk Hill RoadDALLAS, TX 75212",
               "type": "FC",
               "lat": 32.7767,
               "lng": -96.797
@@ -7869,7 +7869,7 @@
               "name": "DDC1",
               "city": "Farmers Branch, TX",
               "state": "TX",
-              "address": "12401 North Stemmons Fwy., Farmers Branch, TX 75234",
+              "address": "North Stemmons Fwy., Farmers Branch, TX 75234",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -7909,7 +7909,7 @@
               "name": "FTW1",
               "city": "Dallas, TX",
               "state": "TX",
-              "address": "33333 LBJ FWY, Dallas, TX 75241",
+              "address": "LBJ FWY, Dallas, TX 75241",
               "type": "FC",
               "lat": 32.7767,
               "lng": -96.797
@@ -7949,7 +7949,7 @@
               "name": "DAL2",
               "city": "Dallas, TX",
               "state": "TX",
-              "address": "2601 S. Airfield Drive，DFW Airport，TX，75261, Dallas, TX",
+              "address": "2601 S. Airfield Drive, DFW Airport, Dallas, TX 75261",
               "type": "FC",
               "lat": 32.7767,
               "lng": -96.797
@@ -7999,7 +7999,7 @@
               "name": "MMU9",
               "city": "TETERBORO, NJ",
               "state": "NJ",
-              "address": "698 Rte. 46 W., TETERBORO, NJ 7608",
+              "address": "698 Rte. 46 W., TETERBORO, NJ 07608",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8009,7 +8009,7 @@
               "name": "EWR8",
               "city": "TETERBORO, NJ",
               "state": "NJ",
-              "address": "698 ROUTE 46, TETERBORO, NJ 7608",
+              "address": "698 ROUTE 46, TETERBORO, NJ 07608",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8069,7 +8069,7 @@
               "name": "AFW1",
               "city": "FORT WORTH, TX",
               "state": "TX",
-              "address": "AFW1 - 1851 NE LOOP 820 76131-1694 - FORT WORTH, TX - United States",
+              "address": "1851 NE LOOP 820, FORT WORTH, TX 76131",
               "type": "FC",
               "lat": 32.7555,
               "lng": -97.3308
@@ -8079,7 +8079,7 @@
               "name": "FTW3",
               "city": "Fort Worth, TX",
               "state": "TX",
-              "address": "15201 Heritage Pkwy, Fort Worth, TX 76177",
+              "address": "Heritage Pkwy, Fort Worth, TX 76177",
               "type": "FC",
               "lat": 32.7555,
               "lng": -97.3308
@@ -8099,7 +8099,7 @@
               "name": "KTX1",
               "city": "JUSTIN, TX",
               "state": "TX",
-              "address": "15716 WOLF XING BLDG E, JUSTIN, TX 76247",
+              "address": "WOLF XING BLDG E, JUSTIN, TX 76247",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8109,7 +8109,7 @@
               "name": "KTX2",
               "city": "JUSTIN, TX",
               "state": "TX",
-              "address": "15716 WOLF XING BLDG E, JUSTIN, TX 76247",
+              "address": "WOLF XING BLDG E, JUSTIN, TX 76247",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8149,7 +8149,7 @@
               "name": "IAH3",
               "city": "HOUSTON, TX",
               "state": "TX",
-              "address": "15525 Milner Road 77032 - HOUSTON, TX - United States",
+              "address": "Milner Road, HOUSTON, TX 77032",
               "type": "FC",
               "lat": 29.7604,
               "lng": -95.3698
@@ -8159,7 +8159,7 @@
               "name": "HOU2",
               "city": "Houston, TX",
               "state": "TX",
-              "address": "10550 Ella Blvd., Houston, TX 77038-2324",
+              "address": "Ella Blvd., Houston, TX 77038-2324",
               "type": "FC",
               "lat": 29.7604,
               "lng": -95.3698
@@ -8189,7 +8189,7 @@
               "name": "IAH4",
               "city": "HOUSTON, TX",
               "state": "TX",
-              "address": "11720 N GESSNER RD, HOUSTON, TX 77064",
+              "address": "N GESSNER RD, HOUSTON, TX 77064",
               "type": "FC",
               "lat": 29.7604,
               "lng": -95.3698
@@ -8209,7 +8209,7 @@
               "name": "HHO9",
               "city": "HOUSTON, TX",
               "state": "TX",
-              "address": "16625 TOMBALL PKWY STE A, HOUSTON, TX 77064",
+              "address": "TOMBALL PKWY STE A, HOUSTON, TX 77064",
               "type": "FC",
               "lat": 29.7604,
               "lng": -95.3698
@@ -8229,7 +8229,7 @@
               "name": "HOU7",
               "city": "HOUSTON, TX",
               "state": "TX",
-              "address": "16225 TOMBALL PKWY BLDG A HOUSTON TX US, TX 77064",
+              "address": "TOMBALL PKWY BLDG A HOUSTON, TX 77064",
               "type": "FC",
               "lat": 29.7604,
               "lng": -95.3698
@@ -8319,7 +8319,7 @@
               "name": "HOU6",
               "city": "RICHMOND, TX",
               "state": "TX",
-              "address": "10507 HARLEN BLVD, RICHMOND, TX 77407",
+              "address": "HARLEN BLVD, RICHMOND, TX 77407",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8329,7 +8329,7 @@
               "name": "HOU3",
               "city": "Brookshire, TX",
               "state": "TX",
-              "address": "31555 Highway 90 E, Brookshire, TX 77423",
+              "address": "Highway 90 E, Brookshire, TX 77423",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8339,7 +8339,7 @@
               "name": "HOU9",
               "city": "KATY, TX",
               "state": "TX",
-              "address": "22525 CLAY RD, KATY, TX 77449",
+              "address": "CLAY RD, KATY, TX 77449",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8349,7 +8349,7 @@
               "name": "HOU5",
               "city": "Katy, TX",
               "state": "TX",
-              "address": "22525 Clay Rd, Katy, TX 77449-8200",
+              "address": "Clay Rd, Katy, TX 77449-8200",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8359,7 +8359,7 @@
               "name": "DHX3",
               "city": "SUGAR LAND, TX",
               "state": "TX",
-              "address": "12900 W AIRPORT BLVD, SUGAR LAND, TX 77478",
+              "address": "W AIRPORT BLVD, SUGAR LAND, TX 77478",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8369,7 +8369,7 @@
               "name": "DHO7",
               "city": "Katy, TX",
               "state": "TX",
-              "address": "28420 W Ten Blvd., Katy, TX 77494",
+              "address": "W Ten Blvd., Katy, TX 77494",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8379,7 +8379,7 @@
               "name": "STX4",
               "city": "PASADENA, TX",
               "state": "TX",
-              "address": "10611 RED BLUFF RD, PASADENA, TX 77507",
+              "address": "RED BLUFF RD, PASADENA, TX 77507",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8389,7 +8389,7 @@
               "name": "HOU8",
               "city": "FRESNO, TX",
               "state": "TX",
-              "address": "Bing Qin HOU82303 Hurricane Lane FRESNO TX 77545-1129, TX",
+              "address": "Bing Qin 2303 Hurricane Lane FRESNO-1129, TX 77545",
               "type": "FC",
               "lat": 36.7378,
               "lng": -119.7871
@@ -8429,7 +8429,7 @@
               "name": "STA1",
               "city": "San Antonio, TX",
               "state": "TX",
-              "address": "6000 enterprise avenue, schertz, tx 78154-1461 San Antonio TX 78154-1461, TX",
+              "address": "6000 enterprise avenue, schertz San Antonio-1461, TX 78154-1461",
               "type": "FC",
               "lat": 29.4241,
               "lng": -98.4936
@@ -8499,7 +8499,7 @@
               "name": "SAT4",
               "city": "SAN ANTONIO, TX",
               "state": "TX",
-              "address": "10384 W US HIGHWAY 90，United States of America (USA)，SAN ANTONIO，TX，78245-9512, TX",
+              "address": "W US HIGHWAY 90, of America (USA), SAN ANTONIO, TX 78245-9512",
               "type": "FC",
               "lat": 29.4241,
               "lng": -98.4936
@@ -8509,7 +8509,7 @@
               "name": "DNJ7",
               "city": "BUDD LAKE, NJ",
               "state": "NJ",
-              "address": "81 INTERNATIONAL DR S, BUDD LAKE, NJ 7828",
+              "address": "81 INTERNATIONAL DR S, BUDD LAKE, NJ 07828",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8539,7 +8539,7 @@
               "name": "STX6",
               "city": "PFLUGERVILLE, TX",
               "state": "TX",
-              "address": "18625 SCHULTZ LN, PFLUGERVILLE, TX 78660",
+              "address": "SCHULTZ LN, PFLUGERVILLE, TX 78660",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8559,7 +8559,7 @@
               "name": "SAT6",
               "city": "San Marcos, TX",
               "state": "TX",
-              "address": "TX San Marcos 1346 Fortuna Rd, TX 78666",
+              "address": "San Marcos 1346 Fortuna Rd, TX 78666",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8629,7 +8629,7 @@
               "name": "AMA1",
               "city": "Amarillo, TX",
               "state": "TX",
-              "address": "8590 NE 24th Avenue 79108-7749 - AMARILLO, TX - United States, TX",
+              "address": "8590 NE 24th Avenue, AMARILLO, TX 79108-7749",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8659,7 +8659,7 @@
               "name": "ELP1",
               "city": "EL PASO, TX",
               "state": "TX",
-              "address": "12101 EMERALD PASS DR, EL PASO, TX 79928",
+              "address": "EMERALD PASS DR, EL PASO, TX 79928",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8679,7 +8679,7 @@
               "name": "DEN5",
               "city": "AURORA, CO",
               "state": "CO",
-              "address": "19799 E 36TH AVE., AURORA, CO 80011-8189",
+              "address": "E 36TH AVE., AURORA, CO 80011-8189",
               "type": "FC",
               "lat": 41.7606,
               "lng": -88.3201
@@ -8689,7 +8689,7 @@
               "name": "DEN8",
               "city": "CO - United States, AURORA",
               "state": "AURORA",
-              "address": "DEN8 - 21000 E 13th Ave. 80018 - AURORA, CO - United States, AURORA",
+              "address": "E 13th Ave., CO, CO - United States, AURORA 80018",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8699,7 +8699,7 @@
               "name": "DEN7",
               "city": "AURORA, CO",
               "state": "CO",
-              "address": "DEN7 22300 E 26th Avenue AURORA, CO 80019-3609 US (DEN7）",
+              "address": "E 26th Avenue AURORA ( ）, CO 80019-3609",
               "type": "FC",
               "lat": 41.7606,
               "lng": -88.3201
@@ -8709,7 +8709,7 @@
               "name": "BDU2",
               "city": "COMMERCE CITY, CO",
               "state": "CO",
-              "address": "8350 Quintero St, COMMERCE CITY 80022",
+              "address": "8350 Quintero St, COMMERCE CITY, CO 80022",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8719,7 +8719,7 @@
               "name": "BDU5",
               "city": "Commerce City, CO",
               "state": "CO",
-              "address": "8350 Quintero St, Commerce City 80022-8453",
+              "address": "8350 Quintero St, Commerce City, CO 80022-8453",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8729,7 +8729,7 @@
               "name": "POD4",
               "city": "THORNTON, CO",
               "state": "CO",
-              "address": "14601 Grant Street, THORNTON, CO 80023",
+              "address": "Grant Street, THORNTON, CO 80023",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8749,7 +8749,7 @@
               "name": "DEN3",
               "city": "Thornton, CO - United States",
               "state": "CO - United States",
-              "address": "DEN3 - 14601 Grant Street 80023-6622, Thornton, CO - United States",
+              "address": "Grant Street 80023-6622, Thornton, CO - United States 80023-6622",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8759,7 +8759,7 @@
               "name": "SNJ3",
               "city": "BURLINGTON, NJ",
               "state": "NJ",
-              "address": "1798 Rte. 130 N, BURLINGTON, NJ 8016",
+              "address": "1798 Rte. 130 N, BURLINGTON, NJ 08016",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8769,7 +8769,7 @@
               "name": "ACY8",
               "city": "BURLINGTON, NJ",
               "state": "NJ",
-              "address": "8 CAMPUS DR, BURLINGTON, NJ 8016",
+              "address": "8 CAMPUS DR, BURLINGTON, NJ 08016",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8799,7 +8799,7 @@
               "name": "DEN6",
               "city": "Denver, CO",
               "state": "CO",
-              "address": "80216 480 E 55th Ave STE 100 Denver CO US, CO",
+              "address": "480 E 55th Ave STE 100 Denver, CO 80216",
               "type": "FC",
               "lat": 39.7392,
               "lng": -104.9903
@@ -8809,7 +8809,7 @@
               "name": "DEN",
               "city": "Denver, CO",
               "state": "CO",
-              "address": "80216 480 E 55th Ave STE 100 Denver CO US, CO",
+              "address": "480 E 55th Ave STE 100 ver, Denver, CO 80216",
               "type": "FC",
               "lat": 39.7392,
               "lng": -104.9903
@@ -8849,7 +8849,7 @@
               "name": "DJE2",
               "city": "PAULSBORO, NJ",
               "state": "NJ",
-              "address": "1250 FOREST PKWY, PAULSBORO, NJ 8066",
+              "address": "1250 FOREST PKWY, PAULSBORO, NJ 08066",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8859,7 +8859,7 @@
               "name": "SNJ2",
               "city": "SEWELL, NJ",
               "state": "NJ",
-              "address": "344 Hurffville Crosskeys rd, SEWELL, NJ 8080",
+              "address": "344 Hurffville Crosskeys rd, SEWELL, NJ 08080",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8869,7 +8869,7 @@
               "name": "TBD5",
               "city": "Carteret, NJ",
               "state": "NJ",
-              "address": "8003 Industrial Ave, Building A, Carteret, NJ 8085",
+              "address": "8003 Industrial Ave, Building A, Carteret, NJ 08085",
               "type": "FC",
               "lat": 40.5773,
               "lng": -74.2285
@@ -8879,7 +8879,7 @@
               "name": "KMA6",
               "city": "SWEDESBORO, NJ",
               "state": "NJ",
-              "address": "400 ARLINGTON BLVD, SWEDESBORO, NJ 8085",
+              "address": "400 ARLINGTON BLVD, SWEDESBORO, NJ 08085",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8889,7 +8889,7 @@
               "name": "KMA8",
               "city": "SWEDESBORO, NJ",
               "state": "NJ",
-              "address": "400 ARLINGTON BLVD, SWEDESBORO, NJ 8085",
+              "address": "400 ARLINGTON BLVD, SWEDESBORO, NJ 08085",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8899,7 +8899,7 @@
               "name": "KNJ2",
               "city": "SWEDESBORO, NJ",
               "state": "NJ",
-              "address": "400 ARLINGTON BLVD, SWEDESBORO, NJ 8085",
+              "address": "400 ARLINGTON BLVD, SWEDESBORO, NJ 08085",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8909,7 +8909,7 @@
               "name": "ACY5",
               "city": "Logan Township, NJ",
               "state": "NJ",
-              "address": "2277 Center Square Rd, Logan Township, NJ 8085",
+              "address": "2277 Center Square Rd, Logan Township, NJ 08085",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8919,7 +8919,7 @@
               "name": "ACY9",
               "city": "LOGAN TOWNSHIP, NJ",
               "state": "NJ",
-              "address": "1150 COMMERCE BLVD, LOGAN TOWNSHIP, NJ 8085",
+              "address": "1150 COMMERCE BLVD, LOGAN TOWNSHIP, NJ 08085",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8929,7 +8929,7 @@
               "name": "JHW1",
               "city": "COLORADO SPRINGS, CO",
               "state": "CO",
-              "address": "4333 INTEGRATION LOOP, COLORADO SPRINGS 80916",
+              "address": "4333 INTEGRATION LOOP, COLORADO SPRINGS, CO 80916",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8939,7 +8939,7 @@
               "name": "DEN4",
               "city": "COLORADO SPRINGS, CO",
               "state": "CO",
-              "address": "4222 INTEGRATION LOOP, COLORADO SPRINGS 80916",
+              "address": "4222 INTEGRATION LOOP, COLORADO SPRINGS, CO 80916",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8949,7 +8949,7 @@
               "name": "COS5",
               "city": "Colorado Springs, CO",
               "state": "CO",
-              "address": "4333 Integration Loop, Colorado Springs 80916-5770",
+              "address": "4333 Integration Loop, Colorado Springs, CO 80916-5770",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8959,7 +8959,7 @@
               "name": "BOI2",
               "city": "NAMPA, ID 83687-5548 US (BOI2)",
               "state": "ID 83687-5548 US (BOI2)",
-              "address": "5295 E. Franklin Road, NAMPA, ID 83687-5548 US (BOI2)",
+              "address": "5295 E. Franklin Road, NAMPA, ID 83687-5548 US (BOI2) 83687-5548",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -8979,7 +8979,7 @@
               "name": "SLC2",
               "city": "West Jordan, UT, West Jordan, UT",
               "state": "West Jordan, UT",
-              "address": "7148 W. Old Bingham Hwy West Jordan, UT 84081 US (SLC2), West Jordan, UT",
+              "address": "7148 W. Old Bingham Hwy, West Jordan, UT 84081",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9179,7 +9179,7 @@
               "name": "AZA5",
               "city": "Phoenix, AZ",
               "state": "AZ",
-              "address": "85043 6000 W Van Buren St Phoenix AZ US, AZ",
+              "address": "6000 W Van Buren St Phoenix, AZ 85043",
               "type": "FC",
               "lat": 33.4484,
               "lng": -112.074
@@ -9189,7 +9189,7 @@
               "name": "GYR3",
               "city": "ST PHOENIX, AZ",
               "state": "AZ",
-              "address": "GYR3 8181 W ROOSEVELT ST PHOENIX, AZ 85043-2356 US (GYR3)",
+              "address": "8181 W ROOSEVELT ST PHOENIX, AZ 85043",
               "type": "FC",
               "lat": 33.4484,
               "lng": -112.074
@@ -9249,7 +9249,7 @@
               "name": "AZA4",
               "city": "AZ, AZ",
               "state": "AZ",
-              "address": "AZA4 3333 S 59TH AVE PHOENIX, AZ 85043-7904, AZ",
+              "address": "3333 S 59TH AVE PHOENIX, AZ 85043-7904",
               "type": "FC",
               "lat": 40.9587,
               "lng": -75.9746
@@ -9259,7 +9259,7 @@
               "name": "HEW9",
               "city": "CRANBURY, NJ",
               "state": "NJ",
-              "address": "HEW9 343 HALF ACRE RD, CRANBURY, NJ 8512",
+              "address": "343 HALF ACRE RD, CRANBURY, NJ 08512",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9299,7 +9299,7 @@
               "name": "GEU1",
               "city": "AVONDALE, AZ",
               "state": "AZ",
-              "address": "10205 W ROOSEVELT ST, AVONDALE, AZ 85323",
+              "address": "W ROOSEVELT ST, AVONDALE, AZ 85323",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9309,7 +9309,7 @@
               "name": "GYR4",
               "city": "Avondale, AZ",
               "state": "AZ",
-              "address": "10205 W Roosevelt St, Avondale, AZ 85323",
+              "address": "W Roosevelt St, Avondale, AZ 85323",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9319,7 +9319,7 @@
               "name": "GEU3",
               "city": "Buckeye, AZ",
               "state": "AZ",
-              "address": "18900 W McDowell Road 85326- BUCKEYE, AZ- United state",
+              "address": "W McDowell Road 85326- BUCKEYE, AZ-, AZ 85326",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9339,7 +9339,7 @@
               "name": "PHX5",
               "city": "Goodyear, AZ",
               "state": "AZ",
-              "address": "16920 W Commerce Drive, Goodyear, AZ 85338",
+              "address": "W Commerce Drive, Goodyear, AZ 85338",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9369,7 +9369,7 @@
               "name": "GEU2",
               "city": "Washington, PA",
               "state": "PA",
-              "address": "15301 West Northern Avenue 85340 - Glendale, AZ - United States, Washington, PA",
+              "address": "West Northern Avenue, Glendale, AZ, Washington, PA 85340",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9409,7 +9409,7 @@
               "name": "GEU5",
               "city": "Goodyear, AZ",
               "state": "AZ",
-              "address": "4660 North Cotton Lane 85395 - GOODYEAR, AZ - United States, AZ",
+              "address": "4660 North Cotton Lane, GOODYEAR, AZ 85395",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9419,7 +9419,7 @@
               "name": "GYR2",
               "city": "GOODYEAR, AZ",
               "state": "AZ",
-              "address": "GYR2 17341 W MINNEZONA AVE GOODYEAR, AZ 85395-7672 US (GYR2)",
+              "address": "W MINNEZONA AVE GOODYEAR, AZ 85395-7672",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9459,7 +9459,7 @@
               "name": "DEW5",
               "city": "LAWRENCE TOWNSHIP, NJ",
               "state": "NJ",
-              "address": "10 PRINCESS RD, LAWRENCE TOWNSHIP, NJ 8648",
+              "address": "10 PRINCESS RD, LAWRENCE TOWNSHIP, NJ 08648",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9469,7 +9469,7 @@
               "name": "XIX1",
               "city": "ROBBINSVILLE, NJ",
               "state": "NJ",
-              "address": "18 APPLEGATE DR, ROBBINSVILLE, NJ 8691",
+              "address": "18 APPLEGATE DR, ROBBINSVILLE, NJ 08691",
               "type": "FC",
               "lat": 40.2198,
               "lng": -74.5879
@@ -9479,7 +9479,7 @@
               "name": "PNE5",
               "city": "ROBBINSVILLE, NJ",
               "state": "NJ",
-              "address": "18 APPLEGATE DR., ROBBINSVILLE, NJ 8691",
+              "address": "18 APPLEGATE DR., ROBBINSVILLE, NJ 08691",
               "type": "FC",
               "lat": 40.2198,
               "lng": -74.5879
@@ -9499,7 +9499,7 @@
               "name": "ABQ2",
               "city": "Los Lunas, NM",
               "state": "NM",
-              "address": "ABQ2 - 6251 Pioneer Trail NW 87031 - LOS LUNAS, NM - United States",
+              "address": "6251 Pioneer Trail NW, LOS LUNAS, NM 87031",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9519,7 +9519,7 @@
               "name": "ABQ5",
               "city": "ALBUQUERQUE, NM",
               "state": "NM",
-              "address": "15480 RESERVOIR RD NW, ALBUQUERQUE, NM 87121",
+              "address": "RESERVOIR RD NW, ALBUQUERQUE, NM 87121",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9529,7 +9529,7 @@
               "name": "HNE1",
               "city": "EDISON, NJ",
               "state": "NJ",
-              "address": "2205 STATE ROUTE 27, EDISON, NJ 8817",
+              "address": "2205 STATE ROUTE 27, EDISON, NJ 08817",
               "type": "FC",
               "lat": 40.5187,
               "lng": -74.4121
@@ -9539,7 +9539,7 @@
               "name": "DJE1",
               "city": "Edison, NJ",
               "state": "NJ",
-              "address": "8 B Court South, Edison, NJ 8817",
+              "address": "8 B Court South, Edison, NJ 08817",
               "type": "FC",
               "lat": 40.5187,
               "lng": -74.4121
@@ -9549,7 +9549,7 @@
               "name": "TTN6",
               "city": "PHILLIPSBURG, NJ",
               "state": "NJ",
-              "address": "942 MEMORIAL PKWY, PHILLIPSBURG, NJ 8865",
+              "address": "942 MEMORIAL PKWY, PHILLIPSBURG, NJ 08865",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9569,7 +9569,7 @@
               "name": "LAS1",
               "city": "HENDERSON, NV",
               "state": "NV",
-              "address": "12300 BERMUDA ROAD, HENDERSON, NV 89044",
+              "address": "BERMUDA ROAD, HENDERSON, NV 89044",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9679,7 +9679,7 @@
               "name": "LAS7",
               "city": "Las Vegas, NV",
               "state": "NV",
-              "address": "6001 East Tropical Parkway Las Vegas, NV 89115-1935 US(LAS7), NV",
+              "address": "6001 East Tropical Parkway Las Vegas, NV 89115-1935",
               "type": "FC",
               "lat": 36.1699,
               "lng": -115.1398
@@ -9859,7 +9859,7 @@
               "name": "UCA3",
               "city": "Los Angeles, CA",
               "state": "CA",
-              "address": "11800 W Olympic Blvd., Los Angeles, CA 90064",
+              "address": "W Olympic Blvd., Los Angeles, CA 90064",
               "type": "FC",
               "lat": 34.0522,
               "lng": -118.2437
@@ -9969,7 +9969,7 @@
               "name": "ILS3",
               "city": "Torrance, CA",
               "state": "CA",
-              "address": "22135 Hawthorne Blvd, Torrance, CA 90503",
+              "address": "Hawthorne Blvd, Torrance, CA 90503",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9989,7 +9989,7 @@
               "name": "MAE6",
               "city": "Whittier, CA",
               "state": "CA",
-              "address": "15225 Whittier Blvd, CA 90603",
+              "address": "Whittier Blvd, CA 90603",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -9999,7 +9999,7 @@
               "name": "ILS1",
               "city": "Whittier, CA",
               "state": "CA",
-              "address": "14249 Whittier Blvd, CA 90607",
+              "address": "Whittier Blvd, CA 90607",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10009,7 +10009,7 @@
               "name": "LAX5",
               "city": "Valley View St  Buena Park,, CA",
               "state": "CA",
-              "address": "Amazon Sort Center Warehouse 6400 Valley View St Buena Park, CA 90620 US (LAX5)",
+              "address": "Amazon Sort Center Warehouse 6400 Valley View St Buena Park, Valley View St Buena Park, CA 90620",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10039,7 +10039,7 @@
               "name": "MAF9",
               "city": "CERRITOS, CA",
               "state": "CA",
-              "address": "11340 South Street, CERRITOS, CA 90701",
+              "address": "South Street, CERRITOS, CA 90701",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10049,7 +10049,7 @@
               "name": "VUI1",
               "city": "CARSON, CA",
               "state": "CA",
-              "address": "909 E 236th St, CARSON 90745",
+              "address": "909 E 236th St, CARSON, CA 90745",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10069,7 +10069,7 @@
               "name": "LGB1",
               "city": "Long Beach, CA",
               "state": "CA",
-              "address": "Amazon Warehouse (LGB1) 2417 E. Carson St Long Beach, CA 90810",
+              "address": "Amazon Warehouse ( ) 2417 E. Carson St Long Beach, CA 90810",
               "type": "FC",
               "lat": 33.7701,
               "lng": -118.1937
@@ -10099,7 +10099,7 @@
               "name": "DAX3",
               "city": "Charsworth, CA",
               "state": "CA",
-              "address": "20730 Prairie St, Charsworth, CA 91311-6010",
+              "address": "Prairie St, Charsworth, CA 91311-6010",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10109,7 +10109,7 @@
               "name": "MAB5",
               "city": "Northridge, CA",
               "state": "CA",
-              "address": "19340 Rinaldi St., Northridge, CA 91326",
+              "address": "Rinaldi St., Northridge, CA 91326",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10129,7 +10129,7 @@
               "name": "DPS5",
               "city": "Valencia, CA",
               "state": "CA",
-              "address": "28820 Chase Pl, Valencia, CA 91355-5422",
+              "address": "Chase Pl, Valencia, CA 91355-5422",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10139,7 +10139,7 @@
               "name": "MAF4",
               "city": "Westlake Village, CA",
               "state": "CA",
-              "address": "140 Promenade Way CA, Westlake Village, CA 91362",
+              "address": "140 Promenade Way, Westlake Village, CA 91362",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10149,7 +10149,7 @@
               "name": "ILS2",
               "city": "Woodland HillsWoodland Hills, CA",
               "state": "CA",
-              "address": "22001 Ventura Blvd, Woodland HillsWoodland Hills, CA 91364",
+              "address": "Ventura Blvd, Woodland HillsWoodland Hills, CA 91364",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10209,7 +10209,7 @@
               "name": "XBC1",
               "city": "Chino, CA",
               "state": "CA",
-              "address": "15750 Mountain Avenue, Chino, CA 91708",
+              "address": "Mountain Avenue, Chino, CA 91708",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10219,7 +10219,7 @@
               "name": "VUI6",
               "city": "CHINO, CA",
               "state": "CA",
-              "address": "15835 San Antonio Ave., CHINO, CA 91708",
+              "address": "San Antonio Ave., CHINO, CA 91708",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10279,7 +10279,7 @@
               "name": "SBD5",
               "city": "JURUPA VALLEY, CA",
               "state": "CA",
-              "address": "11100 IBERIA ST, JURUPA VALLEY, CA 91752",
+              "address": "IBERIA ST, JURUPA VALLEY, CA 91752",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10289,7 +10289,7 @@
               "name": "BUR7",
               "city": "MIRA LOMA, CA",
               "state": "CA",
-              "address": "11200 Iberia St., MIRA LOMA, CA 91752",
+              "address": "Iberia St., MIRA LOMA, CA 91752",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10299,7 +10299,7 @@
               "name": "ABE7",
               "city": "Mira Loma, CA",
               "state": "CA",
-              "address": "12510 Micro Dr, Mira Loma, CA 91752",
+              "address": "Micro Dr, Mira Loma, CA 91752",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10319,7 +10319,7 @@
               "name": "ONT1",
               "city": "Jurupa Valley, CA",
               "state": "CA",
-              "address": "11200 Iberia St, Jurupa Valley, CA 91752-3265",
+              "address": "Iberia St, Jurupa Valley, CA 91752-3265",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10389,7 +10389,7 @@
               "name": "DSD2",
               "city": "Carlsbad, CA",
               "state": "CA",
-              "address": "2777 Loker Ave W., Carlsbad 92010",
+              "address": "2777 Loker Ave W., Carlsbad, CA 92010",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10399,7 +10399,7 @@
               "name": "DSD8",
               "city": "POWAY, CA",
               "state": "CA",
-              "address": "14400 KIRKHAM WAY, #1450, POWAY, CA 92064",
+              "address": "KIRKHAM WAY, #1450, POWAY, CA 92064",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10479,7 +10479,7 @@
               "name": "SCA4",
               "city": "San Diego, CA",
               "state": "CA",
-              "address": "16915 Via Del Campo, San Diego, CA 92127",
+              "address": "Via Del Campo, San Diego, CA 92127",
               "type": "FC",
               "lat": 32.7157,
               "lng": -117.1611
@@ -10509,7 +10509,7 @@
               "name": "QXY9",
               "city": "BEAUMONT, CA",
               "state": "CA",
-              "address": "36900 W FOURTH ST BEAUMONT, CA 92223",
+              "address": "W FOURTH ST BEAUMONT, CA 92223",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10519,7 +10519,7 @@
               "name": "SBD1",
               "city": "BLOOMINGTON, CA",
               "state": "CA",
-              "address": "3388 S Cactus Ave 92316-3819 - BLOOMINGTON, CA - United States",
+              "address": "3388 S Cactus Ave, BLOOMINGTON, CA 92316-3819",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10529,7 +10529,7 @@
               "name": "POC1",
               "city": "Fontana, CA",
               "state": "CA",
-              "address": "4121 Lytle Creek Rd FONTANA CA 92336 US, CA",
+              "address": "4121 Lytle Creek Rd FONTANA, CA 92336",
               "type": "FC",
               "lat": 34.0922,
               "lng": -117.435
@@ -10539,7 +10539,7 @@
               "name": "VUJ2",
               "city": "FONTANA, CA",
               "state": "CA",
-              "address": "13052 Jurupa Ave, FONTANA, CA 92337",
+              "address": "Jurupa Ave, FONTANA, CA 92337",
               "type": "FC",
               "lat": 34.0922,
               "lng": -117.435
@@ -10549,7 +10549,7 @@
               "name": "PCA3",
               "city": "FONTANA, CA",
               "state": "CA",
-              "address": "10681 PRODUCTION AVE, FONTANA, CA 92337",
+              "address": "PRODUCTION AVE, FONTANA, CA 92337",
               "type": "FC",
               "lat": 34.0922,
               "lng": -117.435
@@ -10559,7 +10559,7 @@
               "name": "HCA7",
               "city": "Fontana, CA",
               "state": "CA",
-              "address": "10681 Production Ave, Fontana, CA 92337",
+              "address": "Production Ave, Fontana, CA 92337",
               "type": "FC",
               "lat": 34.0922,
               "lng": -117.435
@@ -10569,7 +10569,7 @@
               "name": "XIX6",
               "city": "San Bernardino, CA",
               "state": "CA",
-              "address": "10681 Production Ave San Bernardino CA 92337",
+              "address": "Production Ave San Bernardino, CA 92337",
               "type": "FC",
               "lat": 34.1083,
               "lng": -117.2898
@@ -10579,7 +10579,7 @@
               "name": "LAX9",
               "city": "Fontana, CA",
               "state": "CA",
-              "address": "11263 Oleander Ave FONTANA, CA 92337-7441 United States, CA",
+              "address": "Oleander Ave FONTANA, CA 92337-7441",
               "type": "FC",
               "lat": 34.0922,
               "lng": -117.435
@@ -10609,7 +10609,7 @@
               "name": "XLG1",
               "city": "Redlands, CA",
               "state": "CA",
-              "address": "XLG1 - 1901 California St 92374 - Redlands, CA - United States",
+              "address": "1901 California St, Redlands, CA 92374",
               "type": "FC",
               "lat": 34.0556,
               "lng": -117.1825
@@ -10629,7 +10629,7 @@
               "name": "LGB4",
               "city": "Redlands, CA",
               "state": "CA",
-              "address": "27517 Pioneer Avenue, Redlands, CA 92374",
+              "address": "Pioneer Avenue, Redlands, CA 92374",
               "type": "FC",
               "lat": 34.0556,
               "lng": -117.1825
@@ -10709,7 +10709,7 @@
               "name": "XLX7",
               "city": "VICTORVILLE,, CA",
               "state": "CA",
-              "address": "XLX7 18580 GATEWAY DR, VICTORVILLE, CA, 92394, US, CA",
+              "address": "GATEWAY DR, VICTORVILLE, VICTORVILLE, CA 92394",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10719,7 +10719,7 @@
               "name": "VUI5",
               "city": "VICTORVILLE, CA",
               "state": "CA",
-              "address": "13133 Innovation Way, VICTORVILLE, CA 92395",
+              "address": "Innovation Way, VICTORVILLE, CA 92395",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10769,7 +10769,7 @@
               "name": "JOT1",
               "city": "San Bernardino, CA",
               "state": "CA",
-              "address": "JOT1 - 1494 S WATERMAN AVE 92408 - SAN BERNARDINO, CA - United States, CA",
+              "address": "1494 S WATERMAN AVE, SAN BERNARDINO, CA 92408",
               "type": "FC",
               "lat": 34.1083,
               "lng": -117.2898
@@ -10889,7 +10889,7 @@
               "name": "POC3-UPS",
               "city": "Riverside, CA",
               "state": "CA",
-              "address": "6120 Clinker Dr, Riverside, CA 92508, CA",
+              "address": "6120 Clinker Dr, Riverside, CA 92508",
               "type": "FC",
               "lat": 33.9533,
               "lng": -117.3962
@@ -10899,7 +10899,7 @@
               "name": "POC3",
               "city": " Jurupa Valley , CA",
               "state": "CA",
-              "address": "联邦地址：6120 Clinker Drive, Jurupa Valley, CA 92509, Jurupa Valley",
+              "address": "联邦地址：6120 Clinker Drive, Jurupa Valley, Jurupa Valley, CA 92509",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10909,7 +10909,7 @@
               "name": "VGT2(UPS专用）",
               "city": "March Air Reserve Base, CA",
               "state": "CA",
-              "address": "20701 Krameria Avenue, March Air Reserve Base, CA, 92518",
+              "address": "Krameria Avenue, March Air Reserve Base, CA 92518",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -10919,7 +10919,7 @@
               "name": "LGB6",
               "city": "Riverside, CA",
               "state": "CA",
-              "address": "20901 Krameria Ave, Riverside, CA 92518-1513",
+              "address": "Krameria Ave, Riverside, CA 92518-1513",
               "type": "FC",
               "lat": 33.9533,
               "lng": -117.3962
@@ -10929,7 +10929,7 @@
               "name": "ONT6",
               "city": "Moreno Valley, CA",
               "state": "CA",
-              "address": "24208 San Michele Rd, Moreno Valley, CA 92551",
+              "address": "San Michele Rd, Moreno Valley, CA 92551",
               "type": "FC",
               "lat": 39.5296,
               "lng": -119.8138
@@ -10939,7 +10939,7 @@
               "name": "ONT8",
               "city": "Valley, CA",
               "state": "CA",
-              "address": "24300 Nandina Ave Moreno, Valley, CA 92551",
+              "address": "Nandina Ave Moreno, Valley, CA 92551",
               "type": "FC",
               "lat": 33.9425,
               "lng": -117.2297
@@ -10949,7 +10949,7 @@
               "name": "FDL3",
               "city": "MORENO VALLEY, CA",
               "state": "CA",
-              "address": "24208 SAN MICHELE RD, MORENO VALLEY, CA 92551-9561",
+              "address": "SAN MICHELE RD, MORENO VALLEY, CA 92551-9561",
               "type": "FC",
               "lat": 33.9425,
               "lng": -117.2297
@@ -10959,7 +10959,7 @@
               "name": "MAH8",
               "city": "MURRIETA, WA",
               "state": "WA",
-              "address": "40481 Murrieta Hot Springs Rd, WA 92563",
+              "address": "Murrieta Hot Springs Rd, WA 92563",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11019,7 +11019,7 @@
               "name": "KRB4",
               "city": "PATTERSON AVE PERRIS, CA",
               "state": "CA",
-              "address": "4501 PATTERSON AVE PERRIS, CA 92571-9722 US (KRB4)",
+              "address": "4501 PATTERSON AVE PERRIS, CA 92571-9722",
               "type": "FC",
               "lat": 33.7825,
               "lng": -117.2286
@@ -11029,7 +11029,7 @@
               "name": "MAB9",
               "city": "Irvine, CA",
               "state": "CA",
-              "address": "13752 Jamboree Rd, Irvine, CA 92602",
+              "address": "Jamboree Rd, Irvine, CA 92602",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11069,7 +11069,7 @@
               "name": "LAX8",
               "city": "Rancho Santa Margarita, CA",
               "state": "CA",
-              "address": "30142 Avenida De Las Banderas, Rancho Santa Margarita, CA 92688-2116",
+              "address": "Avenida De Las Banderas, Rancho Santa Margarita, CA 92688-2116",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11079,7 +11079,7 @@
               "name": "DCX2",
               "city": "MISSION VIEJO, CA",
               "state": "CA",
-              "address": "25725 JERONIMO RD., MISSION VIEJO, CA 92691",
+              "address": "JERONIMO RD., MISSION VIEJO, CA 92691",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11179,7 +11179,7 @@
               "name": "BFL2",
               "city": "Shafter, CA",
               "state": "CA",
-              "address": "93263 4500 Express Ave Shafter CA US, CA",
+              "address": "4500 Express Ave Shafter, CA 93263",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11189,7 +11189,7 @@
               "name": "MIT2-UPS",
               "city": "Shafter, CA",
               "state": "CA",
-              "address": "3256N Plaza Dr., VISALIA, CA, 93291, Shafter, CA",
+              "address": "3256N Plaza Dr., VISALIA, Shafter, CA 93291",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11209,7 +11209,7 @@
               "name": "FAT2",
               "city": "ST VISALIA, CA",
               "state": "CA",
-              "address": "3315 N KELSEY ST VISALIA, CA 93291-1882 US (FAT2)",
+              "address": "3315 N KELSEY ST VISALIA, CA 93291",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11449,7 +11449,7 @@
               "name": "DXC5",
               "city": "FREMONT, CA",
               "state": "CA",
-              "address": "44109 PACIFIC COMMONS BLVD, FREMONT, CA 94538",
+              "address": "PACIFIC COMMONS BLVD, FREMONT, CA 94538",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11459,7 +11459,7 @@
               "name": "HSF9",
               "city": "FREEMONT, CA",
               "state": "CA",
-              "address": "44051 OSGOOD RD, FREEMONT, CA 94539",
+              "address": "OSGOOD RD, FREEMONT, CA 94539",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11469,7 +11469,7 @@
               "name": "SFO21",
               "city": "Hayward, CA",
               "state": "CA",
-              "address": "26464 Corporate Ave, Hayward, CA 94545-3914",
+              "address": "Corporate Ave, Hayward, CA 94545-3914",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11489,7 +11489,7 @@
               "name": "OAK7",
               "city": "Newark, CA",
               "state": "CA",
-              "address": "38811 Cherry St, Newark, CA 94560",
+              "address": "Cherry St, Newark, CA 94560",
               "type": "FC",
               "lat": 37.5175,
               "lng": -122.0157
@@ -11499,7 +11499,7 @@
               "name": "OAK5",
               "city": "Newark, CA",
               "state": "CA",
-              "address": "38811 Cherry St, Newark, CA 94560-4939",
+              "address": "Cherry St, Newark, CA 94560-4939",
               "type": "FC",
               "lat": 37.5175,
               "lng": -122.0157
@@ -11529,7 +11529,7 @@
               "name": "SCK8",
               "city": "Oakley, CA",
               "state": "CA",
-              "address": "SCK8 4700 WILBUR AVE OAKLEY 94561-2677 CA US, CA",
+              "address": "4700 WILBUR AVE OAKLEY 94561-2677, CA 94561",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11569,7 +11569,7 @@
               "name": "HLI2-UPS",
               "city": "Oakland, CA",
               "state": "CA",
-              "address": "8410 Pardee Dr, Oakland, CA 94621, CA",
+              "address": "8410 Pardee Dr, Oakland, CA 94621",
               "type": "FC",
               "lat": 37.8044,
               "lng": -122.2712
@@ -11609,7 +11609,7 @@
               "name": "SCA2",
               "city": "RICHMOND, CA",
               "state": "CA",
-              "address": "12453 SAN PABLO AVE, RICHMOND, CA 94805-1954",
+              "address": "SAN PABLO AVE, RICHMOND, CA 94805-1954",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11749,7 +11749,7 @@
               "name": "QXY5",
               "city": "Stockton, CA",
               "state": "CA",
-              "address": "QXY5 - 4532 NEWCASTLE RD 95215-9465 - STOCKTON, CA - United States, CA",
+              "address": "4532 NEWCASTLE RD, STOCKTON, CA 95215",
               "type": "FC",
               "lat": 37.9577,
               "lng": -121.2908
@@ -11759,7 +11759,7 @@
               "name": "SCK1",
               "city": "NEWCASTLE RD STOCKTON, CA",
               "state": "CA",
-              "address": "SCK1 4532 NEWCASTLE RD STOCKTON, CA 95215-9465 US ( SCK1)",
+              "address": "4532 NEWCASTLE RD STOCKTON, CA 95215",
               "type": "FC",
               "lat": 37.9577,
               "lng": -121.2908
@@ -11779,7 +11779,7 @@
               "name": "SCK4",
               "city": "CA, CA",
               "state": "CA",
-              "address": "SCK4 6001 S AUSTIN RD STOCKTON, CA 95215-8354 United States",
+              "address": "6001 S AUSTIN RD STOCKTON, CA 95215-8354",
               "type": "FC",
               "lat": 34.1064,
               "lng": -117.5931
@@ -11839,7 +11839,7 @@
               "name": "SCK3",
               "city": "MANTECA, CA",
               "state": "CA",
-              "address": "3565 N AIRPORT WAY, MANTECA 95336",
+              "address": "3565 N AIRPORT WAY, MANTECA, CA 95336",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11909,7 +11909,7 @@
               "name": "SJC7",
               "city": "Tracy, CA",
               "state": "CA",
-              "address": "188 Mountain House Parkway Tracy, CA 95377-8906 United States",
+              "address": "188 Mountain House Parkway Tracy, CA 95377-8906",
               "type": "FC",
               "lat": 37.7397,
               "lng": -121.4252
@@ -11919,7 +11919,7 @@
               "name": "MCE1",
               "city": "TURLOCK, CA",
               "state": "CA",
-              "address": "3200 Fulkerth Road 95380-9684 - TURLOCK, CA - United States",
+              "address": "3200 Fulkerth Road, TURLOCK, CA 95380",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -11979,7 +11979,7 @@
               "name": "SMF7",
               "city": "Vacaville, CA",
               "state": "CA",
-              "address": "95688 4800 Midway Rd Vacaville CA US, CA",
+              "address": "4800 Midway Rd Vacaville, CA 95688",
               "type": "FC",
               "lat": 38.3566,
               "lng": -121.9877
@@ -12079,7 +12079,7 @@
               "name": "SMF6",
               "city": "SACRAMENTO,, CA",
               "state": "CA",
-              "address": "4930 ALLBAUGH DR SACRAMENTO, CA 95837-9109 US (SMF6)",
+              "address": "4930 ALLBAUGH DR SACRAMENTO, SACRAMENTO, CA 95837-9109",
               "type": "FC",
               "lat": 38.5816,
               "lng": -121.4944
@@ -12119,7 +12119,7 @@
               "name": "DPD4",
               "city": "Tualatin, OR",
               "state": "OR",
-              "address": "21504 SW 115th Ave., Tualatin, OR 97062",
+              "address": "SW 115th Ave., Tualatin, OR 97062",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -12129,7 +12129,7 @@
               "name": "HIO9",
               "city": "Hillsboro, OR",
               "state": "OR",
-              "address": "23677 NM Huffman St., Hillsboro, OR 97124",
+              "address": "NM Huffman St., Hillsboro, OR 97124",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -12159,7 +12159,7 @@
               "name": "HPD9",
               "city": "PORTLAND, OR",
               "state": "OR",
-              "address": "15000 N LOMBARD, PORTLAND, OR 97203",
+              "address": "N LOMBARD, PORTLAND, OR 97203",
               "type": "FC",
               "lat": 45.5051,
               "lng": -122.675
@@ -12169,7 +12169,7 @@
               "name": "PDX6",
               "city": "Portland, OR",
               "state": "OR",
-              "address": "15000 N Lombard St, Portland, OR 97203",
+              "address": "N Lombard St, Portland, OR 97203",
               "type": "FC",
               "lat": 45.5051,
               "lng": -122.675
@@ -12249,7 +12249,7 @@
               "name": "PDX7",
               "city": "Salem, OR",
               "state": "OR",
-              "address": "PDX7 4775 Depot Ct SE Salem, OR 97317-8983 US ( PDX7)",
+              "address": "4775 Depot Ct SE Salem, OR 97317-8983",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -12369,7 +12369,7 @@
               "name": "BFI4",
               "city": "Kent, WA",
               "state": "WA",
-              "address": "BFI420529 59th Place South, Kent, WA 98032 United States, WA",
+              "address": "59th Place South, Kent, WA 98032",
               "type": "FC",
               "lat": 47.3809,
               "lng": -122.2348
@@ -12429,7 +12429,7 @@
               "name": "IBF7",
               "city": "Redmond, WA",
               "state": "WA",
-              "address": "15230 NE 24th St, Redmond, WA 98052",
+              "address": "NE 24th St, Redmond, WA 98052",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -12639,7 +12639,7 @@
               "name": "UWA2",
               "city": "North Seattle, WA",
               "state": "WA",
-              "address": "13537 Aurora Ave. N., North Seattle, WA 98133",
+              "address": "Aurora Ave. N., North Seattle, WA 98133",
               "type": "FC",
               "lat": 47.6062,
               "lng": -122.3321
@@ -12649,7 +12649,7 @@
               "name": "TWA0",
               "city": "Seattle, WA",
               "state": "WA",
-              "address": "13537 Aurora Ave N, Seattle, WA 98133",
+              "address": "Aurora Ave N, Seattle, WA 98133",
               "type": "FC",
               "lat": 47.6062,
               "lng": -122.3321
@@ -12659,7 +12659,7 @@
               "name": "MAB7",
               "city": "SEATTLE, WA",
               "state": "WA",
-              "address": "13201 Aurora Ave. N., SEATTLE, WA 98133",
+              "address": "Aurora Ave. N., SEATTLE, WA 98133",
               "type": "FC",
               "lat": 47.6062,
               "lng": -122.3321
@@ -12729,7 +12729,7 @@
               "name": "UWA5",
               "city": "SEATTLE, WA",
               "state": "WA",
-              "address": "18323 Andover Park W., Bldg. 6, SEATTLE, WA 98188",
+              "address": "Andover Park W., Bldg. 6, SEATTLE, WA 98188",
               "type": "FC",
               "lat": 47.6062,
               "lng": -122.3321
@@ -12809,7 +12809,7 @@
               "name": "DSE4",
               "city": "Everett, WA",
               "state": "WA",
-              "address": "6611 Associated Blvd Everett WA 美国, WA 98203",
+              "address": "6611 Associated Blvd Everett, WA 98203",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -12839,7 +12839,7 @@
               "name": "BFI9",
               "city": "DUPONT, PL",
               "state": "PL",
-              "address": "3230 INTERNATIONAL PL DUPONT US 98327-7707, PL",
+              "address": "3230 INTERNATIONAL PL DUPONT US 98327-7707, PL 98327-7707",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -12849,7 +12849,7 @@
               "name": "IWA2",
               "city": "Puyallup, WA",
               "state": "WA",
-              "address": "15518 Meridian Ave E, Puyallup, WA 98375",
+              "address": "Meridian Ave E, Puyallup, WA 98375",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -12939,7 +12939,7 @@
               "name": "OLM1",
               "city": "WA, OLIMPIA",
               "state": "OLIMPIA",
-              "address": "3330 HOGUM BAY RD NE, OLIMPIA, WA, 98516-3111, OLIMPIA",
+              "address": "3330 HOGUM BAY RD NE, WA, OLIMPIA 98516-3111",
               "type": "FC",
               "lat": 37.5175,
               "lng": -122.0157
@@ -12999,7 +12999,7 @@
               "name": "GEG2",
               "city": "SPOKANE, WA",
               "state": "WA",
-              "address": "GEG2 18007 E Garland Ave SPOKANE, WA 99216-6102",
+              "address": "E Garland Ave SPOKANE, WA 99216-6102",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -13009,7 +13009,7 @@
               "name": "GEG1",
               "city": "SPOKANE, WA 99224-9471 US (GEG1)",
               "state": "WA 99224-9471 US (GEG1)",
-              "address": "10010 West Geiger Boulevard, SPOKANE, WA 99224-9471 US (GEG1)",
+              "address": "West Geiger Boulevard, SPOKANE, WA 99224-9471 US (GEG1) 99224-9471",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795
@@ -13029,7 +13029,7 @@
               "name": "PSC2",
               "city": "Pasco, WA",
               "state": "WA",
-              "address": "1351S Road 40 E 99301 - PASCO, WA -United States, WA",
+              "address": "1351S Road 40 E, PASCO, WA 99301",
               "type": "FC",
               "lat": 39.8283,
               "lng": -98.5795

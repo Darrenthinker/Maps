@@ -138,6 +138,110 @@ const cityCoordinates = {
   'shakopee': { lat: 44.7974, lng: -93.5271 },
 };
 
+// 清理和标准化地址
+function cleanAndFormatAddress(rawAddress, city, state, zipCode, warehouseCode) {
+  const zipCodeStr = String(zipCode || '');
+  const cityUpper = (city || '').toUpperCase();
+  const codeClean = (warehouseCode || '').replace(/-沃$/, '');
+  
+  // 先清理原始地址中的各种问题格式
+  let addr = rawAddress
+    .replace(/，/g, ', ')                       // 中文逗号转英文
+    .replace(/美国/g, '')                        // 移除中文"美国"
+    .replace(/Amazon\.com\.\w+\s*LLC\s*/gi, '') // 移除 "Amazon.com.dedc LLC"
+    .replace(/\s*-\s*United\s*states/gi, '')   // 移除 "- United states"
+    .replace(/United\s*State[s]?/gi, '')       // 移除 United States/State
+    .replace(/\s+USA\s*/gi, ' ')               // 移除 USA
+    .replace(/\s*US\s*\(\s*[^)]*\s*\)/gi, '')  // 移除 "US ( )" 或 "US(xxx)"
+    .replace(/\s+US\s+\(/gi, ' (')             // 移除独立的 "US ("
+    .replace(/\s*,?\s*US\s*$/i, '')            // 移除结尾的 US
+    .replace(/\s*,\s*US\s*,/gi, ',')           // 移除中间的 ", US,"
+    .replace(/\s+-\s+/g, ', ')                 // " - " 转为 ", "
+    .replace(/-沃/g, '')                        // 移除 "-沃" 后缀
+    .replace(/\s+\d{5}(-\d{4})?-[A-Za-z]+/g, '') // 移除 "32712-Apopka" 格式
+    .trim();
+  
+  // 移除地址中的仓库编码（转义特殊字符）
+  if (codeClean && codeClean.length >= 3) {
+    const escapedCode = codeClean.replace(/[.*+?^${}()|[\]\\（）]/g, '\\$&');
+    try {
+      addr = addr.replace(new RegExp(`\\s*${escapedCode}(-沃)?\\s*`, 'gi'), ' ');
+    } catch (e) {
+      // 忽略正则错误
+    }
+  }
+  
+  // 移除开头的州缩写（如 "FL DAVENPORT"）
+  if (state) {
+    addr = addr.replace(new RegExp(`^${state}\\s+`, 'i'), '');
+    // 移除地址中间的独立州缩写（如 ", FL,"）
+    addr = addr.replace(new RegExp(`,\\s*${state}\\s*,`, 'gi'), ',');
+  }
+  
+  // 移除地址开头的邮编（仅当后面跟着非数字内容时，如 "02149 201 Beacham Street"）
+  // 但保留门牌号（如 "64165 19th AVE"）
+  addr = addr.replace(/^(\d{5})\s+(\d+\s+)/, '$2'); // 移除开头邮编但保留门牌号
+  addr = addr.replace(/^(\d{5}(-\d{4})?)\s+([A-Za-z])/, '$3'); // 移除开头邮编
+  
+  // 清理包含邮编和城市名混杂的格式（如 "22939-2437-FISHERSVILLE"）
+  addr = addr.replace(/(\d{5})-(\d{4})-([A-Za-z]+)/g, '$3');
+  
+  // 移除原地址中所有的州名和邮编
+  if (state) {
+    // 各种格式的州+邮编
+    addr = addr
+      .replace(new RegExp(`,\\s*${state}\\s*,?\\s*\\d{5}(-\\d{4})?`, 'gi'), '')
+      .replace(new RegExp(`,\\s*\\d{5}(-\\d{4})?\\s*,?\\s*${state}`, 'gi'), '')
+      .replace(new RegExp(`\\s+${state}\\s+\\d{5}`, 'gi'), '')
+      .replace(new RegExp(`,\\s*${state}\\s*$`, 'gi'), '')
+      .replace(new RegExp(`\\s+${state}\\s*$`, 'gi'), '');
+  }
+  
+  // 移除孤立的邮编
+  addr = addr.replace(/,\s*\d{5}(-\d{4})?\s*(,|$)/g, '$2');
+  
+  // 移除地址中间的邮编（如 "Pkwy 95742,"）
+  addr = addr.replace(/\s+\d{5}(-\d{4})?,/g, ',');
+  addr = addr.replace(/\s+\d{5}(-\d{4})?\s+/g, ' ');
+  
+  // 清理多余逗号和空格
+  addr = addr
+    .replace(/\s+/g, ' ')
+    .replace(/,\s*,/g, ',')
+    .replace(/,\s*$/, '')
+    .replace(/^,\s*/, '')
+    .trim();
+  
+  // 检查地址是否包含城市名
+  const hasCity = cityUpper && addr.toUpperCase().includes(cityUpper);
+  
+  // 如果没有城市名，添加城市
+  if (!hasCity && city) {
+    addr = `${addr}, ${city}`;
+  }
+  
+  // 添加标准化的州和邮编
+  if (state && zipCodeStr) {
+    addr = `${addr}, ${state} ${zipCodeStr}`;
+  } else if (state) {
+    addr = `${addr}, ${state}`;
+  }
+  
+  // 移除重复的州名（如 "CA, CA"）
+  if (state) {
+    addr = addr.replace(new RegExp(`,\\s*${state}\\s*,\\s*${state}\\s`, 'gi'), `, ${state} `);
+  }
+  
+  // 最终清理
+  return addr
+    .replace(/\s+/g, ' ')
+    .replace(/\s*,\s*/g, ', ')
+    .replace(/,\s*,/g, ',')
+    .replace(/^,\s*/, '')
+    .replace(/,\s*$/, '')
+    .trim();
+}
+
 // 从城市名获取坐标
 function getCityCoordinates(city, state) {
   if (!city) return null;
@@ -181,8 +285,12 @@ function processExcel() {
     const code = row['仓库编码'] || '';
     const state = row['州/郡'] || '';
     const city = row['城市'] || '';
-    const streetAddress = row['地址'] || '';
-    const zipCode = row['邮编'] || '';
+    const rawAddress = row['地址'] || '';
+    // 邮编需要补全前导零（美国邮编是5位）
+    let zipCode = String(row['邮编'] || '');
+    if (zipCode && zipCode.length < 5 && /^\d+$/.test(zipCode)) {
+      zipCode = zipCode.padStart(5, '0');
+    }
     const status = row['状态'] || '';
     
     // 跳过无效数据
@@ -197,35 +305,11 @@ function processExcel() {
       continue;
     }
     
-    // 组合完整地址：街道地址, 城市, 州 邮编
-    let fullAddress = streetAddress.trim();
-    if (city) {
-      // 检查街道地址是否已包含城市名
-      if (!fullAddress.toUpperCase().includes(city.toUpperCase())) {
-        fullAddress += fullAddress ? `, ${city}` : city;
-      }
-    }
-    if (state) {
-      // 检查是否已包含州名
-      if (!fullAddress.toUpperCase().includes(`, ${state.toUpperCase()}`) && 
-          !fullAddress.toUpperCase().endsWith(state.toUpperCase())) {
-        fullAddress += `, ${state}`;
-      }
-    }
-    if (zipCode) {
-      // 检查是否已包含邮编
-      const zipClean = zipCode.toString().split('-')[0]; // 取主邮编
-      if (!fullAddress.includes(zipClean)) {
-        fullAddress += ` ${zipCode}`;
-      }
-    }
+    // 清理仓库编码中的后缀
+    const cleanCode = code.trim().replace(/-沃$/, '').replace(/ UPS$/, '');
     
-    // 清理地址格式
-    fullAddress = fullAddress
-      .replace(/\s+/g, ' ')
-      .replace(/\s*,\s*/g, ', ')
-      .replace(/,\s*,/g, ',')
-      .trim();
+    // 清理和标准化地址
+    let fullAddress = cleanAndFormatAddress(rawAddress, city, state, zipCode, cleanCode);
     
     // 获取坐标
     const coords = getCityCoordinates(city, state) || { lat: 39.8283, lng: -98.5795 }; // 默认美国中心
@@ -234,8 +318,8 @@ function processExcel() {
     const cityFormatted = city ? `${city}, ${state}` : state;
     
     warehouses.push({
-      code: code.trim(),
-      name: code.trim(),
+      code: cleanCode,
+      name: cleanCode,
       city: cityFormatted,
       state: state.trim(),
       address: fullAddress,
