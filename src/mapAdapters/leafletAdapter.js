@@ -303,7 +303,6 @@ export function createLeafletAdapter(mapId) {
         popupContent = `
           <div class="map-popup map-popup--apple map-popup--warehouse">
             <div class="map-popup__header">
-              <span class="map-popup__icon">📦</span>
               <span class="map-popup__code">${code}</span>
             </div>
             <div class="map-popup__address">${address}</div>
