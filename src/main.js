@@ -1351,11 +1351,24 @@ function renderWarehousesView() {
           for (const warehouse of country.warehouses) {
             const companyLabel = warehouse.company ? ` · ${warehouse.company}` : '';
             const typeLabel = warehouse.type ? `<span class="warehouse-type-tag">${warehouse.type}</span>` : '';
-            const cityLabel = warehouse.city ? `<span class="warehouse-city">${warehouse.city}</span>` : '';
-            const addressLine = warehouse.address ? `<div class="result-item__address">${warehouse.address}</div>` : '';
+            
+            // 获取州名中文
+            const stateCode = warehouse.state || '';
+            const stateZh = state.usStatesZh?.states?.[stateCode] || '';
+            const stateLabel = stateCode ? `<span class="warehouse-state">${stateCode}${stateZh ? ' ' + stateZh : ''}</span>` : '';
+            
+            // 处理地址：替换 United States/United states 为 US
+            let address = warehouse.address || '';
+            address = address.replace(/[,\s]*-?\s*United\s*[Ss]tates?\s*$/i, ', US')
+                            .replace(/[,\s]*-?\s*US\s*$/i, ', US');
+            const addressLine = address ? `<div class="result-item__address">${address}</div>` : '';
+            
             html += `
-              <li class="result-item result-item--warehouse" data-warehouse="${warehouse.code}" data-lat="${warehouse.lat}" data-lng="${warehouse.lng}" data-category="${catKey}" data-address="${warehouse.address || ''}">
-                <div class="result-item__title">${warehouse.code}${companyLabel} ${typeLabel} ${cityLabel}</div>
+              <li class="result-item result-item--warehouse" data-warehouse="${warehouse.code}" data-lat="${warehouse.lat}" data-lng="${warehouse.lng}" data-category="${catKey}" data-address="${address}">
+                <div class="result-item__title">
+                  <span class="warehouse-code-group">${warehouse.code}${companyLabel} ${typeLabel}</span>
+                  ${stateLabel}
+                </div>
                 ${addressLine}
               </li>
             `;
@@ -1888,6 +1901,14 @@ async function loadData() {
     state.airportsClassified = airportsClassified;
     state.portsClassified = portsClassified;
     state.warehousesData = warehousesData;
+    
+    // 加载美国州名中文数据
+    try {
+      const usStatesRes = await fetch("/data/us-states-zh.json");
+      state.usStatesZh = await usStatesRes.json();
+    } catch (e) {
+      state.usStatesZh = null;
+    }
     
     // 更新 Tab 数量
     updateTabCounts();

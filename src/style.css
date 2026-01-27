@@ -1570,11 +1570,27 @@ body {
   text-transform: uppercase;
 }
 
-.warehouse-city {
+/* 仓库标题行布局 */
+.result-item--warehouse .result-item__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.warehouse-code-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.warehouse-state {
   font-size: 12px;
   font-weight: 400;
-  color: #94a3b8;
-  margin-left: 8px;
+  color: #64748b;
+  text-align: right;
+  flex-shrink: 0;
 }
 
 .result-item__address {
