@@ -1245,18 +1245,18 @@ function renderClassifiedView() {
               const aTotal = isAirports ? a[1].totalAirports : a[1].totalPorts;
               const bTotal = isAirports ? b[1].totalAirports : b[1].totalPorts;
               
-              // 东亚地区特殊排序：朝鲜排在中国台湾前面
+              // 东亚地区特殊排序：朝鲜排在中国台湾前面，四字名称排最后
               if (regCode === 'EA') {
-                // 四字名称国家的优先级（数字越大越靠后）
-                const fourCharOrder = {
+                // 特殊排序优先级（数字越大越靠后）
+                const specialOrder = {
                   'KP': 10,  // 朝鲜 - 排在四字名称前
                   'TW': 20,  // 中国台湾
                   'HK': 30,  // 中国香港
                   'MO': 40,  // 中国澳门
-                  'XS': 50   // 南海诸岛
+                  'XP': 50   // 南海诸岛 - 排最后
                 };
-                const aOrder = fourCharOrder[a[0]] || 0;
-                const bOrder = fourCharOrder[b[0]] || 0;
+                const aOrder = specialOrder[a[0]] || 0;
+                const bOrder = specialOrder[b[0]] || 0;
                 
                 // 如果两个都有特殊排序，按特殊顺序
                 if (aOrder > 0 && bOrder > 0) {
