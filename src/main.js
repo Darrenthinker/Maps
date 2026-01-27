@@ -1532,8 +1532,13 @@ function updateTabCounts() {
   }
   if (state.warehousesData) {
     let total = 0;
+    // 计算实际仓库数量
     for (const cat of Object.values(state.warehousesData.categories)) {
-      total += cat.totalWarehouses || 0;
+      if (cat.countries) {
+        for (const country of Object.values(cat.countries)) {
+          total += country.warehouses ? country.warehouses.length : 0;
+        }
+      }
     }
     warehousesCountEl.textContent = total;
   }
