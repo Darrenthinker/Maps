@@ -1345,10 +1345,13 @@ function renderWarehousesView() {
           
           for (const warehouse of country.warehouses) {
             const companyLabel = warehouse.company ? ` · ${warehouse.company}` : '';
+            const typeLabel = warehouse.type ? `<span class="warehouse-type-tag">${warehouse.type}</span>` : '';
+            const addressLine = warehouse.address ? `<div class="result-item__address">${warehouse.address}</div>` : '';
             html += `
-              <li class="result-item result-item--airport" data-warehouse="${warehouse.code}" data-lat="${warehouse.lat}" data-lng="${warehouse.lng}" data-category="${catKey}">
-                <div class="result-item__title">${warehouse.code} · ${warehouse.name}</div>
+              <li class="result-item result-item--warehouse" data-warehouse="${warehouse.code}" data-lat="${warehouse.lat}" data-lng="${warehouse.lng}" data-category="${catKey}" data-address="${warehouse.address || ''}">
+                <div class="result-item__title">${warehouse.code} ${typeLabel}</div>
                 <div class="result-item__meta">${warehouse.city}${companyLabel}</div>
+                ${addressLine}
               </li>
             `;
           }
@@ -1403,14 +1406,20 @@ function bindWarehouseTreeEvents() {
     });
   });
   
-  // 仓库项点击 - 在地图上显示位置（带分类图标）
+  // 仓库项点击 - 在地图上显示位置（带分类图标和详细地址）
   document.querySelectorAll('.result-item[data-warehouse]').forEach(el => {
     el.addEventListener('click', () => {
       const lat = parseFloat(el.dataset.lat);
       const lng = parseFloat(el.dataset.lng);
       const category = el.dataset.category;
+      const code = el.dataset.warehouse;
+      const address = el.dataset.address || '';
       if (!isNaN(lat) && !isNaN(lng)) {
-        mapAdapter.focusOnCoords(lat, lng, 12, 'warehouse', category);
+        // 传递仓库信息用于弹窗显示
+        mapAdapter.focusOnCoords(lat, lng, 14, 'warehouse', category, {
+          code: code,
+          address: address
+        });
         if (window.innerWidth <= 768) {
           app.classList.remove("app--sidebar-open");
         }

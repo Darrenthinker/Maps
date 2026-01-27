@@ -287,6 +287,7 @@ export function createLeafletAdapter(mapId) {
       const code = nodeInfo.code || '';
       const nameZh = nodeInfo.nameZh || '';
       const nameEn = nodeInfo.name || '';
+      const address = nodeInfo.address || '';
       const intlClass = nodeInfo.intl ? 'intl' : 'domestic';
       const intlText = nodeInfo.intl ? '国际' : '国内';
       
@@ -295,22 +296,39 @@ export function createLeafletAdapter(mapId) {
       // 简化英文名（如果太长，截取前30个字符）
       const shortNameEn = nameEn.length > 30 ? nameEn.substring(0, 30) + '...' : nameEn;
       
-      let popupContent = `
-        <div class="map-popup map-popup--apple">
-          <div class="map-popup__header">
-            <span class="map-popup__code">${code}</span>
-            <span class="map-popup__tag map-popup__tag--${intlClass}">${intlText}</span>
+      let popupContent = '';
+      
+      // 仓库类型 - 显示地址
+      if (type === 'warehouse' && address) {
+        popupContent = `
+          <div class="map-popup map-popup--apple map-popup--warehouse">
+            <div class="map-popup__header">
+              <span class="map-popup__icon">📦</span>
+              <span class="map-popup__code">${code}</span>
+            </div>
+            <div class="map-popup__address">${address}</div>
           </div>
-          ${nameZh ? `<div class="map-popup__name-zh">${shortNameZh}</div>` : ''}
-          <div class="map-popup__name-en">${shortNameEn}</div>
-        </div>
-      `;
+        `;
+      } else {
+        // 机场/港口类型
+        popupContent = `
+          <div class="map-popup map-popup--apple">
+            <div class="map-popup__header">
+              <span class="map-popup__code">${code}</span>
+              <span class="map-popup__tag map-popup__tag--${intlClass}">${intlText}</span>
+            </div>
+            ${nameZh ? `<div class="map-popup__name-zh">${shortNameZh}</div>` : ''}
+            <div class="map-popup__name-en">${shortNameEn}</div>
+          </div>
+        `;
+      }
       
       addressMarker.bindPopup(popupContent, {
         className: 'custom-popup custom-popup--apple',
         closeButton: false,
         offset: [0, -5],
-        autoPan: false  // 禁用自动平移，我们手动控制
+        autoPan: false,  // 禁用自动平移，我们手动控制
+        maxWidth: 350    // 增加最大宽度以显示地址
       });
       
       // 先设置视图，向上偏移一点以留出 popup 空间
