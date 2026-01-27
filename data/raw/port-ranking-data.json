@@ -1,0 +1,406 @@
+{
+  "description": "港口排序参考数据 - 货物吞吐量、城市人口、城市GDP",
+  "lastUpdated": "2026-01-27",
+  "sources": {
+    "cargo": "世界港口排名/Lloyd's List/各国港口数据",
+    "population": "联合国人口数据",
+    "gdp": "国家/地区统计数据"
+  },
+  "countries": {
+    "CN": {
+      "name": "中国",
+      "ports": {
+        "CNSHA": { "cargo": 47000000, "intl": 1 },
+        "CNNGB": { "cargo": 33500000, "intl": 1 },
+        "CNSZX": { "cargo": 30000000, "intl": 1 },
+        "CNQIN": { "cargo": 24000000, "intl": 1 },
+        "CNGZH": { "cargo": 24000000, "intl": 1 },
+        "CNTXG": { "cargo": 22000000, "intl": 1 },
+        "CNDAL": { "cargo": 18000000, "intl": 1 },
+        "CNXMN": { "cargo": 12000000, "intl": 1 },
+        "CNYTN": { "cargo": 10000000, "intl": 1 },
+        "CNLYG": { "cargo": 9000000, "intl": 1 },
+        "CNTAO": { "cargo": 8000000, "intl": 1 },
+        "CNZJG": { "cargo": 6000000, "intl": 1 },
+        "CNFOC": { "cargo": 4000000, "intl": 1 },
+        "CNNKG": { "cargo": 3500000, "intl": 1 },
+        "CNWUH": { "cargo": 2000000, "intl": 0 },
+        "CNCKG": { "cargo": 1500000, "intl": 0 }
+      }
+    },
+    "JP": {
+      "name": "日本",
+      "ports": {
+        "JPYOK": { "cargo": 8500000, "intl": 1 },
+        "JPTYO": { "cargo": 7500000, "intl": 1 },
+        "JPNGO": { "cargo": 7000000, "intl": 1 },
+        "JPUKB": { "cargo": 6500000, "intl": 1 },
+        "JPOSA": { "cargo": 5500000, "intl": 1 },
+        "JPHKT": { "cargo": 4000000, "intl": 1 },
+        "JPCHB": { "cargo": 3500000, "intl": 1 },
+        "JPKIT": { "cargo": 2500000, "intl": 1 }
+      }
+    },
+    "KR": {
+      "name": "韩国",
+      "ports": {
+        "KRPUS": { "cargo": 22000000, "intl": 1 },
+        "KRINC": { "cargo": 3500000, "intl": 1 },
+        "KRKAN": { "cargo": 2500000, "intl": 1 },
+        "KRULS": { "cargo": 2000000, "intl": 1 },
+        "KRPTK": { "cargo": 1500000, "intl": 1 }
+      }
+    },
+    "HK": {
+      "name": "中国香港",
+      "ports": { "HKHKG": { "cargo": 16500000, "intl": 1 } }
+    },
+    "TW": {
+      "name": "中国台湾",
+      "ports": {
+        "TWKHH": { "cargo": 10000000, "intl": 1 },
+        "TWKEL": { "cargo": 4500000, "intl": 1 },
+        "TWTXG": { "cargo": 1800000, "intl": 1 }
+      }
+    },
+    "SG": {
+      "name": "新加坡",
+      "ports": { "SGSIN": { "cargo": 39000000, "intl": 1 } }
+    },
+    "MY": {
+      "name": "马来西亚",
+      "ports": {
+        "MYPKG": { "cargo": 14000000, "intl": 1 },
+        "MYTPP": { "cargo": 11000000, "intl": 1 },
+        "MYPEN": { "cargo": 1500000, "intl": 1 },
+        "MYJHB": { "cargo": 1200000, "intl": 1 }
+      }
+    },
+    "TH": {
+      "name": "泰国",
+      "ports": {
+        "THLCH": { "cargo": 8500000, "intl": 1 },
+        "THBKK": { "cargo": 1500000, "intl": 1 },
+        "THSGZ": { "cargo": 800000, "intl": 1 }
+      }
+    },
+    "VN": {
+      "name": "越南",
+      "ports": {
+        "VNSGN": { "cargo": 8500000, "intl": 1 },
+        "VNHPH": { "cargo": 6500000, "intl": 1 },
+        "VNDAD": { "cargo": 1200000, "intl": 1 },
+        "VNHAN": { "cargo": 800000, "intl": 1 }
+      }
+    },
+    "ID": {
+      "name": "印度尼西亚",
+      "ports": {
+        "IDJKT": { "cargo": 8000000, "intl": 1 },
+        "IDSUB": { "cargo": 4500000, "intl": 1 },
+        "IDBLW": { "cargo": 2500000, "intl": 1 },
+        "IDSMR": { "cargo": 2000000, "intl": 1 }
+      }
+    },
+    "PH": {
+      "name": "菲律宾",
+      "ports": {
+        "PHMNL": { "cargo": 5500000, "intl": 1 },
+        "PHCEB": { "cargo": 1200000, "intl": 1 },
+        "PHDVO": { "cargo": 800000, "intl": 1 }
+      }
+    },
+    "IN": {
+      "name": "印度",
+      "ports": {
+        "INNSA": { "cargo": 7200000, "intl": 1 },
+        "INMUN": { "cargo": 5000000, "intl": 1 },
+        "INPAV": { "cargo": 4500000, "intl": 1 },
+        "INMAA": { "cargo": 3800000, "intl": 1 },
+        "INCCU": { "cargo": 2500000, "intl": 1 },
+        "INCOK": { "cargo": 1500000, "intl": 1 }
+      }
+    },
+    "PK": {
+      "name": "巴基斯坦",
+      "ports": {
+        "PKKHI": { "cargo": 2800000, "intl": 1 },
+        "PKGWD": { "cargo": 1500000, "intl": 1 }
+      }
+    },
+    "BD": {
+      "name": "孟加拉国",
+      "ports": {
+        "BDCGP": { "cargo": 3200000, "intl": 1 },
+        "BDDAC": { "cargo": 800000, "intl": 0 }
+      }
+    },
+    "LK": {
+      "name": "斯里兰卡",
+      "ports": { "LKCMB": { "cargo": 7200000, "intl": 1 } }
+    },
+    "AE": {
+      "name": "阿联酋",
+      "ports": {
+        "AEJEA": { "cargo": 15000000, "intl": 1 },
+        "AEAUH": { "cargo": 5500000, "intl": 1 },
+        "AESHJ": { "cargo": 1500000, "intl": 1 }
+      }
+    },
+    "SA": {
+      "name": "沙特阿拉伯",
+      "ports": {
+        "SAJED": { "cargo": 5000000, "intl": 1 },
+        "SADMM": { "cargo": 4500000, "intl": 1 },
+        "SAJUB": { "cargo": 2000000, "intl": 1 }
+      }
+    },
+    "TR": {
+      "name": "土耳其",
+      "ports": {
+        "TRIST": { "cargo": 5500000, "intl": 1 },
+        "TRMER": { "cargo": 2000000, "intl": 1 },
+        "TRIZM": { "cargo": 1500000, "intl": 1 }
+      }
+    },
+    "IL": {
+      "name": "以色列",
+      "ports": {
+        "ILASH": { "cargo": 1800000, "intl": 1 },
+        "ILHFA": { "cargo": 1500000, "intl": 1 }
+      }
+    },
+    "OM": {
+      "name": "阿曼",
+      "ports": { "OMSLL": { "cargo": 5500000, "intl": 1 } }
+    },
+    "QA": {
+      "name": "卡塔尔",
+      "ports": { "QADOH": { "cargo": 2500000, "intl": 1 } }
+    },
+    "KW": {
+      "name": "科威特",
+      "ports": { "KWKWI": { "cargo": 1200000, "intl": 1 } }
+    },
+    "BH": {
+      "name": "巴林",
+      "ports": { "BHBAH": { "cargo": 800000, "intl": 1 } }
+    },
+    "IR": {
+      "name": "伊朗",
+      "ports": {
+        "IRBND": { "cargo": 3500000, "intl": 1 },
+        "IRBUZ": { "cargo": 2000000, "intl": 1 }
+      }
+    },
+    "US": {
+      "name": "美国",
+      "ports": {
+        "USLAX": { "cargo": 10000000, "intl": 1 },
+        "USLGB": { "cargo": 9200000, "intl": 1 },
+        "USNYC": { "cargo": 7500000, "intl": 1 },
+        "USSAV": { "cargo": 5000000, "intl": 1 },
+        "USHOU": { "cargo": 4000000, "intl": 1 },
+        "USSEA": { "cargo": 3800000, "intl": 1 },
+        "USOAK": { "cargo": 2500000, "intl": 1 },
+        "USCHA": { "cargo": 2300000, "intl": 1 },
+        "USBAL": { "cargo": 1200000, "intl": 1 },
+        "USMIA": { "cargo": 1000000, "intl": 1 }
+      }
+    },
+    "CA": {
+      "name": "加拿大",
+      "ports": {
+        "CAVAN": { "cargo": 3500000, "intl": 1 },
+        "CAMTR": { "cargo": 1800000, "intl": 1 },
+        "CATOR": { "cargo": 800000, "intl": 1 },
+        "CAHAL": { "cargo": 600000, "intl": 1 }
+      }
+    },
+    "MX": {
+      "name": "墨西哥",
+      "ports": {
+        "MXMAN": { "cargo": 3500000, "intl": 1 },
+        "MXLZC": { "cargo": 2000000, "intl": 1 },
+        "MXVER": { "cargo": 1200000, "intl": 1 }
+      }
+    },
+    "PA": {
+      "name": "巴拿马",
+      "ports": {
+        "PAPTC": { "cargo": 5500000, "intl": 1 },
+        "PABLB": { "cargo": 3000000, "intl": 1 },
+        "PACTB": { "cargo": 2500000, "intl": 1 }
+      }
+    },
+    "BR": {
+      "name": "巴西",
+      "ports": {
+        "BRSTS": { "cargo": 4500000, "intl": 1 },
+        "BRPNG": { "cargo": 1800000, "intl": 1 },
+        "BRRIO": { "cargo": 1200000, "intl": 1 },
+        "BRIQI": { "cargo": 1000000, "intl": 1 }
+      }
+    },
+    "AR": {
+      "name": "阿根廷",
+      "ports": { "ARBUE": { "cargo": 1800000, "intl": 1 } }
+    },
+    "CL": {
+      "name": "智利",
+      "ports": {
+        "CLSAI": { "cargo": 2000000, "intl": 1 },
+        "CLVAP": { "cargo": 1200000, "intl": 1 }
+      }
+    },
+    "CO": {
+      "name": "哥伦比亚",
+      "ports": {
+        "COCTG": { "cargo": 3200000, "intl": 1 },
+        "COBUN": { "cargo": 1500000, "intl": 1 }
+      }
+    },
+    "PE": {
+      "name": "秘鲁",
+      "ports": { "PECLL": { "cargo": 2500000, "intl": 1 } }
+    },
+    "EC": {
+      "name": "厄瓜多尔",
+      "ports": { "ECGYE": { "cargo": 2200000, "intl": 1 } }
+    },
+    "DE": {
+      "name": "德国",
+      "ports": {
+        "DEHAM": { "cargo": 8500000, "intl": 1 },
+        "DEBRV": { "cargo": 3000000, "intl": 1 },
+        "DEWVN": { "cargo": 800000, "intl": 1 }
+      }
+    },
+    "GB": {
+      "name": "英国",
+      "ports": {
+        "GBFXT": { "cargo": 4500000, "intl": 1 },
+        "GBSOU": { "cargo": 2000000, "intl": 1 },
+        "GBLIV": { "cargo": 900000, "intl": 1 },
+        "GBLON": { "cargo": 2500000, "intl": 1 }
+      }
+    },
+    "FR": {
+      "name": "法国",
+      "ports": {
+        "FRLEH": { "cargo": 3000000, "intl": 1 },
+        "FRMRS": { "cargo": 1500000, "intl": 1 },
+        "FRDKK": { "cargo": 800000, "intl": 1 }
+      }
+    },
+    "NL": {
+      "name": "荷兰",
+      "ports": { "NLRTM": { "cargo": 15000000, "intl": 1 } }
+    },
+    "BE": {
+      "name": "比利时",
+      "ports": {
+        "BEANR": { "cargo": 14000000, "intl": 1 },
+        "BEZEE": { "cargo": 1500000, "intl": 1 }
+      }
+    },
+    "IT": {
+      "name": "意大利",
+      "ports": {
+        "ITGOA": { "cargo": 2800000, "intl": 1 },
+        "ITGIT": { "cargo": 2500000, "intl": 1 },
+        "ITVCE": { "cargo": 800000, "intl": 1 },
+        "ITLIV": { "cargo": 800000, "intl": 1 }
+      }
+    },
+    "ES": {
+      "name": "西班牙",
+      "ports": {
+        "ESVLC": { "cargo": 5500000, "intl": 1 },
+        "ESALG": { "cargo": 2000000, "intl": 1 },
+        "ESBCN": { "cargo": 3500000, "intl": 1 }
+      }
+    },
+    "PT": {
+      "name": "葡萄牙",
+      "ports": {
+        "PTLIS": { "cargo": 800000, "intl": 1 },
+        "PTSIN": { "cargo": 1800000, "intl": 1 }
+      }
+    },
+    "GR": {
+      "name": "希腊",
+      "ports": { "GRPIR": { "cargo": 5500000, "intl": 1 } }
+    },
+    "PL": {
+      "name": "波兰",
+      "ports": { "PLGDN": { "cargo": 2500000, "intl": 1 } }
+    },
+    "RU": {
+      "name": "俄罗斯",
+      "ports": {
+        "RULED": { "cargo": 2500000, "intl": 1 },
+        "RUVVO": { "cargo": 1200000, "intl": 1 },
+        "RUNVS": { "cargo": 1500000, "intl": 1 }
+      }
+    },
+    "SE": {
+      "name": "瑞典",
+      "ports": { "SEGOT": { "cargo": 800000, "intl": 1 } }
+    },
+    "NO": {
+      "name": "挪威",
+      "ports": { "NOBGO": { "cargo": 300000, "intl": 1 } }
+    },
+    "DK": {
+      "name": "丹麦",
+      "ports": { "DKCPH": { "cargo": 600000, "intl": 1 } }
+    },
+    "FI": {
+      "name": "芬兰",
+      "ports": { "FIHEL": { "cargo": 500000, "intl": 1 } }
+    },
+    "EG": {
+      "name": "埃及",
+      "ports": {
+        "EGPSD": { "cargo": 3800000, "intl": 1 },
+        "EGALY": { "cargo": 1800000, "intl": 1 }
+      }
+    },
+    "ZA": {
+      "name": "南非",
+      "ports": {
+        "ZADUR": { "cargo": 2800000, "intl": 1 },
+        "ZACPT": { "cargo": 1000000, "intl": 1 }
+      }
+    },
+    "MA": {
+      "name": "摩洛哥",
+      "ports": { "MAPTM": { "cargo": 7500000, "intl": 1 } }
+    },
+    "KE": {
+      "name": "肯尼亚",
+      "ports": { "KEMBA": { "cargo": 1500000, "intl": 1 } }
+    },
+    "NG": {
+      "name": "尼日利亚",
+      "ports": { "NGLOS": { "cargo": 1200000, "intl": 1 } }
+    },
+    "AU": {
+      "name": "澳大利亚",
+      "ports": {
+        "AUMEL": { "cargo": 3200000, "intl": 1 },
+        "AUSYD": { "cargo": 2800000, "intl": 1 },
+        "AUBNE": { "cargo": 1500000, "intl": 1 },
+        "AUFRE": { "cargo": 1200000, "intl": 1 }
+      }
+    },
+    "NZ": {
+      "name": "新西兰",
+      "ports": {
+        "NZAKL": { "cargo": 1200000, "intl": 1 },
+        "NZTRG": { "cargo": 1000000, "intl": 1 }
+      }
+    }
+  }
+}
