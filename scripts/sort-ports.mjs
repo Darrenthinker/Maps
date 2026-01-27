@@ -15,13 +15,13 @@ const RANKING_DATA_PATH = path.join(RAW_DIR, "port-ranking-data.json");
 const AIRPORT_RANKING_PATH = path.join(RAW_DIR, "airport-ranking-data.json");
 const CAPITALS_PATH = path.join(RAW_DIR, "country-capitals.json");
 
-// 排序权重配置
+// 排序权重配置 - 港口吞吐量是主要排序依据
 const WEIGHTS = {
   international: 1000,  // 国际港口加分
   capital: 500,         // 首都加分
-  cargo: 0.00001,       // 货物吞吐量权重 (TEU -> 分)
-  population: 0.00001,  // 人口权重 (人 -> 分)
-  gdp: 0.01             // GDP权重 (亿元 -> 分)
+  cargo: 0.0001,        // 货物吞吐量权重 (TEU -> 分) - 主要因素
+  population: 0.000001, // 人口权重 (人 -> 分) - 次要因素
+  gdp: 0.001            // GDP权重 (亿元 -> 分) - 次要因素
 };
 
 // 加载港口排序参考数据

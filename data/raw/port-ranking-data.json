@@ -1,8 +1,8 @@
 {
-  "description": "港口排序参考数据 - 货物吞吐量、城市人口、城市GDP",
+  "description": "港口排序参考数据 - 货物吞吐量(TEU)、城市人口、城市GDP",
   "lastUpdated": "2026-01-27",
   "sources": {
-    "cargo": "世界港口排名/Lloyd's List/各国港口数据",
+    "cargo": "2025年中国港口吞吐量TOP20/Lloyd's List全球港口排名",
     "population": "联合国人口数据",
     "gdp": "国家/地区统计数据"
   },
@@ -10,35 +10,57 @@
     "CN": {
       "name": "中国",
       "ports": {
-        "CNSHA": { "cargo": 47000000, "intl": 1 },
-        "CNNGB": { "cargo": 33500000, "intl": 1 },
-        "CNSZX": { "cargo": 30000000, "intl": 1 },
-        "CNQIN": { "cargo": 24000000, "intl": 1 },
-        "CNGZH": { "cargo": 24000000, "intl": 1 },
-        "CNTXG": { "cargo": 22000000, "intl": 1 },
+        "CNNBG": { "cargo": 70000000, "intl": 1 },
+        "CNNBO": { "cargo": 70000000, "intl": 1 },
+        "CNMAJ": { "cargo": 69000000, "intl": 1 },
+        "CNSGH": { "cargo": 49500000, "intl": 1 },
+        "CNSHG": { "cargo": 49500000, "intl": 1 },
+        "CNPDG": { "cargo": 49000000, "intl": 1 },
+        "CNQIN": { "cargo": 32000000, "intl": 1 },
+        "CNGGZ": { "cargo": 30000000, "intl": 1 },
+        "CNGZG": { "cargo": 30000000, "intl": 1 },
+        "CNSNZ": { "cargo": 29000000, "intl": 1 },
+        "CNSZP": { "cargo": 29000000, "intl": 1 },
+        "CNYTN": { "cargo": 28000000, "intl": 1 },
+        "CNRZH": { "cargo": 26000000, "intl": 1 },
+        "CNTXG": { "cargo": 25000000, "intl": 1 },
+        "CNTNG": { "cargo": 25000000, "intl": 1 },
+        "CNTNJ": { "cargo": 25000000, "intl": 1 },
+        "CNYAT": { "cargo": 23000000, "intl": 1 },
+        "CNYTG": { "cargo": 23000000, "intl": 1 },
+        "CNTGS": { "cargo": 22000000, "intl": 1 },
+        "CNSZH": { "cargo": 20000000, "intl": 1 },
         "CNDAL": { "cargo": 18000000, "intl": 1 },
-        "CNXMN": { "cargo": 12000000, "intl": 1 },
-        "CNYTN": { "cargo": 10000000, "intl": 1 },
-        "CNLYG": { "cargo": 9000000, "intl": 1 },
-        "CNTAO": { "cargo": 8000000, "intl": 1 },
-        "CNZJG": { "cargo": 6000000, "intl": 1 },
-        "CNFOC": { "cargo": 4000000, "intl": 1 },
-        "CNNKG": { "cargo": 3500000, "intl": 1 },
-        "CNWUH": { "cargo": 2000000, "intl": 0 },
-        "CNCKG": { "cargo": 1500000, "intl": 0 }
+        "CNXMG": { "cargo": 12500000, "intl": 1 },
+        "CNXAM": { "cargo": 12500000, "intl": 1 },
+        "CNHHT": { "cargo": 12000000, "intl": 1 },
+        "CNLYG": { "cargo": 11000000, "intl": 1 },
+        "CNNJI": { "cargo": 9000000, "intl": 1 },
+        "CNNTG": { "cargo": 8000000, "intl": 1 },
+        "CNFZH": { "cargo": 7500000, "intl": 1 },
+        "CNQZL": { "cargo": 6500000, "intl": 1 },
+        "CNWZO": { "cargo": 6000000, "intl": 1 },
+        "CNDGG": { "cargo": 5500000, "intl": 1 },
+        "CNJAX": { "cargo": 5000000, "intl": 1 },
+        "CNFAN": { "cargo": 4500000, "intl": 1 },
+        "CNNHN": { "cargo": 3500000, "intl": 0 },
+        "CNCQI": { "cargo": 3000000, "intl": 0 }
       }
     },
     "JP": {
       "name": "日本",
       "ports": {
-        "JPYOK": { "cargo": 8500000, "intl": 1 },
-        "JPTYO": { "cargo": 7500000, "intl": 1 },
+        "JPTYO": { "cargo": 9500000, "intl": 1 },
+        "JPARI": { "cargo": 9000000, "intl": 1 },
+        "JPNTO": { "cargo": 8500000, "intl": 1 },
+        "JPSHG": { "cargo": 8000000, "intl": 1 },
+        "JPYOK": { "cargo": 7500000, "intl": 1 },
         "JPNGO": { "cargo": 7000000, "intl": 1 },
         "JPUKB": { "cargo": 6500000, "intl": 1 },
-        "JPOSA": { "cargo": 5500000, "intl": 1 },
-        "JPHKT": { "cargo": 4000000, "intl": 1 },
-        "JPCHB": { "cargo": 3500000, "intl": 1 },
-        "JPKIT": { "cargo": 2500000, "intl": 1 }
+        "JPOSA": { "cargo": 6000000, "intl": 1 },
+        "JPHKT": { "cargo": 5000000, "intl": 1 },
+        "JPCHB": { "cargo": 4000000, "intl": 1 },
+        "JPKIT": { "cargo": 3000000, "intl": 1 }
       }
     },
     "KR": {
@@ -196,16 +218,22 @@
     "US": {
       "name": "美国",
       "ports": {
+        "USNYC": { "cargo": 9500000, "intl": 1 },
+        "USBOY": { "cargo": 9400000, "intl": 1 },
+        "USMNH": { "cargo": 9300000, "intl": 1 },
         "USLAX": { "cargo": 10000000, "intl": 1 },
         "USLGB": { "cargo": 9200000, "intl": 1 },
-        "USNYC": { "cargo": 7500000, "intl": 1 },
+        "USHOU": { "cargo": 5500000, "intl": 1 },
+        "USN2R": { "cargo": 5400000, "intl": 1 },
         "USSAV": { "cargo": 5000000, "intl": 1 },
-        "USHOU": { "cargo": 4000000, "intl": 1 },
         "USSEA": { "cargo": 3800000, "intl": 1 },
         "USOAK": { "cargo": 2500000, "intl": 1 },
         "USCHA": { "cargo": 2300000, "intl": 1 },
-        "USBAL": { "cargo": 1200000, "intl": 1 },
-        "USMIA": { "cargo": 1000000, "intl": 1 }
+        "USBAL": { "cargo": 2000000, "intl": 1 },
+        "USPZH": { "cargo": 1800000, "intl": 1 },
+        "USMIA": { "cargo": 1200000, "intl": 1 },
+        "USIAM": { "cargo": 1100000, "intl": 1 },
+        "USIYH": { "cargo": 1100000, "intl": 1 }
       }
     },
     "CA": {

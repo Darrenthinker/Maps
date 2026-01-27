@@ -22,60 +22,28 @@
               "totalPorts": 371,
               "ports": [
                 {
-                  "code": "CNTXG",
-                  "name": "Tianjin Xingang Pt",
-                  "nameZh": "天津港",
-                  "city": "Tianjin Xingang Pt",
-                  "lat": 38.9833,
-                  "lng": 117.7
+                  "code": "CNNBG",
+                  "name": "Ningbo Pt",
+                  "nameZh": "宁波港",
+                  "city": "Ningbo Pt",
+                  "lat": 29.9167,
+                  "lng": 121.6667
                 },
                 {
-                  "code": "CNQIN",
-                  "name": "Qingdao",
-                  "nameZh": "青岛市",
-                  "city": "Qingdao",
-                  "lat": 36.05,
-                  "lng": 120.3167
+                  "code": "CNNBO",
+                  "name": "Ningbo",
+                  "nameZh": "宁波市",
+                  "city": "Ningbo",
+                  "lat": 29.8667,
+                  "lng": 121.55
                 },
                 {
-                  "code": "CNDAL",
-                  "name": "Dalian",
-                  "nameZh": "大连港",
-                  "city": "Dalian",
-                  "lat": 38.9167,
-                  "lng": 121.6
-                },
-                {
-                  "code": "CNYTN",
-                  "name": "Yantian",
-                  "nameZh": "盐田区",
-                  "city": "Yantian",
-                  "lat": 22.6,
-                  "lng": 114.3
-                },
-                {
-                  "code": "CNLYG",
-                  "name": "Lianyungang",
-                  "nameZh": "连云港市",
-                  "city": "Lianyungang",
-                  "lat": 34.7167,
-                  "lng": 119.4333
-                },
-                {
-                  "code": "CNZJG",
-                  "name": "Zhangjiagang",
-                  "nameZh": "张家港市",
-                  "city": "Zhangjiagang",
-                  "lat": 31.8667,
-                  "lng": 120.5333
-                },
-                {
-                  "code": "CNPDG",
-                  "name": "Pudong/Shanghai",
-                  "nameZh": "浦东新区",
-                  "city": "Pudong/Shanghai",
-                  "lat": 31.2333,
-                  "lng": 121.5
+                  "code": "CNMAJ",
+                  "name": "Majistan/Zhoushan",
+                  "nameZh": "马迹山/舟山",
+                  "city": "Majistan/Zhoushan",
+                  "lat": 30.0167,
+                  "lng": 122.1
                 },
                 {
                   "code": "CNSGH",
@@ -94,28 +62,20 @@
                   "lng": 122.0667
                 },
                 {
-                  "code": "CNCQI",
-                  "name": "Chongqing",
-                  "nameZh": "重庆主城区",
-                  "city": "Chongqing",
-                  "lat": 29.5833,
-                  "lng": 106.55
+                  "code": "CNPDG",
+                  "name": "Pudong/Shanghai",
+                  "nameZh": "浦东新区",
+                  "city": "Pudong/Shanghai",
+                  "lat": 31.2333,
+                  "lng": 121.5
                 },
                 {
-                  "code": "CNSNZ",
-                  "name": "Shenzhen",
-                  "nameZh": "深圳",
-                  "city": "Shenzhen",
-                  "lat": 22.55,
-                  "lng": 114.1167
-                },
-                {
-                  "code": "CNSZP",
-                  "name": "Shenzhen Pt",
-                  "nameZh": "深圳港",
-                  "city": "Shenzhen Pt",
-                  "lat": 22.5,
-                  "lng": 113.8833
+                  "code": "CNQIN",
+                  "name": "Qingdao",
+                  "nameZh": "青岛市",
+                  "city": "Qingdao",
+                  "lat": 36.05,
+                  "lng": 120.3167
                 },
                 {
                   "code": "CNGGZ",
@@ -134,36 +94,36 @@
                   "lng": 113.2333
                 },
                 {
-                  "code": "CNSZH",
-                  "name": "Suzhou",
-                  "nameZh": "苏州市",
-                  "city": "Suzhou",
-                  "lat": 31.3167,
-                  "lng": 120.6167
+                  "code": "CNSNZ",
+                  "name": "Shenzhen",
+                  "nameZh": "深圳",
+                  "city": "Shenzhen",
+                  "lat": 22.55,
+                  "lng": 114.1167
                 },
                 {
-                  "code": "CNNHN",
-                  "name": "Wuhan",
-                  "nameZh": "武汉",
-                  "city": "Wuhan",
-                  "lat": 30.5833,
-                  "lng": 114.2833
+                  "code": "CNSZP",
+                  "name": "Shenzhen Pt",
+                  "nameZh": "深圳港",
+                  "city": "Shenzhen Pt",
+                  "lat": 22.5,
+                  "lng": 113.8833
                 },
                 {
-                  "code": "CNCZX",
-                  "name": "Changzhou",
-                  "nameZh": "常州市",
-                  "city": "Changzhou",
-                  "lat": 31.7833,
-                  "lng": 119.9667
+                  "code": "CNYTN",
+                  "name": "Yantian",
+                  "nameZh": "盐田区",
+                  "city": "Yantian",
+                  "lat": 22.6,
+                  "lng": 114.3
                 },
                 {
-                  "code": "CNZZH",
-                  "name": "Zhangzhou",
-                  "nameZh": "漳州市",
-                  "city": "Zhangzhou",
-                  "lat": 24.5167,
-                  "lng": 117.65
+                  "code": "CNRZH",
+                  "name": "Rizhao",
+                  "nameZh": "日照市",
+                  "city": "Rizhao",
+                  "lat": 35.3833,
+                  "lng": 119.5333
                 },
                 {
                   "code": "CNTNG",
@@ -182,6 +142,86 @@
                   "lng": 117.2
                 },
                 {
+                  "code": "CNTXG",
+                  "name": "Tianjin Xingang Pt",
+                  "nameZh": "天津港",
+                  "city": "Tianjin Xingang Pt",
+                  "lat": 38.9833,
+                  "lng": 117.7
+                },
+                {
+                  "code": "CNYAT",
+                  "name": "Yantai",
+                  "nameZh": "烟台港",
+                  "city": "Yantai",
+                  "lat": 37.4667,
+                  "lng": 121.3833
+                },
+                {
+                  "code": "CNYTG",
+                  "name": "Yantai Pt",
+                  "nameZh": "烟台港",
+                  "city": "Yantai Pt",
+                  "lat": 37.55,
+                  "lng": 121.4167
+                },
+                {
+                  "code": "CNTGS",
+                  "name": "Tangshan Pt",
+                  "nameZh": "唐山市",
+                  "city": "Tangshan Pt",
+                  "lat": 39.6,
+                  "lng": 118.1833
+                },
+                {
+                  "code": "CNSZH",
+                  "name": "Suzhou",
+                  "nameZh": "苏州市",
+                  "city": "Suzhou",
+                  "lat": 31.3167,
+                  "lng": 120.6167
+                },
+                {
+                  "code": "CNDAL",
+                  "name": "Dalian",
+                  "nameZh": "大连港",
+                  "city": "Dalian",
+                  "lat": 38.9167,
+                  "lng": 121.6
+                },
+                {
+                  "code": "CNXAM",
+                  "name": "Xiamen",
+                  "nameZh": "厦门市",
+                  "city": "Xiamen",
+                  "lat": 24.45,
+                  "lng": 118.1
+                },
+                {
+                  "code": "CNXMG",
+                  "name": "Xiamen Pt",
+                  "nameZh": "厦门港",
+                  "city": "Xiamen Pt",
+                  "lat": 24.35,
+                  "lng": 118.2
+                },
+                {
+                  "code": "CNHHT",
+                  "name": "Haitian Terminal/ Xiamen",
+                  "nameZh": "海天码头/厦门",
+                  "city": "Haitian Terminal/ Xiamen",
+                  "lat": 27.1,
+                  "lng": 120.3
+                },
+                {
+                  "code": "CNLYG",
+                  "name": "Lianyungang",
+                  "nameZh": "连云港市",
+                  "city": "Lianyungang",
+                  "lat": 34.7167,
+                  "lng": 119.4333
+                },
+                {
                   "code": "CNNJI",
                   "name": "Nanjing",
                   "nameZh": "南京市",
@@ -190,28 +230,12 @@
                   "lng": 118.7667
                 },
                 {
-                  "code": "CNNBG",
-                  "name": "Ningbo Pt",
-                  "nameZh": "宁波港",
-                  "city": "Ningbo Pt",
-                  "lat": 29.9167,
-                  "lng": 121.6667
-                },
-                {
-                  "code": "CNNBO",
-                  "name": "Ningbo",
-                  "nameZh": "宁波市",
-                  "city": "Ningbo",
-                  "lat": 29.8667,
-                  "lng": 121.55
-                },
-                {
-                  "code": "CNCSH",
-                  "name": "Changsha",
-                  "nameZh": "长沙市",
-                  "city": "Changsha",
-                  "lat": 28.2,
-                  "lng": 112.9833
+                  "code": "CNNTG",
+                  "name": "Nantong",
+                  "nameZh": "南通市",
+                  "city": "Nantong",
+                  "lat": 32.0167,
+                  "lng": 120.85
                 },
                 {
                   "code": "CNFZH",
@@ -220,6 +244,86 @@
                   "city": "Fuzhou",
                   "lat": 26.0833,
                   "lng": 119.3
+                },
+                {
+                  "code": "CNQZL",
+                  "name": "Quanzhou",
+                  "nameZh": "泉州市",
+                  "city": "Quanzhou",
+                  "lat": 24.9333,
+                  "lng": 118.6
+                },
+                {
+                  "code": "CNWZO",
+                  "name": "Wenzhou Pt",
+                  "nameZh": "温州港",
+                  "city": "Wenzhou Pt",
+                  "lat": 28.0167,
+                  "lng": 120.65
+                },
+                {
+                  "code": "CNDGG",
+                  "name": "Dongguan",
+                  "nameZh": "东莞市",
+                  "city": "Dongguan",
+                  "lat": 23.0333,
+                  "lng": 113.75
+                },
+                {
+                  "code": "CNJAX",
+                  "name": "Jiaxing",
+                  "nameZh": "嘉兴市",
+                  "city": "Jiaxing",
+                  "lat": 30.7667,
+                  "lng": 120.75
+                },
+                {
+                  "code": "CNFAN",
+                  "name": "Fangcheng Pt",
+                  "nameZh": "防城港",
+                  "city": "Fangcheng Pt",
+                  "lat": 21.7667,
+                  "lng": 108.35
+                },
+                {
+                  "code": "CNNHN",
+                  "name": "Wuhan",
+                  "nameZh": "武汉",
+                  "city": "Wuhan",
+                  "lat": 30.5833,
+                  "lng": 114.2833
+                },
+                {
+                  "code": "CNCQI",
+                  "name": "Chongqing",
+                  "nameZh": "重庆主城区",
+                  "city": "Chongqing",
+                  "lat": 29.5833,
+                  "lng": 106.55
+                },
+                {
+                  "code": "CNCZX",
+                  "name": "Changzhou",
+                  "nameZh": "常州市",
+                  "city": "Changzhou",
+                  "lat": 31.7833,
+                  "lng": 119.9667
+                },
+                {
+                  "code": "CNZZH",
+                  "name": "Zhangzhou",
+                  "nameZh": "漳州市",
+                  "city": "Zhangzhou",
+                  "lat": 24.5167,
+                  "lng": 117.65
+                },
+                {
+                  "code": "CNCSH",
+                  "name": "Changsha",
+                  "nameZh": "长沙市",
+                  "city": "Changsha",
+                  "lat": 28.2,
+                  "lng": 112.9833
                 },
                 {
                   "code": "CNZZU",
@@ -246,36 +350,12 @@
                   "lng": 108.3167
                 },
                 {
-                  "code": "CNHHT",
-                  "name": "Haitian Terminal/ Xiamen",
-                  "nameZh": "海天码头/厦门",
-                  "city": "Haitian Terminal/ Xiamen",
-                  "lat": 27.1,
-                  "lng": 120.3
-                },
-                {
-                  "code": "CNXAM",
-                  "name": "Xiamen",
-                  "nameZh": "厦门市",
-                  "city": "Xiamen",
-                  "lat": 24.45,
-                  "lng": 118.1
-                },
-                {
                   "code": "CNXAN",
                   "name": "Xiang'an, Xiamen",
                   "nameZh": "象安，厦门",
                   "city": "Xiang'an, Xiamen",
                   "lat": 24.6333,
                   "lng": 118.25
-                },
-                {
-                  "code": "CNXMG",
-                  "name": "Xiamen Pt",
-                  "nameZh": "厦门港",
-                  "city": "Xiamen Pt",
-                  "lat": 24.35,
-                  "lng": 118.2
                 },
                 {
                   "code": "CNXXY",
@@ -750,14 +830,6 @@
                   "lng": 120.4667
                 },
                 {
-                  "code": "CNDGG",
-                  "name": "Dongguan",
-                  "nameZh": "东莞市",
-                  "city": "Dongguan",
-                  "lat": 23.0333,
-                  "lng": 113.75
-                },
-                {
                   "code": "CNDGN",
                   "name": "Donggang",
                   "nameZh": "东港市",
@@ -892,14 +964,6 @@
                   "city": "Ezhou",
                   "lat": 30.4,
                   "lng": 114.8167
-                },
-                {
-                  "code": "CNFAN",
-                  "name": "Fangcheng Pt",
-                  "nameZh": "防城港",
-                  "city": "Fangcheng Pt",
-                  "lat": 21.7667,
-                  "lng": 108.35
                 },
                 {
                   "code": "CNFCH",
@@ -1310,14 +1374,6 @@
                   "lng": 114.05
                 },
                 {
-                  "code": "CNJAX",
-                  "name": "Jiaxing",
-                  "nameZh": "嘉兴市",
-                  "city": "Jiaxing",
-                  "lat": 30.7667,
-                  "lng": 120.75
-                },
-                {
                   "code": "CNJAY",
                   "name": "Jiayin",
                   "nameZh": "加印",
@@ -1678,14 +1734,6 @@
                   "lng": 110.0167
                 },
                 {
-                  "code": "CNMAJ",
-                  "name": "Majistan/Zhoushan",
-                  "nameZh": "马迹山/舟山",
-                  "city": "Majistan/Zhoushan",
-                  "lat": 30.0167,
-                  "lng": 122.1
-                },
-                {
                   "code": "CNMAW",
                   "name": "Mawei Pt",
                   "nameZh": "马尾港",
@@ -1796,14 +1844,6 @@
                   "city": "Nansha Pt",
                   "lat": 22.75,
                   "lng": 113.5833
-                },
-                {
-                  "code": "CNNTG",
-                  "name": "Nantong",
-                  "nameZh": "南通市",
-                  "city": "Nantong",
-                  "lat": 32.0167,
-                  "lng": 120.85
                 },
                 {
                   "code": "CNNUD",
@@ -1974,14 +2014,6 @@
                   "lng": 118.9167
                 },
                 {
-                  "code": "CNQZL",
-                  "name": "Quanzhou",
-                  "nameZh": "泉州市",
-                  "city": "Quanzhou",
-                  "lat": 24.9333,
-                  "lng": 118.6
-                },
-                {
                   "code": "CNRCG",
                   "name": "Rongcheng",
                   "nameZh": "荣成",
@@ -2012,14 +2044,6 @@
                   "city": "Raoping",
                   "lat": 23.6667,
                   "lng": 117
-                },
-                {
-                  "code": "CNRZH",
-                  "name": "Rizhao",
-                  "nameZh": "日照市",
-                  "city": "Rizhao",
-                  "lat": 35.3833,
-                  "lng": 119.5333
                 },
                 {
                   "code": "CNSAM",
@@ -2366,14 +2390,6 @@
                   "lng": 117.65
                 },
                 {
-                  "code": "CNTGS",
-                  "name": "Tangshan Pt",
-                  "nameZh": "唐山市",
-                  "city": "Tangshan Pt",
-                  "lat": 39.6,
-                  "lng": 118.1833
-                },
-                {
                   "code": "CNTJG",
                   "name": "Taijiang",
                   "nameZh": "泰江",
@@ -2566,14 +2582,6 @@
                   "lng": 120.3
                 },
                 {
-                  "code": "CNWZO",
-                  "name": "Wenzhou Pt",
-                  "nameZh": "温州港",
-                  "city": "Wenzhou Pt",
-                  "lat": 28.0167,
-                  "lng": 120.65
-                },
-                {
                   "code": "CNXAO",
                   "name": "Xiaolan",
                   "nameZh": "小榄镇",
@@ -2734,14 +2742,6 @@
                   "lng": 118.7667
                 },
                 {
-                  "code": "CNYAT",
-                  "name": "Yantai",
-                  "nameZh": "烟台港",
-                  "city": "Yantai",
-                  "lat": 37.4667,
-                  "lng": 121.3833
-                },
-                {
                   "code": "CNYFU",
                   "name": "Yongfu",
                   "nameZh": "永福镇",
@@ -2796,14 +2796,6 @@
                   "city": "Yangpu Pt",
                   "lat": 19.7,
                   "lng": 109.2
-                },
-                {
-                  "code": "CNYTG",
-                  "name": "Yantai Pt",
-                  "nameZh": "烟台港",
-                  "city": "Yantai Pt",
-                  "lat": 37.55,
-                  "lng": 121.4167
                 },
                 {
                   "code": "CNYUH",
@@ -2908,6 +2900,14 @@
                   "city": "Zhangjiabian",
                   "lat": 22.55,
                   "lng": 113.45
+                },
+                {
+                  "code": "CNZJG",
+                  "name": "Zhangjiagang",
+                  "nameZh": "张家港市",
+                  "city": "Zhangjiagang",
+                  "lat": 31.8667,
+                  "lng": 120.5333
                 },
                 {
                   "code": "CNZLO",
@@ -3206,12 +3206,12 @@
                   "lng": 139.7167
                 },
                 {
-                  "code": "JPTOX",
-                  "name": "Toshima/Tokyo",
-                  "nameZh": "豊島/东京",
-                  "city": "Toshima/Tokyo",
-                  "lat": 34.5167,
-                  "lng": 139.2667
+                  "code": "JPYOK",
+                  "name": "Yokohama",
+                  "nameZh": "横滨港",
+                  "city": "Yokohama",
+                  "lat": 35.45,
+                  "lng": 139.65
                 },
                 {
                   "code": "JPOSA",
@@ -3222,6 +3222,14 @@
                   "lng": 135.5
                 },
                 {
+                  "code": "JPUKB",
+                  "name": "Kobe",
+                  "nameZh": "神户市",
+                  "city": "Kobe",
+                  "lat": 34.6833,
+                  "lng": 135.1667
+                },
+                {
                   "code": "JPHKT",
                   "name": "Hakata/Fukuoka",
                   "nameZh": "博多港",
@@ -3230,20 +3238,12 @@
                   "lng": 130.4167
                 },
                 {
-                  "code": "JPYOK",
-                  "name": "Yokohama",
-                  "nameZh": "横滨港",
-                  "city": "Yokohama",
-                  "lat": 35.45,
-                  "lng": 139.65
-                },
-                {
-                  "code": "JPUKB",
-                  "name": "Kobe",
-                  "nameZh": "神户市",
-                  "city": "Kobe",
-                  "lat": 34.6833,
-                  "lng": 135.1667
+                  "code": "JPTOX",
+                  "name": "Toshima/Tokyo",
+                  "nameZh": "豊島/东京",
+                  "city": "Toshima/Tokyo",
+                  "lat": 34.5167,
+                  "lng": 139.2667
                 },
                 {
                   "code": "JPGTK",
@@ -5950,14 +5950,6 @@
                   "lng": 106.6667
                 },
                 {
-                  "code": "VNHAN",
-                  "name": "Hanoi",
-                  "nameZh": "河内",
-                  "city": "Hanoi",
-                  "lat": 21.0333,
-                  "lng": 105.85
-                },
-                {
                   "code": "VNHPH",
                   "name": "Haiphong",
                   "nameZh": "海防市",
@@ -5972,6 +5964,14 @@
                   "city": "Da Nang",
                   "lat": 16.0667,
                   "lng": 108.2167
+                },
+                {
+                  "code": "VNHAN",
+                  "name": "Hanoi",
+                  "nameZh": "河内",
+                  "city": "Hanoi",
+                  "lat": 21.0333,
+                  "lng": 105.85
                 },
                 {
                   "code": "VNBAN",
@@ -8054,20 +8054,20 @@
               "totalPorts": 67,
               "ports": [
                 {
-                  "code": "THBKK",
-                  "name": "Bangkok",
-                  "nameZh": "曼谷",
-                  "city": "Bangkok",
-                  "lat": 13.75,
-                  "lng": 100.5167
-                },
-                {
                   "code": "THLCH",
                   "name": "Laem Chabang",
                   "nameZh": "林查班",
                   "city": "Laem Chabang",
                   "lat": 13.0833,
                   "lng": 100.8833
+                },
+                {
+                  "code": "THBKK",
+                  "name": "Bangkok",
+                  "nameZh": "曼谷",
+                  "city": "Bangkok",
+                  "lat": 13.75,
+                  "lng": 100.5167
                 },
                 {
                   "code": "THBMT",
@@ -8766,12 +8766,12 @@
               "totalPorts": 76,
               "ports": [
                 {
-                  "code": "INCCU",
-                  "name": "Kolkata (ex Calcutta)",
-                  "nameZh": "加尔各答港",
-                  "city": "Kolkata (ex Calcutta)",
-                  "lat": 22.5667,
-                  "lng": 88.35
+                  "code": "INPAV",
+                  "name": "Pipavav (Victor) Port",
+                  "nameZh": "皮帕瓦夫港",
+                  "city": "Pipavav (Victor) Port",
+                  "lat": 20.9667,
+                  "lng": 71.55
                 },
                 {
                   "code": "INMAA",
@@ -8782,20 +8782,20 @@
                   "lng": 80.2833
                 },
                 {
+                  "code": "INCCU",
+                  "name": "Kolkata (ex Calcutta)",
+                  "nameZh": "加尔各答港",
+                  "city": "Kolkata (ex Calcutta)",
+                  "lat": 22.5667,
+                  "lng": 88.35
+                },
+                {
                   "code": "INCOK",
                   "name": "Cochin",
                   "nameZh": "科钦",
                   "city": "Cochin",
                   "lat": 9.9667,
                   "lng": 76.2333
-                },
-                {
-                  "code": "INPAV",
-                  "name": "Pipavav (Victor) Port",
-                  "nameZh": "皮帕瓦夫港",
-                  "city": "Pipavav (Victor) Port",
-                  "lat": 20.9667,
-                  "lng": 71.55
                 },
                 {
                   "code": "INICD",
@@ -9726,20 +9726,20 @@
                   "lng": 28.9667
                 },
                 {
-                  "code": "TRIZM",
-                  "name": "Izmir",
-                  "nameZh": "伊兹密尔",
-                  "city": "Izmir",
-                  "lat": 38.4167,
-                  "lng": 27.15
-                },
-                {
                   "code": "TRMER",
                   "name": "Mersin",
                   "nameZh": "梅尔辛",
                   "city": "Mersin",
                   "lat": 36.7167,
                   "lng": 34.6333
+                },
+                {
+                  "code": "TRIZM",
+                  "name": "Izmir",
+                  "nameZh": "伊兹密尔",
+                  "city": "Izmir",
+                  "lat": 38.4167,
+                  "lng": 27.15
                 },
                 {
                   "code": "TRAYT",
@@ -21262,20 +21262,20 @@
               "totalPorts": 809,
               "ports": [
                 {
-                  "code": "FRMRS",
-                  "name": "Marseille",
-                  "nameZh": "马赛",
-                  "city": "Marseille",
-                  "lat": 43.3,
-                  "lng": 5.4
-                },
-                {
                   "code": "FRLEH",
                   "name": "Le Havre",
                   "nameZh": "勒阿弗尔港口",
                   "city": "Le Havre",
                   "lat": 49.5,
                   "lng": 0.1
+                },
+                {
+                  "code": "FRMRS",
+                  "name": "Marseille",
+                  "nameZh": "马赛",
+                  "city": "Marseille",
+                  "lat": 43.3,
+                  "lng": 5.4
                 },
                 {
                   "code": "FRDKK",
@@ -67494,14 +67494,6 @@
                   "lng": -74
                 },
                 {
-                  "code": "USLAX",
-                  "name": "Los Angeles",
-                  "nameZh": "洛杉矶港务局",
-                  "city": "Los Angeles",
-                  "lat": 34.05,
-                  "lng": -118.25
-                },
-                {
                   "code": "USBOY",
                   "name": "Brooklyn/New York",
                   "nameZh": "布鲁克林/纽约",
@@ -67518,12 +67510,12 @@
                   "lng": -73.9667
                 },
                 {
-                  "code": "USHOU",
-                  "name": "Houston",
-                  "nameZh": "休斯敦",
-                  "city": "Houston",
-                  "lat": 29.75,
-                  "lng": -95.35
+                  "code": "USLAX",
+                  "name": "Los Angeles",
+                  "nameZh": "洛杉矶港务局",
+                  "city": "Los Angeles",
+                  "lat": 34.05,
+                  "lng": -118.25
                 },
                 {
                   "code": "USLGB",
@@ -67534,12 +67526,20 @@
                   "lng": -118.1833
                 },
                 {
-                  "code": "USBAL",
-                  "name": "Baltimore",
-                  "nameZh": "巴尔的摩",
-                  "city": "Baltimore",
-                  "lat": 39.2833,
-                  "lng": -76.6167
+                  "code": "USHOU",
+                  "name": "Houston",
+                  "nameZh": "休斯敦",
+                  "city": "Houston",
+                  "lat": 29.75,
+                  "lng": -95.35
+                },
+                {
+                  "code": "USN2R",
+                  "name": "North Houston",
+                  "nameZh": "北休斯顿",
+                  "city": "North Houston",
+                  "lat": 29.9167,
+                  "lng": -95.5
                 },
                 {
                   "code": "USPZH",
@@ -67550,20 +67550,12 @@
                   "lng": -122.0167
                 },
                 {
-                  "code": "USDC6",
-                  "name": "Dallas Center",
-                  "nameZh": "达拉斯中心",
-                  "city": "Dallas Center",
-                  "lat": 41.6833,
-                  "lng": -93.95
-                },
-                {
-                  "code": "USN2R",
-                  "name": "North Houston",
-                  "nameZh": "北休斯顿",
-                  "city": "North Houston",
-                  "lat": 29.9167,
-                  "lng": -95.5
+                  "code": "USBAL",
+                  "name": "Baltimore",
+                  "nameZh": "巴尔的摩",
+                  "city": "Baltimore",
+                  "lat": 39.2833,
+                  "lng": -76.6167
                 },
                 {
                   "code": "USIAM",
@@ -67580,6 +67572,14 @@
                   "city": "Miami Beach",
                   "lat": 25.7833,
                   "lng": -80.1333
+                },
+                {
+                  "code": "USDC6",
+                  "name": "Dallas Center",
+                  "nameZh": "达拉斯中心",
+                  "city": "Dallas Center",
+                  "lat": 41.6833,
+                  "lng": -93.95
                 },
                 {
                   "code": "USKKV",
@@ -85702,20 +85702,20 @@
               "totalPorts": 206,
               "ports": [
                 {
-                  "code": "BRRIO",
-                  "name": "Rio de Janeiro",
-                  "nameZh": "里约热内卢",
-                  "city": "Rio de Janeiro",
-                  "lat": -22.8667,
-                  "lng": -43.2167
-                },
-                {
                   "code": "BRPNG",
                   "name": "Paranaguá",
                   "nameZh": "巴拉那瓜",
                   "city": "Paranaguá",
                   "lat": -25.5,
                   "lng": -48.5167
+                },
+                {
+                  "code": "BRRIO",
+                  "name": "Rio de Janeiro",
+                  "nameZh": "里约热内卢",
+                  "city": "Rio de Janeiro",
+                  "lat": -22.8667,
+                  "lng": -43.2167
                 },
                 {
                   "code": "BRIQI",
@@ -91966,20 +91966,20 @@
               "totalPorts": 34,
               "ports": [
                 {
-                  "code": "ZACPT",
-                  "name": "Cape Town",
-                  "nameZh": "开普敦",
-                  "city": "Cape Town",
-                  "lat": -33.9167,
-                  "lng": 18.4167
-                },
-                {
                   "code": "ZADUR",
                   "name": "Durban",
                   "nameZh": "德班",
                   "city": "Durban",
                   "lat": -29.85,
                   "lng": 31.0167
+                },
+                {
+                  "code": "ZACPT",
+                  "name": "Cape Town",
+                  "nameZh": "开普敦",
+                  "city": "Cape Town",
+                  "lat": -33.9167,
+                  "lng": 18.4167
                 },
                 {
                   "code": "ZA2WC",
@@ -92478,20 +92478,20 @@
               "totalPorts": 236,
               "ports": [
                 {
-                  "code": "AUSYD",
-                  "name": "Sydney",
-                  "nameZh": "悉尼",
-                  "city": "Sydney",
-                  "lat": -33.85,
-                  "lng": 151.2
-                },
-                {
                   "code": "AUMEL",
                   "name": "Melbourne",
                   "nameZh": "墨尔本港",
                   "city": "Melbourne",
                   "lat": -37.8167,
                   "lng": 144.9667
+                },
+                {
+                  "code": "AUSYD",
+                  "name": "Sydney",
+                  "nameZh": "悉尼",
+                  "city": "Sydney",
+                  "lat": -33.85,
+                  "lng": 151.2
                 },
                 {
                   "code": "AUBNE",
