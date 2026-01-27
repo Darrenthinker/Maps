@@ -22,6 +22,7 @@
         "CNSNZ": { "cargo": 29000000, "intl": 1 },
         "CNSZP": { "cargo": 29000000, "intl": 1 },
         "CNYTN": { "cargo": 28000000, "intl": 1 },
+        "CNSHK": { "cargo": 16000000, "intl": 1 },
         "CNRZH": { "cargo": 26000000, "intl": 1 },
         "CNTXG": { "cargo": 25000000, "intl": 1 },
         "CNTNG": { "cargo": 25000000, "intl": 1 },

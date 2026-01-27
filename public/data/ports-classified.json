@@ -19,7 +19,7 @@
               "code": "CN",
               "name": "中国",
               "nameEn": "China",
-              "totalPorts": 91,
+              "totalPorts": 93,
               "ports": [
                 {
                   "code": "CNAJG",
@@ -116,8 +116,8 @@
                   "name": "Dalian",
                   "nameZh": "大连港",
                   "city": "Dalian",
-                  "lat": 38.9167,
-                  "lng": 121.6,
+                  "lat": 38.92,
+                  "lng": 121.65,
                   "intl": true
                 },
                 {
@@ -467,8 +467,8 @@
                   "name": "Ningbo Pt",
                   "nameZh": "宁波港",
                   "city": "Ningbo Pt",
-                  "lat": 29.9167,
-                  "lng": 121.6667,
+                  "lat": 29.9461,
+                  "lng": 121.8175,
                   "intl": true
                 },
                 {
@@ -566,8 +566,17 @@
                   "name": "Shanghai Pt",
                   "nameZh": "上海港",
                   "city": "Shanghai Pt",
-                  "lat": 30.6333,
-                  "lng": 122.0667,
+                  "lat": 30.6097,
+                  "lng": 122.06,
+                  "intl": true
+                },
+                {
+                  "code": "CNSHK",
+                  "name": "Shekou Pt",
+                  "nameZh": "蛇口港",
+                  "city": "Shekou Pt",
+                  "lat": 22.47,
+                  "lng": 113.9,
                   "intl": true
                 },
                 {
@@ -629,8 +638,8 @@
                   "name": "Shenzhen Pt",
                   "nameZh": "深圳港",
                   "city": "Shenzhen Pt",
-                  "lat": 22.5,
-                  "lng": 113.8833,
+                  "lat": 22.5362,
+                  "lng": 114.0584,
                   "intl": true
                 },
                 {
@@ -656,8 +665,8 @@
                   "name": "Tianjin Xingang Pt",
                   "nameZh": "天津港",
                   "city": "Tianjin Xingang Pt",
-                  "lat": 38.9833,
-                  "lng": 117.7,
+                  "lat": 38.98,
+                  "lng": 117.75,
                   "intl": true
                 },
                 {
@@ -737,8 +746,8 @@
                   "name": "Xiamen Pt",
                   "nameZh": "厦门港",
                   "city": "Xiamen Pt",
-                  "lat": 24.35,
-                  "lng": 118.2,
+                  "lat": 24.45,
+                  "lng": 118.08,
                   "intl": true
                 },
                 {
@@ -793,6 +802,15 @@
                   "city": "Yantai Pt",
                   "lat": 37.55,
                   "lng": 121.4167,
+                  "intl": true
+                },
+                {
+                  "code": "CNYTN",
+                  "name": "Yantian",
+                  "nameZh": "盐田港",
+                  "city": "Yantian",
+                  "lat": 22.56,
+                  "lng": 114.28,
                   "intl": true
                 },
                 {
@@ -862,8 +880,8 @@
                   "name": "Hong Kong",
                   "nameZh": "香港",
                   "city": "Hong Kong",
-                  "lat": 22.3167,
-                  "lng": 114.1667,
+                  "lat": 22.31,
+                  "lng": 114.17,
                   "intl": true
                 }
               ]
@@ -986,8 +1004,8 @@
                   "name": "Busan",
                   "nameZh": "釜山港",
                   "city": "Busan",
-                  "lat": 35.1333,
-                  "lng": 129.05,
+                  "lat": 35.08,
+                  "lng": 129.04,
                   "intl": true
                 },
                 {
@@ -3897,8 +3915,8 @@
                   "name": "Hamburg",
                   "nameZh": "汉堡港",
                   "city": "Hamburg",
-                  "lat": 53.5167,
-                  "lng": 9.9333,
+                  "lat": 53.54,
+                  "lng": 9.97,
                   "intl": true
                 },
                 {
@@ -3959,8 +3977,8 @@
                   "name": "Antwerpen",
                   "nameZh": "安特卫普港",
                   "city": "Antwerpen",
-                  "lat": 51.2167,
-                  "lng": 4.4167,
+                  "lat": 51.26,
+                  "lng": 4.4,
                   "intl": true
                 },
                 {
@@ -4046,8 +4064,8 @@
                   "name": "Rotterdam",
                   "nameZh": "鹿特丹港",
                   "city": "Rotterdam",
-                  "lat": 51.9167,
-                  "lng": 4.5,
+                  "lat": 51.95,
+                  "lng": 4.14,
                   "intl": true
                 },
                 {
@@ -6567,8 +6585,8 @@
                   "name": "Los Angeles",
                   "nameZh": "洛杉矶港务局",
                   "city": "Los Angeles",
-                  "lat": 34.05,
-                  "lng": -118.25,
+                  "lat": 33.74,
+                  "lng": -118.27,
                   "intl": true
                 },
                 {
@@ -6693,8 +6711,8 @@
                   "name": "New York",
                   "nameZh": "纽约和纽泽西港",
                   "city": "New York",
-                  "lat": 40.7,
-                  "lng": -74,
+                  "lat": 40.67,
+                  "lng": -74.05,
                   "intl": true
                 },
                 {
