@@ -1351,11 +1351,11 @@ function renderWarehousesView() {
           for (const warehouse of country.warehouses) {
             const companyLabel = warehouse.company ? ` · ${warehouse.company}` : '';
             const typeLabel = warehouse.type ? `<span class="warehouse-type-tag">${warehouse.type}</span>` : '';
+            const cityLabel = warehouse.city ? `<span class="warehouse-city">${warehouse.city}</span>` : '';
             const addressLine = warehouse.address ? `<div class="result-item__address">${warehouse.address}</div>` : '';
             html += `
               <li class="result-item result-item--warehouse" data-warehouse="${warehouse.code}" data-lat="${warehouse.lat}" data-lng="${warehouse.lng}" data-category="${catKey}" data-address="${warehouse.address || ''}">
-                <div class="result-item__title">${warehouse.code} ${typeLabel}</div>
-                <div class="result-item__meta">${warehouse.city}${companyLabel}</div>
+                <div class="result-item__title">${warehouse.code}${companyLabel} ${typeLabel} ${cityLabel}</div>
                 ${addressLine}
               </li>
             `;

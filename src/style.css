@@ -1570,6 +1570,13 @@ body {
   text-transform: uppercase;
 }
 
+.warehouse-city {
+  font-size: 12px;
+  font-weight: 400;
+  color: #94a3b8;
+  margin-left: 8px;
+}
+
 .result-item__address {
   font-size: 11px;
   color: #64748b;
