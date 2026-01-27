@@ -577,6 +577,80 @@ body {
   color: #047857;
 }
 
+/* 联想列表 - 机场/港口格式 */
+.suggestion-item--airport .airport-row1,
+.suggestion-item--airport .airport-row2 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.suggestion-item--airport .airport-row2 {
+  margin-top: 4px;
+}
+
+.suggestion-item--airport .airport-code {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #2563eb;
+}
+
+.suggestion-item--airport .port-code {
+  color: #10b981;
+}
+
+.suggestion-item--airport .airport-names {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.suggestion-item--airport .airport-city {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.suggestion-item--airport .airport-type-tag {
+  font-size: 11px;
+  margin-left: auto;
+}
+
+/* 联想列表 - 海外仓格式 */
+.suggestion-item--warehouse .result-item__title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.suggestion-item--warehouse .warehouse-code-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.suggestion-item--warehouse .warehouse-code-group .highlight {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.suggestion-item--warehouse .warehouse-state {
+  margin-left: auto;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.suggestion-item--warehouse .result-item__address {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 #hubSearch {
   position: relative;
 }

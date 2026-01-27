@@ -1679,30 +1679,53 @@ function showSearchSuggestions() {
     return aExact - bExact;
   });
   
-  // 渲染联想列表
+  // 渲染联想列表 - 与列表视图格式保持一致
   html += allResults.map((item, index) => {
     const code = item.code || '';
-    const name = item.nameZh || item.name || '';
     const highlightedCode = highlightMatch(code, query);
     
-    let meta = '';
-    let tagClass = '';
-    let tagText = '';
-    
     let categoryAttr = '';
-    if (item._type === 'airport') {
-      meta = `${item.city}, ${item.country}`;
-      tagClass = 'suggestion-item__tag--airport';
-      tagText = '机场';
-    } else if (item._type === 'port') {
-      meta = `${item.city}, ${item.country}`;
-      tagClass = 'suggestion-item__tag--port';
-      tagText = '港口';
+    let itemHtml = '';
+    
+    if (item._type === 'airport' || item._type === 'port') {
+      // 机场/港口格式 - 与列表视图一致
+      const nameZh = item.nameZh || '';
+      const isIntl = item.intl === 1;
+      const isAirport = item._type === 'airport';
+      
+      // 中英文名称
+      const namesHtml = nameZh 
+        ? `<span class="airport-name-zh">${nameZh}</span><span class="airport-name-divider">/</span><span class="airport-name-en">${item.name}</span>`
+        : `<span class="airport-name-en">${item.name}</span>`;
+      
+      // 类型标签
+      let typeTag;
+      if (isAirport) {
+        typeTag = isIntl 
+          ? '<span class="airport-type-tag airport-type-tag--intl">国际机场</span>'
+          : '<span class="airport-type-tag airport-type-tag--domestic">国内机场</span>';
+      } else {
+        typeTag = isIntl 
+          ? '<span class="airport-type-tag airport-type-tag--intl port-type-tag">国际港口</span>'
+          : '<span class="airport-type-tag airport-type-tag--domestic port-type-tag">国内港口</span>';
+      }
+      
+      const codeClass = isAirport ? 'airport-code' : 'airport-code port-code';
+      
+      itemHtml = `
+        <div class="suggestion-item suggestion-item--airport" data-index="${index}" data-lat="${item.lat}" data-lng="${item.lng}" data-type="${item._type}" data-code="${code}" data-name="${item.name || ''}" data-name-zh="${nameZh}" data-intl="${item.intl ? 1 : 0}">
+          <div class="airport-row1">
+            <span class="${codeClass}">${highlightedCode}</span>
+            <span class="airport-names">${namesHtml}</span>
+          </div>
+          <div class="airport-row2">
+            <span class="airport-city">${item.city}</span>
+            ${typeTag}
+          </div>
+        </div>
+      `;
     } else {
-      meta = `${item.city} · ${item.categoryName}`;
-      tagClass = 'suggestion-item__tag--warehouse';
-      tagText = '海外仓';
-      // 根据分类名称设置分类属性
+      // 海外仓格式 - 与列表视图一致
       if (item.categoryName && item.categoryName.includes('亚马逊')) {
         categoryAttr = 'data-category="amazon"';
       } else if (item.categoryName && item.categoryName.includes('沃尔玛')) {
@@ -1710,17 +1733,37 @@ function showSearchSuggestions() {
       } else {
         categoryAttr = 'data-category="freight"';
       }
+      
+      // 处理地址
+      let address = item.address || '';
+      address = address
+        .replace(/\s+/g, ' ')
+        .replace(/\s*,\s*/g, ', ')
+        .trim();
+      
+      // 获取州名中文
+      const stateCode = item.state || '';
+      const stateZh = state.usStatesZh?.states?.[stateCode] || '';
+      const stateLabel = stateCode ? `<span class="warehouse-state">${stateCode}${stateZh ? ' ' + stateZh : ''}</span>` : '';
+      
+      // 类型标签
+      const typeLabel = item.type ? `<span class="warehouse-type-tag">${item.type}</span>` : '';
+      
+      const addressLine = address ? `<div class="result-item__address">${address}</div>` : '';
+      const addressAttr = address ? `data-address="${address.replace(/"/g, '&quot;')}"` : '';
+      
+      itemHtml = `
+        <div class="suggestion-item suggestion-item--warehouse" data-index="${index}" data-lat="${item.lat}" data-lng="${item.lng}" data-type="${item._type}" data-code="${code}" ${categoryAttr} ${addressAttr}>
+          <div class="result-item__title">
+            <span class="warehouse-code-group">${highlightedCode} ${typeLabel}</span>
+            ${stateLabel}
+          </div>
+          ${addressLine}
+        </div>
+      `;
     }
     
-    return `
-      <div class="suggestion-item" data-index="${index}" data-lat="${item.lat}" data-lng="${item.lng}" data-type="${item._type}" data-code="${code}" data-name="${item.name || ''}" data-name-zh="${item.nameZh || ''}" data-intl="${item.intl ? 1 : 0}" ${categoryAttr}>
-        <div class="suggestion-item__title">
-          ${highlightedCode} · ${name}
-          <span class="suggestion-item__tag ${tagClass}">${tagText}</span>
-        </div>
-        <div class="suggestion-item__meta">${meta}</div>
-      </div>
-    `;
+    return itemHtml;
   }).join('');
   
   searchSuggestions.innerHTML = html;
