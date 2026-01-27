@@ -1,0 +1,104 @@
+{
+  "description": "Amazon FBA仓库原始数据 - 来源: amzprep.com",
+  "lastUpdated": "2026-01-27",
+  "countries": {
+    "US": {
+      "name": "美国",
+      "states": {
+        "AL": { "name": "Alabama", "warehouses": ["BHM1", "MOB5", "MOB9"] },
+        "AZ": { "name": "Arizona", "warehouses": ["SAZ1", "TUS1", "TUS2", "PHX3", "PHX5", "PHX6", "PHX7", "PHX8", "PHX9", "DPX1", "DPX3"] },
+        "CA": { "name": "California", "warehouses": ["ONT2", "ONT3", "ONT4", "ONT5", "ONT6", "ONT7", "ONT8", "ONT9", "LGB1", "LGB3", "LGB4", "LGB5", "LGB6", "LGB7", "LGB8", "LGB9", "LAX2", "LAX5", "LAX6", "LAX9", "OAK3", "OAK4", "OAK5", "OAK6", "OAK7", "OAK8", "SMF1", "SMF3", "SMF5", "SJC7", "SJC8", "SCK1", "FAT1", "SNA4", "SNA6", "SNA7", "SNA8", "SNA9"] },
+        "CO": { "name": "Colorado", "warehouses": ["DEN1", "DEN2", "DEN3", "DEN5", "DEN6"] },
+        "CT": { "name": "Connecticut", "warehouses": ["BDL1", "BDL2", "BDL3", "BDL5"] },
+        "DE": { "name": "Delaware", "warehouses": ["PHL1", "PHL3", "PHL7", "PHL8"] },
+        "FL": { "name": "Florida", "warehouses": ["JAX1", "JAX2", "JAX5", "MCO1", "MCO5", "MIA1", "MIA5", "MIA6", "TPA1", "TPA2", "LAL1"] },
+        "GA": { "name": "Georgia", "warehouses": ["ATL2", "ATL6", "ATL7", "ATL8", "MGE1", "MGE3", "MGE5", "MGE7", "SAV1", "SAV3"] },
+        "IL": { "name": "Illinois", "warehouses": ["MDW1", "MDW2", "MDW4", "MDW5", "MDW6", "MDW7", "MDW8", "MDW9", "ORD6", "STL4", "STL6", "STL7"] },
+        "IN": { "name": "Indiana", "warehouses": ["IND1", "IND2", "IND3", "IND4", "IND5", "IND6", "IND7", "IND9", "SDF8"] },
+        "KS": { "name": "Kansas", "warehouses": ["MCI1", "MCI5", "MCI7", "MKC4", "MKC6"] },
+        "KY": { "name": "Kentucky", "warehouses": ["CVG1", "CVG2", "CVG3", "CVG5", "CVG7", "CVG8", "LEX1", "LEX2", "LEX3", "SDF1", "SDF2", "SDF4", "SDF6", "SDF7", "SDF9"] },
+        "MD": { "name": "Maryland", "warehouses": ["BWI5", "MDT2", "DCA1"] },
+        "MA": { "name": "Massachusetts", "warehouses": ["BOS1", "BOS2", "BOS3", "BOS5", "BOS7"] },
+        "MI": { "name": "Michigan", "warehouses": ["DTW1", "DTW2", "DTW3", "DTW5", "DET1", "DET2", "GRR1"] },
+        "MN": { "name": "Minnesota", "warehouses": ["MSP1", "MSP5", "MSP9"] },
+        "MS": { "name": "Mississippi", "warehouses": ["MEM2", "JAN1"] },
+        "MO": { "name": "Missouri", "warehouses": ["STL5", "STL8"] },
+        "NV": { "name": "Nevada", "warehouses": ["LAS1", "LAS2", "LAS5", "LAS6", "LAS7", "RNO1", "RNO2", "RNO3", "RNO4"] },
+        "NH": { "name": "New Hampshire", "warehouses": ["BOS1"] },
+        "NJ": { "name": "New Jersey", "warehouses": ["EWR1", "EWR4", "EWR5", "EWR6", "EWR7", "EWR8", "EWR9", "ACY1", "ACY2", "ACY5", "LGA6", "LGA7", "LGA8", "LGA9", "TEB3", "TEB6", "TTN1", "ABE8"] },
+        "NY": { "name": "New York", "warehouses": ["JFK8", "SYR1", "SYR2", "BUF5"] },
+        "NC": { "name": "North Carolina", "warehouses": ["CLT1", "CLT2", "CLT3", "CLT4", "CLT5", "RDU1", "RDU5"] },
+        "OH": { "name": "Ohio", "warehouses": ["CMH1", "CMH2", "CMH3", "CMH4", "CLE2", "CLE3", "CLE5", "DAY3", "AKR1"] },
+        "OK": { "name": "Oklahoma", "warehouses": ["OKC1", "OKC5", "TUL2"] },
+        "OR": { "name": "Oregon", "warehouses": ["PDX5", "PDX6", "PDX7", "PDX8", "PDX9"] },
+        "PA": { "name": "Pennsylvania", "warehouses": ["ABE1", "ABE2", "ABE3", "ABE4", "ABE5", "AVP1", "AVP2", "AVP3", "AVP6", "AVP8", "MDT1", "PHL4", "PHL5", "PHL6", "PHL9", "PIT1", "PIT5"] },
+        "SC": { "name": "South Carolina", "warehouses": ["CAE1", "CAE3", "CHS1", "GSP1"] },
+        "TN": { "name": "Tennessee", "warehouses": ["BNA1", "BNA2", "BNA3", "BNA4", "BNA5", "CHA1", "CHA2", "MEM1", "MEM4", "MEM5"] },
+        "TX": { "name": "Texas", "warehouses": ["DFW1", "DFW6", "DFW7", "DFW8", "DFW9", "DAL3", "DAL6", "DAL9", "FTW1", "FTW2", "FTW3", "FTW4", "FTW6", "FTW7", "FTW8", "FTW9", "HOU1", "HOU2", "HOU3", "SAT1", "SAT2", "SAT5", "TEM1", "WAC1"] },
+        "UT": { "name": "Utah", "warehouses": ["SLC1", "SLC3", "SLC4"] },
+        "VA": { "name": "Virginia", "warehouses": ["BWI1", "BWI4", "BWI6", "ORF1", "RIC1", "RIC2", "RIC3", "RIC5"] },
+        "WA": { "name": "Washington", "warehouses": ["BFI1", "BFI3", "BFI4", "BFI5", "BFI6", "BFI7", "SEA6", "SEA8", "GEG1"] },
+        "WI": { "name": "Wisconsin", "warehouses": ["MKE1", "MKE2", "MKE5"] },
+        "AR": { "name": "Arkansas", "warehouses": ["LIT1", "LIT2"] },
+        "ID": { "name": "Idaho", "warehouses": ["BOI1", "BOI2"] },
+        "IA": { "name": "Iowa", "warehouses": ["DSM1", "DSM2"] }
+      }
+    },
+    "CA": {
+      "name": "加拿大",
+      "provinces": {
+        "AB": { "name": "Alberta", "warehouses": ["YYC1", "YEG1"] },
+        "BC": { "name": "British Columbia", "warehouses": ["YVR1", "YVR2", "YVR3", "YVR4"] },
+        "ON": { "name": "Ontario", "warehouses": ["YYZ1", "YYZ2", "YYZ3", "YYZ4", "YYZ6", "YYZ7", "YYZ9", "YYZ10", "YOW1"] },
+        "QC": { "name": "Quebec", "warehouses": ["YUL1"] },
+        "MB": { "name": "Manitoba", "warehouses": ["YWG1"] },
+        "SK": { "name": "Saskatchewan", "warehouses": ["YQR1"] }
+      }
+    },
+    "MX": {
+      "name": "墨西哥",
+      "states": {
+        "MEX": { "name": "Estado de México", "warehouses": ["MEX1", "MEX2"] },
+        "JAL": { "name": "Jalisco", "warehouses": ["GDL1"] },
+        "NLE": { "name": "Nuevo León", "warehouses": ["MTY1"] },
+        "PUE": { "name": "Puebla", "warehouses": ["PUE1"] }
+      }
+    },
+    "JP": {
+      "name": "日本",
+      "warehouses": ["NRT1", "NRT2", "NRT5", "HND3", "HND6", "HND9", "FSZ1", "KIX1", "KIX2", "KIX3", "KIX4", "HSG1", "NGO2", "TYO6", "TPF3"]
+    },
+    "AU": {
+      "name": "澳大利亚",
+      "warehouses": ["BWU1", "BWU2", "MEL1", "MEL5", "MEL8", "BNE1", "PER2"]
+    },
+    "IN": {
+      "name": "印度",
+      "warehouses": ["DEL2", "DEL4", "DEL5", "BOM4", "BOM5", "BOM7", "BLR4", "BLR5", "BLR7", "BLR8", "MAA4", "HYD3", "HYD8", "CCX1", "CCX2", "AMD2", "PNQ3"]
+    },
+    "AE": {
+      "name": "阿联酋",
+      "warehouses": ["DXB2", "DXB3", "DXB4", "DXB6", "AUH1"]
+    },
+    "SA": {
+      "name": "沙特阿拉伯",
+      "warehouses": ["RUH3", "RUH6", "RUH7", "RUH8", "JED3", "JED4", "JED6"]
+    },
+    "SG": {
+      "name": "新加坡",
+      "warehouses": ["SIN8"]
+    },
+    "TR": {
+      "name": "土耳其",
+      "warehouses": ["IST1"]
+    },
+    "EG": {
+      "name": "埃及",
+      "warehouses": ["CAI6", "SPX5"]
+    },
+    "ZA": {
+      "name": "南非",
+      "warehouses": ["ZAF1"]
+    }
+  }
+}
