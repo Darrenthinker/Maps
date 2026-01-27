@@ -7,13 +7,13 @@
       "code": "AS",
       "name": "亚洲",
       "nameEn": "Asia",
-      "totalPorts": 1496,
+      "totalPorts": 267,
       "regions": {
         "EA": {
           "code": "EA",
           "name": "东亚",
           "nameEn": "East Asia",
-          "totalPorts": 583,
+          "totalPorts": 108,
           "countries": {
             "CN": {
               "code": "CN",
@@ -1025,7 +1025,7 @@
           "code": "SEA",
           "name": "东南亚",
           "nameEn": "Southeast Asia",
-          "totalPorts": 491,
+          "totalPorts": 85,
           "countries": {
             "VN": {
               "code": "VN",
@@ -1846,7 +1846,7 @@
           "code": "SA",
           "name": "南亚",
           "nameEn": "South Asia",
-          "totalPorts": 111,
+          "totalPorts": 19,
           "countries": {
             "IN": {
               "code": "IN",
@@ -2057,7 +2057,7 @@
           "code": "WA",
           "name": "西亚/中东",
           "nameEn": "West Asia / Middle East",
-          "totalPorts": 301,
+          "totalPorts": 55,
           "countries": {
             "IR": {
               "code": "IR",
@@ -2648,7 +2648,7 @@
           "code": "CA",
           "name": "中亚",
           "nameEn": "Central Asia",
-          "totalPorts": 10,
+          "totalPorts": 0,
           "countries": {}
         }
       }
