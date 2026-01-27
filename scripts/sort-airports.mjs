@@ -1,6 +1,7 @@
 /**
  * 按综合指标对机场进行排序
- * 排序维度：国际机场 > 货物吞吐量 > 城市人口 > 城市GDP
+ * 有数据的国家：国际机场 > 货物吞吐量 > 城市人口 > 城市GDP
+ * 无数据的国家：国际机场 > 首都 > 城市人口
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -11,10 +12,12 @@ const RAW_DIR = path.join(ROOT, "data", "raw");
 
 const AIRPORTS_PATH = path.join(DATA_DIR, "airports-classified.json");
 const RANKING_DATA_PATH = path.join(RAW_DIR, "airport-ranking-data.json");
+const CAPITALS_PATH = path.join(RAW_DIR, "country-capitals.json");
 
 // 排序权重配置
 const WEIGHTS = {
   international: 1000,  // 国际机场加分
+  capital: 500,         // 首都加分
   cargo: 0.0001,        // 货物吞吐量权重 (吨 -> 分)
   population: 0.00001,  // 人口权重 (人 -> 分)
   gdp: 0.01             // GDP权重 (亿元 -> 分)
@@ -29,7 +32,16 @@ function loadRankingData() {
   return JSON.parse(fs.readFileSync(RANKING_DATA_PATH, "utf8"));
 }
 
-// 计算机场综合评分
+// 加载首都数据
+function loadCapitalsData() {
+  if (!fs.existsSync(CAPITALS_PATH)) {
+    console.warn("Warning: country-capitals.json not found");
+    return { capitals: {} };
+  }
+  return JSON.parse(fs.readFileSync(CAPITALS_PATH, "utf8"));
+}
+
+// 计算机场综合评分（有完整数据的国家）
 function calculateScore(airport, countryData) {
   let score = 0;
   
@@ -53,6 +65,35 @@ function calculateScore(airport, countryData) {
   // 4. 城市GDP加分
   if (cityData?.gdp) {
     score += cityData.gdp * WEIGHTS.gdp;
+  }
+  
+  return score;
+}
+
+// 计算机场评分（简化版：用于无完整数据的国家）
+function calculateSimpleScore(airport, capitalInfo) {
+  let score = 0;
+  
+  // 1. 国际机场加分
+  if (airport.intl === 1) {
+    score += WEIGHTS.international;
+  }
+  
+  // 2. 首都机场加分
+  if (capitalInfo && airport.city) {
+    const cityLower = airport.city.toLowerCase();
+    const capitalLower = capitalInfo.capital?.toLowerCase() || "";
+    const capitalZh = capitalInfo.capitalZh || "";
+    
+    // 匹配首都
+    if (cityLower.includes(capitalLower) || capitalLower.includes(cityLower) ||
+        airport.city.includes(capitalZh)) {
+      score += WEIGHTS.capital;
+      // 首都人口作为额外加分
+      if (capitalInfo.population) {
+        score += capitalInfo.population * WEIGHTS.population;
+      }
+    }
   }
   
   return score;
@@ -88,7 +129,7 @@ function findCityData(cityName, countryData) {
   return null;
 }
 
-// 对单个国家的机场进行排序
+// 对单个国家的机场进行排序（有完整数据）
 function sortCountryAirports(airports, countryCode, rankingData) {
   const countryData = rankingData.countries?.[countryCode];
   
@@ -105,6 +146,26 @@ function sortCountryAirports(airports, countryCode, rankingData) {
   return scoredAirports.map(({ _score, ...rest }) => rest);
 }
 
+// 对单个国家的机场进行排序（无完整数据，使用首都）
+function sortCountryAirportsSimple(airports, countryCode, capitalsData) {
+  const capitalInfo = capitalsData.capitals?.[countryCode];
+  
+  // 计算每个机场的评分
+  const scoredAirports = airports.map(airport => ({
+    ...airport,
+    _score: calculateSimpleScore(airport, capitalInfo)
+  }));
+  
+  // 按评分降序排序，评分相同按代码排序
+  scoredAirports.sort((a, b) => {
+    if (b._score !== a._score) return b._score - a._score;
+    return a.code.localeCompare(b.code);
+  });
+  
+  // 移除临时评分字段
+  return scoredAirports.map(({ _score, ...rest }) => rest);
+}
+
 // 处理所有数据
 function processAllAirports() {
   console.log("开始对机场进行综合排序...\n");
@@ -112,12 +173,15 @@ function processAllAirports() {
   // 加载数据
   const airportsData = JSON.parse(fs.readFileSync(AIRPORTS_PATH, "utf8"));
   const rankingData = loadRankingData();
+  const capitalsData = loadCapitalsData();
   
-  console.log(`已加载排序参考数据，包含 ${Object.keys(rankingData.countries || {}).length} 个国家的数据`);
+  console.log(`已加载排序参考数据，包含 ${Object.keys(rankingData.countries || {}).length} 个国家的完整数据`);
+  console.log(`已加载首都数据，包含 ${Object.keys(capitalsData.capitals || {}).length} 个国家的首都信息`);
   
   let totalSorted = 0;
-  let countriesWithData = 0;
-  let countriesWithoutData = 0;
+  let countriesWithFullData = 0;
+  let countriesWithCapitalData = 0;
+  let countriesWithNoData = 0;
   
   // 遍历所有大洲
   for (const [contCode, continent] of Object.entries(airportsData.continents || {})) {
@@ -129,29 +193,40 @@ function processAllAirports() {
       
       // 遍历所有国家
       for (const [countryCode, country] of Object.entries(region.countries || {})) {
-        const hasRankingData = !!rankingData.countries?.[countryCode];
+        const hasFullData = !!rankingData.countries?.[countryCode];
+        const hasCapitalData = !!capitalsData.capitals?.[countryCode];
         
-        // 对机场排序
-        const sortedAirports = sortCountryAirports(country.airports || [], countryCode, rankingData);
-        country.airports = sortedAirports;
+        let sortedAirports;
         
-        if (hasRankingData) {
-          countriesWithData++;
-          console.log(`    ✓ ${country.name} (${countryCode}): ${sortedAirports.length} 机场 [有排序数据]`);
-          
-          // 显示前5个机场
-          const top5 = sortedAirports.slice(0, 5);
-          for (const ap of top5) {
-            const intlMark = ap.intl ? "🌐" : "  ";
-            console.log(`      ${intlMark} ${ap.code} - ${ap.nameZh || ap.name} (${ap.city})`);
-          }
+        if (hasFullData) {
+          // 有完整排序数据
+          sortedAirports = sortCountryAirports(country.airports || [], countryCode, rankingData);
+          countriesWithFullData++;
+          console.log(`    ✓ ${country.name} (${countryCode}): ${sortedAirports.length} 机场 [完整数据]`);
+        } else if (hasCapitalData) {
+          // 有首都数据
+          sortedAirports = sortCountryAirportsSimple(country.airports || [], countryCode, capitalsData);
+          countriesWithCapitalData++;
+          const capitalInfo = capitalsData.capitals[countryCode];
+          console.log(`    ○ ${country.name} (${countryCode}): ${sortedAirports.length} 机场 [首都: ${capitalInfo.capitalZh}]`);
         } else {
-          countriesWithoutData++;
-          // 没有排序数据的国家，仍按国际/国内分组，然后按代码排序
-          country.airports = sortedAirports.sort((a, b) => {
+          // 无数据，按国际/国内 + 代码排序
+          sortedAirports = (country.airports || []).sort((a, b) => {
             if (a.intl !== b.intl) return b.intl - a.intl;
             return a.code.localeCompare(b.code);
           });
+          countriesWithNoData++;
+        }
+        
+        country.airports = sortedAirports;
+        
+        // 显示前3个机场（仅有数据的国家）
+        if (hasFullData || hasCapitalData) {
+          const top3 = sortedAirports.slice(0, 3);
+          for (const ap of top3) {
+            const intlMark = ap.intl ? "🌐" : "  ";
+            console.log(`      ${intlMark} ${ap.code} - ${ap.nameZh || ap.name} (${ap.city})`);
+          }
         }
         
         totalSorted += sortedAirports.length;
@@ -166,8 +241,9 @@ function processAllAirports() {
   console.log("排序完成！");
   console.log("=".repeat(60));
   console.log(`总计排序: ${totalSorted} 个机场`);
-  console.log(`有排序数据的国家: ${countriesWithData}`);
-  console.log(`无排序数据的国家: ${countriesWithoutData} (按国际/国内 + 代码排序)`);
+  console.log(`有完整排序数据的国家: ${countriesWithFullData}`);
+  console.log(`有首都数据的国家: ${countriesWithCapitalData}`);
+  console.log(`无数据的国家: ${countriesWithNoData} (按国际/国内 + 代码排序)`);
   console.log(`\n✅ 已保存到 ${AIRPORTS_PATH}`);
 }
 

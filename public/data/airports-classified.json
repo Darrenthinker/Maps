@@ -26429,17 +26429,6 @@
               "domesticAirports": 14,
               "airports": [
                 {
-                  "code": "CNP",
-                  "icao": "BGCO",
-                  "iata": "CNP",
-                  "name": "Neerlerit Inaat Airport",
-                  "nameZh": "Nerlerit Inaat机场",
-                  "city": "Neerlerit Inaat",
-                  "lat": 70.7431,
-                  "lng": -22.6505,
-                  "intl": 0
-                },
-                {
                   "code": "GOH",
                   "icao": "BGGH",
                   "iata": "GOH",
@@ -26448,6 +26437,17 @@
                   "city": "Nuuk",
                   "lat": 64.1911,
                   "lng": -51.6791,
+                  "intl": 0
+                },
+                {
+                  "code": "CNP",
+                  "icao": "BGCO",
+                  "iata": "CNP",
+                  "name": "Neerlerit Inaat Airport",
+                  "nameZh": "Nerlerit Inaat机场",
+                  "city": "Neerlerit Inaat",
+                  "lat": 70.7431,
+                  "lng": -22.6505,
                   "intl": 0
                 },
                 {
@@ -28837,6 +28837,17 @@
               "domesticAirports": 4,
               "airports": [
                 {
+                  "code": "SJJ",
+                  "icao": "LQSA",
+                  "iata": "SJJ",
+                  "name": "Sarajevo International Airport",
+                  "nameZh": "萨拉热窝国际机场",
+                  "city": "Sarajevo",
+                  "lat": 43.8246,
+                  "lng": 18.3315,
+                  "intl": 0
+                },
+                {
                   "code": "BNX",
                   "icao": "LQBK",
                   "iata": "BNX",
@@ -28856,17 +28867,6 @@
                   "city": "Mostar",
                   "lat": 43.2825,
                   "lng": 17.8461,
-                  "intl": 0
-                },
-                {
-                  "code": "SJJ",
-                  "icao": "LQSA",
-                  "iata": "SJJ",
-                  "name": "Sarajevo International Airport",
-                  "nameZh": "萨拉热窝国际机场",
-                  "city": "Sarajevo",
-                  "lat": 43.8246,
-                  "lng": 18.3315,
                   "intl": 0
                 },
                 {
@@ -28934,17 +28934,6 @@
               "domesticAirports": 3,
               "airports": [
                 {
-                  "code": "IVG",
-                  "icao": "LYBR",
-                  "iata": "IVG",
-                  "name": "Berane Airport",
-                  "nameZh": "别拉内机场",
-                  "city": "Berane",
-                  "lat": 42.839,
-                  "lng": 19.862,
-                  "intl": 0
-                },
-                {
                   "code": "TGD",
                   "icao": "LYPG",
                   "iata": "TGD",
@@ -28953,6 +28942,17 @@
                   "city": "Podgorica",
                   "lat": 42.3594,
                   "lng": 19.2519,
+                  "intl": 0
+                },
+                {
+                  "code": "IVG",
+                  "icao": "LYBR",
+                  "iata": "IVG",
+                  "name": "Berane Airport",
+                  "nameZh": "别拉内机场",
+                  "city": "Berane",
+                  "lat": 42.839,
+                  "lng": 19.862,
                   "intl": 0
                 },
                 {
@@ -63612,6 +63612,17 @@
               "domesticAirports": 5,
               "airports": [
                 {
+                  "code": "SVD",
+                  "icao": "TVSA",
+                  "iata": "SVD",
+                  "name": "Argyle International Airport",
+                  "nameZh": "圣文森",
+                  "city": "Kingstown",
+                  "lat": 13.1597,
+                  "lng": -61.1488,
+                  "intl": 0
+                },
+                {
                   "code": "BQU",
                   "icao": "TVSB",
                   "iata": "BQU",
@@ -63645,17 +63656,6 @@
                   "intl": 0
                 },
                 {
-                  "code": "SVD",
-                  "icao": "TVSA",
-                  "iata": "SVD",
-                  "name": "Argyle International Airport",
-                  "nameZh": "圣文森",
-                  "city": "Kingstown",
-                  "lat": 13.1597,
-                  "lng": -61.1488,
-                  "intl": 0
-                },
-                {
                   "code": "UNI",
                   "icao": "TVSU",
                   "iata": "UNI",
@@ -63677,17 +63677,6 @@
               "domesticAirports": 3,
               "airports": [
                 {
-                  "code": "CYB",
-                  "icao": "MWCB",
-                  "iata": "CYB",
-                  "name": "Charles Kirkconnell International Airport",
-                  "nameZh": "Charles Kirkconnell国际机场",
-                  "city": "West End",
-                  "lat": 19.687,
-                  "lng": -79.8828,
-                  "intl": 0
-                },
-                {
                   "code": "GCM",
                   "icao": "MWCR",
                   "iata": "GCM",
@@ -63696,6 +63685,17 @@
                   "city": "George Town",
                   "lat": 19.2928,
                   "lng": -81.3577,
+                  "intl": 0
+                },
+                {
+                  "code": "CYB",
+                  "icao": "MWCB",
+                  "iata": "CYB",
+                  "name": "Charles Kirkconnell International Airport",
+                  "nameZh": "Charles Kirkconnell国际机场",
+                  "city": "West End",
+                  "lat": 19.687,
+                  "lng": -79.8828,
                   "intl": 0
                 },
                 {
@@ -63998,17 +63998,6 @@
               "domesticAirports": 2,
               "airports": [
                 {
-                  "code": "NEV",
-                  "icao": "TKPN",
-                  "iata": "NEV",
-                  "name": "Vance W. Amory International Airport",
-                  "nameZh": "万斯·艾默里国际机场",
-                  "city": "Charlestown",
-                  "lat": 17.2057,
-                  "lng": -62.5899,
-                  "intl": 0
-                },
-                {
                   "code": "SKB",
                   "icao": "TKPK",
                   "iata": "SKB",
@@ -64017,6 +64006,17 @@
                   "city": "Basseterre",
                   "lat": 17.3108,
                   "lng": -62.7191,
+                  "intl": 0
+                },
+                {
+                  "code": "NEV",
+                  "icao": "TKPN",
+                  "iata": "NEV",
+                  "name": "Vance W. Amory International Airport",
+                  "nameZh": "万斯·艾默里国际机场",
+                  "city": "Charlestown",
+                  "lat": 17.2057,
+                  "lng": -62.5899,
                   "intl": 0
                 }
               ]
@@ -74794,17 +74794,6 @@
               "domesticAirports": 2,
               "airports": [
                 {
-                  "code": "MPN",
-                  "icao": "EGYP",
-                  "iata": "MPN",
-                  "name": "Mount Pleasant Airport / RAF Mount Pleasant",
-                  "nameZh": "芒特普莱森特机场/皇家空军普莱森特山基地",
-                  "city": "Mount Pleasant",
-                  "lat": -51.8226,
-                  "lng": -58.4458,
-                  "intl": 0
-                },
-                {
                   "code": "PSY",
                   "icao": "SFAL",
                   "iata": "PSY",
@@ -74813,6 +74802,17 @@
                   "city": "Stanley",
                   "lat": -51.6857,
                   "lng": -57.7776,
+                  "intl": 0
+                },
+                {
+                  "code": "MPN",
+                  "icao": "EGYP",
+                  "iata": "MPN",
+                  "name": "Mount Pleasant Airport / RAF Mount Pleasant",
+                  "nameZh": "芒特普莱森特机场/皇家空军普莱森特山基地",
+                  "city": "Mount Pleasant",
+                  "lat": -51.8226,
+                  "lng": -58.4458,
                   "intl": 0
                 }
               ]
@@ -75614,6 +75614,17 @@
               "domesticAirports": 22,
               "airports": [
                 {
+                  "code": "KRT",
+                  "icao": "HSSK",
+                  "iata": "KRT",
+                  "name": "Khartoum International Airport",
+                  "nameZh": "喀土穆国际机场",
+                  "city": "Khartoum",
+                  "lat": 15.5895,
+                  "lng": 32.5532,
+                  "intl": 0
+                },
+                {
                   "code": "ADV",
                   "icao": "ADV",
                   "iata": "ADV",
@@ -75743,17 +75754,6 @@
                   "city": "Kadugli",
                   "lat": 11.138,
                   "lng": 29.7011,
-                  "intl": 0
-                },
-                {
-                  "code": "KRT",
-                  "icao": "HSSK",
-                  "iata": "KRT",
-                  "name": "Khartoum International Airport",
-                  "nameZh": "喀土穆国际机场",
-                  "city": "Khartoum",
-                  "lat": 15.5895,
-                  "lng": 32.5532,
                   "intl": 0
                 },
                 {
@@ -76107,6 +76107,17 @@
               "domesticAirports": 18,
               "airports": [
                 {
+                  "code": "MJI",
+                  "icao": "HLLM",
+                  "iata": "MJI",
+                  "name": "Mitiga International Airport",
+                  "nameZh": "的黎波里-米提加",
+                  "city": "Tripoli",
+                  "lat": 32.8918,
+                  "lng": 13.2879,
+                  "intl": 0
+                },
+                {
                   "code": "AKF",
                   "icao": "HLKF",
                   "iata": "AKF",
@@ -76203,17 +76214,6 @@
                   "city": "Ghadames",
                   "lat": 30.1517,
                   "lng": 9.7153,
-                  "intl": 0
-                },
-                {
-                  "code": "MJI",
-                  "icao": "HLLM",
-                  "iata": "MJI",
-                  "name": "Mitiga International Airport",
-                  "nameZh": "的黎波里-米提加",
-                  "city": "Tripoli",
-                  "lat": 32.8918,
-                  "lng": 13.2879,
                   "intl": 0
                 },
                 {
@@ -76435,17 +76435,6 @@
               "domesticAirports": 5,
               "airports": [
                 {
-                  "code": "AEE",
-                  "icao": "AEE",
-                  "iata": "AEE",
-                  "name": "Adareil Airport",
-                  "nameZh": "阿达雷尔机场",
-                  "city": "Adar",
-                  "lat": 10.0536,
-                  "lng": 32.9594,
-                  "intl": 0
-                },
-                {
                   "code": "JUB",
                   "icao": "HJJJ",
                   "iata": "JUB",
@@ -76454,6 +76443,17 @@
                   "city": "Juba",
                   "lat": 4.872,
                   "lng": 31.6011,
+                  "intl": 0
+                },
+                {
+                  "code": "AEE",
+                  "icao": "AEE",
+                  "iata": "AEE",
+                  "name": "Adareil Airport",
+                  "nameZh": "阿达雷尔机场",
+                  "city": "Adar",
+                  "lat": 10.0536,
+                  "lng": 32.9594,
                   "intl": 0
                 },
                 {
@@ -76882,6 +76882,17 @@
               "domesticAirports": 27,
               "airports": [
                 {
+                  "code": "OUA",
+                  "icao": "DFFD",
+                  "iata": "OUA",
+                  "name": "Ouagadougou Thomas Sankara International Airport",
+                  "nameZh": "瓦加杜古汤姆·桑卡拉国际机场",
+                  "city": "Ouagadougou",
+                  "lat": 12.3532,
+                  "lng": -1.5124,
+                  "intl": 0
+                },
+                {
                   "code": "ARL",
                   "icao": "DFER",
                   "iata": "ARL",
@@ -76956,17 +76967,6 @@
                   "city": "Fada N'gourma",
                   "lat": 12.033,
                   "lng": 0.35,
-                  "intl": 0
-                },
-                {
-                  "code": "OUA",
-                  "icao": "DFFD",
-                  "iata": "OUA",
-                  "name": "Ouagadougou Thomas Sankara International Airport",
-                  "nameZh": "瓦加杜古汤姆·桑卡拉国际机场",
-                  "city": "Ouagadougou",
-                  "lat": 12.3532,
-                  "lng": -1.5124,
                   "intl": 0
                 },
                 {
@@ -77452,6 +77452,17 @@
               "domesticAirports": 18,
               "airports": [
                 {
+                  "code": "NKC",
+                  "icao": "GQNO",
+                  "iata": "NKC",
+                  "name": "Nouakchott–Oumtounsy International Airport",
+                  "nameZh": "诺克少",
+                  "city": "Nouakchott",
+                  "lat": 18.31,
+                  "lng": -15.9697,
+                  "intl": 0
+                },
+                {
                   "code": "AEO",
                   "icao": "GQNA",
                   "iata": "AEO",
@@ -77559,17 +77570,6 @@
                   "city": "Nouadhibou",
                   "lat": 20.9324,
                   "lng": -17.0302,
-                  "intl": 0
-                },
-                {
-                  "code": "NKC",
-                  "icao": "GQNO",
-                  "iata": "NKC",
-                  "name": "Nouakchott–Oumtounsy International Airport",
-                  "nameZh": "诺克少",
-                  "city": "Nouakchott",
-                  "lat": 18.31,
-                  "lng": -15.9697,
                   "intl": 0
                 },
                 {
@@ -77835,6 +77835,28 @@
               "domesticAirports": 14,
               "airports": [
                 {
+                  "code": "MLW",
+                  "icao": "GLMR",
+                  "iata": "MLW",
+                  "name": "Spriggs Payne Airport",
+                  "nameZh": "斯普里格斯佩恩机场",
+                  "city": "Monrovia",
+                  "lat": 6.2891,
+                  "lng": -10.7587,
+                  "intl": 0
+                },
+                {
+                  "code": "ROB",
+                  "icao": "GLRB",
+                  "iata": "ROB",
+                  "name": "Roberts International Airport",
+                  "nameZh": "罗伯茨国际机场",
+                  "city": "Monrovia",
+                  "lat": 6.2338,
+                  "lng": -10.3623,
+                  "intl": 0
+                },
+                {
                   "code": "BYL",
                   "icao": "BYL",
                   "iata": "BYL",
@@ -77879,17 +77901,6 @@
                   "intl": 0
                 },
                 {
-                  "code": "MLW",
-                  "icao": "GLMR",
-                  "iata": "MLW",
-                  "name": "Spriggs Payne Airport",
-                  "nameZh": "斯普里格斯佩恩机场",
-                  "city": "Monrovia",
-                  "lat": 6.2891,
-                  "lng": -10.7587,
-                  "intl": 0
-                },
-                {
                   "code": "NIA",
                   "icao": "GLNA",
                   "iata": "NIA",
@@ -77898,17 +77909,6 @@
                   "city": "Nimba",
                   "lat": 7.4945,
                   "lng": -8.5845,
-                  "intl": 0
-                },
-                {
-                  "code": "ROB",
-                  "icao": "GLRB",
-                  "iata": "ROB",
-                  "name": "Roberts International Airport",
-                  "nameZh": "罗伯茨国际机场",
-                  "city": "Monrovia",
-                  "lat": 6.2338,
-                  "lng": -10.3623,
                   "intl": 0
                 },
                 {
@@ -78152,17 +78152,6 @@
               "domesticAirports": 11,
               "airports": [
                 {
-                  "code": "BKJ",
-                  "icao": "GUOK",
-                  "iata": "BKJ",
-                  "name": "Boké Baralande Airport",
-                  "nameZh": "博凯Baralande机场",
-                  "city": "Boké",
-                  "lat": 10.9658,
-                  "lng": -14.2811,
-                  "intl": 0
-                },
-                {
                   "code": "CKY",
                   "icao": "GUCY",
                   "iata": "CKY",
@@ -78171,6 +78160,17 @@
                   "city": "Conakry",
                   "lat": 9.5769,
                   "lng": -13.612,
+                  "intl": 0
+                },
+                {
+                  "code": "BKJ",
+                  "icao": "GUOK",
+                  "iata": "BKJ",
+                  "name": "Boké Baralande Airport",
+                  "nameZh": "博凯Baralande机场",
+                  "city": "Boké",
+                  "lat": 10.9658,
+                  "lng": -14.2811,
                   "intl": 0
                 },
                 {
@@ -78283,6 +78283,17 @@
               "domesticAirports": 9,
               "airports": [
                 {
+                  "code": "RAI",
+                  "icao": "GVNP",
+                  "iata": "RAI",
+                  "name": "Nelson Mandela International Airport",
+                  "nameZh": "纳尔逊·曼德拉国际机场",
+                  "city": "Praia",
+                  "lat": 14.9411,
+                  "lng": -23.4847,
+                  "intl": 0
+                },
+                {
                   "code": "BVC",
                   "icao": "GVBA",
                   "iata": "BVC",
@@ -78324,17 +78335,6 @@
                   "city": "Ponta do Sol",
                   "lat": 17.2028,
                   "lng": -25.0906,
-                  "intl": 0
-                },
-                {
-                  "code": "RAI",
-                  "icao": "GVNP",
-                  "iata": "RAI",
-                  "name": "Nelson Mandela International Airport",
-                  "nameZh": "纳尔逊·曼德拉国际机场",
-                  "city": "Praia",
-                  "lat": 14.9411,
-                  "lng": -23.4847,
                   "intl": 0
                 },
                 {
@@ -78577,17 +78577,6 @@
                   "intl": 0
                 },
                 {
-                  "code": "GBK",
-                  "icao": "GFGK",
-                  "iata": "GBK",
-                  "name": "Gbangbatok Airport",
-                  "nameZh": "邦巴托克机场",
-                  "city": "Gbangbatok",
-                  "lat": 7.8125,
-                  "lng": -12.3778,
-                  "intl": 0
-                },
-                {
                   "code": "HGS",
                   "icao": "GFHA",
                   "iata": "HGS",
@@ -78596,6 +78585,17 @@
                   "city": "Freetown",
                   "lat": 8.3943,
                   "lng": -13.1289,
+                  "intl": 0
+                },
+                {
+                  "code": "GBK",
+                  "icao": "GFGK",
+                  "iata": "GBK",
+                  "name": "Gbangbatok Airport",
+                  "nameZh": "邦巴托克机场",
+                  "city": "Gbangbatok",
+                  "lat": 7.8125,
+                  "lng": -12.3778,
                   "intl": 0
                 },
                 {
@@ -78653,6 +78653,17 @@
               "domesticAirports": 6,
               "airports": [
                 {
+                  "code": "NIM",
+                  "icao": "DRRN",
+                  "iata": "NIM",
+                  "name": "Diori Hamani International Airport",
+                  "nameZh": "迪奥里·哈马尼国际机场",
+                  "city": "Niamey",
+                  "lat": 13.4815,
+                  "lng": 2.1836,
+                  "intl": 0
+                },
+                {
                   "code": "AJY",
                   "icao": "DRZA",
                   "iata": "AJY",
@@ -78672,17 +78683,6 @@
                   "city": "Maradi",
                   "lat": 13.5025,
                   "lng": 7.1268,
-                  "intl": 0
-                },
-                {
-                  "code": "NIM",
-                  "icao": "DRRN",
-                  "iata": "NIM",
-                  "name": "Diori Hamani International Airport",
-                  "nameZh": "迪奥里·哈马尼国际机场",
-                  "city": "Niamey",
-                  "lat": 13.4815,
-                  "lng": 2.1836,
                   "intl": 0
                 },
                 {
@@ -78761,17 +78761,6 @@
               "domesticAirports": 2,
               "airports": [
                 {
-                  "code": "BQE",
-                  "icao": "GGBU",
-                  "iata": "BQE",
-                  "name": "Bubaque Airport",
-                  "nameZh": "布巴克机场",
-                  "city": "Bubaque",
-                  "lat": 11.2974,
-                  "lng": -15.8381,
-                  "intl": 0
-                },
-                {
                   "code": "OXB",
                   "icao": "GGOV",
                   "iata": "OXB",
@@ -78780,6 +78769,17 @@
                   "city": "Bissau",
                   "lat": 11.8943,
                   "lng": -15.6536,
+                  "intl": 0
+                },
+                {
+                  "code": "BQE",
+                  "icao": "GGBU",
+                  "iata": "BQE",
+                  "name": "Bubaque Airport",
+                  "nameZh": "布巴克机场",
+                  "city": "Bubaque",
+                  "lat": 11.2974,
+                  "lng": -15.8381,
                   "intl": 0
                 }
               ]
@@ -78823,6 +78823,17 @@
               "intlAirports": 0,
               "domesticAirports": 67,
               "airports": [
+                {
+                  "code": "TNR",
+                  "icao": "FMMI",
+                  "iata": "TNR",
+                  "name": "Ivato Airport",
+                  "nameZh": "伊瓦托机场",
+                  "city": "Antananarivo",
+                  "lat": -18.7969,
+                  "lng": 47.4788,
+                  "intl": 0
+                },
                 {
                   "code": "AHY",
                   "icao": "AHY",
@@ -79239,17 +79250,6 @@
                   "city": "Toamasina",
                   "lat": -18.1135,
                   "lng": 49.3923,
-                  "intl": 0
-                },
-                {
-                  "code": "TNR",
-                  "icao": "FMMI",
-                  "iata": "TNR",
-                  "name": "Ivato Airport",
-                  "nameZh": "伊瓦托机场",
-                  "city": "Antananarivo",
-                  "lat": -18.7969,
-                  "lng": 47.4788,
                   "intl": 0
                 },
                 {
@@ -80987,6 +80987,28 @@
               "domesticAirports": 25,
               "airports": [
                 {
+                  "code": "MGQ",
+                  "icao": "HCMM",
+                  "iata": "MGQ",
+                  "name": "Aden Adde International Airport",
+                  "nameZh": "亚丁·阿德国际机场",
+                  "city": "Mogadishu",
+                  "lat": 2.0144,
+                  "lng": 45.3047,
+                  "intl": 0
+                },
+                {
+                  "code": "SO-0001",
+                  "icao": "SO-0001",
+                  "iata": "",
+                  "name": "K50 Airstrip",
+                  "nameZh": "K50飞机跑道",
+                  "city": "Mogadishu",
+                  "lat": 2.0053,
+                  "lng": 44.9866,
+                  "intl": 0
+                },
+                {
                   "code": "AAD",
                   "icao": "HCAD",
                   "iata": "AAD",
@@ -81237,28 +81259,6 @@
                   "city": "Las Khorey",
                   "lat": 11.1735,
                   "lng": 48.2143,
-                  "intl": 0
-                },
-                {
-                  "code": "MGQ",
-                  "icao": "HCMM",
-                  "iata": "MGQ",
-                  "name": "Aden Adde International Airport",
-                  "nameZh": "亚丁·阿德国际机场",
-                  "city": "Mogadishu",
-                  "lat": 2.0144,
-                  "lng": 45.3047,
-                  "intl": 0
-                },
-                {
-                  "code": "SO-0001",
-                  "icao": "SO-0001",
-                  "iata": "",
-                  "name": "K50 Airstrip",
-                  "nameZh": "K50飞机跑道",
-                  "city": "Mogadishu",
-                  "lat": 2.0053,
-                  "lng": 44.9866,
                   "intl": 0
                 }
               ]
@@ -81523,17 +81523,6 @@
               "domesticAirports": 5,
               "airports": [
                 {
-                  "code": "AII",
-                  "icao": "HDAS",
-                  "iata": "AII",
-                  "name": "Ali-Sabieh Airport",
-                  "nameZh": "阿里萨比耶机场",
-                  "city": "Ali-Sabieh",
-                  "lat": 11.1469,
-                  "lng": 42.72,
-                  "intl": 0
-                },
-                {
                   "code": "JIB",
                   "icao": "HDAM",
                   "iata": "JIB",
@@ -81542,6 +81531,17 @@
                   "city": "Djibouti City",
                   "lat": 11.5473,
                   "lng": 43.1595,
+                  "intl": 0
+                },
+                {
+                  "code": "AII",
+                  "icao": "HDAS",
+                  "iata": "AII",
+                  "name": "Ali-Sabieh Airport",
+                  "nameZh": "阿里萨比耶机场",
+                  "city": "Ali-Sabieh",
+                  "lat": 11.1469,
+                  "lng": 42.72,
                   "intl": 0
                 },
                 {
@@ -81653,17 +81653,6 @@
               "domesticAirports": 4,
               "airports": [
                 {
-                  "code": "ASA",
-                  "icao": "HHSB",
-                  "iata": "ASA",
-                  "name": "Assab International Airport",
-                  "nameZh": "阿萨布国际机场",
-                  "city": "Assab",
-                  "lat": 13.0718,
-                  "lng": 42.645,
-                  "intl": 0
-                },
-                {
                   "code": "ASM",
                   "icao": "HHAS",
                   "iata": "ASM",
@@ -81672,6 +81661,17 @@
                   "city": "Asmara",
                   "lat": 15.2919,
                   "lng": 38.9107,
+                  "intl": 0
+                },
+                {
+                  "code": "ASA",
+                  "icao": "HHSB",
+                  "iata": "ASA",
+                  "name": "Assab International Airport",
+                  "nameZh": "阿萨布国际机场",
+                  "city": "Assab",
+                  "lat": 13.0718,
+                  "lng": 42.645,
                   "intl": 0
                 },
                 {
@@ -81750,17 +81750,6 @@
               "domesticAirports": 3,
               "airports": [
                 {
-                  "code": "AJN",
-                  "icao": "FMCV",
-                  "iata": "AJN",
-                  "name": "Ouani Airport",
-                  "nameZh": "瓦尼机场",
-                  "city": "Ouani",
-                  "lat": -12.131,
-                  "lng": 44.43,
-                  "intl": 0
-                },
-                {
                   "code": "HAH",
                   "icao": "FMCH",
                   "iata": "HAH",
@@ -81769,6 +81758,17 @@
                   "city": "Moroni",
                   "lat": -11.5337,
                   "lng": 43.2719,
+                  "intl": 0
+                },
+                {
+                  "code": "AJN",
+                  "icao": "FMCV",
+                  "iata": "AJN",
+                  "name": "Ouani Airport",
+                  "nameZh": "瓦尼机场",
+                  "city": "Ouani",
+                  "lat": -12.131,
+                  "lng": 44.43,
                   "intl": 0
                 },
                 {
@@ -81793,17 +81793,6 @@
               "domesticAirports": 3,
               "airports": [
                 {
-                  "code": "BJM",
-                  "icao": "HBBA",
-                  "iata": "BJM",
-                  "name": "Bujumbura Melchior Ndadaye International Airport",
-                  "nameZh": "布琼布拉国际机场",
-                  "city": "Bujumbura",
-                  "lat": -3.324,
-                  "lng": 29.3185,
-                  "intl": 0
-                },
-                {
                   "code": "GID",
                   "icao": "HBBE",
                   "iata": "GID",
@@ -81812,6 +81801,17 @@
                   "city": "Gitega",
                   "lat": -3.4172,
                   "lng": 29.9113,
+                  "intl": 0
+                },
+                {
+                  "code": "BJM",
+                  "icao": "HBBA",
+                  "iata": "BJM",
+                  "name": "Bujumbura Melchior Ndadaye International Airport",
+                  "nameZh": "布琼布拉国际机场",
+                  "city": "Bujumbura",
+                  "lat": -3.324,
+                  "lng": 29.3185,
                   "intl": 0
                 },
                 {
@@ -81919,6 +81919,17 @@
               "intlAirports": 0,
               "domesticAirports": 61,
               "airports": [
+                {
+                  "code": "FIH",
+                  "icao": "FZAA",
+                  "iata": "FIH",
+                  "name": "Ndjili International Airport",
+                  "nameZh": "恩吉利国际机场",
+                  "city": "Kinshasa",
+                  "lat": -4.3857,
+                  "lng": 15.4446,
+                  "intl": 0
+                },
                 {
                   "code": "BAN",
                   "icao": "FZVR",
@@ -82060,17 +82071,6 @@
                   "city": "Bandundu",
                   "lat": -3.3113,
                   "lng": 17.3817,
-                  "intl": 0
-                },
-                {
-                  "code": "FIH",
-                  "icao": "FZAA",
-                  "iata": "FIH",
-                  "name": "Ndjili International Airport",
-                  "nameZh": "恩吉利国际机场",
-                  "city": "Kinshasa",
-                  "lat": -4.3857,
-                  "lng": 15.4446,
                   "intl": 0
                 },
                 {
@@ -83084,6 +83084,17 @@
               "domesticAirports": 31,
               "airports": [
                 {
+                  "code": "LBV",
+                  "icao": "FOOL",
+                  "iata": "LBV",
+                  "name": "Libreville Leon M'ba International Airport",
+                  "nameZh": "利伯维尔国际机场",
+                  "city": "Libreville",
+                  "lat": 0.4586,
+                  "lng": 9.4123,
+                  "intl": 0
+                },
+                {
                   "code": "AKE",
                   "icao": "FOGA",
                   "iata": "AKE",
@@ -83213,17 +83224,6 @@
                   "city": "Lambarene",
                   "lat": -0.7044,
                   "lng": 10.2457,
-                  "intl": 0
-                },
-                {
-                  "code": "LBV",
-                  "icao": "FOOL",
-                  "iata": "LBV",
-                  "name": "Libreville Leon M'ba International Airport",
-                  "nameZh": "利伯维尔国际机场",
-                  "city": "Libreville",
-                  "lat": 0.4586,
-                  "lng": 9.4123,
                   "intl": 0
                 },
                 {
@@ -83435,6 +83435,17 @@
               "domesticAirports": 25,
               "airports": [
                 {
+                  "code": "BZV",
+                  "icao": "FCBB",
+                  "iata": "BZV",
+                  "name": "Maya-Maya International Airport",
+                  "nameZh": "玛雅玛亚国际机场",
+                  "city": "Brazzaville",
+                  "lat": -4.2517,
+                  "lng": 15.253,
+                  "intl": 0
+                },
+                {
                   "code": "ANJ",
                   "icao": "FCBZ",
                   "iata": "ANJ",
@@ -83465,17 +83476,6 @@
                   "city": "Betou",
                   "lat": 3.0576,
                   "lng": 18.5144,
-                  "intl": 0
-                },
-                {
-                  "code": "BZV",
-                  "icao": "FCBB",
-                  "iata": "BZV",
-                  "name": "Maya-Maya International Airport",
-                  "nameZh": "玛雅玛亚国际机场",
-                  "city": "Brazzaville",
-                  "lat": -4.2517,
-                  "lng": 15.253,
                   "intl": 0
                 },
                 {
@@ -83720,6 +83720,17 @@
               "domesticAirports": 22,
               "airports": [
                 {
+                  "code": "BGF",
+                  "icao": "FEFF",
+                  "iata": "BGF",
+                  "name": "Bangui M'Poko International Airport",
+                  "nameZh": "班吉－姆波科国际机场",
+                  "city": "Bangui",
+                  "lat": 4.3985,
+                  "lng": 18.5188,
+                  "intl": 0
+                },
+                {
                   "code": "AIG",
                   "icao": "FEFY",
                   "iata": "AIG",
@@ -83761,17 +83772,6 @@
                   "city": "Bouca",
                   "lat": 6.517,
                   "lng": 18.267,
-                  "intl": 0
-                },
-                {
-                  "code": "BGF",
-                  "icao": "FEFF",
-                  "iata": "BGF",
-                  "name": "Bangui M'Poko International Airport",
-                  "nameZh": "班吉－姆波科国际机场",
-                  "city": "Bangui",
-                  "lat": 4.3985,
-                  "lng": 18.5188,
                   "intl": 0
                 },
                 {
@@ -83972,6 +83972,17 @@
               "domesticAirports": 19,
               "airports": [
                 {
+                  "code": "NDJ",
+                  "icao": "FTTJ",
+                  "iata": "NDJ",
+                  "name": "N'Djamena International Airport",
+                  "nameZh": "恩贾梅纳国际机场",
+                  "city": "N'Djamena",
+                  "lat": 12.1337,
+                  "lng": 15.034,
+                  "intl": 0
+                },
+                {
                   "code": "AEH",
                   "icao": "FTTC",
                   "iata": "AEH",
@@ -84101,17 +84112,6 @@
                   "city": "Mongo",
                   "lat": 12.1705,
                   "lng": 18.6756,
-                  "intl": 0
-                },
-                {
-                  "code": "NDJ",
-                  "icao": "FTTJ",
-                  "iata": "NDJ",
-                  "name": "N'Djamena International Airport",
-                  "nameZh": "恩贾梅纳国际机场",
-                  "city": "N'Djamena",
-                  "lat": 12.1337,
-                  "lng": 15.034,
                   "intl": 0
                 },
                 {
@@ -84410,6 +84410,17 @@
               "domesticAirports": 6,
               "airports": [
                 {
+                  "code": "SSG",
+                  "icao": "FGSL",
+                  "iata": "SSG",
+                  "name": "Malabo International Airport",
+                  "nameZh": "马拉博机场",
+                  "city": "Malabo",
+                  "lat": 3.7553,
+                  "lng": 8.7087,
+                  "intl": 0
+                },
+                {
                   "code": "BSG",
                   "icao": "FGBT",
                   "iata": "BSG",
@@ -84462,17 +84473,6 @@
                   "city": "Corisco Island",
                   "lat": 0.9109,
                   "lng": 9.3303,
-                  "intl": 0
-                },
-                {
-                  "code": "SSG",
-                  "icao": "FGSL",
-                  "iata": "SSG",
-                  "name": "Malabo International Airport",
-                  "nameZh": "马拉博机场",
-                  "city": "Malabo",
-                  "lat": 3.7553,
-                  "lng": 8.7087,
                   "intl": 0
                 }
               ]
@@ -85539,6 +85539,17 @@
               "domesticAirports": 37,
               "airports": [
                 {
+                  "code": "MPM",
+                  "icao": "FQMA",
+                  "iata": "MPM",
+                  "name": "Maputo Airport",
+                  "nameZh": "马普托国际机场",
+                  "city": "Maputo",
+                  "lat": -25.9208,
+                  "lng": 32.5726,
+                  "intl": 0
+                },
+                {
                   "code": "AME",
                   "icao": "AME",
                   "iata": "AME",
@@ -85748,17 +85759,6 @@
                   "intl": 0
                 },
                 {
-                  "code": "MPM",
-                  "icao": "FQMA",
-                  "iata": "MPM",
-                  "name": "Maputo Airport",
-                  "nameZh": "马普托国际机场",
-                  "city": "Maputo",
-                  "lat": -25.9208,
-                  "lng": 32.5726,
-                  "intl": 0
-                },
-                {
                   "code": "MTU",
                   "icao": "MTU",
                   "iata": "MTU",
@@ -85956,6 +85956,28 @@
               "domesticAirports": 32,
               "airports": [
                 {
+                  "code": "ERS",
+                  "icao": "FYWE",
+                  "iata": "ERS",
+                  "name": "Eros Airport",
+                  "nameZh": "埃罗斯机场",
+                  "city": "Windhoek",
+                  "lat": -22.6049,
+                  "lng": 17.079,
+                  "intl": 0
+                },
+                {
+                  "code": "WDH",
+                  "icao": "FYWH",
+                  "iata": "WDH",
+                  "name": "Hosea Kutako International Airport",
+                  "nameZh": "霍齐亚·库塔科国际机场",
+                  "city": "Windhoek",
+                  "lat": -22.4799,
+                  "lng": 17.4709,
+                  "intl": 0
+                },
+                {
                   "code": "ADI",
                   "icao": "FYAR",
                   "iata": "ADI",
@@ -85986,17 +86008,6 @@
                   "city": "Bagani",
                   "lat": -18.1185,
                   "lng": 21.6233,
-                  "intl": 0
-                },
-                {
-                  "code": "ERS",
-                  "icao": "FYWE",
-                  "iata": "ERS",
-                  "name": "Eros Airport",
-                  "nameZh": "埃罗斯机场",
-                  "city": "Windhoek",
-                  "lat": -22.6049,
-                  "lng": 17.079,
                   "intl": 0
                 },
                 {
@@ -86286,17 +86297,6 @@
                   "intl": 0
                 },
                 {
-                  "code": "WDH",
-                  "icao": "FYWH",
-                  "iata": "WDH",
-                  "name": "Hosea Kutako International Airport",
-                  "nameZh": "霍齐亚·库塔科国际机场",
-                  "city": "Windhoek",
-                  "lat": -22.4799,
-                  "lng": 17.4709,
-                  "intl": 0
-                },
-                {
                   "code": "WVB",
                   "icao": "FYWB",
                   "iata": "WVB",
@@ -86317,6 +86317,17 @@
               "intlAirports": 0,
               "domesticAirports": 25,
               "airports": [
+                {
+                  "code": "LUN",
+                  "icao": "FLKK",
+                  "iata": "LUN",
+                  "name": "Kenneth Kaunda International Airport",
+                  "nameZh": "肯尼思·卡翁达国际机场",
+                  "city": "Lusaka",
+                  "lat": -15.3308,
+                  "lng": 28.4527,
+                  "intl": 0
+                },
                 {
                   "code": "BBZ",
                   "icao": "FLZB",
@@ -86425,17 +86436,6 @@
                   "city": "Kaoma",
                   "lat": -14.8,
                   "lng": 24.783,
-                  "intl": 0
-                },
-                {
-                  "code": "LUN",
-                  "icao": "FLKK",
-                  "iata": "LUN",
-                  "name": "Kenneth Kaunda International Airport",
-                  "nameZh": "肯尼思·卡翁达国际机场",
-                  "city": "Lusaka",
-                  "lat": -15.3308,
-                  "lng": 28.4527,
                   "intl": 0
                 },
                 {
@@ -86800,6 +86800,17 @@
               "domesticAirports": 16,
               "airports": [
                 {
+                  "code": "GBE",
+                  "icao": "FBSK",
+                  "iata": "GBE",
+                  "name": "Sir Seretse Khama International Airport",
+                  "nameZh": "塞雷茨·卡马爵士国际机场",
+                  "city": "Gaborone",
+                  "lat": -24.5552,
+                  "lng": 25.9182,
+                  "intl": 0
+                },
+                {
                   "code": "BBK",
                   "icao": "FBKE",
                   "iata": "BBK",
@@ -86819,17 +86830,6 @@
                   "city": "Francistown",
                   "lat": -21.1592,
                   "lng": 27.4688,
-                  "intl": 0
-                },
-                {
-                  "code": "GBE",
-                  "icao": "FBSK",
-                  "iata": "GBE",
-                  "name": "Sir Seretse Khama International Airport",
-                  "nameZh": "塞雷茨·卡马爵士国际机场",
-                  "city": "Gaborone",
-                  "lat": -24.5552,
-                  "lng": 25.9182,
                   "intl": 0
                 },
                 {
@@ -86986,6 +86986,17 @@
               "domesticAirports": 13,
               "airports": [
                 {
+                  "code": "HRE",
+                  "icao": "FVHA",
+                  "iata": "HRE",
+                  "name": "Robert Gabriel Mugabe International Airport",
+                  "nameZh": "哈拉雷国际机场",
+                  "city": "Harare",
+                  "lat": -17.9318,
+                  "lng": 31.0928,
+                  "intl": 0
+                },
+                {
                   "code": "BFO",
                   "icao": "FVCZ",
                   "iata": "BFO",
@@ -87038,17 +87049,6 @@
                   "city": "Gweru",
                   "lat": -19.4367,
                   "lng": 29.8619,
-                  "intl": 0
-                },
-                {
-                  "code": "HRE",
-                  "icao": "FVHA",
-                  "iata": "HRE",
-                  "name": "Robert Gabriel Mugabe International Airport",
-                  "nameZh": "哈拉雷国际机场",
-                  "city": "Harare",
-                  "lat": -17.9318,
-                  "lng": 31.0928,
                   "intl": 0
                 },
                 {
@@ -87313,17 +87313,6 @@
               "domesticAirports": 2,
               "airports": [
                 {
-                  "code": "ASI",
-                  "icao": "FHAW",
-                  "iata": "ASI",
-                  "name": "RAF Ascension Island",
-                  "nameZh": "英国皇家空军阿森松岛基地",
-                  "city": "Cat Hill",
-                  "lat": -7.9702,
-                  "lng": -14.3927,
-                  "intl": 0
-                },
-                {
                   "code": "HLE",
                   "icao": "FHSH",
                   "iata": "HLE",
@@ -87332,6 +87321,17 @@
                   "city": "Jamestown",
                   "lat": -15.9589,
                   "lng": -5.6461,
+                  "intl": 0
+                },
+                {
+                  "code": "ASI",
+                  "icao": "FHAW",
+                  "iata": "ASI",
+                  "name": "RAF Ascension Island",
+                  "nameZh": "英国皇家空军阿森松岛基地",
+                  "city": "Cat Hill",
+                  "lat": -7.9702,
+                  "lng": -14.3927,
                   "intl": 0
                 }
               ]
@@ -98534,6 +98534,17 @@
               "domesticAirports": 36,
               "airports": [
                 {
+                  "code": "HIR",
+                  "icao": "AGGH",
+                  "iata": "HIR",
+                  "name": "Honiara International Airport",
+                  "nameZh": "霍尼亚拉国际机场",
+                  "city": "Honiara",
+                  "lat": -9.428,
+                  "lng": 160.055,
+                  "intl": 0
+                },
+                {
                   "code": "AFT",
                   "icao": "AGAF",
                   "iata": "AFT",
@@ -98674,17 +98685,6 @@
                   "city": "Gizo",
                   "lat": -8.0978,
                   "lng": 156.864,
-                  "intl": 0
-                },
-                {
-                  "code": "HIR",
-                  "icao": "AGGH",
-                  "iata": "HIR",
-                  "name": "Honiara International Airport",
-                  "nameZh": "霍尼亚拉国际机场",
-                  "city": "Honiara",
-                  "lat": -9.428,
-                  "lng": 160.055,
                   "intl": 0
                 },
                 {
@@ -98939,6 +98939,17 @@
               "intlAirports": 0,
               "domesticAirports": 29,
               "airports": [
+                {
+                  "code": "VLI",
+                  "icao": "NVVV",
+                  "iata": "VLI",
+                  "name": "Bauerfield International Airport",
+                  "nameZh": "维拉港国际机场",
+                  "city": "Port Vila",
+                  "lat": -17.6993,
+                  "lng": 168.32,
+                  "intl": 0
+                },
                 {
                   "code": "AUY",
                   "icao": "NVVA",
@@ -99212,17 +99223,6 @@
                   "city": "Ambrym Island",
                   "lat": -16.3297,
                   "lng": 168.3011,
-                  "intl": 0
-                },
-                {
-                  "code": "VLI",
-                  "icao": "NVVV",
-                  "iata": "VLI",
-                  "name": "Bauerfield International Airport",
-                  "nameZh": "维拉港国际机场",
-                  "city": "Port Vila",
-                  "lat": -17.6993,
-                  "lng": 168.32,
                   "intl": 0
                 },
                 {
@@ -99695,6 +99695,17 @@
               "domesticAirports": 32,
               "airports": [
                 {
+                  "code": "MAJ",
+                  "icao": "PKMJ",
+                  "iata": "MAJ",
+                  "name": "Marshall Islands International Airport",
+                  "nameZh": "马绍尔群岛国际机场",
+                  "city": "Majuro Atoll",
+                  "lat": 7.0651,
+                  "lng": 171.2717,
+                  "intl": 0
+                },
+                {
                   "code": "AIC",
                   "icao": "AIP",
                   "iata": "AIC",
@@ -99882,17 +99893,6 @@
                   "intl": 0
                 },
                 {
-                  "code": "MAJ",
-                  "icao": "PKMJ",
-                  "iata": "MAJ",
-                  "name": "Marshall Islands International Airport",
-                  "nameZh": "马绍尔群岛国际机场",
-                  "city": "Majuro Atoll",
-                  "lat": 7.0651,
-                  "lng": 171.2717,
-                  "intl": 0
-                },
-                {
                   "code": "MAV",
                   "icao": "MH-MAV",
                   "iata": "MAV",
@@ -100056,6 +100056,17 @@
               "intlAirports": 0,
               "domesticAirports": 21,
               "airports": [
+                {
+                  "code": "TRW",
+                  "icao": "NGTA",
+                  "iata": "TRW",
+                  "name": "Bonriki International Airport",
+                  "nameZh": "邦里基国际机场",
+                  "city": "South Tarawa",
+                  "lat": 1.3816,
+                  "lng": 173.147,
+                  "intl": 0
+                },
                 {
                   "code": "AAK",
                   "icao": "NGUK",
@@ -100263,17 +100274,6 @@
                   "city": "Tabuaeran Island",
                   "lat": 3.8994,
                   "lng": -159.389,
-                  "intl": 0
-                },
-                {
-                  "code": "TRW",
-                  "icao": "NGTA",
-                  "iata": "TRW",
-                  "name": "Bonriki International Airport",
-                  "nameZh": "邦里基国际机场",
-                  "city": "South Tarawa",
-                  "lat": 1.3816,
-                  "lng": 173.147,
                   "intl": 0
                 },
                 {
@@ -101061,6 +101061,17 @@
               "domesticAirports": 9,
               "airports": [
                 {
+                  "code": "RAR",
+                  "icao": "NCRG",
+                  "iata": "RAR",
+                  "name": "Rarotonga International Airport",
+                  "nameZh": "拉罗汤加国际机场",
+                  "city": "Avarua",
+                  "lat": -21.2027,
+                  "lng": -159.806,
+                  "intl": 0
+                },
+                {
                   "code": "AIT",
                   "icao": "NCAI",
                   "iata": "AIT",
@@ -101147,17 +101158,6 @@
                   "lat": -10.9145,
                   "lng": -165.8393,
                   "intl": 0
-                },
-                {
-                  "code": "RAR",
-                  "icao": "NCRG",
-                  "iata": "RAR",
-                  "name": "Rarotonga International Airport",
-                  "nameZh": "拉罗汤加国际机场",
-                  "city": "Avarua",
-                  "lat": -21.2027,
-                  "lng": -159.806,
-                  "intl": 0
                 }
               ]
             },
@@ -101169,6 +101169,17 @@
               "intlAirports": 0,
               "domesticAirports": 6,
               "airports": [
+                {
+                  "code": "TBU",
+                  "icao": "NFTF",
+                  "iata": "TBU",
+                  "name": "Fua'amotu International Airport",
+                  "nameZh": "努瓜娄发国际机场",
+                  "city": "Nuku'alofa",
+                  "lat": -21.2414,
+                  "lng": -175.1492,
+                  "intl": 0
+                },
                 {
                   "code": "EUA",
                   "icao": "NFTE",
@@ -101211,17 +101222,6 @@
                   "city": "Niuatoputapu",
                   "lat": -15.9773,
                   "lng": -173.7911,
-                  "intl": 0
-                },
-                {
-                  "code": "TBU",
-                  "icao": "NFTF",
-                  "iata": "TBU",
-                  "name": "Fua'amotu International Airport",
-                  "nameZh": "努瓜娄发国际机场",
-                  "city": "Nuku'alofa",
-                  "lat": -21.2414,
-                  "lng": -175.1492,
                   "intl": 0
                 },
                 {
