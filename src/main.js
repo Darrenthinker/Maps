@@ -336,7 +336,12 @@ function showAutocompleteSuggestions(predictions) {
   
   autocompleteDropdown.innerHTML = predictions.map((p, index) => `
     <div class="autocomplete-item" data-place-id="${p.place_id}" data-index="${index}">
-      <span class="autocomplete-item__icon">📍</span>
+      <span class="autocomplete-item__icon">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#9CA3AF"/>
+          <circle cx="12" cy="9" r="2.5" fill="#fff"/>
+        </svg>
+      </span>
       <span class="autocomplete-item__text">${p.description}</span>
     </div>
   `).join("");
@@ -441,9 +446,10 @@ async function selectPlace(placeId, description) {
       const isUS = isUSAddress(name);
       const remoteCheck = isUS ? checkRemoteArea(zipCode) : null;
       
-      // 显示结果
+      // 显示结果 - 使用灰色定位图标
+      const locationIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" style="vertical-align: middle; margin-right: 4px;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#9CA3AF"/><circle cx="12" cy="9" r="2.5" fill="#fff"/></svg>`;
       let html = `
-        <div class="address-result__title">📍 ${name}</div>
+        <div class="address-result__title">${locationIcon}${name}</div>
       `;
       
       // 显示偏远地区状态（仅美国地址，分快递公司：UPS/FedEx/DHL/USPS）

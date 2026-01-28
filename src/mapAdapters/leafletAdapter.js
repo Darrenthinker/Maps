@@ -202,9 +202,35 @@ export function createLeafletAdapter(mapId) {
   
   // 根据类型获取图标
   function getMarkerIcon(type, category, zoom = 12) {
-    let html = "📍";
-    let className = "marker marker-address";
+    // 默认使用谷歌风格红色水滴标记（中心有深红小点）
     const size = getIconSizeByZoom(zoom);
+    const markerSize = Math.max(32, size + 12);
+    const markerHeight = Math.round(markerSize * 1.5);
+    let html = `<svg viewBox="0 0 48 62" width="${markerSize}" height="${Math.round(markerSize * 1.3)}" style="filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4));">
+      <defs>
+        <!-- 主体渐变 - 从亮红到深红 -->
+        <linearGradient id="pinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#EA4335"/>
+          <stop offset="50%" style="stop-color:#E53935"/>
+          <stop offset="100%" style="stop-color:#C62828"/>
+        </linearGradient>
+        <!-- 左侧高光 -->
+        <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.4"/>
+          <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+      <!-- 主体水滴形状（底部更圆润） -->
+      <path d="M24 4C13.507 4 5 12.507 5 23c0 5.5 3.5 12.5 8 20 3.5 5.8 7.5 11.5 11 16 3.5-4.5 7.5-10.2 11-16 4.5-7.5 8-14.5 8-20 0-10.493-8.507-19-19-19z" 
+            fill="url(#pinGradient)" 
+            stroke="#B71C1C" 
+            stroke-width="1"/>
+      <!-- 左上高光 -->
+      <ellipse cx="16" cy="17" rx="7" ry="9" fill="url(#highlightGradient)" transform="rotate(-30 16 17)"/>
+      <!-- 中心深红色小圆点（谷歌风格） -->
+      <circle cx="24" cy="23" r="6" fill="#B71C1C"/>
+    </svg>`;
+    let className = "marker marker-address marker-google-style";
     const fontSize = Math.max(14, size - 6);
     
     if (type === 'airport') {
@@ -245,11 +271,18 @@ export function createLeafletAdapter(mapId) {
       }
     }
     
+    // 谷歌风格标记需要从底部尖端定位
+    const isGoogleStyle = className.includes('marker-google-style');
+    const iconWidth = isGoogleStyle ? Math.max(28, size + 8) : size;
+    const iconHeight = isGoogleStyle ? Math.round(iconWidth * 1.4) : size;
+    const anchorX = iconWidth / 2;
+    const anchorY = isGoogleStyle ? iconHeight : size / 2;
+    
     return L.divIcon({
       className: `${className} marker-zoom-${zoom >= 12 ? 'large' : zoom >= 8 ? 'medium' : 'small'}`,
       html: html,
-      iconSize: [size, size],
-      iconAnchor: [size / 2, size / 2]
+      iconSize: [iconWidth, iconHeight],
+      iconAnchor: [anchorX, anchorY]
     });
   }
   

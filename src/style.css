@@ -243,6 +243,15 @@ body {
 .autocomplete-item__icon {
   flex-shrink: 0;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+.autocomplete-item__icon svg {
+  display: block;
 }
 
 .autocomplete-item__text {
@@ -1042,6 +1051,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* 谷歌风格红色水滴标记 */
+.marker-google-style {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.marker-google-style svg {
+  display: block;
 }
 
 /* 机场/港口/海外仓标记图标 */
